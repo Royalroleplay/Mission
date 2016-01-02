@@ -2,7 +2,7 @@
 /*
 	File: fn_civInteractionMenu.sqf
 	Author: Bryan "Tonic" Boardwine
-	
+
 	Description:
 	Original code take from copInteraction, reproduced as a civ interaction
 */
@@ -39,7 +39,7 @@ life_pInact_curTarget = _curTarget;
 if(life_pInact_curTarget getVariable["restrained",false]) then {
 	_Btn1 ctrlSetText "UnRestrain";
 	_Btn1 buttonSetAction "[life_pInact_curTarget] call life_fnc_unrestrain; life_pInact_curTarget setVariable[""rope"",false,true]; closeDialog 0;";
-	
+
 	// player is restrained, but not by rope
 	if(!(life_pInact_curTarget getVariable["rope",false])) then {
 		_Btn1 ctrlEnable false;
@@ -83,11 +83,11 @@ _Btn5 buttonSetAction "[] call life_fnc_robAction; closeDialog 0;";
 _Btn6 ctrlSetText localize "STR_pInAct_PutInCar";
 _Btn6 buttonSetAction "[life_pInact_curTarget] call life_fnc_putInCar;";
 
-if(!(life_pInact_curTarget getVariable["restrained",false])) then {
+if(!(life_pInact_curTarget getVariable["restrained",false]) && ((animationState cursorTarget) != "Incapacitated")) then {
 	if(life_inv_rope < 1) then {
 		_Btn1 ctrlEnable false;
 	};
-	
+
 	_Btn2 ctrlEnable false;
 	_Btn3 ctrlEnable false;
 	_Btn4 ctrlEnable false;
