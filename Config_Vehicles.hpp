@@ -32,14 +32,13 @@ class CarShops {
 		};
 	};
 
-	class race_shop {
+	class kart_shop {
 		side = "civ";
 		vehicles[] = {
 			{ "C_Kart_01_Blu_F", 15000 , "driver" },
 			{ "C_Kart_01_Fuel_F", 15000, "driver" },
 			{ "C_Kart_01_Red_F", 15000, "driver" },
-			{ "C_Kart_01_Vrana_F", 15000, "driver" },
-			{ "ADM_Monte_Carlo", 100000, "race" }
+			{ "C_Kart_01_Vrana_F", 15000, "driver" }
 		};
 	};
 
@@ -48,6 +47,8 @@ class CarShops {
 		vehicles[] = {
 			{ "A3L_CVPILBFD", 1000, "" },
 			{ "A3L_Subaru_EMS", 2500, "" },
+			{ "A3L_ExplorerEMS_S" 3500, ""},
+			{ "A3L_Charger_EMS_Fast" 3500, ""},
 			{ "Jonzie_AmbulanceExtended", 5000, "" }
 		};
 	};
@@ -56,6 +57,8 @@ class CarShops {
 		side = "med";
 		vehicles[] = {
 			{ "B_Heli_Light_01_F", 500, "mAir" },
+			{ "RobJ_Rescue1", 500, "mAir" },
+			{ "EC635_SAR", 500, "mAir" },
 			{ "O_Heli_Light_02_unarmed_F", 500, "mAir" }
 		};
 	};
@@ -245,44 +248,29 @@ class CfgVehicles {
 	class Jonzie_Transit: Jonzie_Base {vItemSpace = 120;};
 	class ADM_GMC_Vandura: Jonzie_Base {vItemSpace = 150;};
 	class Jonzie_AmbulanceExtended: Jonzie_Base {vItemSpace = 100; textures[] = {}; };
-	class ADM_Monte_Carlo: Jonzie_Base {
-		vItemSpace = 0;
-		
-		textures[] = {
-        	{ "Red", "civ", {
-                "#(argb,8,8,3)color(1,0,0,1)"
-            } },
-			{ "Black", "civ", {
-	                "#(argb,8,8,3)color(0,0,0,1)"
-            } },
-			{ "Dark blue", "civ", {
-	                "#(argb,8,8,3)color(0,0,0.627451,1)"
-            } },
-			{ "Yellow", "civ", {
-	                "#(argb,8,8,3)color(1,1,0,1)"
-            } },
-			{ "Pink", "civ", {
-	                "#(argb,8,8,3)color(1,0,1,1)"
-            } },
-			{ "Gray", "civ", {
-	                "#(argb,8,8,3)color(0.5,0.5,0.5,1)"
-            } },
-            { "Purple", "civ", {
-	                "#(argb,8,8,3)color(0.501961,0,0.501961,1)"
-            } },
-			{ "Orange", "civ", {
-	                "#(argb,8,8,3)color(1,0.501961,0,1)"
-            } },
-            { "Number 20", "civ", {
-	                "\ADM_Monte_Carlo\textures\DEWALT20.paa"
-            } },
-			{ "Number 48", "civ", {
-	                "\ADM_Monte_Carlo\textures\Nascar48.paa"
-            } }
-	    };
-	};
 	
 	class I_Truck_02_medical_F : Default {
+		vItemSpace = 150;
+		storageFee[] = { 0, 0, 1500, 0 };
+		garageSell[] = { 0, 0, 5000, 0 };
+		chopShop = 3000;
+	};
+	
+	class A3L_ExplorerEMS_S : Default {
+		vItemSpace = 150;
+		storageFee[] = { 0, 0, 1500, 0 };
+		garageSell[] = { 0, 0, 5000, 0 };
+		chopShop = 3000;
+	};
+	
+	class A3L_CVPILBFD : Default {
+		vItemSpace = 150;
+		storageFee[] = { 0, 0, 1500, 0 };
+		garageSell[] = { 0, 0, 5000, 0 };
+		chopShop = 3000;
+	};
+	
+	class A3L_Charger_EMS_Fast : Default {
 		vItemSpace = 150;
 		storageFee[] = { 0, 0, 1500, 0 };
 		garageSell[] = { 0, 0, 5000, 0 };
@@ -300,6 +288,13 @@ class CfgVehicles {
 		vItemSpace = 250;
 		storageFee[] = { 0, 0, 6500, 0 };
 		garageSell[] = { 0, 0, 25000, 0 };
+		chopShop = 12500;
+	};
+	
+	class a3l_subaru_ems : Default {
+		vItemSpace = 250;
+		storageFee[] = { 0, 0, 6500, 0 };
+		garageSell[] = { 0, 0, 2500, 0 };
 		chopShop = 12500;
 	};
 
@@ -417,6 +412,24 @@ class CfgVehicles {
     };
 
 	class C_Boat_Civil_01_F {
+        vItemSpace = 85;
+        storageFee[] = { 4500, 2500, 0, 0 };
+		garageSell[] = { 6800, 3500, 0, 0 };
+        insurance = 2500;
+        chopShop = 5000;
+        textures[] = { };
+    };
+	
+	class RobJ_Rescue1 {
+        vItemSpace = 85;
+        storageFee[] = { 4500, 2500, 0, 0 };
+		garageSell[] = { 6800, 3500, 0, 0 };
+        insurance = 2500;
+        chopShop = 5000;
+        textures[] = { };
+    };
+	
+	class EC635_SAR {
         vItemSpace = 85;
         storageFee[] = { 4500, 2500, 0, 0 };
 		garageSell[] = { 6800, 3500, 0, 0 };
