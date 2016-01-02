@@ -2,13 +2,13 @@
 /*
 	File: fn_weaponShopCfg.sqf
 	Author: Bryan "Tonic" Boardwine
-	
+
 	Description:
 	Master configuration file for the weapon shops.
-	
+
 	Return:
 	String: Close the menu
-	Array: 
+	Array:
 	[Shop Name,
 	[ //Array of items to add to the store
 		[classname,Custom Name (set nil for default),price]
@@ -86,6 +86,7 @@ switch(_shop) do {
 				};
 
 				_items pushBack ["Binocular",nil,150];
+				_items pushback ["pmc_earpeice", 50]; // added - Von
 				_items pushBack ["ItemGPS",nil,100];
 				_items pushBack ["ToolKit",nil,250];
 				_items pushBack ["FirstAidKit",nil,150];
@@ -99,7 +100,7 @@ switch(_shop) do {
 			};
 		};
 	};
-	
+
 	case "med_basic": {
 		switch (true) do {
 			case (playerSide != independent): {"You are not an EMS Medic"};
@@ -108,6 +109,7 @@ switch(_shop) do {
 					[
 						["ItemGPS",nil,100],
 						["Binocular",nil,150],
+						["pmc_earpeice", 50],
 						["ToolKit",nil,250],
 						["FirstAidKit",nil,150],
 						["Medikit",nil,500],
@@ -120,7 +122,7 @@ switch(_shop) do {
 			};
 		};
 	};
-	
+
 	case "rebel_low":
 	{
 		switch(true) do
@@ -133,22 +135,22 @@ switch(_shop) do {
 					[
 						["RH_m9c",nil,2100],
 						["RH_15Rnd_9x19_M9",nil,100],
-						
+
 						["RH_vp70",nil,7500],
 						["RH_18Rnd_9x19_VP",nil,250],
-						
+
 						["hgun_Pistol_heavy_01_F",nil,9000],
 						["11Rnd_45ACP_Mag",nil,300],
-						
+
 						["RH_kimber_nw",nil,11000],
 						["RH_7Rnd_45cal_m1911",nil,300],
-						
+
 						["RH_kimber",nil,11000],
 						["RH_7Rnd_45cal_m1911",nil,300],
-						
+
 						["RH_g18",nil,12000],
 						["RH_19Rnd_9x19_g18",nil,175],
-						
+
 						["RH_vz61",nil,13250],
 						["RH_20Rnd_32cal_vz61",nil,250],
 
@@ -165,7 +167,7 @@ switch(_shop) do {
 			};
 		};
 	};
-	
+
 	case "rebel_high":
 	{
 		switch(true) do
@@ -213,7 +215,7 @@ switch(_shop) do {
 			};
 		};
 	};
-	
+
 	case "gun":
 	{
 		switch(true) do
@@ -249,7 +251,7 @@ switch(_shop) do {
 			};
 		};
 	};
-	
+
 	case "gang":
 	{
 		switch(true) do
@@ -270,7 +272,7 @@ switch(_shop) do {
 			};
 		};
 	};
-	
+
 	case "genstore":
 	{
 		["General Store",
