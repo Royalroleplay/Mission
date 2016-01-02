@@ -32,7 +32,7 @@ class CarShops {
 		};
 	};
 
-	class kart_shop {
+	class race_shop {
 		side = "civ";
 		vehicles[] = {
 			{ "C_Kart_01_Blu_F", 15000 , "driver" },
@@ -47,8 +47,8 @@ class CarShops {
 		vehicles[] = {
 			{ "A3L_CVPILBFD", 1000, "" },
 			{ "A3L_Subaru_EMS", 2500, "" },
-			{ "A3L_ExplorerEMS_S" 3500, ""},
-			{ "A3L_Charger_EMS_Fast" 3500, ""},
+			{ "A3L_ExplorerEMS_S", 3500, ""},
+			{ "A3L_Charger_EMS_Fast", 3500, ""},
 			{ "Jonzie_AmbulanceExtended", 5000, "" }
 		};
 	};
