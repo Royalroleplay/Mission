@@ -47,9 +47,9 @@ class Life_Settings {
 	paycheck_period = 5; //Scaled in minutes
 
 	/* Impound Variables */
-	impound_car = 350; //Price for impounding cars
-	impound_boat = 250; //Price for impounding boats
-	impound_air = 850; //Price for impounding helicopters / planes
+	impound_car = 1350; //Price for impounding cars
+	impound_boat = 1250; //Price for impounding boats
+	impound_air = 1850; //Price for impounding helicopters / planes
 
 	/* Initial Bank Amount */
 	bank_cop = 100000; //Amount of cash on bank for new cops
@@ -287,6 +287,11 @@ class VirtualShops {
 	class fishmarket {
 		name = "STR_Shops_FishMarket";
 		items[] = { "salema_raw", "salema_grilled", "ornate_raw", "ornate_grilled", "mackerel_raw", "mackerel_grilled", "tuna_raw", "tuna_grilled", "mullet_raw", "mullet_fried", "catshark_raw", "catshark_fried" };
+	};
+	
+	class emsMarket {
+		name = "STR_Shops_emsMarket";
+		items[] = { "donuts", "coffee", "spikeStrip", "waterBottle", "rabbit_grilled", "apple", "redgull", "fuelFull", "defusekit" };
 	};
 
 	class diamond {
