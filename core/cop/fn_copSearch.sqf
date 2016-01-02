@@ -10,6 +10,7 @@ life_action_inUse = false;
 private["_license","_guns","_gun"];
 params [
 	["_civ",objNull,[objNull]],
+	["_cop",objNull,[objNull]],
 	["_invs",[],[[]]],
 	["_robber",false,[true]]
 ];
@@ -34,6 +35,8 @@ if(count _invs > 0) then {
 	
 	[getPlayerUID _civ,_civ GVAR ["realname",name _civ],"481"] remoteExecCall ["life_fnc_wantedAdd",RSERV];
 	[0,"STR_Cop_Contraband",true,[(_civ GVAR ["realname",name _civ]),[_illegal] call life_fnc_numberText]] remoteExecCall ["life_fnc_broadcast",west];
+	_val = _illegal * 0.05;
+	ADD(CASH,_val);
 } else {
 	_inv = localize "STR_Cop_NoIllegal";
 };
