@@ -32,13 +32,14 @@ class CarShops {
 		};
 	};
 
-	class kart_shop {
+	class race_shop {
 		side = "civ";
 		vehicles[] = {
 			{ "C_Kart_01_Blu_F", 15000 , "driver" },
 			{ "C_Kart_01_Fuel_F", 15000, "driver" },
 			{ "C_Kart_01_Red_F", 15000, "driver" },
-			{ "C_Kart_01_Vrana_F", 15000, "driver" }
+			{ "C_Kart_01_Vrana_F", 15000, "driver" },
+			{ "ADM_Monte_Carlo", 100000, "race" }
 		};
 	};
 
@@ -244,6 +245,42 @@ class CfgVehicles {
 	class Jonzie_Transit: Jonzie_Base {vItemSpace = 120;};
 	class ADM_GMC_Vandura: Jonzie_Base {vItemSpace = 150;};
 	class Jonzie_AmbulanceExtended: Jonzie_Base {vItemSpace = 100; textures[] = {}; };
+	class ADM_Monte_Carlo: Jonzie_Base {
+		vItemSpace = 0;
+		
+		textures[] = {
+        	{ "Red", "civ", {
+                "#(argb,8,8,3)color(1,0,0,1)"
+            } },
+			{ "Black", "civ", {
+	                "#(argb,8,8,3)color(0,0,0,1)"
+            } },
+			{ "Dark blue", "civ", {
+	                "#(argb,8,8,3)color(0,0,0.627451,1)"
+            } },
+			{ "Yellow", "civ", {
+	                "#(argb,8,8,3)color(1,1,0,1)"
+            } },
+			{ "Pink", "civ", {
+	                "#(argb,8,8,3)color(1,0,1,1)"
+            } },
+			{ "Gray", "civ", {
+	                "#(argb,8,8,3)color(0.5,0.5,0.5,1)"
+            } },
+            { "Purple", "civ", {
+	                "#(argb,8,8,3)color(0.501961,0,0.501961,1)"
+            } },
+			{ "Orange", "civ", {
+	                "#(argb,8,8,3)color(1,0.501961,0,1)"
+            } },
+            { "Number 20", "civ", {
+	                "\ADM_Monte_Carlo\textures\DEWALT20.paa"
+            } },
+			{ "Number 48", "civ", {
+	                "\ADM_Monte_Carlo\textures\Nascar48.paa"
+            } }
+	    };
+	};
 	
 	class I_Truck_02_medical_F : Default {
 		vItemSpace = 150;

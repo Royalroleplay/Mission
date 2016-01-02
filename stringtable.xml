@@ -3539,6 +3539,13 @@
 			<Italian>Licenza possesso Casa</Italian>
 			<Portuguese>Licença de Casas</Portuguese>
 		</Key>
+		<Key ID="STR_License_Race">
+			<Original>Racing License</Original>
+			<German>Racing-Lizenz</German>
+			<French>Racing Licence</French>
+			<Italian>Corsa Licenza</Italian>
+			<Portuguese>Licença Corrida</Portuguese>
+		</Key>
 	</Package>
 	<Package name="More_Item_Strings">
 		<Key ID="STR_ISTR_Blast_VaultOnly">

@@ -201,6 +201,7 @@ class Life_Client_Core
 		class openSync {};
 		class openTransfer {};
 		class openSettings {};
+		class openMessages {};
 
 		class wantedList {};
 		class wantedInfo {};

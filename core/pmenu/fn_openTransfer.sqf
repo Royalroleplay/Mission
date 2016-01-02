@@ -12,6 +12,9 @@ disableSerialization;
 closeDialog 0;
 createDialog 'rr_phone_transfer';
 
+//player name
+ctrlSetText [1000, format ["%1", name player]];
+
 _near_i = CONTROL(20055,2100);
 
 //Near players

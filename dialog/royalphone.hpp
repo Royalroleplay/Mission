@@ -88,7 +88,7 @@ class rr_phone_home: rr_phone_welcome
 		y = 0.533 * safezoneH + safezoneY;
 		w = 0.0309375 * safezoneW;
 		h = 0.055 * safezoneH;
-		action = "closeDialog 0; createDialog 'rr_phone_keychain'";
+		action = "closeDialog 0; createDialog 'rr_phone_keychain'; [] call life_fnc_keyMenu;";
 	};
 	class rr_phone_home_items: RscButtonInvisible
 	{
@@ -106,7 +106,7 @@ class rr_phone_home: rr_phone_welcome
 		y = 0.632 * safezoneH + safezoneY;
 		w = 0.0309375 * safezoneW;
 		h = 0.055 * safezoneH;
-		action = "closeDialog 0; createDialog 'rr_phone_message'";
+		action = "[] call life_fnc_openMessages";
 	};
 	class rr_phone_home_settings: RscButtonInvisible
 	{
@@ -481,7 +481,7 @@ class rr_phone_transfer: rr_phone_welcome
 class rr_phone_message: rr_phone_welcome
 {
 	idd = 20056;
-	controls[] = { rr_phone_message_frame, rr_phone_message_background, rr_phone_message_screen, rr_phone_message_name, rr_phone_message_textBox, rr_phone_message_send, rr_phone_message_return, rr_phone_message_exit, rr_phone_message_messages };
+	controls[] = { rr_phone_message_frame, rr_phone_message_background, rr_phone_message_screen, rr_phone_message_name, rr_phone_message_textBox, rr_phone_message_send, rr_phone_message_return, rr_phone_message_exit, rr_phone_message_admin, rr_phone_message_police, rr_phone_message_ems, rr_phone_message_players };
 	
 	class rr_phone_message_frame: rr_phone_welcome_frame {};
 	class rr_phone_message_background: rr_phone_welcome_background {};
@@ -503,7 +503,7 @@ class rr_phone_message: rr_phone_welcome
 	};
 	class rr_phone_message_textBox: RscEdit
 	{
-		idc = 1400;
+		idc = 3003;
 		x = 0.438125 * safezoneW + safezoneX;
 		y = 0.599 * safezoneH + safezoneY;
 		w = 0.103125 * safezoneW;
@@ -515,11 +515,12 @@ class rr_phone_message: rr_phone_welcome
 	};
 	class rr_phone_message_send: RscButtonInvisible
 	{
-		idc = 1600;
+		idc = 3015;
 		x = 0.546406 * safezoneW + safezoneX;
 		y = 0.61 * safezoneH + safezoneY;
 		w = 0.020625 * safezoneW;
 		h = 0.044 * safezoneH;
+		action = "[] call TON_fnc_cell_textmsg";
 	};
 	class rr_phone_message_return: RscButtonInvisible
 	{
@@ -539,13 +540,46 @@ class rr_phone_message: rr_phone_welcome
 		h = 0.011 * safezoneH;
 		action = "closeDialog 0; createDialog 'rr_phone_home'";
 	};
-	class rr_phone_message_messages: RscListbox
+	class rr_phone_message_admin: RscButton
 	{
-		idc = 1500;
+		idc = 3017;
+		text = "Text Admin"; //--- ToDo: Localize;
+		x = 0.443281 * safezoneW + safezoneX;
+		y = 0.555 * safezoneH + safezoneY;
+		w = 0.0515625 * safezoneW;
+		h = 0.022 * safezoneH;
+		colorBackground[] = {0,1,0,1};
+		action = "[] call TON_fnc_cell_textadmin";
+	};
+	class rr_phone_message_ems: RscButton
+	{
+		idc = 3022;
+		text = "Text EMS"; //--- ToDo: Localize;
+		x = 0.510312 * safezoneW + safezoneX;
+		y = 0.555 * safezoneH + safezoneY;
+		w = 0.0515625 * safezoneW;
+		h = 0.022 * safezoneH;
+		colorBackground[] = {1,0,0,1};
+		action = "[] call TON_fnc_cell_emsrequest";
+	};
+	class rr_phone_message_police: RscButton
+	{
+		idc = 3016;
+		text = "Text Police"; //--- ToDo: Localize;
+		x = 0.474219 * safezoneW + safezoneX;
+		y = 0.522 * safezoneH + safezoneY;
+		w = 0.0515625 * safezoneW;
+		h = 0.022 * safezoneH;
+		colorBackground[] = {0,0,1,1};
+		action = "[] call TON_fnc_cell_textcop";
+	};
+	class rr_phone_message_players: RscCombo
+	{
+		idc = 3004;
 		x = 0.438125 * safezoneW + safezoneX;
-		y = 0.346 * safezoneH + safezoneY;
+		y = 0.357 * safezoneH + safezoneY;
 		w = 0.128906 * safezoneW;
-		h = 0.242 * safezoneH;
+		h = 0.022 * safezoneH;
 	};
 };
 
@@ -665,7 +699,7 @@ class rr_phone_licenses: rr_phone_welcome
 
 class rr_phone_keychain: rr_phone_welcome
 {
-	idd = 20059;
+	idd = 2700;
 	controls[] = { rr_phone_keychain_frame, rr_phone_keychain_background, rr_phone_keychain_screen, rr_phone_keychain_list, rr_phone_keychain_exit, rr_phone_keychain_return, rr_phone_keychain_give, rr_phone_keychain_nearPlayers };
 	
 	class rr_phone_keychain_frame: rr_phone_welcome_frame {};
@@ -674,9 +708,9 @@ class rr_phone_keychain: rr_phone_welcome
 	{
 		text = "\mrb_textures\phone\KeychainScreen.paa";
 	};
-	class rr_phone_keychain_list: RscListbox
+	class rr_phone_keychain_list: Life_RscListBox
 	{
-		idc = 1500;
+		idc = 2701;
 		x = 0.443281 * safezoneW + safezoneX;
 		y = 0.357 * safezoneH + safezoneY;
 		w = 0.118594 * safezoneW;
@@ -702,15 +736,16 @@ class rr_phone_keychain: rr_phone_welcome
 	};
 	class rr_phone_keychain_give: RscButtonInvisible
 	{
-		idc = 1602;
+		idc = 2703;
 		x = 0.520625 * safezoneW + safezoneX;
 		y = 0.643 * safezoneH + safezoneY;
 		w = 0.0464063 * safezoneW;
 		h = 0.022 * safezoneH;
+		action = "[] call life_fnc_keyGive";
 	};
 	class rr_phone_keychain_nearPlayers: RscCombo
 	{
-		idc = 2100;
+		idc = 2702;
 		x = 0.443281 * safezoneW + safezoneX;
 		y = 0.643 * safezoneH + safezoneY;
 		w = 0.0721875 * safezoneW;
@@ -831,7 +866,7 @@ class rr_phone_addContact: rr_phone_welcome
 
 class rr_phone_settings: rr_phone_welcome
 {
-	idd = 20062;
+	idd = 2900;
 	controls[] = { rr_phone_settings_frame, rr_phone_settings_background, rr_phone_settings_screen, rr_phone_settings_exit, rr_phone_settings_return, rr_phone_settings_onFoot, rr_phone_settings_inCar, rr_phone_settings_inAir, rr_phone_settings_playerTags, rr_phone_settings_sidechat, rr_phone_settings_revealObject };
 	
 	class rr_phone_settings_frame: rr_phone_welcome_frame {};
@@ -858,54 +893,54 @@ class rr_phone_settings: rr_phone_welcome
 		h = 0.033 * safezoneH;
 		action = "closeDialog 0; createDialog 'rr_phone_home'";
 	};
-	class rr_phone_settings_onFoot: phoneSlider
+	class rr_phone_settings_onFoot: life_RscXSliderH
 	{
-		idc = 1900;
+		idc = 2901;
 		onSliderPosChanged = "[0,_this select 1] call life_fnc_s_onSliderChange;";
 		x = 0.479375 * safezoneW + safezoneX;
 		y = 0.379 * safezoneH + safezoneY;
 		w = 0.0825 * safezoneW;
 		h = 0.022 * safezoneH;
 	};
-	class rr_phone_settings_inCar: phoneSlider
+	class rr_phone_settings_inCar: life_RscXSliderH
 	{
-		idc = 1901;
+		idc = 2911;
 		onSliderPosChanged = "[1,_this select 1] call life_fnc_s_onSliderChange;";
 		x = 0.479375 * safezoneW + safezoneX;
 		y = 0.405 * safezoneH + safezoneY;
 		w = 0.0825 * safezoneW;
 		h = 0.022 * safezoneH;
 	};
-	class rr_phone_settings_inAir: phoneSlider
+	class rr_phone_settings_inAir: life_RscXSliderH
 	{
-		idc = 1902;
+		idc = 2921;
 		onSliderPosChanged = "[2,_this select 1] call life_fnc_s_onSliderChange;";
 		x = 0.479375 * safezoneW + safezoneX;
 		y = 0.43 * safezoneH + safezoneY;
 		w = 0.0825 * safezoneW;
 		h = 0.022 * safezoneH;
 	};
-	class rr_phone_settings_playerTags: RscCheckbox
+	class rr_phone_settings_playerTags: Life_Checkbox
 	{
-		idc = 2800;
+		idc = 2970;
 		onCheckedChanged = "['tags',_this select 1] call life_fnc_s_onCheckedChange;";
 		x = 0.551562 * safezoneW + safezoneX;
 		y = 0.511 * safezoneH + safezoneY;
 		w = 0.0103125 * safezoneW;
 		h = 0.022 * safezoneH;
 	};
-	class rr_phone_settings_sidechat: RscCheckbox
+	class rr_phone_settings_sidechat: Life_Checkbox
 	{
-		idc = 2801;
+		idc = 2971;
 		onCheckedChanged = "['sidechat',_this select 1] call life_fnc_s_onCheckedChange;";
 		x = 0.551562 * safezoneW + safezoneX;
 		y = 0.533 * safezoneH + safezoneY;
 		w = 0.0103125 * safezoneW;
 		h = 0.022 * safezoneH;
 	};
-	class rr_phone_settings_revealObject: RscCheckbox
+	class rr_phone_settings_revealObject: Life_Checkbox
 	{
-		idc = 2802;
+		idc = 2972;
 		onCheckedChanged = "['objects',_this select 1] call life_fnc_s_onCheckedChange;";
 		x = 0.551562 * safezoneW + safezoneX;
 		y = 0.555 * safezoneH + safezoneY;

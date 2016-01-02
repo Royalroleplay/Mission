@@ -7,7 +7,7 @@
 	Setup the settings menu.
 */
 if(isNull (findDisplay 2900)) then {
-	if(!createDialog "SettingsMenu") exitWith {hint "Something went wrong, the menu won't open?"};
+	if(!createDialog "rr_phone_settings") exitWith {hint "Something went wrong, the menu won't open?"};
 };
 
 disableSerialization;

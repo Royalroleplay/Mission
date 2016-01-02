@@ -2,7 +2,7 @@ class SettingsMenu
 {
 	idd = 2900;
 	name = "SettingsMenu";
-	movingEnabled = 1;
+	movingEnabled = 0;
 	enableSimulation = 1;
 	
 	class controlsBackground
