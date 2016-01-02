@@ -242,13 +242,23 @@ class Clothing {
 
 		uniforms[] = {
 			{ "NONE", "Remove Uniform", 0, { "", "", -1 } },
+			{ "RR_Clothing_Police_RM_Cadet", "", 0, {"", "", -1 } },
+			{ "RR_Clothing_Police_RM_Officer", "", 0, {"", "", -1 } },
+			{ "RR_Clothing_Police_RM_Corporal", "", 0, {"", "", -1 } },
+			{ "RR_Clothing_Police_RM_Sergeant", "", 0, {"", "", -1 } },
+			{ "RR_Clothing_Police_RM_FTO", "", 0, {"", "", -1 } },
+			{ "RR_Clothing_Police_RM_LT", "", 0, {"", "", -1 } },
+			{ "RR_Clothing_Police_RM_cpt", "", 0, {"", "", -1 } },
+			{ "RR_Clothing_Police_RM_Dep_Chief", "", 0, {"", "", -1 } },
+			{ "RR_Clothing_Police_RM_Chief", "", 0, {"", "", -1 } },
+			{ "RR_Clothing_Police_Tactical", "SWAT", 0, {"", "", -1 } },
 			{ "a3l_pdofc", "", 25, { "", "", -1 } }
 		};
 
 		headgear[] = {
 			{ "NONE", "Remove Hat", 0, { "", "", -1 } },
-			{ "H_HelmetB_plain_mcamo", "", 75, { "life_coplevel", "SCALAR", 1 } },
-			{ "H_Booniehat_mcamo", "", 120, { "life_coplevel", "SCALAR", 1 } },
+			{ "TRYK_H_PASGT_BLK", "", 175, { "life_coplevel", "SCALAR", 1 } },
+			{ "TRYK_H_headsetcap_blk_Glasses", "", 120, { "life_coplevel", "SCALAR", 1 } },
 			{ "H_MilCap_mcamo", "", 100, { "life_coplevel", "SCALAR", 2 } }
 		};
 
@@ -262,8 +272,7 @@ class Clothing {
 			{ "G_Sport_BlackWhite", "", 20, { "", "", -1 } },
 			{ "G_Squares", "", 10, { "", "", -1 } },
 			{ "G_Aviator", "", 100, { "", "", -1 } },
-			{ "G_Lady_Mirror", "", 150, { "", "", -1 } },
-			{ "G_Lady_Dark", "", 150, { "", "", -1 } },
+			{ "Kio_Balaclava_blk", "", 150, { "", "", -1 } },
 			{ "G_Lady_Blue", "", 150, { "" , "", -1 } },
 			{ "G_Lowprofile", "", 30, { "", "", -1 } },
 			{ "G_Combat", "", 55, { "", "", -1 } }
@@ -271,6 +280,8 @@ class Clothing {
 
 		vests[] = {
 			{ "NONE", "Remove Vest", 0, { "", "", -1 } },
+			{ "TRYK_V_tacv1_P_BK", "", 0, { "", "", -1 } },
+			{ "TRYK_V_tacv1LP_BK", "", 0, { "", "", -1 } },
 			{ "v_tacvest_blk_police", "", 0, { "", "", -1 } }
 		};
 
@@ -416,6 +427,79 @@ class Clothing {
 
 		backpacks[] = {
 			{ "NONE", "Remove Backpack", 0, { "", "", -1 } }
+		};
+	};
+	
+	class ems {
+		title = "STR_Shops_C_EMS";
+		license = "";
+		side = "med";
+
+		uniforms[] = {
+			{ "NONE", "Remove Uniform", 0, { "", "", -1 } },
+			{ "emsoff_uni", "", 1500, { "", "", -1 } },
+			{ "A3L_EMSProbieUniform", "", 1500, { "", "", -1 } },
+			{ "EMTRM_uni", "", 1500, { "", "", -1 } },
+			{ "A3L_EMT2", "", 1500, { "", "", -1 } },
+			{ "U_B_Wetsuit", "", 1500, { "", "", -1 } }
+		};
+
+		headgear[] = {
+			{ "NONE", "Remove Hat", 0, { "", "", -1 } },
+			{ "A3L_medic_helmet", "", 1000, { "", "", -1 } },
+			{ "TRYK_H_woolhat", "", 1000, { "", "", -1 } },
+			{ "TRYK_H_woolhat_br", "", 1000, { "", "", -1 } },
+			{ "TRYK_H_woolhat_cu", "", 300, { "", "", -1 } },
+			{ "TRYK_H_woolhat_CW", "", 100, { "", "", -1 } },
+			{ "TRYK_H_woolhat_tan", "", 100, { "", "", -1 } },
+			{ "TRYK_H_woolhat_WH", "", 250, { "", "", -1 } },
+			{ "TRYK_R_CAP_BLK", "", 250, { "", "", -1 } },
+			{ "TRYK_H_headsetcap_blk", "", 250, { "", "", -1 } },
+			{ "H_Cap_blk", "", 250, { "", "", -1 } },
+			{ "H_Cap_red", "", 250, { "", "", -1 } },
+			{ "H_Cap_blu", "", 250, { "", "", -1 } },
+			{ "H_Beret_blk", "", 250, { "", "", -1 } },
+			{ "RobJ_Rescue_Hat", "", 2500, { "", "", -1 } }
+		};
+
+		goggles[] = {
+			{ "NONE", "Remove Glasses", 0, { "", "", -1 } },
+			{ "G_Aviator", "", 50, { "", "", -1} },
+			{ "G_Diving", "", 50, { "", "", -1} },
+			{ "G_Shades_Black", "", 50, { "", "", -1} },
+			{ "G_Shades_Blue", "", 50, { "", "", -1} },
+			{ "G_Shades_Green", "", 50, { "", "", -1} },
+			{ "G_Shades_Red", "", 50, { "", "", -1} },
+			{ "G_Spectacles", "", 50, { "", "", -1} },
+			{ "G_Spectacles_Tinted", "", 50, { "", "", -1} },
+			{ "G_Sport_Red", "", 50, { "", "", -1} },
+			{ "G_Sport_Blackyellow", "", 50, { "", "", -1} },
+			{ "G_Sport_BlackWhite", "", 50, { "", "", -1} },
+			{ "G_Sport_Checkered", "", 50, { "", "", -1} },
+			{ "G_Sport_Blackred", "", 50, { "", "", -1} },
+			{ "G_Sport_Greenblack", "", 50, { "", "", -1} },
+			{ "G_Squares_Tinted", "", 50, { "", "", -1} }
+		};
+
+		vests[] = {
+			{ "NONE", "Remove Vest", 0, { "", "", -1 } },
+			{ "V_HarnessOSpec_gry", "", 200, { "", "", -1 } },
+			{ "V_PlateCarrierL_CTRG", "", 250, { "", "", -1 } },
+			{ "V_TacVestIR_blk", "", 300, { "", "", -1 } },
+			{ "V_TacVest_blk", "", 300, { "", "", -1 } },
+			{ "V_RebreatherB", "", 800, { "", "", -1 } },
+			{ "cl3_police_vest_CG2", "EMS Chief", 4500, { "", "", -1 } },
+			{ "cl3_police_vest_fd", "", 800, { "", "", -1 } },
+			{ "cl3_police_vest_mr", "EMS Command", 4000, { "", "", -1 } },
+			{ "cl3_police_vest_pm", "", 500, { "", "", -1 } }
+		};
+
+		backpacks[] = {
+			{ "NONE", "Remove Backpack", 0, { "", "", -1 } },
+			{ "cl3_emt_tacticalbelt", "EMS Duty Belt", 150, { "", "", -1 } },
+			{ "cl3_emt_tacticalbelt_black", "EMS Duty Belt Black", 600, { "", "", -1 } },
+			{ "TRYK_B_Medbag_OD", "", 600, { "", "", -1 } },
+			{ "TRYK_B_Medbag_BK", "", 600, { "", "", -1 } }
 		};
 	};
 };
