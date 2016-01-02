@@ -77,6 +77,13 @@
 			<French>Marché de Poissons</French>
 			<Portuguese>Mercado de Peixes</Portuguese>
 		</Key>
+		<Key ID="STR_Shops_emsMarket">
+			<Original>EMS Market</Original>
+			<German>Fischmarkt</German>
+			<Italian>Pescivendolo</Italian>
+			<French>Marché de Poissons</French>
+			<Portuguese>Mercado de Peixes</Portuguese>
+		</Key>
 		<Key ID="STR_Shops_Glass">
 			<Original>Glass Trader</Original>
 			<German>Glashändler</German>
