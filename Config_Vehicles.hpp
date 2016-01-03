@@ -28,7 +28,8 @@ class CarShops {
 			{ "Mrshounka_a3_308_rcz", 45000, "driver" },
 			{ "Mrshounka_a3_308_civ", 45000, "driver" },
 			{ "Mrshounka_a3_dodge15_civ", 45000, "driver" },
-			{ "Mrshounka_a3_ds3_civ", 45000, "driver" }
+			{ "Mrshounka_a3_ds3_civ", 45000, "driver" },
+			{ "RG_mustang_rouge", 55000, "driver" }
 		};
 	};
 
@@ -204,7 +205,7 @@ class CfgVehicles {
     class Mrshounka_a3_308_rcz : shounka_base {};
     class Mrshounka_a3_308_civ : shounka_base {};
     class Mrshounka_a3_dodge15_civ : shounka_base {};
-    class Mrshounka_a3_ds3_civ : shounka_base {};
+    class Mrshounka_a3_ds3_civ : shounka_base {}; 
 
 	class Jonzie_Base {
 		vItemSpace = 10;
@@ -254,6 +255,13 @@ class CfgVehicles {
 		storageFee[] = { 0, 0, 1500, 0 };
 		garageSell[] = { 0, 0, 5000, 0 };
 		chopShop = 3000;
+	};
+	
+	class RG_mustang_rouge : Default {
+		vItemSpace = 50;
+		storageFee[] = { 0, 0, 0, 0 };
+		garageSell[] = { 0, 0, 0, 0 };
+		chopShop = 4500;
 	};
 	
 	class A3L_ExplorerEMS_S : Default {
