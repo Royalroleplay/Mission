@@ -20,7 +20,7 @@ disableSerialization;
 _units = CONTROL(2700,2703);
 
 lbClear _units;
-CONTROL(2700,2701) ctrlSetStructuredText parseText format["<img size='1.7' image='\MRB_Textures\icons\bank.paa'/> $%1<br/><img size='1.6' image='\MRB_Textures\icons\money.paa'/> $%2",[BANK] call life_fnc_numberText,[CASH] call life_fnc_numberText];
+CONTROL(2700,2701) ctrlSetStructuredText parseText format["<img size='1.7' image='\rr_textures\icons\bank.paa'/> $%1<br/><img size='1.6' image='\rr_textures\icons\money.paa'/> $%2",[BANK] call life_fnc_numberText,[CASH] call life_fnc_numberText];
 
 {
 	_name = _x GVAR ["realname",name _x];

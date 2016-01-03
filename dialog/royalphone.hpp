@@ -17,7 +17,7 @@ class rr_phone_welcome
 	class rr_phone_welcome_background: RscPicture
 	{
 		idc = 1200;
-		text = "\mrb_textures\phone\RoyalPhone.paa";
+		text = "\rr_textures\phone\RoyalPhone.paa";
 		x = 0.402031 * safezoneW + safezoneX;
 		y = 0.159 * safezoneH + safezoneY;
 		w = 0.201094 * safezoneW;
@@ -26,7 +26,7 @@ class rr_phone_welcome
 	class rr_phone_welcome_screen: RscPicture
 	{
 		idc = 1201;
-		text = "\mrb_textures\phone\WelcomeScreen.paa";
+		text = "\rr_textures\phone\WelcomeScreen.paa";
 		x = 0.402031 * safezoneW + safezoneX;
 		y = 0.159 * safezoneH + safezoneY;
 		w = 0.201094 * safezoneW;
@@ -43,7 +43,7 @@ class rr_phone_home: rr_phone_welcome
 	class rr_phone_home_background: rr_phone_welcome_background {};
 	class rr_phone_home_screen: rr_phone_welcome_screen
 	{
-		text = "\mrb_textures\phone\HomeScreen.paa";
+		text = "\rr_textures\phone\HomeScreen.paa";
 	};
 	class rr_phone_home_bank: RscButtonInvisible
 	{
@@ -138,7 +138,7 @@ class rr_phone_balance: rr_phone_welcome
 	class rr_phone_balance_background: rr_phone_welcome_background {};
 	class rr_phone_balance_screen: rr_phone_welcome_screen
 	{
-		text = "\mrb_textures\phone\BalanceScreen.paa";
+		text = "\rr_textures\phone\BalanceScreen.paa";
 	};
 	class rr_phone_balance_name: RscText
 	{
@@ -209,7 +209,7 @@ class rr_phone_sync: rr_phone_welcome
 	class rr_phone_sync_background: rr_phone_welcome_background {};
 	class rr_phone_sync_screen: rr_phone_welcome_screen
 	{
-		text = "\mrb_textures\phone\SyncScreen.paa";
+		text = "\rr_textures\phone\SyncScreen.paa";
 	};
 	class rr_phone_sync_exit: RscButtonInvisible
 	{
@@ -249,7 +249,7 @@ class rr_phone_keypad: rr_phone_welcome
 	class rr_phone_keypad_background: rr_phone_welcome_background {};
 	class rr_phone_keypad_screen: rr_phone_welcome_screen
 	{
-		text = "\mrb_textures\phone\KeypadScreen.paa";
+		text = "\rr_textures\phone\KeypadScreen.paa";
 	};
 	class rr_phone_keypad_1: RscButtonInvisible
 	{
@@ -414,7 +414,7 @@ class rr_phone_transfer: rr_phone_welcome
 	class rr_phone_transfer_background: rr_phone_welcome_background {};
 	class rr_phone_transfer_screen: rr_phone_welcome_screen
 	{
-		text = "\mrb_textures\phone\TransferScreen.paa";
+		text = "\rr_textures\phone\TransferScreen.paa";
 	};
 	class rr_phone_transfer_player: RscText
 	{
@@ -487,7 +487,7 @@ class rr_phone_message: rr_phone_welcome
 	class rr_phone_message_background: rr_phone_welcome_background {};
 	class rr_phone_message_screen: rr_phone_welcome_screen
 	{
-		text = "\mrb_textures\phone\MessageScreen.paa";
+		text = "\rr_textures\phone\MessageScreen.paa";
 	};
 	class rr_phone_message_name: RscText
 	{
@@ -592,7 +592,7 @@ class rr_phone_items: rr_phone_welcome
 	class rr_phone_items_background: rr_phone_welcome_background {};
 	class rr_phone_items_screen: rr_phone_welcome_screen
 	{
-		text = "\mrb_textures\phone\ItemScreen.paa";
+		text = "\rr_textures\phone\ItemScreen.paa";
 	};
 	class rr_phone_items_use: RscButtonInvisible
 	{
@@ -666,7 +666,7 @@ class rr_phone_licenses: rr_phone_welcome
 	class rr_phone_licenses_background: rr_phone_welcome_background {};
 	class rr_phone_licenses_screen: rr_phone_welcome_screen
 	{
-		text = "\mrb_textures\phone\LicensesScreen.paa";
+		text = "\rr_textures\phone\LicensesScreen.paa";
 	};
 	class rr_phone_licenses_list: Life_RscStructuredText
 	{
@@ -706,7 +706,7 @@ class rr_phone_keychain: rr_phone_welcome
 	class rr_phone_keychain_background: rr_phone_welcome_background {};
 	class rr_phone_keychain_screen: rr_phone_welcome_screen
 	{
-		text = "\mrb_textures\phone\KeychainScreen.paa";
+		text = "\rr_textures\phone\KeychainScreen.paa";
 	};
 	class rr_phone_keychain_list: Life_RscListBox
 	{
@@ -762,7 +762,7 @@ class rr_phone_contacts: rr_phone_welcome
 	class rr_phone_contacts_background: rr_phone_welcome_background {};
 	class rr_phone_contacts_screen: rr_phone_welcome_screen
 	{
-		text = "\mrb_textures\phone\ContactsScreen.paa";
+		text = "\rr_textures\phone\ContactsScreen.paa";
 	};
 	class rr_phone_contacts_list: RscListbox
 	{
@@ -810,7 +810,7 @@ class rr_phone_addContact: rr_phone_welcome
 	class rr_phone_addContact_background: rr_phone_welcome_background {};
 	class rr_phone_addContact_screen: rr_phone_welcome_screen
 	{
-		text = "\mrb_textures\phone\AddContactScreen.paa";
+		text = "\rr_textures\phone\AddContactScreen.paa";
 	};
 	class rr_phone_contacts_exit: RscButtonInvisible
 	{
@@ -873,7 +873,7 @@ class rr_phone_settings: rr_phone_welcome
 	class rr_phone_settings_background: rr_phone_welcome_background {};
 	class rr_phone_settings_screen: rr_phone_welcome_screen
 	{
-		text = "\mrb_textures\phone\settingsScreen.paa";
+		text = "\rr_textures\phone\settingsScreen.paa";
 	};
 	class rr_phone_settings_exit: RscButtonInvisible
 	{

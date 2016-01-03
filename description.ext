@@ -44,49 +44,49 @@ class CfgSounds
 	class SirenLong
 	{
 		name = "SirenLong";
-		sound[] = {"\mrb_textures\sounds\Siren_Long.ogg", 1.0, 1};
+		sound[] = {"\rr_textures\sounds\Siren_Long.ogg", 1.0, 1};
 		titles[] = {0,""};
 	};
 
 	class Intro
 	{
 		name = "Intro";
-		sound[] = {"\mrb_textures\sounds\IntroMusic.ogg", 1.0, 1};
+		sound[] = {"\rr_textures\sounds\IntroMusic.ogg", 1.0, 1};
 		titles[] = {0,""};
 	};
 	
 	class tazersound
 	{
 		name = "Tazersound";
-		sound[] = {"\mrb_textures\sounds\tazer.ogg", 0.25, 1};
+		sound[] = {"\rr_textures\sounds\tazer.ogg", 0.25, 1};
 		titles[] = {0,""};
 	};
 	
 	class flashbang
 	{
 		name = "flashbang";
-		sound[] = {"\mrb_textures\sounds\flashbang.ogg", 1.0, 1};
+		sound[] = {"\rr_textures\sounds\flashbang.ogg", 1.0, 1};
 		titles[] = {0,""};
 	};
 	
 	class incoming
 	{
 		name = "incoming";
-		sound[] = {"\mrb_textures\sounds\incoming.ogg", 1.0, 1};
+		sound[] = {"\rr_textures\sounds\incoming.ogg", 1.0, 1};
 		titles[] = {0,""};
 	};
 	
 	class dial
 	{
 		name = "dial";
-		sound[] = {"\mrb_textures\sounds\dial.ogg", 1.0, 1};
+		sound[] = {"\rr_textures\sounds\dial.ogg", 1.0, 1};
 		titles[] = {0,""};
 	};
 	
 	class vibrate
 	{
 		name = "vibrate";
-		sound[] = {"\mrb_textures\sounds\PhoneSMS.ogg", 1.0, 1};
+		sound[] = {"\rr_textures\sounds\PhoneSMS.ogg", 1.0, 1};
 		titles[] = {0,""};
 	};
 
@@ -163,7 +163,7 @@ class CfgNotifications
 	class TextMessage
 	{
 		title = "Received A Text Message";
-		iconPicture = "\MRB_Textures\icons\messagenew.paa";
+		iconPicture = "\rr_textures\icons\messagenew.paa";
 		description = "%1";
 		duration = 10;
 		priority = 6;
@@ -172,7 +172,7 @@ class CfgNotifications
 	class PoliceDispatch
 	{
 		title = "911 Dispatch Center";
-		iconPicture = "\MRB_Textures\icons\messagepolice.paa";
+		iconPicture = "\rr_textures\icons\messagepolice.paa";
 		description = "%1";
 		duration = 10;
 		priority = 6;
@@ -181,7 +181,7 @@ class CfgNotifications
 	class AdminDispatch
 	{
 		title = "Admin Dispatch Center";
-		iconPicture = "\MRB_Textures\icons\messageadmin.paa";
+		iconPicture = "\rr_textures\icons\messageadmin.paa";
 		description = "%1";
 		duration = 10;
 		priority = 6;
@@ -190,7 +190,7 @@ class CfgNotifications
 	class AdminMessage
 	{
 		title = "Admin Message";
-		iconPicture = "\MRB_Textures\icons\messageadmin.paa";
+		iconPicture = "\rr_textures\icons\messageadmin.paa";
 		description = "%1";
 		duration = 10;
 		priority = 5;

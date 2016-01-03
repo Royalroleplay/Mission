@@ -30,7 +30,7 @@ if(BANK > (call life_revive_fee)) then {
 
 //Retexturing of units clothing, vanilla files only retexture the EMS unit.
 switch(playerSide) do {
-	case independent: {[player,0,"\MRB_Textures\textures\medic_uniform.jpg"] remoteExecCall ["life_fnc_setTexture",RCLIENT];};
+	case independent: {[player,0,"\rr_textures\textures\medic_uniform.jpg"] remoteExecCall ["life_fnc_setTexture",RCLIENT];};
 };
 
 //Bring me back to life.

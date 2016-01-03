@@ -15,7 +15,7 @@ if(alive player) then {
 	_cash = [KWEFookxWQOk] call life_fnc_numberText;
 	_bank = [life_atmbank] call life_fnc_numberText;
 
-	_text = parseText format["<img size='1' image='\MRB_Textures\icons\itime.paa'/><t size='1px'> %1</t> | <img size='1' image='\MRB_Textures\icons\icop.paa'/><t size='1px'> %2</t> | <img size='1' image='\MRB_Textures\icons\iciv.paa'/><t size='1px'> %3</t> | <img size='1' image='\MRB_Textures\icons\iems.paa'/><t size='1px'> %4</t> | <img size='1' image='\MRB_Textures\icons\icash.paa'/><t size='1px'> %5</t> | <img size='1' image='\MRB_Textures\icons\iatm.paa'/><t size='1px'> %6</t>",
+	_text = parseText format["<img size='1' image='\rr_textures\icons\itime.paa'/><t size='1px'> %1</t> | <img size='1' image='\rr_textures\icons\icop.paa'/><t size='1px'> %2</t> | <img size='1' image='\rr_textures\icons\iciv.paa'/><t size='1px'> %3</t> | <img size='1' image='\rr_textures\icons\iems.paa'/><t size='1px'> %4</t> | <img size='1' image='\rr_textures\icons\icash.paa'/><t size='1px'> %5</t> | <img size='1' image='\rr_textures\icons\iatm.paa'/><t size='1px'> %6</t>",
 	_serverTime, _cop, _civ, _ems, _cash, _bank];
 
 	((uiNamespace getVariable "osefStatusBar") displayCtrl 1000) ctrlSetStructuredText _text;

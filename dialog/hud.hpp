@@ -11,7 +11,7 @@ class Royal_HUD {
 		class RscPicture_1200: RscPicture
 		{
 			idc = 1200;
-			text = "\mrb_textures\hud_placement.paa";
+			text = "\rr_textures\hud_placement.paa";
 			x = 0.852567 * safezoneW + safezoneX;
 			y = 0.894965 * safezoneH + safezoneY;
 			w = 0.154248 * safezoneW;

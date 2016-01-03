@@ -20,6 +20,6 @@ player assignItem "ItemCompass";
 player addItem "ItemWatch";
 player assignItem "ItemWatch";
 
-//[player,0,"\MRB_Textures\textures\medic_uniform.jpg"] remoteExecCall ["life_fnc_setTexture",RCLIENT]; Not Need anymore - Von
+//[player,0,"\rr_textures\textures\medic_uniform.jpg"] remoteExecCall ["life_fnc_setTexture",RCLIENT]; Not Need anymore - Von
 
 [] call life_fnc_saveGear;
