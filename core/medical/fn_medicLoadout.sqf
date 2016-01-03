@@ -2,7 +2,7 @@
 /*
 	File: fn_medicLoadout.sqf
 	Author: Bryan "Tonic" Boardwine
-	
+
 	Description:
 	Loads the medic out with the default gear.
 */
@@ -20,6 +20,6 @@ player assignItem "ItemCompass";
 player addItem "ItemWatch";
 player assignItem "ItemWatch";
 
-[player,0,"\MRB_Textures\textures\medic_uniform.jpg"] remoteExecCall ["life_fnc_setTexture",RCLIENT];
+//[player,0,"\MRB_Textures\textures\medic_uniform.jpg"] remoteExecCall ["life_fnc_setTexture",RCLIENT]; Not Need anymore - Von
 
 [] call life_fnc_saveGear;
