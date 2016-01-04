@@ -50,28 +50,25 @@ hint format[localize "STR_Shop_Veh_Bought",getText(configFile >> "CfgVehicles" >
 if((life_veh_shop select 0) == "med_air_hs") then {
 	_vehicle = createVehicle [_className,[0,0,999],[], 0, "NONE"];
 	waitUntil {!isNil "_vehicle"}; //Wait?
-	_vehicle allowDamage false; //Temp fix to allow ems heli to spawn on markers
+	_vehicle allowDamage false;
 	_vehicle lock 2;
 	_vehicle setVectorUp (surfaceNormal (getMarkerPos _spawnPoint));
 	_vehicle setDir (markerDir _spawnPoint);
-	[_vehicle,_colorIndex] remoteExec ["life_fnc_colorVehicle",RCLIENT];
+	_vehicle setPos (getMarkerPos _spawnPoint);
+	[_vehicle,_colorIndex] remoteExecCall ["life_fnc_colorVehicle",RCLIENT];
 	[_vehicle] call life_fnc_clearVehicleAmmo;
 	[_vehicle,"trunk_in_use",false,true] remoteExecCall ["TON_fnc_setObjVar",RSERV];
 	[_vehicle,"vehicle_info_owners",[[getPlayerUID player,profileName]],true] remoteExecCall ["TON_fnc_setObjVar",RSERV];
 	_vehicle disableTIEquipment true; //No Thermals.. They're cheap but addictive.
 } else {
-
-	_loc = getMarkerPos _spawnPoint;
-	_loc = [_loc select 0, _loc select 1, (_loc select 2)+1];
-
-	_vehicle = createVehicle [_className, _loc, [], 0, "NONE"];
-	_vehicle allowDamage false; //Temp disable damage handling..
+	_vehicle = createVehicle [_className, (getMarkerPos _spawnPoint), [], 0, "NONE"];
 	waitUntil {!isNil "_vehicle"}; //Wait?
+	_vehicle allowDamage false; //Temp disable damage handling..
 	_vehicle lock 2;
-	_vehicle setVectorUp (surfaceNormal (_loc));
+	_vehicle setVectorUp (surfaceNormal (getMarkerPos _spawnPoint));
 	_vehicle setDir (markerDir _spawnPoint);
-	_vehicle setPos (_loc);
-	[_vehicle,_colorIndex] remoteExec ["life_fnc_colorVehicle",RCLIENT];
+	_vehicle setPos (getMarkerPos _spawnPoint);
+	[_vehicle,_colorIndex] remoteExecCall ["life_fnc_colorVehicle",RCLIENT];
 	[_vehicle] call life_fnc_clearVehicleAmmo;
 	[_vehicle,"trunk_in_use",false,true] remoteExecCall ["TON_fnc_setObjVar",RSERV];
 	[_vehicle,"vehicle_info_owners",[[getPlayerUID player,profileName]],true] remoteExecCall ["TON_fnc_setObjVar",RSERV];
