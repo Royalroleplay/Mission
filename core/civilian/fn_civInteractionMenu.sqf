@@ -83,7 +83,7 @@ _Btn5 buttonSetAction "[] call life_fnc_robAction; closeDialog 0;";
 _Btn6 ctrlSetText localize "STR_pInAct_PutInCar";
 _Btn6 buttonSetAction "[life_pInact_curTarget] call life_fnc_putInCar;";
 
-if(!(life_pInact_curTarget getVariable["restrained",false]) && ((animationState cursorTarget) != "Incapacitated")) then {
+if(!(life_pInact_curTarget getVariable["restrained",false]) && (animationState cursorTarget) != "Incapacitated") then {
 	if(life_inv_rope < 1) then {
 		_Btn1 ctrlEnable false;
 	};
