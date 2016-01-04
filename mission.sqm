@@ -2197,7 +2197,7 @@ class Mission
 					side="WEST";
 					vehicle="B_RangeMaster_F";
 					skill=0.60000002;
-					init="this enableSimulation false;  this allowDamage false;  this addAction[format[""%1 ($%2)"",localize (getText(missionConfigFile >> ""Licenses"" >> ""mAir"" >> ""displayName"")), [(getNumber(missionConfigFile >> ""Licenses"" >> ""mAir"" >> ""price""))] call life_fnc_numberText],life_fnc_buyLicense,""mAir"",0,false,false,"""",' !license_med_mAir && playerSide == independent ']; this enableSimulation false; this allowDamage false; this addAction[""Ems Air Shop"",life_fnc_vehicleShopMenu,[""med_air_hs"",independent,[""ems_heli""],""med"",""EMS AIR SHOP""]]; this addAction[""EMS Clothing Store"",life_fnc_clothingMenu,""emsShop""]; this addAction[""emsMarket"",life_fnc_virt_menu,""market""]; this setObjectTexture [0,""\rr_textures\textures\medic_uniform.jpg""];";
+					init="this enableSimulation false;  this allowDamage false;  this addAction[format[""%1 ($%2)"",localize (getText(missionConfigFile >> ""Licenses"" >> ""mAir"" >> ""displayName"")), [(getNumber(missionConfigFile >> ""Licenses"" >> ""mAir"" >> ""price""))] call life_fnc_numberText],life_fnc_buyLicense,""mAir"",0,false,false,"""",' !license_med_mAir && playerSide == independent ']; this enableSimulation false; this allowDamage false; this addAction[""Ems Air Shop"",life_fnc_vehicleShopMenu,[""med_air_hs"",independent,""ems_heli"",""med"",""EMS AIR SHOP""]]; this addAction[""EMS Clothing Store"",life_fnc_clothingMenu,""emsShop""]; this addAction[""emsMarket"",life_fnc_virt_menu,""market""]; this setObjectTexture [0,""\rr_textures\textures\medic_uniform.jpg""];";
 				};
 			};
 		};
@@ -6111,9 +6111,10 @@ class Mission
 		};
 		class Item138
 		{
-			position[]={8292.8809,0.0029714617,5876.3994};
+			position[]={8291.5898,-0.011219067,5845.3057};
 			name="ems_heli";
 			type="Empty";
+			angle=-7.0296869;
 		};
 		class Item139
 		{

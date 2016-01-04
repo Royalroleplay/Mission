@@ -61,7 +61,11 @@ if((life_veh_shop select 0) == "med_air_hs") then {
 	[_vehicle,"vehicle_info_owners",[[getPlayerUID player,profileName]],true] remoteExecCall ["TON_fnc_setObjVar",RSERV];
 	_vehicle disableTIEquipment true; //No Thermals.. They're cheap but addictive.
 } else {
-	_vehicle = createVehicle [_className, (getMarkerPos _spawnPoint), [], 0, "NONE"];
+	
+	_loc = getMarkerPos _spawnPoint;
+	_loc = [_loc select 0, _loc select 1, (_loc select 2)+1];
+
+	_vehicle = createVehicle [_className, _loc, [], 0, "NONE"];
 	waitUntil {!isNil "_vehicle"}; //Wait?
 	_vehicle allowDamage false; //Temp disable damage handling..
 	_vehicle lock 2;
