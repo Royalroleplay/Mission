@@ -68,6 +68,10 @@ if(playerSide == west) then {
 			if(count crew _curTarget == 0 && {canMove _curTarget}) then { _Btn6 ctrlEnable false;} else {_Btn6 ctrlEnable true;};
 		};
 	};
+
+	_Btn6 ctrlShow true;
+	_Btn6 ctrlSetText "Push";
+	_Btn6 buttonSetAction "[] spawn life_fnc_pushObject; closeDialog 0;";
 	
 } else {
 	
