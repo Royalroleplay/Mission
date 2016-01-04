@@ -54,35 +54,35 @@ class CfgSounds
 		sound[] = {"\rr_textures\sounds\IntroMusic.ogg", 1.0, 1};
 		titles[] = {0,""};
 	};
-	
+
 	class tazersound
 	{
 		name = "Tazersound";
 		sound[] = {"\rr_textures\sounds\tazer.ogg", 0.25, 1};
 		titles[] = {0,""};
 	};
-	
+
 	class flashbang
 	{
 		name = "flashbang";
 		sound[] = {"\rr_textures\sounds\flashbang.ogg", 1.0, 1};
 		titles[] = {0,""};
 	};
-	
+
 	class incoming
 	{
 		name = "incoming";
 		sound[] = {"\rr_textures\sounds\incoming.ogg", 1.0, 1};
 		titles[] = {0,""};
 	};
-	
+
 	class dial
 	{
 		name = "dial";
 		sound[] = {"\rr_textures\sounds\dial.ogg", 1.0, 1};
 		titles[] = {0,""};
 	};
-	
+
 	class vibrate
 	{
 		name = "vibrate";
@@ -109,7 +109,7 @@ class CfgDebriefing
 		picture = "";
 		pictureColor[] = {0,0.3,0.6,1};
 	};
-	
+
 	class Blacklisted
 	{
 		title = "Mission Failed";
@@ -119,7 +119,7 @@ class CfgDebriefing
 		picture = "";
 		pictureColor[] = {0,0.3,0.6,1};
 	};
-	
+
 };
 
 class CfgNotifications
@@ -132,7 +132,7 @@ class CfgNotifications
 		duration = 5;
 		priority = 7;
 	};
-	
+
 	class DeliveryAssigned
 	{
 		title = "Delivery Job Accepted";
@@ -141,7 +141,7 @@ class CfgNotifications
 		duration = 10;
 		priority = 7;
 	};
-	
+
 	class DeliveryFailed
 	{
 		title = "Delivery Job Failed";
@@ -150,7 +150,7 @@ class CfgNotifications
 		duration = 7;
 		priority = 7;
 	};
-	
+
 	class DeliverySucceeded
 	{
 		title = "Delivery Job Completed";
@@ -159,7 +159,7 @@ class CfgNotifications
 		duration = 6;
 		priority = 6;
 	};
-	
+
 	class TextMessage
 	{
 		title = "Received A Text Message";
@@ -168,7 +168,7 @@ class CfgNotifications
 		duration = 10;
 		priority = 6;
 	};
-	
+
 	class PoliceDispatch
 	{
 		title = "911 Dispatch Center";
@@ -177,7 +177,7 @@ class CfgNotifications
 		duration = 10;
 		priority = 6;
 	};
-	
+
 	class AdminDispatch
 	{
 		title = "Admin Dispatch Center";
@@ -186,7 +186,7 @@ class CfgNotifications
 		duration = 10;
 		priority = 6;
 	};
-	
+
 	class AdminMessage
 	{
 		title = "Admin Message";

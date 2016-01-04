@@ -23,7 +23,7 @@ life_bail_paid = false;
 life_impound_inuse = false;
 life_action_inUse = false;
 life_spikestrip = ObjNull;
-life_respawn_timer = 10;
+life_respawn_timer = 8;
 life_knockout = false;
 life_interrupted = false;
 life_respawned = false;
@@ -75,6 +75,6 @@ life_vehicles = [];
 {
 	_varName = getText(_x >> "variable");
 	_sideFlag = getText(_x >> "side");
-	
+
 	SVAR_MNS [LICENSE_VARNAME(_varName,_sideFlag),false];
 } foreach ("true" configClasses (missionConfigFile >> "Licenses"));
