@@ -282,6 +282,7 @@ class Clothing {
 			{ "NONE", "Remove Vest", 0, { "", "", -1 } },
 			{ "TRYK_V_tacv1_P_BK", "", 0, { "", "", -1 } },
 			{ "TRYK_V_tacv1LP_BK", "", 0, { "", "", -1 } },
+			{ "PD_DUTY_VEST", "", 0, { "", "", -1 } },
 			{ "v_tacvest_blk_police", "", 0, { "", "", -1 } }
 		};
 
