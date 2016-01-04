@@ -20,6 +20,16 @@ class CarShops {
 		};
 	};
 	
+	class car_classic {
+		side = "civ";
+		vehicles[] = {
+			{ "ADM_Ford_F100", 12500 , "driver" },
+			{ "ADM_1964_Impala", 15000 , "driver" },
+			{ "ADM_1969_Camaro", 25000 , "driver" },
+			{ "ADM_1969_Charger", 29000 , "driver" }
+		};
+	};
+	
 	class civ_car {
 		side = "civ";
 		vehicles[] = {
@@ -29,7 +39,17 @@ class CarShops {
 			{ "Mrshounka_a3_308_civ", 45000, "driver" },
 			{ "Mrshounka_a3_dodge15_civ", 45000, "driver" },
 			{ "Mrshounka_a3_ds3_civ", 45000, "driver" },
-			{ "RG_mustang_rouge", 55000, "driver" }
+			{ "RG_mustang_rouge", 55000, "driver" },
+			{ "Mrshounka_agera_p", 420000, "driver" },  // Koenesegge Agera based off real pricing of car
+			{ "Mrshounka_bmwm1_civ", 40000, "driver" },  // BMW m 1 Seriews based off real pricing of car
+			{ "Mrshounka_bmwm6_civ", 113400, "driver" },  // BMW M 6 Series based off real pricing of car
+			{ "Mrshounka_Bowler_c", 241000, "driver" },  // Land Rover Bowler based off real pricing of car
+			{ "shounka_f430_spider", 120000, "driver" },  // Ferrari F430 Spyder based off real pricing of car
+			{ "Mrshounka_hummer_civ", 40500, "driver" },  // Hummer H1 based off real pricing of car
+			{ "shounka_h2", 57400, "driver" },  // Hummer h2 based off real pricing of car
+			{ "Mrshounka_evox_civ", 50000, "driver" },  // Lancer Evolution based off real pricing of car
+			{ "Mrshounka_lykan_c", 340000, "driver" },  // LykanHyper Sport based off real pricing of car
+			{ "Mrshounka_c63_2015_civ", 63000, "driver" }
 		};
 	};
 
@@ -39,7 +59,8 @@ class CarShops {
 			{ "C_Kart_01_Blu_F", 15000 , "driver" },
 			{ "C_Kart_01_Fuel_F", 15000, "driver" },
 			{ "C_Kart_01_Red_F", 15000, "driver" },
-			{ "C_Kart_01_Vrana_F", 15000, "driver" }
+			{ "C_Kart_01_Vrana_F", 15000, "driver" },
+			{ "ADM_Monte_Carlo", 175000, "race" }
 		};
 	};
 
@@ -68,10 +89,19 @@ class CarShops {
 		side = "civ";
 		vehicles[] = {
 			{ "C_Van_01_box_F", 30000, "trucking" },
-			{ "Jonzie_Box_Truck", 80000, "trucking" }
+			{ "Jonzie_Box_Truck", 80000, "trucking" },
+			{ "Jonzie_Western", 120000, "semi" }
 		};
 	};
 
+	class civ_trailer {
+		side = "civ";
+		vehicles[] = {
+			{ "Jonzie_Curtain", 45000, "semi" },
+			{ "Jonzie_Flatbed", 35000, "semi" }
+		};
+	};
+	
 	class reb_car {
 		side = "civ";
 		vehicles[] = {
@@ -243,8 +273,16 @@ class CfgVehicles {
 	class Jonzie_Ceed: Jonzie_Base {vItemSpace = 65;};
 	class Jonzie_Ute: Jonzie_Base {vItemSpace = 70;};
 	class Jonzie_Transit: Jonzie_Base {vItemSpace = 120;};
-	class ADM_GMC_Vandura: Jonzie_Base {vItemSpace = 150;};
 	class Jonzie_AmbulanceExtended: Jonzie_Base {vItemSpace = 100; textures[] = {}; };
+	class Jonzie_Western: Jonzie_Base {vItemSpace = 100;};
+	class Jonzie_Flatbed: Jonzie_Base {vItemSpace = 300;};
+	class Jonzie_Curtain: Jonzie_Base {vItemSpace = 500;};
+	class ADM_GMC_Vandura: Jonzie_Base {vItemSpace = 150;};
+	class ADM_Monte_Carlo: Jonzie_Base {vItemSpace = 0;};
+	class ADM_1964_Impala: Jonzie_Base {vItemSpace = 80;};
+	class ADM_1969_Camaro: Jonzie_Base {vItemSpace = 100;};
+	class ADM_1969_Charger: Jonzie_Base {vItemSpace = 90;};
+	class ADM_Ford_F100: Jonzie_Base {vItemSpace = 150;};
 	
 	class I_Truck_02_medical_F : Default {
 		vItemSpace = 150;
