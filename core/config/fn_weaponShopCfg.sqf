@@ -86,7 +86,7 @@ switch(_shop) do {
 				};
 
 				_items pushBack ["Binocular",nil,150];
-				_items pushback ["pmc_earpeice",nil,50]; // added - Von
+				_items pushback ["pmc_earpiece",nil,50]; // added - Von
 				_items pushBack ["ItemGPS",nil,100];
 				_items pushBack ["ToolKit",nil,250];
 				_items pushBack ["FirstAidKit",nil,150];
@@ -109,7 +109,7 @@ switch(_shop) do {
 					[
 						["ItemGPS",nil,100],
 						["Binocular",nil,150],
-						["pmc_earpeice",nil,50],
+						["pmc_earpiece",nil,50],
 						["ToolKit",nil,250],
 						["FirstAidKit",nil,150],
 						["Medikit",nil,500],
