@@ -17,9 +17,10 @@ switch (true) do {
 			life_thirst = 100;
 			if(EQUAL(LIFE_SETTINGS(getNumber,"enable_fatigue"),1)) then {player setFatigue 0;};
 			if(EQUAL(_item,"redgull") && {EQUAL(LIFE_SETTINGS(getNumber,"enable_fatigue"),1)}) then {
-				[] spawn {
+				[] spawn { //TODO: Port this to event handler system
 					life_redgull_effect = time;
 					titleText[localize "STR_ISTR_RedGullEffect","PLAIN"];
+					player setFatigue 0;
 					player enableFatigue false;
 					waitUntil {!alive player OR ((time - life_redgull_effect) > (3 * 60))};
 					player enableFatigue true;

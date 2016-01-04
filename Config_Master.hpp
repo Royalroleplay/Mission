@@ -251,38 +251,10 @@ class VirtualShops {
 		items[] = { "cocaine_processed", "heroin_processed", "marijuana" };
 	};
 
-
 	class construction {
 		name = "STR_Shops_Oil";
 		items[] = { "oil_processed","pickaxe","fuelFull","glass","iron_refined","copper_refined","salt_refined","cement" };
 	};
-
-/*
-	class oil {
-		name = "STR_Shops_Oil";
-		items[] = { "oil_processed", "pickaxe", "fuelFull" };
-	};
-
-	class glass {
-		name = "STR_Shops_Glass";
-		items[] = { "glass" };
-	};
-
-	class iron  {
-		name = "STR_Shops_Minerals";
-		items[] = { "iron_refined", "copper_refined" };
-	};
-
-	class salt {
-		name = "STR_Shops_Salt";
-		items[] = { "salt_refined" };
-	};
-
-	class cement {
-		name = "STR_Shops_Cement";
-		items[] = { "cement" };
-	};
-*/
 
 	class fishmarket {
 		name = "STR_Shops_FishMarket";
