@@ -242,16 +242,16 @@ class Clothing {
 
 		uniforms[] = {
 			{ "NONE", "Remove Uniform", 0, { "", "", -1 } },
-			{ "RR_Clothing_Police_RM_Cadet", "", 0, {"", "", -1 } },
-			{ "RR_Clothing_Police_RM_Officer", "", 0, {"", "", -1 } },
-			{ "RR_Clothing_Police_RM_Corporal", "", 0, {"", "", -1 } },
-			{ "RR_Clothing_Police_RM_Sergeant", "", 0, {"", "", -1 } },
-			{ "RR_Clothing_Police_RM_FTO", "", 0, {"", "", -1 } },
-			{ "RR_Clothing_Police_RM_LT", "", 0, {"", "", -1 } },
-			{ "RR_Clothing_Police_RM_cpt", "", 0, {"", "", -1 } },
-			{ "RR_Clothing_Police_RM_Dep_Chief", "", 0, {"", "", -1 } },
-			{ "RR_Clothing_Police_RM_Chief", "", 0, {"", "", -1 } },
-			{ "RR_Clothing_Police_Tactical", "SWAT", 0, {"", "", -1 } },
+			{ "RR_Clothing_Police_RM_Cadet_obj", "", 0, {"", "", -1 } },
+			{ "RR_Clothing_Police_RM_Officer_obj", "", 0, {"", "", -1 } },
+			{ "RR_Clothing_Police_RM_Corporal_obj", "", 0, {"", "", -1 } },
+			{ "RR_Clothing_Police_RM_Sergeant_obj", "", 0, {"", "", -1 } },
+			{ "RR_Clothing_Police_RM_FTO_obj", "", 0, {"", "", -1 } },
+			{ "RR_Clothing_Police_RM_LT_obj", "", 0, {"", "", -1 } },
+			{ "RR_Clothing_Police_RM_cpt_obj", "", 0, {"", "", -1 } },
+			{ "RR_Clothing_Police_RM_Dep_Chief_obj", "", 0, {"", "", -1 } },
+			{ "RR_Clothing_Police_RM_Chief_obj", "", 0, {"", "", -1 } },
+			{ "RR_Clothing_Police_Tactical_obj", "SWAT", 0, {"", "", -1 } },
 			{ "a3l_pdofc", "", 25, { "", "", -1 } }
 		};
 
@@ -287,11 +287,7 @@ class Clothing {
 
 		backpacks[] = {
 			{ "NONE", "Remove Backpack", 0, { "", "", -1 } },
-			{ "cl3_police_tacticalbelt", "", 800, { "", "", -1 } },
-			{ "B_FieldPack_cbr", "", 500, { "", "", -1 } },
-			{ "B_AssaultPack_cbr", "", 700, { "", "", -1 } },
-			{ "B_Bergen_sgg", "", 2500, { "", "", -1 } },
-			{ "B_Carryall_cbr", "", 3500, { "", "", -1 } }
+			{ "cl3_police_tacticalbelt", "", 800, { "", "", -1 } }
 		};
 	};
 
