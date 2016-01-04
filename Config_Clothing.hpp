@@ -430,7 +430,7 @@ class Clothing {
 		};
 	};
 	
-	class ems {
+	class emsShop {
 		title = "STR_Shops_C_EMS";
 		license = "";
 		side = "med";
