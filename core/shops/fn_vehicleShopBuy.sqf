@@ -58,7 +58,7 @@ if((life_veh_shop select 0) == "med_air_hs") then {
 	_vehicle lock 2;
 	_vehicle setVectorUp (surfaceNormal _loc);
 	_vehicle setDir (markerDir _spawnPoint);
-	_vehicle setPos _loc;
+	_vehicle setPosATL _loc;
 	[_vehicle,_colorIndex] remoteExecCall ["life_fnc_colorVehicle",RCLIENT];
 	[_vehicle] call life_fnc_clearVehicleAmmo;
 	[_vehicle,"trunk_in_use",false,true] remoteExecCall ["TON_fnc_setObjVar",RSERV];

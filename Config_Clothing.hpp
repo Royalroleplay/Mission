@@ -96,6 +96,7 @@ class Clothing {
 			{ "cowboyhat", "", 50, { "", "", -1 } },
 			{ "elfhat", "", 50, { "", "", -1 } },
 			{ "A3L_crown", "", 50, { "", "", -1 } },
+			{ "a3l_russianhat", "", 50, { "", "", -1 } },
 			{ "A3L_longhairblack", "", 50, { "", "", -1 } },
 			{ "A3L_longhairblond", "", 50, { "", "", -1 } },
 			{ "A3L_longhairbrown", "", 50, { "", "", -1 } },
