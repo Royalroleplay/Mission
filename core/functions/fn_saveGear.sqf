@@ -137,7 +137,7 @@ if(count (PISTOL_ITEMS) > 0) then {
     if (_val > 0) then {
 		_yItems pushBack [_x,_val];
     };
-} forEach ["pickaxe","boltcutter","hacking_device","fuelEmpty","fuelFull","spikeStrip", "lockpick", "defuseKit","storageSmall","storageBig","redgull","coffee","waterBottle","rope","apple","peach","tbacon","donut","rabbit_raw","rabbit_grilled","salema_raw","salema_grilled","ornate_raw","ornate_grilled","mackerel_raw","mackerel_grilled","tuna_raw","tuna_grilled","mullet_raw","mullet_fried","catshark_raw","catshark_fried","turtle_raw",,"turtle_soup","hen_raw","hen_fried","rooster_raw","rooster_grilled","sheep_raw","sheep_grilled","goat_raw","goat_grilled"];
+} forEach ["pickaxe","boltcutter","hacking_device","fuelEmpty","fuelFull","spikeStrip", "lockpick", "defuseKit","storageSmall","storageBig","redgull","coffee","waterBottle","rope","apple","peach","tbacon","donut","rabbit_raw","rabbit_grilled","salema_raw","salema_grilled","ornate_raw","ornate_grilled","mackerel_raw","mackerel_grilled","tuna_raw","tuna_grilled","mullet_raw","mullet_fried","catshark_raw","catshark_fried","turtle_raw","turtle_soup","hen_raw","hen_fried","rooster_raw","rooster_grilled","sheep_raw","sheep_grilled","goat_raw","goat_grilled"];
 
 _return pushBack _uItems;
 _return pushBack _uMags;
