@@ -48,13 +48,17 @@ hint format[localize "STR_Shop_Veh_Bought",getText(configFile >> "CfgVehicles" >
 
 //Spawn the vehicle and prep it.
 if((life_veh_shop select 0) == "med_air_hs") then {
+	
+	_loc = getMarkerPos _spawnPoint;
+	_loc = [_loc select 0, _loc select 1, (_loc select 2)+11.5];
+
 	_vehicle = createVehicle [_className,[0,0,999],[], 0, "NONE"];
 	waitUntil {!isNil "_vehicle"}; //Wait?
 	_vehicle allowDamage false;
 	_vehicle lock 2;
-	_vehicle setVectorUp (surfaceNormal (getMarkerPos _spawnPoint));
+	_vehicle setVectorUp (surfaceNormal _loc);
 	_vehicle setDir (markerDir _spawnPoint);
-	_vehicle setPos (getMarkerPos _spawnPoint);
+	_vehicle setPos _loc;
 	[_vehicle,_colorIndex] remoteExecCall ["life_fnc_colorVehicle",RCLIENT];
 	[_vehicle] call life_fnc_clearVehicleAmmo;
 	[_vehicle,"trunk_in_use",false,true] remoteExecCall ["TON_fnc_setObjVar",RSERV];
@@ -63,15 +67,15 @@ if((life_veh_shop select 0) == "med_air_hs") then {
 } else {
 	
 	_loc = getMarkerPos _spawnPoint;
-	_loc = [_loc select 0, _loc select 1, (_loc select 2)+1];
+	_loc = [_loc select 0, _loc select 1, (_loc select 2)+1.5];
 
 	_vehicle = createVehicle [_className, _loc, [], 0, "NONE"];
 	waitUntil {!isNil "_vehicle"}; //Wait?
 	_vehicle allowDamage false; //Temp disable damage handling..
 	_vehicle lock 2;
-	_vehicle setVectorUp (surfaceNormal (getMarkerPos _spawnPoint));
+	_vehicle setVectorUp (surfaceNormal _loc);
 	_vehicle setDir (markerDir _spawnPoint);
-	_vehicle setPos (getMarkerPos _spawnPoint);
+	_vehicle setPos _loc;
 	[_vehicle,_colorIndex] remoteExecCall ["life_fnc_colorVehicle",RCLIENT];
 	[_vehicle] call life_fnc_clearVehicleAmmo;
 	[_vehicle,"trunk_in_use",false,true] remoteExecCall ["TON_fnc_setObjVar",RSERV];
