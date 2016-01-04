@@ -40,7 +40,6 @@ class Life_Client_Core
 		file = "Core\MrBoolean\Prison";
 
 		class jailBreak {};
-		class prisonSiren {};
 	};
 
 	class MrBoolean_HUD
