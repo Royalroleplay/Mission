@@ -147,6 +147,7 @@ _return pushBack _vItems;
 _return pushBack _vMags;
 _return pushBack _pItems;
 _return pushBack _hItems;
+
 if(EQUAL(LIFE_SETTINGS(getNumber,"save_virtualItems"),1)) then {
     _return pushBack _yItems;
 } else {
