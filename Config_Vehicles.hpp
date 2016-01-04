@@ -29,7 +29,13 @@ class CarShops {
 			{ "Mrshounka_a3_308_civ", 45000, "driver" },
 			{ "Mrshounka_a3_dodge15_civ", 45000, "driver" },
 			{ "Mrshounka_a3_ds3_civ", 45000, "driver" },
-			{ "RG_mustang_rouge", 55000, "driver" }
+			{ "RG_mustang_rouge", 55000, "driver" },
+			{ "Mrshounka_cherokee_noir", 60000, "driver" },
+			{ "Mrshounka_agera_p", 60000, "driver" },
+			{ "Jonzie_Viper", 75000, "driver" },
+			{ "shounka_buggy", 75000, "driver" },
+			{ "Mrshounka_a3_gtr_civ", 75000, "driver" },
+			{ "RG_huracan_c_noir", 125000, "driver" }
 		};
 	};
 
@@ -202,6 +208,12 @@ class CfgVehicles {
     class Mrshounka_a3_308_civ : shounka_base {};
     class Mrshounka_a3_dodge15_civ : shounka_base {};
     class Mrshounka_a3_ds3_civ : shounka_base {}; 
+    class Mrshounka_cherokee_noir : shounka_base {};
+    class shounka_buggy : shounka_base {};
+    class Mrshounka_a3_gtr_civ : shounka_base {};
+    class RG_huracan_c_noir : shounka_base {};
+    class RG_mustang_rouge : shounka_base {};
+    class Mrshounka_agera_p : shounka_base {};
 
 	class Jonzie_Base {
 		vItemSpace = 10;
@@ -244,6 +256,7 @@ class CfgVehicles {
 	class Jonzie_Ute: Jonzie_Base {vItemSpace = 70;};
 	class Jonzie_Transit: Jonzie_Base {vItemSpace = 120;};
 	class ADM_GMC_Vandura: Jonzie_Base {vItemSpace = 150;};
+	class Jonzie_Viper : Jonzie_Base {vItemSpace = 50; };
 	class Jonzie_AmbulanceExtended: Jonzie_Base {vItemSpace = 100; textures[] = {}; };
 	
 	class I_Truck_02_medical_F : Default {

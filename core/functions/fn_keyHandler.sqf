@@ -98,6 +98,12 @@ switch (_code) do {
 			[] call life_fnc_restrainAction;
 		};
 	};
+
+	case 44: {
+		if(_ctrlKey) then {
+			[] call life_fnc_openInv;
+		};
+	};
 	
 	//Knock out, this is experimental and yeah...	
 	case 34: {

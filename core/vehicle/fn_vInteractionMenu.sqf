@@ -52,6 +52,10 @@ if(playerSide == west) then {
 	
 	_Btn5 ctrlSetText localize "STR_vInAct_Impound";
 	_Btn5 buttonSetAction "[life_vInact_curTarget] spawn life_fnc_impoundAction;";
+
+	_Btn6 ctrlShow true;
+	_Btn6 ctrlSetText "Push";
+	_Btn6 buttonSetAction "[] spawn life_fnc_pushObject; closeDialog 0;";
 	
 	if(_curTarget isKindOf "Ship") then {
 		_Btn6 ctrlSetText localize "STR_vInAct_PushBoat";
@@ -68,10 +72,6 @@ if(playerSide == west) then {
 			if(count crew _curTarget == 0 && {canMove _curTarget}) then { _Btn6 ctrlEnable false;} else {_Btn6 ctrlEnable true;};
 		};
 	};
-
-	_Btn6 ctrlShow true;
-	_Btn6 ctrlSetText "Push";
-	_Btn6 buttonSetAction "[] spawn life_fnc_pushObject; closeDialog 0;";
 	
 } else {
 	

@@ -64,16 +64,16 @@ if(_curTarget isKindOf "Man" && {!alive _curTarget} && {playerSide in [west,inde
 
 //If target is a player then check if we can use the cop menu.
 if(isPlayer _curTarget && _curTarget isKindOf "Man") then {
+	if(!dialog && {playerSide == independent}) then {
+		[_curTarget] call life_fnc_emsInteractionMenu;
+	};
+
 	if((_curTarget GVAR ["restrained",false]) && !dialog && playerSide == west) then {
 		[_curTarget] call life_fnc_copInteractionMenu;
 	};
 
 	if(!dialog && {playerSide == civilian}) then {
 		[_curTarget] call life_fnc_civInteractionMenu;
-	};
-
-	if(!dialog && {playerSide == independent}) then {
-		[_curTarget] call life_fnc_emsInteractionMenu;
 	};
 } else {
 	//OK, it wasn't a player so what is it?
