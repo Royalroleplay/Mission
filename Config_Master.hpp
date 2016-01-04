@@ -218,6 +218,7 @@ class Licenses {
 	LICENSEMACRO(mAir,"STR_License_Pilot","mAir",150,false,"med")
 	LICENSEMACRO(home,"STR_License_Home","home",75000,false,"civ")
 	LICENSEMACRO(race,"STR_License_Race","race",5000,false,"civ")
+	LICENSEMACRO(semi,"STR_License_Semi","semi",15000,false,"civ")
 };
 
 class VirtualShops {
