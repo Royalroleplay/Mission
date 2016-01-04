@@ -86,11 +86,7 @@ class CarShops {
 	class cop_car {
 		side = "cop";
 		vehicles[] = {
-			{ "A3L_CVPI_Corrections_LB", 1000, "" },
-			{ "A3L_CVPI_Sheriff_LB", 1500, "" },
-			{ "A3L_Subaru_HWP_interceptor", 5000, ""},
-			{ "A3L_TahoeFPBLBPD", 7500, "" },
-			{ "A3L_TaurusFPBPD", 10000, "" },
+			{ "AM_Impala_P_P", 1000, "" },
 			{ "Mrshounka_a3_smart_cop", 500, "" }
 		};
 	};
