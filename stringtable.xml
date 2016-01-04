@@ -50,10 +50,10 @@
 			<Portuguese>Praça de Alimentação</Portuguese>
 		</Key>
 		<Key ID="STR_Shops_Coffee">
-			<Original>Gyro's Coffee</Original>
-			<German>Gyro's Café</German>
-			<Italian>Caffè</Italian>
-			<French>Café de Gyro</French>
+			<Original>Boo's Coffee</Original>
+			<German>Boo's Coffee</German>
+			<Italian>Boo's Coffee</Italian>
+			<French>Boo's Coffee</French>
 			<Portuguese>Café do Gyro</Portuguese>
 		</Key>
 		<Key ID="STR_Shops_DrugDealer">
