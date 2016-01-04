@@ -243,7 +243,7 @@ class VirtualShops {
 
 	class coffee {
 		name = "STR_Shops_Coffee";
-		items[] = { "coffee", "donuts" };
+		items[] = { "coffee", "donut" };
 	};
 	
 	class drugdealer {
@@ -291,7 +291,7 @@ class VirtualShops {
 	
 	class emsMarket {
 		name = "STR_Shops_emsMarket";
-		items[] = { "donuts", "coffee", "spikeStrip", "waterBottle", "rabbit_grilled", "apple", "redgull", "fuelFull", "defusekit" };
+		items[] = { "spikeStrip", "waterBottle", "rabbit_grilled", "apple", "redgull", "fuelFull", "defusekit" };
 	};
 
 	class diamond {
@@ -301,7 +301,7 @@ class VirtualShops {
 
 	class cop {
 		name = "STR_Shops_Cop";
-		items[] = { "donuts", "coffee", "spikeStrip", "waterBottle", "rabbit_grilled", "apple", "redgull", "fuelFull", "defusekit" };
+		items[] = { "spikeStrip", "waterBottle", "rabbit_grilled", "apple", "redgull", "fuelFull" };
 	};
 
 	class gold {
