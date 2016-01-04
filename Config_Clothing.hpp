@@ -260,6 +260,9 @@ class Clothing {
 			{ "NONE", "Remove Hat", 0, { "", "", -1 } },
 			{ "TRYK_H_woolhat", "", 0, { "", "", -1 } },
 			{ "TRYK_r_cap_blk_Glasses", "", 0, { "", "", -1 } },
+			{ "TRYK_R_CAP_BLK", "", 0, { "", "", -1 } },
+			{ "H_Cap_blk", "", 0, { "", "", -1 } },
+			{ "H_CrewHelmetHeli_B", "", 0, { "", "", -1 } },
 			{ "TRYK_H_PASGT_BLK", "", 175, { "life_coplevel", "SCALAR", 6 } },
 			{ "TRYK_H_headsetcap_blk_Glasses", "", 120, { "", "", -1 } },
 			{ "H_MilCap_mcamo", "", 100, { "", "", -1 } }
@@ -284,6 +287,7 @@ class Clothing {
 		vests[] = {
 			{ "NONE", "Remove Vest", 0, { "", "", -1 } },
 			{ "HighThreatVestPolice2", "", 0, { "", "", -1 } },
+			{ "SWATvest1", "", 0, { "", "", -1 } },
 			{ "TRYK_V_tacv1_P_BK", "", 0, { "", "", -1 } },
 			{ "TRYK_V_tacv1LP_BK", "", 0, { "", "", -1 } },
 			{ "PD_DUTY_VEST", "", 0, { "", "", -1 } },
