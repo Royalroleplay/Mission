@@ -474,13 +474,13 @@ class rr_phone_transfer: rr_phone_welcome
 		y = 0.313 * safezoneH + safezoneY;
 		w = 0.0154688 * safezoneW;
 		h = 0.033 * safezoneH;
-		action = "closeDialog 0; createDialog 'rr_phone_balance'";
+		action = "closeDialog 0; [] call life_fnc_openBank";
 	};
 };
 
 class rr_phone_message: rr_phone_welcome
 {
-	idd = 20056;
+	idd = 3000;
 	controls[] = { rr_phone_message_frame, rr_phone_message_background, rr_phone_message_screen, rr_phone_message_name, rr_phone_message_textBox, rr_phone_message_send, rr_phone_message_return, rr_phone_message_exit, rr_phone_message_admin, rr_phone_message_police, rr_phone_message_ems, rr_phone_message_players };
 	
 	class rr_phone_message_frame: rr_phone_welcome_frame {};
@@ -586,7 +586,7 @@ class rr_phone_message: rr_phone_welcome
 class rr_phone_items: rr_phone_welcome
 {
 	idd = 20057;
-	controls[] = { rr_phone_items_frame, rr_phone_items_background, rr_phone_items_screen, rr_phone_items_use, rr_phone_items_remove, rr_phone_items_give, rr_phone_items_exit, rr_phone_items_return, rr_phone_items_nearPlayers, rr_phone_items_items };
+	controls[] = { rr_phone_items_frame, rr_phone_items_background, rr_phone_items_screen, rr_phone_items_use, rr_phone_items_remove, rr_phone_items_give, rr_phone_items_exit, rr_phone_items_return, rr_phone_items_nearPlayers, rr_phone_items_items, rr_phone_items_quantity };
 	
 	class rr_phone_items_frame: rr_phone_welcome_frame {};
 	class rr_phone_items_background: rr_phone_welcome_background {};
@@ -654,6 +654,14 @@ class rr_phone_items: rr_phone_welcome
 		y = 0.357 * safezoneH + safezoneY;
 		w = 0.118594 * safezoneW;
 		h = 0.242 * safezoneH;
+	};
+	class rr_phone_items_quantity: RscEdit
+	{
+		idc = 3004;
+		x = 0.443281 * safezoneW + safezoneX;
+		y = 0.621 * safezoneH + safezoneY;
+		w = 0.0721875 * safezoneW;
+		h = 0.022 * safezoneH;
 	};
 };
 

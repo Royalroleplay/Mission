@@ -41,7 +41,6 @@ class CarShops {
 			{ "Mrshounka_a3_ds3_civ", 45000, "driver" },
 			{ "RG_mustang_rouge", 55000, "driver" },
 			{ "Mrshounka_cherokee_noir", 60000, "driver" },
-			{ "Mrshounka_agera_p", 60000, "driver" },
 			{ "Jonzie_Viper", 75000, "driver" },
 			{ "shounka_buggy", 75000, "driver" },
 			{ "Mrshounka_a3_gtr_civ", 75000, "driver" },
