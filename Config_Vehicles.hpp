@@ -45,7 +45,7 @@ class CarShops {
 			{ "Jonzie_Viper", 75000, "driver" },
 			{ "shounka_buggy", 75000, "driver" },
 			{ "Mrshounka_a3_gtr_civ", 75000, "driver" },
-			{ "RG_huracan_c_noir", 125000, "driver" }
+			{ "RG_huracan_c_noir", 125000, "driver" },
 			{ "Mrshounka_agera_p", 420000, "driver" },  // Koenesegge Agera based off real pricing of car
 			{ "Mrshounka_bmwm1_civ", 40000, "driver" },  // BMW m 1 Seriews based off real pricing of car
 			{ "Mrshounka_bmwm6_civ", 113400, "driver" },  // BMW M 6 Series based off real pricing of car
@@ -242,7 +242,6 @@ class CfgVehicles {
     class shounka_buggy : shounka_base {};
     class Mrshounka_a3_gtr_civ : shounka_base {};
     class RG_huracan_c_noir : shounka_base {};
-    class RG_mustang_rouge : shounka_base {};
     class Mrshounka_agera_p : shounka_base {};
 
 	class Jonzie_Base {
@@ -285,7 +284,6 @@ class CfgVehicles {
 	class Jonzie_Ceed: Jonzie_Base {vItemSpace = 65;};
 	class Jonzie_Ute: Jonzie_Base {vItemSpace = 70;};
 	class Jonzie_Transit: Jonzie_Base {vItemSpace = 120;};
-	class ADM_GMC_Vandura: Jonzie_Base {vItemSpace = 150;};
 	class Jonzie_Viper : Jonzie_Base {vItemSpace = 50; };
 	class Jonzie_AmbulanceExtended: Jonzie_Base {vItemSpace = 100; textures[] = {}; };
 	class Jonzie_Western: Jonzie_Base {vItemSpace = 100;};
