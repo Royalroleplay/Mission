@@ -14,6 +14,12 @@ createDialog 'rr_phone_items';
 
 _inv = CONTROL(20057,1500);
 
+_near_units = [];
+{ if(player distance _x < 20) then {_near_units pushBack _x};} foreach playableUnits;
+_display = findDisplay 3000;
+_plist = _display displayCtrl 2100;
+lbClear _plist;
+
 {
 	if(ITEM_VALUE(configName _x) > 0) then {
 		_inv lbAdd format["%2 [x%1]",ITEM_VALUE(configName _x),localize (getText(_x >> "displayName"))];
@@ -24,3 +30,10 @@ _inv = CONTROL(20057,1500);
 		};
 	};
 } foreach ("true" configClasses (missionConfigFile >> "VirtualItems"));
+
+{
+	if(!isNull _x && alive _x && player distance _x < 20 && _x != player) then {
+		_plist lbAdd format["%1 - %2",_x getVariable["realname",name _x], side _x];
+		_plist lbSetData [(lbSize _plist)-1,str(_x)];
+	};
+} foreach _near_units;
