@@ -28,7 +28,7 @@ if(_bad) then {
 	sleep 1;
 };
 
-player forceAddUniform "RR_Clothing_Prisoner";
+player forceAddUniform "RR_Clothing_Prisoner_obj";
 
 //Check to make sure they goto check
 //if(player distance (getMarkerPos "jail_marker") > 40) then {
@@ -42,7 +42,7 @@ player forceAddUniform "RR_Clothing_Prisoner";
 	if(_amount > 0) then {
 		[false,_x,_amount] call life_fnc_handleInv;
 	};
-} forEach ["heroin_unprocessed","heroin_processed","cannabis","marijuana","cocaine_unprocessed","cocaine_processed","turtle_raw"];
+} forEach ["heroin_unprocessed","heroin_processed","cannabis","marijuana","cocaine_unprocessed","cocaine_processed","turtle_raw","hacking_device"];
 
 life_is_arrested = true;
 
