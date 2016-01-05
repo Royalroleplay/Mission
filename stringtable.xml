@@ -3481,11 +3481,11 @@
 			<Portuguese>Treinamento Rebelde</Portuguese>
 		</Key>
 		<Key ID="STR_License_Truck">
-			<Original>Truck License</Original>
-			<German>LKW-Führerschein</German>
-			<French>Permis Poids Lourds</French>
-			<Italian>Licenza Camion</Italian>
-			<Portuguese>Licença de Caminhão</Portuguese>
+			<Original>CDL License 1</Original>
+			<German>CDL License 1</German>
+			<French>CDL License 1</French>
+			<Italian>CDL License 1</Italian>
+			<Portuguese>CDL License 1</Portuguese>
 		</Key>
 		<Key ID="STR_License_Diamond">
 			<Original>Diamond Processing</Original>
@@ -3557,12 +3557,12 @@
 			<Italian>Corsa Licenza</Italian>
 			<Portuguese>Licença Corrida</Portuguese>
 		</Key>
-		<Key ID="STR_License_Race">
-			<Original>Semi License</Original>
-			<German>Semi-Lizenz</German>
-			<French>Semi Licence</French>
-			<Italian>Semi License</Italian>
-			<Portuguese>Semi License</Portuguese>
+		<Key ID="STR_License_Semi">
+			<Original>CDL License 2</Original>
+			<German>CDL License 2</German>
+			<French>CDL License 2</French>
+			<Italian>CDL License 2</Italian>
+			<Portuguese>CDL License 2</Portuguese>
 		</Key>
 	</Package>
 	<Package name="More_Item_Strings">
