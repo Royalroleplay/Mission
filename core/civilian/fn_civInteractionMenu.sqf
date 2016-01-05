@@ -36,46 +36,44 @@ _Btn6 = _display displayCtrl Btn6;
 _Btn7 = _display displayCtrl Btn7;
 life_pInact_curTarget = _curTarget;
 
-if(life_pInact_curTarget getVariable["restrained",false]) then {
+_restrained = life_pInact_curTarget getVariable["restrained",false];
+_distance = player distance life_pInact_curTarget;
+_rope = life_pInact_curTarget getVariable["rope",false];
+_escorting = life_pInact_curTarget getVariable["Escorting",false];
+_blindfold = life_pInact_curTarget getVariable["blindfold",false];
+_knocked = false;
+
+if((animationState cursorTarget) == "Incapacitated") then {
+	_knocked = true;
+};
+
+if(_restrained) then {
 	_Btn1 ctrlSetText "UnRestrain";
 	_Btn1 buttonSetAction "[life_pInact_curTarget] call life_fnc_unrestrain; life_pInact_curTarget setVariable[""rope"",false,true]; closeDialog 0;";
-
-	// player is restrained, but not by rope
-	if(!(life_pInact_curTarget getVariable["rope",false])) then {
-		_Btn1 ctrlEnable false;
-		_Btn3 ctrlEnable false;
-		_Btn4 ctrlEnable false;
-		_Btn5 ctrlEnable false;
-		_Btn6 ctrlEnable false;
-	};
-
-	//Player is being escorted and is restrained, give option to stop escorting
-	if(life_pInact_curTarget getVariable["Escorting",false]) then {
-		_Btn4 ctrlSetText "Stop Escorting";
-		_Btn4 buttonSetAction "[life_pInact_curTarget] call life_fnc_stopEscorting; closeDialog 0;";
-	};
 } else {
 	_Btn1 ctrlSetText "Restrain";
 	_Btn1 buttonSetAction "if([false,""rope"",1] call life_fnc_handleInv) then { [] call life_fnc_restrainAction; life_pInact_curTarget setVariable[""rope"",true,true]; }; closeDialog 0;";
 };
 
-if(life_pInact_curTarget getVariable["blindfold",false]) then {
+if(_blindfold) then {
 	_Btn2 ctrlSetText "UnBlindfold";
 	_Btn2 buttonSetAction "[false] remoteExec [""life_fnc_blindfold"",life_pInact_curTarget];";
 } else {
 	_Btn2 ctrlSetText "Blindfold";
 	_Btn2 buttonSetAction "if([false,""blindfold"",1] call life_fnc_handleInv) then { [true] remoteExec [""life_fnc_blindfold"",life_pInact_curTarget]; hint ""Successfully Blindfolded""; }; closeDialog 0;";
-
-	if(!(life_pInact_curTarget getVariable["rope",false])) then {
-		_Btn2 ctrlEnable false;
-	};
 };
 
 _Btn3 ctrlSetText "Pat Down";
 _Btn3 buttonSetAction "";
 
-_Btn4 ctrlSetText "Escort";
-_Btn4 buttonSetAction "[life_pInact_curTarget] call life_fnc_escortAction; closeDialog 0;";
+//Player is being escorted and is restrained, give option to stop escorting
+if(_escorting) then {
+	_Btn4 ctrlSetText "Stop Escorting";
+	_Btn4 buttonSetAction "[life_pInact_curTarget] call life_fnc_stopEscorting; closeDialog 0;";
+}else{
+	_Btn4 ctrlSetText "Escort";
+	_Btn4 buttonSetAction "[life_pInact_curTarget] call life_fnc_escortAction; closeDialog 0;";
+};
 
 _Btn5 ctrlSetText "Rob";
 _Btn5 buttonSetAction "[] call life_fnc_robAction; closeDialog 0;";
@@ -83,17 +81,22 @@ _Btn5 buttonSetAction "[] call life_fnc_robAction; closeDialog 0;";
 _Btn6 ctrlSetText localize "STR_pInAct_PutInCar";
 _Btn6 buttonSetAction "[life_pInact_curTarget] call life_fnc_putInCar;";
 
-if(!(life_pInact_curTarget getVariable["restrained",false]) && (animationState cursorTarget) != "Incapacitated") then {
-	if(life_inv_rope < 1) then {
-		_Btn1 ctrlEnable false;
+if(!_restrained) then {
+	if((_distance > 5) or {!_restrained} or {life_inv_rope < 1}) then {
+	    _Btn1 ctrlEnable false;
 	};
+};
 
+if(!_restrained or {_distance > 5} or {!_rope}) then {
 	_Btn2 ctrlEnable false;
-	_Btn3 ctrlEnable false;
+//	_Btn3 ctrlEnable false;
 	_Btn4 ctrlEnable false;
 	_Btn5 ctrlEnable false;
 	_Btn6 ctrlEnable false;
 };
+
+//Coming Soon - needs to be written
+_Btn3 ctrlEnable false;
 
 _Btn7 ctrlEnable false;
 _Btn7 ctrlShow false;

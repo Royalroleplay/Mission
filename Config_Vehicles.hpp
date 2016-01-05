@@ -816,7 +816,7 @@ class CfgVehicles {
     };
 
 	class B_Heli_Light_01_F {
-        vItemSpace = 90;
+        vItemSpace = 0;
         storageFee[] = { 45000, 19500, 0, 0 };
 		garageSell[] = { 57000, 35000, 0, 0 };
         insurance = 2500;
@@ -871,7 +871,7 @@ class CfgVehicles {
     };
 
 	class O_Heli_Light_02_unarmed_F {
-        vItemSpace = 210;
+        vItemSpace = 0;
         storageFee[] = { 55000, 0, 22000, 0 };
 		garageSell[] = { 72500, 0, 35000, 0 };
         insurance = 2500;
@@ -896,7 +896,7 @@ class CfgVehicles {
     };
 
 	class I_Heli_Transport_02_F {
-        vItemSpace = 375;
+        vItemSpace = 0;
         storageFee[] = { 75000, 0, 0, 0 };
 		garageSell[] = { 125000, 0, 0, 0 };
         insurance = 2500;
