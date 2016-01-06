@@ -93,18 +93,10 @@ class CarShops {
 	class civ_truck {
 		side = "civ";
 		vehicles[] = {
-<<<<<<< HEAD
-			{ "C_Van_01_box_F", 30000, "trucking" },
-			{ "Jonzie_Box_Truck", 80000, "trucking" },
-<<<<<<< HEAD
-			{ "Jonzie_Tow_Truck", 40000, "trucking" },
-=======
 			{ "C_Van_01_box_F", 25000, "trucking" },
 			{ "Jonzie_Box_Truck", 70000, "trucking" },
->>>>>>> origin/master
-=======
->>>>>>> parent of 0f0efe2... Fixes / Addition
-			{ "Jonzie_Western", 120000, "semi" }
+			{ "Jonzie_Tow_Truck", 40000, "trucking" },
+			{ "Jonzie_Western", 80000, "semi" }
 		};
 	};
 
@@ -294,9 +286,9 @@ class CfgVehicles {
 	class Jonzie_Transit: Jonzie_Base {vItemSpace = 130;};
 	class Jonzie_Viper : Jonzie_Base {vItemSpace = 50; };
 	class Jonzie_AmbulanceExtended: Jonzie_Base {vItemSpace = 100; textures[] = {}; };
-	class Jonzie_Western: Jonzie_Base {vItemSpace = 100;};
+	class Jonzie_Western: Jonzie_Base {vItemSpace = 0;};
 	class Jonzie_Flatbed: Jonzie_Base {vItemSpace = 300;};
-	class Jonzie_Curtain: Jonzie_Base {vItemSpace = 500;};
+	class Jonzie_Curtain: Jonzie_Base {vItemSpace = 400;};
 	class ADM_GMC_Vandura: Jonzie_Base {vItemSpace = 100;};
 	class ADM_Monte_Carlo: Jonzie_Base {vItemSpace = 0;};
 	class ADM_1964_Impala: Jonzie_Base {vItemSpace = 80;};
