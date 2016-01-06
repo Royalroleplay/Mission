@@ -5250,7 +5250,7 @@ class Mission
 		class Item131
 		{
 			position[]={8296.7041,10.506592,6516.981};
-			name="civ_truck_1_2";
+			name="civ_truck_1_1";
 			type="Empty";
 			angle=131.26801;
 		};

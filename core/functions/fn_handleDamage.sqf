@@ -23,7 +23,7 @@ if(_part == "") then {
 if(!isNull _source) then {
 	if(_source != _unit) then {
 		if(_projectile == "26_taser") then {
-			if(side _source == west && playerSide != west) then {
+			if(side _source == west) then {
 				private["_distance","_isVehicle","_isQuad"];
 				_isVehicle = if(vehicle player != player) then {true} else {false};
 				_isQuad = if(_isVehicle) then {if(typeOf (vehicle player) == "B_Quadbike_01_F") then {true} else {false}} else {false};
