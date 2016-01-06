@@ -3688,8 +3688,8 @@ class Mission
 		};
 		class Item3
 		{
-			position[]={5786.8394,8.2084169,4144.8843};
-			azimut=-1.9363391;
+			position[]={7924.6489,4.1403255,5171.5464};
+			azimut=-69.834816;
 			id=186;
 			side="EMPTY";
 			vehicle="Land_cmp_Hopper_F";
@@ -4226,12 +4226,12 @@ class Mission
 		};
 		class Item5
 		{
-			position[]={5787.8042,8.25418,4144.9971};
+			position[]={7924.8936,4.1869683,5172.4819};
 			name="salt_1";
 			text="Salt Mine";
 			type="mil_triangle";
 			colorName="ColorBrown";
-			angle=-358.05771;
+			angle=-357.61154;
 		};
 		class Item6
 		{
