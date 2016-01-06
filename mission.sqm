@@ -1813,7 +1813,7 @@ class Mission
 				items=34;
 				class Item0
 				{
-					position[]={5325.7246,167.58456,10226.528};
+					position[]={5310.6851,160.99648,10193.942};
 					azimut=-201.8864;
 					special="NONE";
 					id=77;
@@ -1862,8 +1862,8 @@ class Mission
 				};
 				class Item4
 				{
-					position[]={8196.8496,10.274944,6068.248};
-					azimut=-25.548901;
+					position[]={5879.4272,500.43723,8246.4326};
+					azimut=-166.28404;
 					offsetY=0.1;
 					special="NONE";
 					id=81;
@@ -2639,8 +2639,8 @@ class Mission
 				items=1;
 				class Item0
 				{
-					position[]={9349.6299,97.92627,5455.2979};
-					azimut=-537.79199;
+					position[]={2786.2964,164.88768,2710.8767};
+					azimut=-549.15076;
 					special="NONE";
 					id=136;
 					side="CIV";
@@ -2660,8 +2660,8 @@ class Mission
 				items=1;
 				class Item0
 				{
-					position[]={4161.375,83.980003,6495.4443};
-					azimut=-346.711;
+					position[]={492.49167,475.80826,1261.5105};
+					azimut=-280.50504;
 					special="NONE";
 					id=137;
 					side="CIV";
@@ -5242,7 +5242,7 @@ class Mission
 		};
 		class Item20
 		{
-			position[]={3511.8298,24.540001,2930.0381};
+			position[]={1798.2844,243.03212,8801.918};
 			name="weed_1";
 			text="Weed Field";
 			type="mil_dot";
@@ -5250,12 +5250,12 @@ class Mission
 		};
 		class Item21
 		{
-			position[]={8196.8506,10.275083,6068.2783};
+			position[]={5879.4028,500.43903,8246.415};
 			name="Weed_p_1";
 			text="Weed Processing";
 			type="mil_dot";
 			colorName="Color1_FD_F";
-			angle=4.9632382;
+			angle=-135.77185;
 		};
 		class Item22
 		{
@@ -5333,7 +5333,7 @@ class Mission
 		};
 		class Item31
 		{
-			position[]={9743.2021,240.5858,932.85315};
+			position[]={570.6463,119.99,8234.0986};
 			name="cocaine_1";
 			text="Cocaine Field";
 			type="mil_dot";
@@ -5341,7 +5341,7 @@ class Mission
 		};
 		class Item32
 		{
-			position[]={9743.0264,240.58522,932.09045};
+			position[]={570.47052,119.99,8233.3369};
 			name="coke_area";
 			markerType="ELLIPSE";
 			type="Empty";
@@ -5428,7 +5428,7 @@ class Mission
 		};
 		class Item42
 		{
-			position[]={489.44003,478.17001,1076.624};
+			position[]={4649.1494,329.94101,9564.916};
 			name="heroin_1";
 			text="Heroin Field";
 			type="hd_dot";
@@ -5436,7 +5436,7 @@ class Mission
 		};
 		class Item43
 		{
-			position[]={491.52695,478.15475,1072.3574};
+			position[]={4651.2363,328.93207,9560.6504};
 			name="heroin_area";
 			markerType="ELLIPSE";
 			type="Empty";
@@ -5693,7 +5693,7 @@ class Mission
 		};
 		class Item74
 		{
-			position[]={1796.5088,174.75035,9092.0908};
+			position[]={2822.8625,114.84558,8676.5723};
 			name="hunting_zone";
 			markerType="ELLIPSE";
 			type="Empty";
@@ -5703,7 +5703,7 @@ class Mission
 		};
 		class Item75
 		{
-			position[]={1798.1993,176.23183,9088.6191};
+			position[]={2824.553,114.40112,8673.1006};
 			name="hunting_marker";
 			text="Hunting Grounds";
 			type="mil_join";
@@ -5817,7 +5817,7 @@ class Mission
 		};
 		class Item90
 		{
-			position[]={3509.0911,24.540001,2928.6172};
+			position[]={1795.5452,243.03404,8800.4971};
 			name="weed_area";
 			markerType="ELLIPSE";
 			type="Empty";
@@ -5827,21 +5827,21 @@ class Mission
 		};
 		class Item91
 		{
-			position[]={9349.6377,97.926247,5455.2915};
+			position[]={2786.3042,164.88739,2710.8704};
 			name="heroin_p";
 			text="Heroin Processing";
 			type="mil_dot";
 			colorName="ColorRed";
-			angle=-60.764908;
+			angle=-72.123779;
 		};
 		class Item92
 		{
-			position[]={4161.4302,83.980003,6495.5073};
+			position[]={492.57114,475.81079,1261.4851};
 			name="cocaine processing_1";
 			text="Cocaine Processing";
 			type="mil_dot";
 			colorName="Color1_FD_F";
-			angle=135.73723;
+			angle=201.94304;
 		};
 		class Item93
 		{
