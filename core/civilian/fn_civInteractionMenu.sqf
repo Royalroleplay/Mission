@@ -71,7 +71,7 @@ if(_blindfold) then {
 };
 
 _Btn3 ctrlSetText "Pat Down";
-_Btn3 buttonSetAction "[player] remoteExec [""life_fnc_patdown"",life_pInact_curTarget]; hint ""You patted down your target""; }; closeDialog 0;";
+_Btn3 buttonSetAction "[player] remoteExec [""life_fnc_patDown"",life_pInact_curTarget]; hint ""You patted down your target""; }; closeDialog 0;";
 
 //Player is being escorted and is restrained, give option to stop escorting
 if(_escorting) then {
