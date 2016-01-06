@@ -38,7 +38,7 @@ life_pInact_curTarget = _curTarget;
 
 _restrained = life_pInact_curTarget getVariable["restrained",false];
 _distance = player distance life_pInact_curTarget;
-_rope = life_pInact_curTarget getVariable["rope",false];
+//_rope = life_pInact_curTarget getVariable["rope",false]; this doesnt get changed or as i can see exist!
 _escorting = life_pInact_curTarget getVariable["Escorting",false];
 _blindfold = life_pInact_curTarget getVariable["blindfold",false];
 _knocked = false;
@@ -51,8 +51,15 @@ if(_restrained) then {
 	_Btn1 ctrlSetText "UnRestrain";
 	_Btn1 buttonSetAction "[life_pInact_curTarget] call life_fnc_unrestrain; life_pInact_curTarget setVariable[""rope"",false,true]; closeDialog 0;";
 } else {
-	_Btn1 ctrlSetText "Restrain";
-	_Btn1 buttonSetAction "if([false,""rope"",1] call life_fnc_handleInv) then { [] call life_fnc_restrainAction; life_pInact_curTarget setVariable[""rope"",true,true]; }; closeDialog 0;";
+	if(_knocked) then
+	{
+		_Btn1 ctrlSetText "Restrain";
+		_Btn1 buttonSetAction "if([false,""rope"",1] call life_fnc_handleInv) then { [] call life_fnc_restrainAction; life_pInact_curTarget setVariable[""rope"",true,true]; }; closeDialog 0;";
+	}
+	else
+	{
+		_Btn1 ctrlEnable false;
+	};
 };
 
 if(_blindfold) then {
@@ -64,7 +71,7 @@ if(_blindfold) then {
 };
 
 _Btn3 ctrlSetText "Pat Down";
-_Btn3 buttonSetAction "";
+_Btn3 buttonSetAction "[player] remoteExec [""life_fnc_patdown"",life_pInact_curTarget]; hint ""You patted down your target""; }; closeDialog 0;";
 
 //Player is being escorted and is restrained, give option to stop escorting
 if(_escorting) then {
@@ -81,13 +88,15 @@ _Btn5 buttonSetAction "[] call life_fnc_robAction; closeDialog 0;";
 _Btn6 ctrlSetText localize "STR_pInAct_PutInCar";
 _Btn6 buttonSetAction "[life_pInact_curTarget] call life_fnc_putInCar;";
 
+/*
 if(!_restrained) then {
 	if((_distance > 5) or {!_restrained} or {life_inv_rope < 1}) then {
-	    _Btn1 ctrlEnable false;
+	    
 	};
 };
-
-if(!_restrained or {_distance > 5} or {!_rope}) then {
+*/
+//removed this : {!_rope}
+if(!_restrained or {_distance > 5}) then {
 	_Btn2 ctrlEnable false;
 //	_Btn3 ctrlEnable false;
 	_Btn4 ctrlEnable false;
