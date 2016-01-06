@@ -95,6 +95,7 @@ class CarShops {
 		vehicles[] = {
 			{ "C_Van_01_box_F", 30000, "trucking" },
 			{ "Jonzie_Box_Truck", 80000, "trucking" },
+			{ "Jonzie_Tow_Truck", 40000, "trucking" },
 			{ "Jonzie_Western", 120000, "semi" }
 		};
 	};
