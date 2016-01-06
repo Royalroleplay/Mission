@@ -3635,7 +3635,7 @@ class Mission
 					leader=1;
 					skill=0.60000002;
 					text="carshop1_2_2_1";
-					init="this enableSimulation false; this allowDamage false; this addAction[""Trailer Shop"",life_fnc_vehicleShopMenu,[""civ_trailer"",civilian,""civ_truck_g_1"",""civ"",""Adam's Trailer Shop""]];";
+					init="this enableSimulation false; this allowDamage false; this addAction[""Trailer Shop"",life_fnc_vehicleShopMenu,[""civ_trailer"",civilian,""civ_truck_1_1"",""civ"",""Adam's Trailer Shop""]];";
 				};
 			};
 		};
@@ -5665,7 +5665,7 @@ class Mission
 		};
 		class Item25
 		{
-			position[]={8295.4629,10.503879,6522.5972};
+			position[]={8300.4463,10.5,6523.5137};
 			name="civ_truck_1";
 			type="Empty";
 			angle=131.26846;
@@ -6542,10 +6542,10 @@ class Mission
 		};
 		class Item136
 		{
-			position[]={8316.2607,10.5,6516.1587};
+			position[]={8313.7451,10.5,6519.4629};
 			name="civ_truck_g_1";
 			type="Empty";
-			angle=623.60162;
+			angle=570.3374;
 		};
 		class Item137
 		{
@@ -6595,10 +6595,10 @@ class Mission
 		};
 		class Item143
 		{
-			position[]={8295.4629,10.503879,6522.5972};
-			name="civ_truck_1_1";
+			position[]={8296.7041,10.506592,6516.981};
+			name="civ_truck_1_2";
 			type="Empty";
-			angle=131.26846;
+			angle=131.26801;
 		};
 		class Item144
 		{
