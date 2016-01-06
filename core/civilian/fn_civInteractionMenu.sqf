@@ -98,14 +98,11 @@ if(!_restrained) then {
 //removed this : {!_rope}
 if(!_restrained or {_distance > 5}) then {
 	_Btn2 ctrlEnable false;
-//	_Btn3 ctrlEnable false;
+	_Btn3 ctrlEnable false;
 	_Btn4 ctrlEnable false;
 	_Btn5 ctrlEnable false;
 	_Btn6 ctrlEnable false;
 };
-
-//Coming Soon - needs to be written
-_Btn3 ctrlEnable false;
 
 _Btn7 ctrlEnable false;
 _Btn7 ctrlShow false;
