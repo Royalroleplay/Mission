@@ -10,13 +10,13 @@ class CarShops {
 		side = "civ";
 		vehicles[] = {
 			{ "Jonzie_Datsun_510", 2000, "driver" },
-			{ "Jonzie_Z432", 3000, "driver" },
-			{ "Jonzie_Galant", 4000, "driver" },
-			{ "Jonzie_Corolla", 6000, "driver" },
-			{ "Jonzie_Ceed", 10000, "driver" },
-			{ "Jonzie_Ute", 15000, "driver" },
-			{ "Jonzie_Transit", 22500, "driver" },
-			{ "ADM_GMC_Vandura", 30000, "driver" }
+			{ "Jonzie_Z432", 2000, "driver" },
+			{ "Jonzie_Galant", 3000, "driver" },
+			{ "Jonzie_Corolla", 4500, "driver" },
+			{ "ADM_GMC_Vandura", 5000, "driver" },
+			{ "Jonzie_Ceed", 6000, "driver" },
+			{ "Jonzie_Ute", 7500, "driver" },
+			{ "Jonzie_Transit", 10000, "driver" }
 		};
 	};
 	
@@ -93,9 +93,14 @@ class CarShops {
 	class civ_truck {
 		side = "civ";
 		vehicles[] = {
+<<<<<<< HEAD
 			{ "C_Van_01_box_F", 30000, "trucking" },
 			{ "Jonzie_Box_Truck", 80000, "trucking" },
 			{ "Jonzie_Tow_Truck", 40000, "trucking" },
+=======
+			{ "C_Van_01_box_F", 25000, "trucking" },
+			{ "Jonzie_Box_Truck", 70000, "trucking" },
+>>>>>>> origin/master
 			{ "Jonzie_Western", 120000, "semi" }
 		};
 	};
@@ -283,13 +288,13 @@ class CfgVehicles {
 	class Jonzie_Corolla: Jonzie_Base {vItemSpace = 60;};
 	class Jonzie_Ceed: Jonzie_Base {vItemSpace = 65;};
 	class Jonzie_Ute: Jonzie_Base {vItemSpace = 70;};
-	class Jonzie_Transit: Jonzie_Base {vItemSpace = 120;};
+	class Jonzie_Transit: Jonzie_Base {vItemSpace = 130;};
 	class Jonzie_Viper : Jonzie_Base {vItemSpace = 50; };
 	class Jonzie_AmbulanceExtended: Jonzie_Base {vItemSpace = 100; textures[] = {}; };
 	class Jonzie_Western: Jonzie_Base {vItemSpace = 100;};
 	class Jonzie_Flatbed: Jonzie_Base {vItemSpace = 300;};
 	class Jonzie_Curtain: Jonzie_Base {vItemSpace = 500;};
-	class ADM_GMC_Vandura: Jonzie_Base {vItemSpace = 150;};
+	class ADM_GMC_Vandura: Jonzie_Base {vItemSpace = 100;};
 	class ADM_Monte_Carlo: Jonzie_Base {vItemSpace = 0;};
 	class ADM_1964_Impala: Jonzie_Base {vItemSpace = 80;};
 	class ADM_1969_Camaro: Jonzie_Base {vItemSpace = 100;};
@@ -792,7 +797,7 @@ class CfgVehicles {
     };
 
     class Jonzie_Box_Truck {
-    	vItemSpace = 500;
+    	vItemSpace = 350;
     	storageFee[] = { 5000, 0, 0, 0 };
     	garageSell[] = { 40000, 0, 0, 0 };
     	insurance = 10000;
