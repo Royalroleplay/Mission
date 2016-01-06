@@ -96,11 +96,14 @@ class CarShops {
 <<<<<<< HEAD
 			{ "C_Van_01_box_F", 30000, "trucking" },
 			{ "Jonzie_Box_Truck", 80000, "trucking" },
+<<<<<<< HEAD
 			{ "Jonzie_Tow_Truck", 40000, "trucking" },
 =======
 			{ "C_Van_01_box_F", 25000, "trucking" },
 			{ "Jonzie_Box_Truck", 70000, "trucking" },
 >>>>>>> origin/master
+=======
+>>>>>>> parent of 0f0efe2... Fixes / Addition
 			{ "Jonzie_Western", 120000, "semi" }
 		};
 	};
