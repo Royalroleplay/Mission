@@ -23,6 +23,7 @@ life_corpse SVAR ["Reviving",nil,TRUE];
 player SVAR ["Revive",nil,TRUE];
 player SVAR ["name",nil,TRUE];
 player SVAR ["Reviving",nil,TRUE];
+player setVariable ["tf_unable_to_use_radio", false, true];
 
 //Load gear for a 'new life'
 switch(playerSide) do
