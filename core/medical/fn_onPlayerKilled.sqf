@@ -29,7 +29,7 @@ showCinemaBorder TRUE;
 life_deathCamera cameraEffect ["Internal","Back"];
 createDialog "DeathScreen";
 life_deathCamera camSetTarget _unit;
-life_deathCamera camSetRelPos [0,3.5,4.5];
+life_deathCamera camSetRelPos [0,8.5,9.5];
 life_deathCamera camSetFOV .5;
 life_deathCamera camSetFocus [50,0];
 life_deathCamera camCommit 0;

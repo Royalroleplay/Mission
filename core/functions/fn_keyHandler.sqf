@@ -98,12 +98,6 @@ switch (_code) do {
 			[] call life_fnc_restrainAction;
 		};
 	};
-
-	case 44: {
-		if(_ctrlKey) then {
-			[] call life_fnc_openInv;
-		};
-	};
 	
 	//Knock out, this is experimental and yeah...	
 	case 34: {
@@ -160,6 +154,9 @@ switch (_code) do {
 
 	//Y Player Menu
 	case 21: {
+		if(_ctrlKey) then {
+			[] call life_fnc_openInv;
+		};
 		if(!_alt && !_ctrlKey && !dialog && {!life_action_inUse}) then {
 			[] spawn life_fnc_p_openMenu;
 		};
