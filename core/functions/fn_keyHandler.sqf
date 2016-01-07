@@ -56,6 +56,19 @@ switch (_code) do {
 		};
 	};
 
+	case 59: {
+		if(_shift) then {_handled = true;};
+		if (_shift) then {
+			if (vehicle player == player && !(player getVariable ["restrained", false]) && (animationState player) != "Incapacitated" && !life_istazed) then {
+				if (player getVariable ["surrender", false]) then {
+					player setVariable ["surrender", false, true];
+				} else {
+					[] spawn life_fnc_surrender;
+				};
+			};
+		};
+	};
+
 	//Map Key
 	case _mapKey: {
 		switch (playerSide) do {
@@ -92,6 +105,13 @@ switch (_code) do {
 	};
 
 	//Restraining (Shift + R)
+	case 19: {
+		if(_shift) then {_handled = true;};
+		if(_shift && playerSide == west && !isNull cursorTarget && cursorTarget isKindOf "Man" && (isPlayer cursorTarget) && (side cursorTarget == civilian) && alive cursorTarget && cursorTarget distance player < 3.5 && !(cursorTarget getVariable "Escorting") && !(cursorTarget getVariable "restrained") && speed cursorTarget < 1) then	{
+			[] call life_fnc_restrainAction;
+		};
+	};
+
 	case 19: {
 		if(_shift) then {_handled = true;};
 		if(_shift && playerSide == west && {!isNull cursorTarget} && {cursorTarget isKindOf "Man"} && {(isPlayer cursorTarget)} && {alive cursorTarget} && {cursorTarget distance player < 3.5} && {!(cursorTarget GVAR "Escorting")} && {!(cursorTarget GVAR "restrained")} && {speed cursorTarget < 1}) then {
