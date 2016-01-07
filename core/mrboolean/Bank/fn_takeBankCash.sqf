@@ -9,7 +9,9 @@
 
 _cash_left = (bank_cash getVariable ["cash_amount",0]);
 if(_cash_left <= 0) exitWith {hint "There is no money left! Get out of here!"};
+if(life_action_gathering) exitWith {};
 
+life_action_gathering = true;
 //Setup our progress bar.
 disableSerialization;
 5 cutRsc ["life_progress","PLAIN"];
@@ -21,7 +23,7 @@ _progress progressSetPosition 0.01;
 _cP = 0.01;
 
 [] spawn {
-	for "_i" from 0 to 6 do {
+	for "_i" from 0 to 3 do {
 		player playMove "AinvPercMstpSnonWnonDnon_Putdown_AmovPercMstpSnonWnonDnon";
 		waitUntil{animationState player != "AinvPercMstpSnonWnonDnon_Putdown_AmovPercMstpSnonWnonDnon";};
 		sleep 2.5;
@@ -38,6 +40,7 @@ while{true} do {
 };
 
 5 cutText ["","PLAIN"];
+life_action_gathering = false;
 
 //Make sure he's within 8m
 if(player distance bank_cash > 8) exitWith { hint "You moved too far from the money!"; };
