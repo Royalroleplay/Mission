@@ -9,7 +9,6 @@ class CarShops {
 	class car_lowend {
 		side = "civ";
 		vehicles[] = {
-			{ "Jonzie_Datsun_510", 2000, "driver" },
 			{ "Jonzie_Z432", 2000, "driver" },
 			{ "Jonzie_Galant", 3000, "driver" },
 			{ "Jonzie_Corolla", 4500, "driver" },
@@ -277,7 +276,6 @@ class CfgVehicles {
             } }
 	    };
 	};
-	class Jonzie_Datsun510: Jonzie_Base {vItemSpace = 45;};
 	class Jonzie_Z432: Jonzie_Base {vItemSpace = 50;};
 	class Jonzie_Galant: Jonzie_Base {vItemSpace = 55;};
 	class Jonzie_Corolla: Jonzie_Base {vItemSpace = 60;};
