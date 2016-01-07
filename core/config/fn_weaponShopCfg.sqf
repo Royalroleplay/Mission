@@ -26,9 +26,9 @@ switch(_shop) do {
 				_ret = ["LSPD Shop"];
 
 				_items = [];
-				_items pushBack ["taser_26","Taser",2000];
+				_items pushBack ["taser_26","Taser",200];
 				_items pushBack ["26_cartridge","Taser Magazine",125];
-				_items pushBack ["radar_gun","Radar Gun",7500];
+				_items pushBack ["radar_gun","Radar Gun",750];
 				_items pushBack ["RH_g17",nil,250];
 				_items pushBack ["RH_17Rnd_9x19_g17",nil,50];
 				_items pushBack ["RH_m9",nil,250];
