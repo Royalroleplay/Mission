@@ -56,7 +56,7 @@ class Mission
 	class Intel
 	{
 		briefingName="RoyalRoleplay";
-		overviewText="v0.02 by MrBoolean";
+		overviewText="v0.03 by MrBoolean";
 		startWeather=0.099999994;
 		startWind=0.29999998;
 		startWindDir=20;
