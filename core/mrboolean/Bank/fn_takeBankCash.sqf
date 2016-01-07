@@ -7,7 +7,7 @@
 *
 */
 
-_cash_left = bank_cash getVariable ["cash_amount"];
+_cash_left = (bank_cash getVariable ["cash_amount",0]);
 if(_cash_left <= 0) exitWith {hint "There is no money left! Get out of here!"};
 
 //Setup our progress bar.
@@ -21,7 +21,7 @@ _progress progressSetPosition 0.01;
 _cP = 0.01;
 
 [] spawn {
-	for "_i" from 0 to 2 do {
+	for "_i" from 0 to 6 do {
 		player playMove "AinvPercMstpSnonWnonDnon_Putdown_AmovPercMstpSnonWnonDnon";
 		waitUntil{animationState player != "AinvPercMstpSnonWnonDnon_Putdown_AmovPercMstpSnonWnonDnon";};
 		sleep 2.5;
@@ -29,7 +29,7 @@ _cP = 0.01;
 };
 
 while{true} do {
-	uiSleep 0.25;
+	uiSleep 0.1;
 	_cP = _cP + 0.01;
 	_progress progressSetPosition _cP;
 	_pgText ctrlSetText format["%3 (%1%2)...",round(_cP * 100),"%","Collecting Cash..."];
@@ -43,18 +43,18 @@ while{true} do {
 if(player distance bank_cash > 8) exitWith { hint "You moved too far from the money!"; };
 
 //Check to make sure there is cash left.
-_cash_left = bank_cash getVariable ["cash_amount"];
+_cash_left = bank_cash getVariable ["cash_amount",0];
 if(_cash_left <= 0) exitWith {hint "There is no money left! Get out of here!"};
 
 
 if(_cash_left >= 10000) then {
 	
 	//There is atleast 10,000, give them 10k
-	bank_cash setVariable ["cash_amount",((bank_cash getVariable ["cash_amount"])-10000),true];
+	bank_cash setVariable ["cash_amount",((bank_cash getVariable ["cash_amount",0])-10000),true];
 	life_cash = life_cash + 10000;
 } else {
 	
 	//less than $10000 left, give them whats left and set to 0
-	life_cash = life_cash + (bank_cash getVariable ["cash_amount"]);
+	life_cash = life_cash + (bank_cash getVariable ["cash_amount",0]);
 	bank_cash setVariable ["cash_amount",0,true];
 };
