@@ -34,27 +34,27 @@ class CarShops {
 		side = "civ";
 		vehicles[] = {
 			{ "shounka_gt", 45000, "driver" },
-			{ "Mrshounka_207_civ", 45000, "driver" },
-			{ "Mrshounka_a3_308_rcz", 45000, "driver" },
-			{ "Mrshounka_a3_308_civ", 45000, "driver" },
-			{ "Mrshounka_a3_dodge15_civ", 45000, "driver" },
-			{ "Mrshounka_a3_ds3_civ", 45000, "driver" },
-			{ "RG_mustang_rouge", 55000, "driver" },
-			{ "Mrshounka_cherokee_noir", 60000, "driver" },
-			{ "Jonzie_Viper", 75000, "driver" },
-			{ "shounka_buggy", 75000, "driver" },
-			{ "Mrshounka_a3_gtr_civ", 75000, "driver" },
+			{ "Mrshounka_207_civ", 18000, "driver" },
+			{ "Mrshounka_a3_308_rcz", 21000, "driver" },
+			{ "Mrshounka_a3_308_civ", 28000, "driver" },
+			{ "Mrshounka_a3_dodge15_civ", 29000, "driver" },
+			{ "Mrshounka_a3_ds3_civ", 18000, "driver" },
+			{ "RG_mustang_rouge", 41000, "driver" },
+			{ "Mrshounka_cherokee_noir", 25000, "driver" },
+			{ "Jonzie_Viper", 35000, "driver" },
+			{ "shounka_buggy", 37000, "driver" },
+			{ "Mrshounka_a3_gtr_civ", 66000, "driver" },
 			{ "RG_huracan_c_noir", 125000, "driver" },
-			{ "Mrshounka_agera_p", 420000, "driver" },  // Koenesegge Agera based off real pricing of car
+			{ "Mrshounka_agera_p", 360000, "driver" },  // Koenesegge Agera based off real pricing of car
 			{ "Mrshounka_bmwm1_civ", 40000, "driver" },  // BMW m 1 Seriews based off real pricing of car
-			{ "Mrshounka_bmwm6_civ", 113400, "driver" },  // BMW M 6 Series based off real pricing of car
-			{ "Mrshounka_Bowler_c", 241000, "driver" },  // Land Rover Bowler based off real pricing of car
+			{ "Mrshounka_bmwm6_civ", 55400, "driver" },  // BMW M 6 Series based off real pricing of car
+			{ "Mrshounka_Bowler_c", 57000, "driver" },  // Land Rover Bowler based off real pricing of car
 			{ "shounka_f430_spider", 120000, "driver" },  // Ferrari F430 Spyder based off real pricing of car
 			{ "Mrshounka_hummer_civ", 40500, "driver" },  // Hummer H1 based off real pricing of car
 			{ "shounka_h2", 57400, "driver" },  // Hummer h2 based off real pricing of car
 			{ "Mrshounka_evox_civ", 50000, "driver" },  // Lancer Evolution based off real pricing of car
 			{ "Mrshounka_lykan_c", 340000, "driver" },  // LykanHyper Sport based off real pricing of car
-			{ "Mrshounka_c63_2015_civ", 63000, "driver" }
+			{ "Mrshounka_c63_2015_civ", 52000, "driver" }
 		};
 	};
 
