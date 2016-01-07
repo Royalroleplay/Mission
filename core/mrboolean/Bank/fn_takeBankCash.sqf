@@ -61,3 +61,7 @@ if(_cash_left >= 10000) then {
 	life_cash = life_cash + (bank_cash getVariable ["cash_amount",0]);
 	bank_cash setVariable ["cash_amount",0,true];
 };
+
+if((bank_cash getVariable ["cash_amount",0]) < 1) then {
+	deleteVehicle bank_cash;
+};
