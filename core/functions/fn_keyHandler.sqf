@@ -2,7 +2,7 @@
 /*
 	File: fn_keyHandler.sqf
 	Author: Bryan "Tonic" Boardwine
-	
+
 	Description:
 	Main key handler for event 'keyDown'
 */
@@ -51,11 +51,11 @@ switch (_code) do {
 		if(_shift && {!(EQUAL(animationState player,"AovrPercMrunSrasWrflDf"))} && {isTouchingGround player} && {EQUAL(stance player,"STAND")} && {speed player > 2} && {!life_is_arrested} && {SEL((velocity player),2) < 2.5} && {time - jumpActionTime > 1.5}) then {
 			jumpActionTime = time; //Update the time.
 			[player,true] spawn life_fnc_jumpFnc; //Local execution
-			[player,false] remoteExec ["life_fnc_jumpFnc",RANY]; //Global execution 
+			[player,false] remoteExec ["life_fnc_jumpFnc",RANY]; //Global execution
 			_handled = true;
 		};
 	};
-	
+
 	//Map Key
 	case _mapKey: {
 		switch (playerSide) do {
@@ -63,7 +63,7 @@ switch (_code) do {
 			case independent: {if(!visibleMap) then {[] spawn life_fnc_medicMarkers;}};
 		};
 	};
-	
+
 	//Holster / recall weapon.
 	case 35: {
 		if(_shift && !_ctrlKey && !(EQUAL(currentWeapon player,""))) then {
@@ -71,14 +71,14 @@ switch (_code) do {
 			player action ["SwitchWeapon", player, player, 100];
 			player switchCamera cameraView;
 		};
-		
+
 		if(!_shift && _ctrlKey && !isNil "life_curWep_h" && {!(EQUAL(life_curWep_h,""))}) then {
 			if(life_curWep_h in [RIFLE,LAUNCHER,PISTOL]) then {
 				player selectWeapon life_curWep_h;
 			};
 		};
 	};
-	
+
 	//Interaction key (default is Left Windows, can be mapped via Controls -> Custom -> User Action 10)
 	case _interactionKey: {
 		if(!life_action_inUse) then {
@@ -90,7 +90,7 @@ switch (_code) do {
 			};
 		};
 	};
-	
+
 	//Restraining (Shift + R)
 	case 19: {
 		if(_shift) then {_handled = true;};
@@ -98,8 +98,16 @@ switch (_code) do {
 			[] call life_fnc_restrainAction;
 		};
 	};
-	
-	//Knock out, this is experimental and yeah...	
+
+	//Push vehicles Shift + L
+	case 38: {
+		if(_shift) then {_handled = true;};
+		if(_shift && playerSide == west && {cursorTarget isKindOf "Car"} && {cursorTarget distance player < 1.5}) then {
+			[] spawn life_fnc_pushObject;
+		};
+	};
+
+	//Knock out, this is experimental and yeah...
 	case 34: {
 		if(_shift) then {_handled = true;};
 		if(_shift && playerSide == civilian && !isNull cursorTarget && cursorTarget isKindOf "Man" && isPlayer cursorTarget && alive cursorTarget && cursorTarget distance player < 4 && speed cursorTarget < 1) then {
@@ -130,7 +138,7 @@ switch (_code) do {
 
 	//L Key?
 	case 38: {
-	
+
 		//Radar
 		if(!_alt && !_ctrlKey) then { [] call life_fnc_radar; };
 
@@ -148,7 +156,7 @@ switch (_code) do {
 				};
 			};
 		};
-		
+
 */
 	};
 
@@ -172,7 +180,7 @@ switch (_code) do {
 				sleep 4.7;
 				life_siren_active = false;
 			};
-			
+
 			_veh = vehicle player;
 			if(isNil {_veh GVAR "siren"}) then {_veh SVAR ["siren",false,true];};
 			if((_veh GVAR "siren")) then {
@@ -205,7 +213,7 @@ switch (_code) do {
 			};
 		};
 	};
-	
+
 	//U Key
 	case 22: {
 		if(!_alt && !_ctrlKey) then {
@@ -214,13 +222,13 @@ switch (_code) do {
 			} else {
 				_veh = vehicle player;
 			};
-			
+
 			if(_veh isKindOf "House_F" && {playerSide == civilian}) then {
 				if(_veh in life_vehicles && player distance _veh < 8) then {
 					_door = [_veh] call life_fnc_nearestDoor;
 					if(EQUAL(_door,0)) exitWith {hint localize "STR_House_Door_NotNear"};
 					_locked = _veh GVAR [format["bis_disabled_Door_%1",_door],0];
-					
+
 					if(EQUAL(_locked,0)) then {
 						_veh SVAR [format["bis_disabled_Door_%1",_door],1,true];
 						_veh animate [format["door_%1_rot",_door],0];
@@ -246,7 +254,7 @@ switch (_code) do {
 							_veh lock 2;
 						} else {
 							[_veh,2] remoteExecCall ["life_fnc_lockVehicle",_veh];
-						};	
+						};
 						systemChat localize "STR_MISC_VehLock";
 					};
 				};
