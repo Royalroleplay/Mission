@@ -53,7 +53,6 @@ diag_log "::Life Client:: Received server functions.";
 
 diag_log "::Life Client:: Waiting for the server to be ready..";
 waitUntil{!isNil "life_server_isReady"};
-waitUntil{(life_server_isReady OR !isNil "life_server_extDB_notLoaded")};
 
 if(!isNil "life_server_extDB_notLoaded" && {life_server_extDB_notLoaded != ""}) exitWith {
 	diag_log life_server_extDB_notLoaded;
@@ -134,7 +133,22 @@ if(EQUAL(LIFE_SETTINGS(getNumber,"enable_fatigue"),0)) then {player enableFatigu
 };
 
 [] spawn {
+	bank_building = (nearestObjects [[8608,6601,0], ["Land_CommonwealthBank"], 200]) select 0;
 	
+	if(playerSide == civilian) then {
+	
+		waitUntil {!isNil "bank_obj"};
+		bank_obj addAction ["Hack Bank Vault", { [] spawn life_fnc_robBank; }];
+		waitUntil {!isNil "bank_cash"};
+		bank_cash addAction ["Take Cash", { [] spawn life_fnc_takeBankCash; }];	
+	} else {
+	
+		waitUntil {!isNil "bank_obj"};
+		bank_obj addAction ["Reset Bank", { [] spawn life_fnc_resetBank; }];
+	};
+};
+
+[] spawn {
 	waitUntil {!isNil "life_atmbank"};
 
 	life_bankCache = life_atmbank;

@@ -98,6 +98,8 @@ class CfgRemoteExec {
 		F(MBSF_Phone_fnc_initPhoneCall,SERVER)
 		F(MBF_Fnc_callFireworks,SERVER)
 		F(MBF_fnc_startBreak,SERVER)
+		F(MBF_Bank_fnc_startRobbery,SERVER)
+		F(MBF_Bank_fnc_resetBank,SERVER)
 		
 		/* Functions for everyone */
 		F(life_fnc_broadcast,ANYONE)

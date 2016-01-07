@@ -42,6 +42,15 @@ class Life_Client_Core
 		class jailBreak {};
 	};
 
+	class MrBoolean_Bank
+	{
+		file = "Core\MrBoolean\Bank";
+
+		class resetBank {};
+		class robBank {};
+		class takeBankCash {};
+	};
+
 	class MrBoolean_HUD
 	{
 		file = "Core\MrBoolean\HUD";
