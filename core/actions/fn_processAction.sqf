@@ -11,7 +11,8 @@ _vendor = [_this,0,ObjNull,[ObjNull]] call BIS_fnc_param;
 _type = [_this,3,"",[""]] call BIS_fnc_param;
 //Error check
 if(isNull _vendor OR EQUAL(_type,"") OR (player distance _vendor > 10)) exitWith {};
-if(!LICENSE_VALUE(_type,"civ")) exitWith {hint "A processing license is required!"};
+_hasLicense = LICENSE_VALUE(_type,"civ");
+if(!_hasLicense) exitWith {hint "A processing license is required!"};
 
 //unprocessed item,processed item, cost if no license,Text to display (I.e Processing  (percent) ..."
 _itemInfo = switch (_type) do {
@@ -56,7 +57,6 @@ _cP = 0.01;
 
 life_is_processing = true;
 
-
 while{true} do {
 	sleep  0.3;
 	_cP = _cP + 0.01;
@@ -71,6 +71,7 @@ if(!([false,_oldItem,_oldVal] call life_fnc_handleInv)) exitWith {5 cutText ["",
 if(!([true,_newItem,_oldVal] call life_fnc_handleInv)) exitWith {5 cutText ["","PLAIN"]; [true,_oldItem,_oldVal] call life_fnc_handleInv; life_is_processing = false;};
 5 cutText ["","PLAIN"];
 titleText[format[localize "STR_Process_Processed",_oldVal,localize _itemName],"PLAIN"];
+
 life_is_processing = false;
 
 
