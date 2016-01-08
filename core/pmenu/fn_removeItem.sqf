@@ -10,7 +10,7 @@
 private["_data","_value"];
 disableSerialization;
 _data = lbData[1500,(lbCurSel 1500)];
-_value = 1;
+_value = ctrlText 3004;
 
 if(!([str(_value)] call life_fnc_isnumeric)) exitWith {hint "Please enter a valid quantity.";};
 if(EQUAL(_data,"")) exitWith {hint "You didn't select anything to remove.";};

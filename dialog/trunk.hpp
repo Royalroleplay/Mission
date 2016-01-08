@@ -4,6 +4,7 @@ class TrunkMenu
 	name = "TrunkMenu";
 	movingEnable = false;
 	enableSimulation = true;
+	onUnload = "life_cur_veh_inv setVariable [""inv_open"",false,true];";
 	
 	class controlsBackground
 	{
