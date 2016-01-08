@@ -663,20 +663,6 @@ class rr_phone_items: rr_phone_welcome
 		w = 0.0721875 * safezoneW;
 		h = 0.022 * safezoneH;
 	};
-	class iNearPlayers : RscCombo
-	{
-		idc = 2023;
-			
-		x = 0.62; y = 0.65;
-		w = 0.275; h = 0.03;
-	};
-	class NearPlayers : RscCombo 
-	{
-		idc = 2022;
-		
-		x = 0.12; y = 0.46;
-		w = 0.18; h = 0.03;
-	};
 };
 
 class rr_phone_licenses: rr_phone_welcome
