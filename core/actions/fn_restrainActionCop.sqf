@@ -1,6 +1,6 @@
 #include "..\..\script_macros.hpp"
 /*
-	File: fn_restrainAction.sqf
+	File: fn_restrainActionCop.sqf
 	Author: Bryan "Tonic" Boardwine
 	
 	Description:
@@ -18,11 +18,9 @@ if((speed _unit < 1)) exitWith {};
 if((_unit GVAR "restrained") || (_unit GVAR "tiedup") || (_unit getVariable "Escorting")) exitWith {};
 if(player == _unit) exitWith {};
 if(!isPlayer _unit) exitWith {};
-if((animationState _unit) != "Incapacitated") exitWith {};
-if(life_inv_rope == 0) exitWith { titleText ["You do not have any rope", "PLAIN"]; };
+//Broadcast!
 
-_unit SVAR["tiedup",true,false];
+_unit SVAR["restrained",true,false];
 
-[player, "tiedup"] remoteExec ["life_fnc_restrain",_unit];
+[player, "restrained"] remoteExec ["life_fnc_restrain",_unit];
 
-[false,"rope",1] call life_fnc_handleInv;

@@ -86,6 +86,7 @@ switch (playerSide) do {
 };
 
 player SVAR ["restrained",false,true];
+player SVAR ["tiedup",false,true];
 player SVAR ["Escorting",false,true];
 player SVAR ["transporting",false,true];
 
@@ -120,6 +121,8 @@ life_fnc_moveIn = compileFinal
 ";
 
 [] spawn life_fnc_survival;
+
+[] spawn life_fnc_playerVehicleKeys;
 
 CONSTVAR(life_paycheck); //Make the paycheck static.
 if(EQUAL(LIFE_SETTINGS(getNumber,"enable_fatigue"),0)) then {player enableFatigue false;};
@@ -170,3 +173,4 @@ if(EQUAL(LIFE_SETTINGS(getNumber,"enable_fatigue"),0)) then {player enableFatigu
 		sleep 0.5;
 	};
 };
+

@@ -169,6 +169,8 @@ class Life_Client_Core
 		class gather {};
 		class gutAnimal {};
 		class surrender {};
+		class restrainActionCop {};
+		class unrestrainCop {};
 	};
 	
 	class Housing
@@ -276,6 +278,7 @@ class Life_Client_Core
 		class stripDownPlayer {};
 		class nearATM {};
 		class patDown {};
+		class playerVehicleKeys {};
 	};
 	
 	class Network

@@ -36,11 +36,12 @@ _Btn6 = _display displayCtrl Btn6;
 _Btn7 = _display displayCtrl Btn7;
 life_pInact_curTarget = _curTarget;
 
-_restrained = life_pInact_curTarget getVariable["restrained",false];
+
 _distance = player distance life_pInact_curTarget;
 //_rope = life_pInact_curTarget getVariable["rope",false]; this doesnt get changed or as i can see exist!
 _escorting = life_pInact_curTarget getVariable["Escorting",false];
 _blindfold = life_pInact_curTarget getVariable["blindfold",false];
+_restrained = life_pInact_curTarget getVariable["restrained",false];
 _knocked = false;
 
 if((animationState cursorTarget) == "Incapacitated") then {
@@ -51,15 +52,7 @@ if(_restrained) then {
 	_Btn1 ctrlSetText "UnRestrain";
 	_Btn1 buttonSetAction "[life_pInact_curTarget] call life_fnc_unrestrain; life_pInact_curTarget setVariable[""rope"",false,true]; closeDialog 0;";
 } else {
-	if(_knocked) then
-	{
-		_Btn1 ctrlSetText "Restrain";
-		_Btn1 buttonSetAction "if([false,""rope"",1] call life_fnc_handleInv) then { [] call life_fnc_restrainAction; life_pInact_curTarget setVariable[""rope"",true,true]; }; closeDialog 0;";
-	}
-	else
-	{
-		_Btn1 ctrlEnable false;
-	};
+	_Btn1 ctrlEnable false;
 };
 
 if(_blindfold) then {
