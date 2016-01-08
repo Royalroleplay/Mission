@@ -55,6 +55,15 @@ if(life_pInact_curTarget getVariable["blindfold",false]) then {
 	_Btn3 buttonSetAction "[false] remoteExec [""life_fnc_blindfold"",life_pInact_curTarget];";
 };
 
+//Set Escort Button
+if((_curTarget getVariable["Escorting",false])) then {
+	_Btn4 ctrlSetText localize "STR_pInAct_StopEscort";
+	_Btn4 buttonSetAction "[life_pInact_curTarget] call life_fnc_stopEscorting; [life_pInact_curTarget] call life_fnc_emsInteractionMenu;";
+} else {
+	_Btn4 ctrlSetText localize "STR_pInAct_Escort";
+	_Btn4 buttonSetAction "[life_pInact_curTarget] call life_fnc_escortAction; closeDialog 0;";
+};
+
 if(!(_curTarget getVariable["restrained",false])) then {
 	_Btn1 ctrlEnable false;
 };
