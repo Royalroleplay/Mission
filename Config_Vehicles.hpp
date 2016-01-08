@@ -165,7 +165,6 @@ class CarShops {
 	class cop_car {
 		side = "cop";
 		vehicles[] = {
-			{ "AM_Impala_P_P", 1000, "" },
 			{ "Mrshounka_a3_smart_cop", 500, "" },
 			{ "DRPG_12Charger_P_P", 1500, "" },
 			{ "DRPG_12M5_P_P", 2000, "" },
