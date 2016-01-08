@@ -4377,7 +4377,7 @@ class Mission
 		};
 		class Item13
 		{
-			position[]={8682.8408,8.8106546,6611.1514};
+			position[]={3765.4971,104.87135,2177.6519};
 			name="apple_1";
 			text="Apple Field";
 			type="loc_Tree";
@@ -4386,7 +4386,7 @@ class Mission
 		};
 		class Item14
 		{
-			position[]={8675.3594,7.8521619,6565.3081};
+			position[]={9154.8359,7.3921046,8241.5742};
 			name="peaches_1";
 			text="Peaches Field";
 			type="loc_Tree";
