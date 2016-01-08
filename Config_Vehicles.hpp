@@ -134,8 +134,7 @@ class CarShops {
 			{ "DRPG_08Suburban_P_U", 2500, "" },
 			{ "DRPG_06Victoria_P_T", 3000, "" },
 			{ "DRPG_14Explorer_P_P", 3500, "" },
-			{ "DRPG_06Victoria_P_P", 4000, "" },
-			{ "DRPG_14Explorer_P_P", 4500, "" }
+			{ "DRPG_06Victoria_P_P", 4000, "" }
 		};
 	};
 
@@ -312,7 +311,6 @@ class CfgVehicles {
 	class DRPG_06Victoria_P_T: Jonzie_Base {vItemSpace = 150;};
 	class DRPG_14Explorer_P_P: Jonzie_Base {vItemSpace = 125;};
 	class DRPG_06Victoria_P_P: Jonzie_Base {vItemSpace = 100;};
-	class DRPG_14Explorer_P_P: Jonzie_Base {vItemSpace = 150;};
 	class DRPG_06Victoria_EMS: Jonzie_Base {vItemSpace = 100;};
 	class DRPG_06Victoria_Base: Jonzie_Base {vItemSpace = 100;};
 	class DRPG_14Explorer_Base: Jonzie_Base {vItemSpace = 125;};
