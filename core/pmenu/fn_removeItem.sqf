@@ -12,7 +12,7 @@ disableSerialization;
 _data = lbData[1500,(lbCurSel 1500)];
 _value = 1;
 
-if(!([str(_value)]] call life_fnc_isnumeric)) exitWith {hint "Please enter a valid quantity.";};
+if(!([str(_value)] call life_fnc_isnumeric)) exitWith {hint "Please enter a valid quantity.";};
 if(EQUAL(_data,"")) exitWith {hint "You didn't select anything to remove.";};
 if((_value) <= 0) exitWith {hint "You need to enter an actual amount you want to remove."};
 if(player != vehicle player) exitWith {titleText["You cannot remove an item when you are in a vehicle.","PLAIN"]};
