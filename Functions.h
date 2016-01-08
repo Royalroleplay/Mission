@@ -13,8 +13,6 @@ class Socket_Reciever
 	};
 };
 
-#include "core\mrboolean\phone\cfgFunctions.hpp"
-
 class Life_Client_Core
 {
 	tag = "life";
