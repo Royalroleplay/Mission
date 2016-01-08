@@ -129,27 +129,27 @@ class VirtualItems {
 
 	//Mined Items
 	VITEMMACRO(oil_unprocessed, "STR_Item_OilU", "oilUnprocessed", 7, -1, -1, false, -1, "")
-	VITEMMACRO(oil_processed, "STR_Item_OilP", "oilProcessed", 6, -1, 350, false, -1, "")
+	VITEMMACRO(oil_processed, "STR_Item_OilP", "oilProcessed", 6, -1, 650, false, -1, "")
 	VITEMMACRO(copper_unrefined, "STR_Item_CopperOre", "copperUnrefined", 4, -1, -1, false, -1, "")
-	VITEMMACRO(copper_refined, "STR_Item_CopperIngot", "copperRefined", 3, -1, 150, false, -1, "")
+	VITEMMACRO(copper_refined, "STR_Item_CopperIngot", "copperRefined", 3, -1, 225, false, -1, "")
 	VITEMMACRO(iron_unrefined, "STR_Item_IronOre", "ironUnrefined", 5, -1, -1, false, -1, "")
 	VITEMMACRO(iron_refined, "STR_Item_IronIngot", "ironRefined", 3, -1, 320, false, -1, "")
 	VITEMMACRO(salt_unrefined, "STR_Item_Salt", "saltUnrefined", 3, -1, -1, false, -1, "")
-	VITEMMACRO(salt_refined, "STR_Item_SaltR", "saltRefined", 1, -1, 145, false, -1, "")
+	VITEMMACRO(salt_refined, "STR_Item_SaltR", "saltRefined", 1, -1, 175, false, -1, "")
 	VITEMMACRO(sand, "STR_Item_Sand", "sand", 3, -1, -1, false, -1, "")
-	VITEMMACRO(glass, "STR_Item_Glass", "glass", 1, -1, 145, false, -1, "")
+	VITEMMACRO(glass, "STR_Item_Glass", "glass", 1, -1, 225, false, -1, "")
 	VITEMMACRO(diamond_uncut, "STR_Item_DiamondU", "diamondUncut", 4, -1, 750, false, -1, "")
 	VITEMMACRO(diamond_cut, "STR_Item_DiamondC", "diamondCut", 2, -1, 500, false, -1, "")
 	VITEMMACRO(rock, "STR_Item_Rock", "rock", 6, -1, -1, false, -1, "")
-	VITEMMACRO(cement, "STR_Item_CementBag", "cement", 5, -1, 150, false, -1, "")
+	VITEMMACRO(cement, "STR_Item_CementBag", "cement", 5, -1, 200, false, -1, "")
 
 	//Drugs
 	VITEMMACRO(heroin_unprocessed, "STR_Item_HeroinU", "heroinUnprocessed", 6, -1, -1, true, -1, "")
-	VITEMMACRO(heroin_processed, "STR_Item_HeroinP", "heroinProcessed", 4, 350, 650, true, -1, "")
+	VITEMMACRO(heroin_processed, "STR_Item_HeroinP", "heroinProcessed", 4, 350, 850, true, -1, "")
 	VITEMMACRO(cannabis, "STR_Item_Cannabis", "cannabis", 4, -1, -1, true, -1, "")
-	VITEMMACRO(marijuana, "STR_Item_Marijuana", "marijuana", 3, 280, 335, true, -1, "\rr_textures\icons\ico_marijuana.paa")
+	VITEMMACRO(marijuana, "STR_Item_Marijuana", "marijuana", 3, 280, 600, true, -1, "\rr_textures\icons\ico_marijuana.paa")
 	VITEMMACRO(cocaine_unprocessed, "STR_Item_CocaineU", "cocaineUnprocessed", 6, -1, 300, true, -1, "")
-	VITEMMACRO(cocaine_processed, "STR_Item_CocaineP", "cocaineProcessed", 4, -1, 850, true, -1, "")
+	VITEMMACRO(cocaine_processed, "STR_Item_CocaineP", "cocaineProcessed", 4, -1, 1000, true, -1, "")
 
 	//Drink
 	VITEMMACRO(redgull, "STR_Item_RedGull", "redgull", 1, 150, 50, false, 100, "\rr_textures\icons\ico_redgull.paa")
@@ -157,8 +157,8 @@ class VirtualItems {
 	VITEMMACRO(waterBottle, "STR_Item_WaterBottle", "waterBottle", 1, 10, 5, false, 100, "\rr_textures\icons\ico_waterBottle.paa")
 
 	//Food
-	VITEMMACRO(apple, "STR_Item_Apple", "apple", 1, 65, 50, false, 10, "\rr_textures\icons\food.paa")
-	VITEMMACRO(peach, "STR_Item_Peach", "peach", 1, 68, 55, false, 10, "\rr_textures\icons\food.paa")
+	VITEMMACRO(apple, "STR_Item_Apple", "apple", 1, 65, 25, false, 10, "\rr_textures\icons\food.paa")
+	VITEMMACRO(peach, "STR_Item_Peach", "peach", 1, 68, 20, false, 10, "\rr_textures\icons\food.paa")
 	VITEMMACRO(tbacon, "STR_Item_TBacon", "tbacon", 1, 75, 25, false, 40, "\rr_textures\icons\ico_tbacon.paa")
 	VITEMMACRO(donut, "STR_Item_Donuts", "donut", 1, 120, 60, false, 30, "\rr_textures\icons\food.paa")
 	VITEMMACRO(rabbit_raw, "STR_Item_Rabbit", "rabbitRaw", 2, -1, 65, false, -1, "\rr_textures\icons\food.paa")

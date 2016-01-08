@@ -11,6 +11,7 @@ _vendor = [_this,0,ObjNull,[ObjNull]] call BIS_fnc_param;
 _type = [_this,3,"",[""]] call BIS_fnc_param;
 //Error check
 if(isNull _vendor OR EQUAL(_type,"") OR (player distance _vendor > 10)) exitWith {};
+if(!LICENSE_VALUE(_type,"civ")) exitWith {hint "A processing license is required!"};
 
 //unprocessed item,processed item, cost if no license,Text to display (I.e Processing  (percent) ..."
 _itemInfo = switch (_type) do {
@@ -36,12 +37,6 @@ _newItem = SEL(_itemInfo,1);
 _cost = SEL(_itemInfo,2);
 _upp = SEL(_itemInfo,3);
 
-if(_vendor in [coke_processor,heroin_processor]) then {
-	_hasLicense = true;
-} else {
-	_hasLicense = LICENSE_VALUE(_type,"civ");
-};
-
 _itemName = M_CONFIG(getText,"VirtualItems",_newItem,"displayName");
 _oldVal = ITEM_VALUE(_oldItem);
 
@@ -61,22 +56,21 @@ _cP = 0.01;
 
 life_is_processing = true;
 
-if(_hasLicense) then {
-	while{true} do {
-		sleep  0.3;
-		_cP = _cP + 0.01;
-		_progress progressSetPosition _cP;
-		_pgText ctrlSetText format["%3 (%1%2)...",round(_cP * 100),"%",_upp];
-		if(_cP >= 1) exitWith {};
-		if(player distance _vendor > 10) exitWith {};
-	};
-	
-	if(player distance _vendor > 10) exitWith {hint localize "STR_Process_Stay"; 5 cutText ["","PLAIN"]; life_is_processing = false;};
-	if(!([false,_oldItem,_oldVal] call life_fnc_handleInv)) exitWith {5 cutText ["","PLAIN"]; life_is_processing = false;};
-	if(!([true,_newItem,_oldVal] call life_fnc_handleInv)) exitWith {5 cutText ["","PLAIN"]; [true,_oldItem,_oldVal] call life_fnc_handleInv; life_is_processing = false;};
-	5 cutText ["","PLAIN"];
-	titleText[format[localize "STR_Process_Processed",_oldVal,localize _itemName],"PLAIN"];
-	life_is_processing = false;
-} else {
-	titleText["A processing license is required!","PLAIN"];
-};	
+
+while{true} do {
+	sleep  0.3;
+	_cP = _cP + 0.01;
+	_progress progressSetPosition _cP;
+	_pgText ctrlSetText format["%3 (%1%2)...",round(_cP * 100),"%",_upp];
+	if(_cP >= 1) exitWith {};
+	if(player distance _vendor > 10) exitWith {};
+};
+
+if(player distance _vendor > 10) exitWith {hint localize "STR_Process_Stay"; 5 cutText ["","PLAIN"]; life_is_processing = false;};
+if(!([false,_oldItem,_oldVal] call life_fnc_handleInv)) exitWith {5 cutText ["","PLAIN"]; life_is_processing = false;};
+if(!([true,_newItem,_oldVal] call life_fnc_handleInv)) exitWith {5 cutText ["","PLAIN"]; [true,_oldItem,_oldVal] call life_fnc_handleInv; life_is_processing = false;};
+5 cutText ["","PLAIN"];
+titleText[format[localize "STR_Process_Processed",_oldVal,localize _itemName],"PLAIN"];
+life_is_processing = false;
+
+
