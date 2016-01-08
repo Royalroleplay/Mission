@@ -68,7 +68,7 @@ if(isPlayer _curTarget && _curTarget isKindOf "Man") then {
 		[_curTarget] call life_fnc_emsInteractionMenu;
 	};
 
-	if((_curTarget GVAR ["restrained",false]) && !dialog && playerSide == west) then {
+	if(!dialog && playerSide == west) then {
 		[_curTarget] call life_fnc_copInteractionMenu;
 	};
 

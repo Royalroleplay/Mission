@@ -15,6 +15,7 @@ class CfgRemoteExec {
 		F(life_fnc_jail,CLIENT)
 		F(life_fnc_moveIn,CLIENT)
 		F(life_fnc_restrain,CLIENT)
+		F(life_fnc_restrainCop,CLIENT)
 		F(life_fnc_robPerson,CLIENT)
 		F(life_fnc_searchClient,CLIENT)
 		F(TON_fnc_player_query,CLIENT)
@@ -62,6 +63,7 @@ class CfgRemoteExec {
 		F(life_fnc_ticketPaid,CLIENT)
 		F(MBF_Phone_fnc_hangUpActive,CLIENT)
 		F(life_fnc_blindfold,CLIENT)
+		F(life_fnc_patDown,CLIENT)
 		
 		/* Server only functions */
 		F(bis_fnc_execvm,SERVER)

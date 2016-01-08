@@ -38,43 +38,48 @@ _Btn7 = _display displayCtrl Btn7;
 _Btn8 = _display displayCtrl Btn8;
 life_pInact_curTarget = _curTarget;
 
-//Set Unrestrain Button
-_Btn1 ctrlSetText localize "STR_pInAct_Unrestrain";
-_Btn1 buttonSetAction "[life_pInact_curTarget] call life_fnc_unrestrainCop; closeDialog 0;";
+_escorting = life_pInact_curTarget getVariable["Escorting",false];
+_restrained = (life_pInact_curTarget GVAR["tiedup",false] || life_pInact_curTarget GVAR ["restrained",false]);
 
-//Set Check Licenses Button
-_Btn2 ctrlSetText localize "STR_pInAct_checkLicenses";
-_Btn2 buttonSetAction "[player] remoteExecCall [""life_fnc_licenseCheck"",life_pInact_curTarget];";
+if(!_restrained) exitWith {closeDialog 0;}; //Bad side check?
 
-//Set Search Button
-_Btn3 ctrlSetText localize "STR_pInAct_SearchPlayer";
-_Btn3 buttonSetAction "[life_pInact_curTarget] spawn life_fnc_searchAction; closeDialog 0;";
+if(_restrained) then {
+	//Set Unrestrain Button
+	_Btn1 ctrlSetText localize "STR_pInAct_Unrestrain";
+	_Btn1 buttonSetAction "[life_pInact_curTarget] call life_fnc_unrestrainCop; closeDialog 0;";
 
-//Set Escort Button
-if((_curTarget getVariable["Escorting",false])) then {
-	_Btn4 ctrlSetText localize "STR_pInAct_StopEscort";
-	_Btn4 buttonSetAction "[life_pInact_curTarget] call life_fnc_stopEscorting; [life_pInact_curTarget] call life_fnc_copInteractionMenu;";
-} else {
-	_Btn4 ctrlSetText localize "STR_pInAct_Escort";
-	_Btn4 buttonSetAction "[life_pInact_curTarget] call life_fnc_escortAction; closeDialog 0;";
-};
+	//Set Check Licenses Button
+	_Btn2 ctrlSetText localize "STR_pInAct_checkLicenses";
+	_Btn2 buttonSetAction "[player] remoteExecCall [""life_fnc_licenseCheck"",life_pInact_curTarget];";
 
-//Set Ticket Button
-_Btn5 ctrlSetText localize "STR_pInAct_TicketBtn";
-_Btn5 buttonSetAction "[life_pInact_curTarget] call life_fnc_ticketAction;";
+	//Set Search Button
+	_Btn3 ctrlSetText localize "STR_pInAct_SearchPlayer";
+	_Btn3 buttonSetAction "[life_pInact_curTarget] spawn life_fnc_searchAction; closeDialog 0;";
 
-_Btn6 ctrlSetText localize "STR_pInAct_Arrest";
-_Btn6 buttonSetAction "[life_pInact_curTarget] call life_fnc_arrestAction;";
+	//Set Escort Button
+	if(_escorting) then {
+		_Btn4 ctrlSetText localize "STR_pInAct_StopEscort";
+		_Btn4 buttonSetAction "[life_pInact_curTarget] call life_fnc_stopEscorting; [life_pInact_curTarget] call life_fnc_copInteractionMenu;";
+	} else {
+		_Btn4 ctrlSetText localize "STR_pInAct_Escort";
+		_Btn4 buttonSetAction "[life_pInact_curTarget] call life_fnc_escortAction; closeDialog 0;";
+	};
 
-_Btn7 ctrlSetText localize "STR_pInAct_PutInCar";
-_Btn7 buttonSetAction "[life_pInact_curTarget] call life_fnc_putInCar;";
+	//Set Ticket Button
+	_Btn5 ctrlSetText localize "STR_pInAct_TicketBtn";
+	_Btn5 buttonSetAction "[life_pInact_curTarget] call life_fnc_ticketAction;";
 
-_Btn8 ctrlSetText "Pat Down";
-_Btn8 buttonSetAction "[player] remoteExec [""life_fnc_patDown"",life_pInact_curTarget]; hint ""You patted down your target""; closeDialog 0;";
+	_Btn6 ctrlSetText localize "STR_pInAct_Arrest";
+	_Btn6 buttonSetAction "[life_pInact_curTarget] call life_fnc_arrestAction;";
 
-_Btn8 ctrlEnable false;
+	_Btn7 ctrlSetText localize "STR_pInAct_PutInCar";
+	_Btn7 buttonSetAction "[life_pInact_curTarget] call life_fnc_putInCar;";
 
-//Check that you are near a place to jail them.
-if(!(player distance (getMarkerPos "lakeside_jail_loc") < 50)) then {
-	_Btn6 ctrlEnable false;
+	_Btn8 ctrlSetText "Pat Down";
+	_Btn8 buttonSetAction "[player] remoteExec [""life_fnc_patDown"",life_pInact_curTarget]; closeDialog 0;";
+
+	//Check that you are near a place to jail them.
+	if(!(player distance (getMarkerPos "lakeside_jail_loc") < 50)) then {
+		_Btn6 ctrlEnable false;
+	};
 };

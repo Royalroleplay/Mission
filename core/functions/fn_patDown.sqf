@@ -1,59 +1,85 @@
 /*
-    File: fn_actionPatDown.sqf
-    Author: Bad^^Eye
+	Author Scotty from Realmenofgenius
+	11/01/2015
 
-    Description:
-    Action to drop all weapons from a player on the ground
 */
-private ["_caller", "_mags", "_items", "_weapons", "_container", "_holder"];
+private["_hgItems","_holder","_items","_pwItems","_safeItems","_swItems","_weps"];
 
-_caller = param [0,objNull,[objNull]];
+_safeItems = ["FirstAidKit","ItemRadio","ItemMap","ItemCompass","ItemGPS","ItemWatch","NVGoggles","Rangefinder","Binocular"];	
 
-_mags = [];
-_items = [];
-_weapons = [];
+0 cutText["Your weapons are removed.","PLAIN"];
 
-_mags pushBack [magazinesAmmoFull player];
+//--Get weapons, attachments and magazines of player
+_weps = [];
+
+_pwItems = primaryWeaponItems player;
+_swItems = secondaryWeaponItems player;
+_hgitems = handGunItems player;
+
+_mags = magazinesAmmoFull player;
+
+//--Now remove stuff
 
 {player removeMagazine _x} foreach (magazines player);
 
+if(primaryWeapon player != "") then
 {
-	_container = _x;
+	_weps pushBack (primaryWeapon player);
+	player removeWeapon (primaryWeapon player);
+
+};
+		
+if(secondaryWeapon player != "") then
+{
+	_weps pushBack (secondaryWeapon player);
+	player removeWeapon (secondaryWeapon player);
+
+};
+		
+if(handgunWeapon player != "") then
+{
+	_weps pushBack (handgunWeapon player);
+	player removeWeapon (handgunWeapon player);
+};
+
+{
+	_items = _x;
 	{
-		_items pushBack _x;
 		player unassignItem _x;
 		player removeItem _x;
-	} forEach _container;
-} forEach [primaryWeaponItems player, secondaryWeaponItems player, handGunItems player];
+	}forEach _items;
+	
+}forEach [_hgItems, _pwItems, _swItems];
 
-{		
-	if(_x != "") then
-	{
-		_weapons pushBack _x;
-		player removeWeapon _x;
-	};
-} foreach [primaryWeapon player, secondaryWeapon player, handgunWeapon player];
+//--Anything in backpack, vest etc we forgot? Make sure we don't include rangefinders etc. 
 
 {
-	if (!(_x in ["Rangefinder", "Laserdesignator", "Laserdesignator_02", "Laserdesignator_03", "Binocular"])) then
+	if (!(_x in _safeItems)) then
 	{
 		player removeItem _x;
-		_weapons pushBack _x;
+		_weps pushBack _x;
 	};
+
 }forEach (weapons player);
 
-_holder = createVehicle [ "GroundWeaponHolder", getPosATL player, [], 0, "CAN_COLLIDE" ];
 
+//-- Create holder and add everything to it.
+ _holder = createVehicle [ "GroundWeaponHolder", getPosATL player, [], 0, "CAN_COLLIDE" ];
+ 
 {
-	_holder addItemCargoGlobal [_x,1];
-}forEach _items; 
+	_holder addWeaponCargoGlobal [_x,1];
+}forEach _weps;
 
 {
 	_holder addMagazineCargoGlobal [_x select 0,1];
 }forEach _mags;
 
 {
-	_holder addWeaponCargoGlobal [_x,1];
-}forEach _weapons;
+	_items = _x;
+	{
+		_holder addItemCargoGlobal [_x,1];
+	}forEach _items;
+}forEach [_hgItems, _pwItems, _swItems];
 
-_caller reveal _holder;
+//--Save the player's updated gear.
+call life_fnc_saveGear;
