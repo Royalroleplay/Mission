@@ -55,7 +55,7 @@ if(playerSide == west) then {
 
 	_Btn6 ctrlShow true;
 	_Btn6 ctrlSetText "Push";
-	_Btn6 buttonSetAction "[] spawn life_fnc_pushObject; closeDialog 0;";
+	_Btn6 buttonSetAction "[life_vInact_curTarget, player] spawn life_fnc_pushObject; closeDialog 0;";
 	
 	if(_curTarget isKindOf "Ship") then {
 		_Btn6 ctrlSetText localize "STR_vInAct_PushBoat";
@@ -93,7 +93,7 @@ if(playerSide == west) then {
 	
 	_Btn3 ctrlShow true;
 	_Btn3 ctrlSetText "Push";
-	_Btn3 buttonSetAction "[] spawn life_fnc_pushObject; closeDialog 0;";
+	_Btn3 buttonSetAction "[life_vInact_curTarget, player] spawn life_fnc_pushObject; closeDialog 0;";
 	
 	if(typeOf _curTarget == "O_Truck_03_device_F") then {
 		_Btn4 ctrlSetText localize "STR_vInAct_DeviceMine";
