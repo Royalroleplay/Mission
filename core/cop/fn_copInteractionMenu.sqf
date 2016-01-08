@@ -70,8 +70,9 @@ _Btn7 ctrlSetText localize "STR_pInAct_PutInCar";
 _Btn7 buttonSetAction "[life_pInact_curTarget] call life_fnc_putInCar;";
 
 _Btn8 ctrlSetText "Pat Down";
-_Btn8 buttonSetAction "[player] remoteExec [""life_fnc_patDown"",life_pInact_curTarget]; hint ""You patted down your target""; }; closeDialog 0;";
+_Btn8 buttonSetAction "[player] remoteExec [""life_fnc_patDown"",life_pInact_curTarget]; hint ""You patted down your target""; closeDialog 0;";
 
+_Btn8 ctrlEnable false;
 
 //Check that you are near a place to jail them.
 if(!(player distance (getMarkerPos "lakeside_jail_loc") < 50)) then {

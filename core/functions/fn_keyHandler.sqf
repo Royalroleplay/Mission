@@ -106,15 +106,15 @@ switch (_code) do {
 
 	//Restraining (Shift + R)
 	case 19: {
-		if(_shift) then 
-		{	
-			if(playerSide == west) then	
-			{
+		if(_shift) then {
+			if(playerSide == west) then	{
+
+				hint "running restrain action";
 				[] call life_fnc_restrainActionCop;
 			};
 
-			if(playerSide == civilian) then	
-			{
+			if(playerSide == civilian) then	{
+
 				[] call life_fnc_restrainAction;
 			};
 

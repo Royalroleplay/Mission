@@ -52,9 +52,9 @@ class Life_Settings {
 	impound_air = 1850; //Price for impounding helicopters / planes
 
 	/* Initial Bank Amount */
-	bank_cop = 100000; //Amount of cash on bank for new cops
-	bank_civ = 100000; //Amount of cash on bank for new civillians
-	bank_med = 100000; //Amount of cash on bank for new medics
+	bank_cop = 20000; //Amount of cash on bank for new cops
+	bank_civ = 20000; //Amount of cash on bank for new civillians
+	bank_med = 20000; //Amount of cash on bank for new medics
 
 	/* Paycheck Amount */
 	paycheck_cop = 500; //Payment for cops
@@ -113,6 +113,7 @@ class Life_Settings {
 
 //Virtual Items
 class VirtualItems {
+
 	//Misc
 	VITEMMACRO(pickaxe, "STR_Item_Pickaxe", "pickaxe", 2, 750, 350, false, -1, "")
 	VITEMMACRO(fuelEmpty, "STR_Item_FuelE", "fuelEmpty", 2, -1, -1, false, -1, "\rr_textures\icons\ico_fuelempty.paa")
@@ -139,7 +140,7 @@ class VirtualItems {
 	VITEMMACRO(sand, "STR_Item_Sand", "sand", 3, -1, -1, false, -1, "")
 	VITEMMACRO(glass, "STR_Item_Glass", "glass", 1, -1, 225, false, -1, "")
 	VITEMMACRO(diamond_uncut, "STR_Item_DiamondU", "diamondUncut", 4, -1, 750, false, -1, "")
-	VITEMMACRO(diamond_cut, "STR_Item_DiamondC", "diamondCut", 2, -1, 500, false, -1, "")
+	VITEMMACRO(diamond_cut, "STR_Item_DiamondC", "diamondCut", 2, -1, 2000, false, -1, "")
 	VITEMMACRO(rock, "STR_Item_Rock", "rock", 6, -1, -1, false, -1, "")
 	VITEMMACRO(cement, "STR_Item_CementBag", "cement", 5, -1, 200, false, -1, "")
 

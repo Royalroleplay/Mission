@@ -9,7 +9,7 @@
 			2: What to compare to
 */
 class Clothing {
-	class dective {
+	class dtu {
 		title = "STR_Shops_C_Dective";
 		license = "";
 		side = "cop";

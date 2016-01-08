@@ -62,6 +62,46 @@ class CarShops {
 		};
 	};
 
+	class dtu {
+		side = "cop";
+		vehicles[] = {
+			{ "Jonzie_Z432", 500, "driver" },
+			{ "Jonzie_Galant", 500, "driver" },
+			{ "Jonzie_Corolla", 500, "driver" },
+			{ "ADM_GMC_Vandura", 500, "driver" },
+			{ "Jonzie_Ceed", 500, "driver" },
+			{ "Jonzie_Ute", 500, "driver" },
+			{ "DRPG_06Victoria_Base", 500, "driver"},
+			{ "Jonzie_Transit", 500, "driver" },
+			{ "shounka_gt", 500, "driver" },
+			{ "Mrshounka_207_civ", 500, "driver" },
+			{ "Mrshounka_a3_308_rcz", 500, "driver" },
+			{ "Mrshounka_a3_308_civ", 500, "driver" },
+			{ "Mrshounka_a3_dodge15_civ", 500, "driver" },
+			{ "Mrshounka_a3_ds3_civ", 500, "driver" },
+			{ "RG_mustang_rouge", 500, "driver" },
+			{ "Mrshounka_cherokee_noir", 500, "driver" },
+			{ "Jonzie_Viper", 500, "driver" },
+			{ "shounka_buggy", 500, "driver" },
+			{ "Mrshounka_a3_gtr_civ", 500, "driver" },
+			{ "RG_huracan_c_noir", 500, "driver" },
+			{ "Mrshounka_agera_p", 500, "driver" },  // Koenesegge Agera based off real pricing of car
+			{ "Mrshounka_bmwm1_civ", 500, "driver" },  // BMW m 1 Seriews based off real pricing of car
+			{ "Mrshounka_bmwm6_civ", 500, "driver" },  // BMW M 6 Series based off real pricing of car
+			{ "Mrshounka_Bowler_c", 500, "driver" },  // Land Rover Bowler based off real pricing of car
+			{ "shounka_f430_spider", 500, "driver" },  // Ferrari F430 Spyder based off real pricing of car
+			{ "Mrshounka_hummer_civ", 500, "driver" },  // Hummer H1 based off real pricing of car
+			{ "shounka_h2", 500, "driver" },  // Hummer h2 based off real pricing of car
+			{ "Mrshounka_evox_civ", 500, "driver" },  // Lancer Evolution based off real pricing of car
+			{ "Mrshounka_lykan_c", 500, "driver" },  // LykanHyper Sport based off real pricing of car
+			{ "Mrshounka_c63_2015_civ", 500, "driver" },
+			{ "DRPG_14Explorer_Base", 500, "driver" },
+			{ "DRPG_12Charger_Base", 500, "driver" },
+			{ "DRPG_15Charger_Base", 500, "driver" },
+			{ "DRPG_12M5_Base", 500, "driver" }
+		};
+	};
+
 	class race_shop {
 		side = "civ";
 		vehicles[] = {

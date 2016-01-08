@@ -15,7 +15,7 @@ if(!alive _unit) exitWith {};
 if(!(_unit isKindOf "Man")) exitWith {};
 if((player distance _unit > 3)) exitWith {};
 if((speed _unit < 1)) exitWith {};
-if((_unit GVAR "restrained") || (_unit GVAR "tiedup") || (_unit getVariable "Escorting")) exitWith {};
+if((_unit getVariable ["restrained",false]) || (_unit getVariable ["tiedup",false]) || (_unit getVariable ["Escorting",false])) exitWith {};
 if(player == _unit) exitWith {};
 if(!isPlayer _unit) exitWith {};
 if((animationState _unit) != "Incapacitated") exitWith {};
