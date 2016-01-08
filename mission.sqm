@@ -28,7 +28,8 @@ class Mission
 		"xcam_source",
 		"A3_Structures_F_Heli_Ind_AirPort",
 		"A3L_CivClothesPack",
-		"A3_Characters_F_INDEP"
+		"A3_Characters_F_INDEP",
+		"A3L_HospitalBed2015"
 	};
 	addOnsAuto[]=
 	{
@@ -50,6 +51,7 @@ class Mission
 		"housea",
 		"gaol_mapobject",
 		"A3_Structures_F_Heli_Ind_AirPort",
+		"A3L_HospitalBed2015",
 		"jackson_county"
 	};
 	randomSeed=2004553;
@@ -2529,7 +2531,7 @@ class Mission
 					leader=1;
 					skill=0.60000002;
 					init="this enableSimulation false;  this addAction[""Cop Item Shop"",life_fnc_virt_menu,""cop""];  this allowDamage false;  this addAction[""Cop Clothing Shop"",life_fnc_clothingMenu,""cop""]; this addAction[""Cop Weapon Shop"",life_fnc_weaponShopMenu,""cop_weapons""]; this addAction[format[""%1 ($%2)"",localize (getText(missionConfigFile >> ""Licenses"" >> ""cAir"" >> ""displayName"")), [(getNumber(missionConfigFile >> ""Licenses"" >> ""cAir"" >> ""price""))] call life_fnc_numberText],life_fnc_buyLicense,""cAir"",0,false,false,"""",' !license_cop_cAir && playerSide == west '];  this addAction[format[""%1 ($%2)"",localize (getText(missionConfigFile >> ""Licenses"" >> ""coastguard"" >> ""displayName"")), [(getNumber(missionConfigFile >> ""Licenses"" >> ""coastguard"" >> ""price""))] call life_fnc_numberText],life_fnc_buyLicense,""coastguard"",0,false,false,"""",' !license_cop_cg && playerSide == west ']; this addAction[""Clothing Store"",life_fnc_clothingMenu,""dective""];";
-  				};
+				};
 			};
 		};
 		class Item83
@@ -3642,7 +3644,7 @@ class Mission
 	};
 	class Vehicles
 	{
-		items=51;
+		items=61;
 		class Item0
 		{
 			position[]={5402.4883,10.818096,3570.9509};
@@ -4175,6 +4177,96 @@ class Mission
 			vehicle="Land_CashDesk_F";
 			skill=0.60000002;
 			init="this enableSimulation false; this allowDamage false;";
+		};
+		class Item51
+		{
+			position[]={8500.5371,10.46,6466.895};
+			azimut=187.85448;
+			id=234;
+			side="EMPTY";
+			vehicle="A3L_HospitalBed2015";
+			skill=0.60000002;
+		};
+		class Item52
+		{
+			position[]={8502.7266,10.46,6466.6069};
+			azimut=187.85448;
+			id=235;
+			side="EMPTY";
+			vehicle="A3L_HospitalBed2015";
+			skill=0.60000002;
+		};
+		class Item53
+		{
+			position[]={8505.3184,10.46,6466.2534};
+			azimut=187.85448;
+			id=236;
+			side="EMPTY";
+			vehicle="A3L_HospitalBed2015";
+			skill=0.60000002;
+		};
+		class Item54
+		{
+			position[]={8503.9512,10.46,6454.7217};
+			azimut=369.00241;
+			id=237;
+			side="EMPTY";
+			vehicle="A3L_HospitalBed2015";
+			skill=0.60000002;
+		};
+		class Item55
+		{
+			position[]={8501.3232,10.46,6455.1167};
+			azimut=369.00241;
+			id=238;
+			side="EMPTY";
+			vehicle="A3L_HospitalBed2015";
+			skill=0.60000002;
+		};
+		class Item56
+		{
+			position[]={8498.749,10.46,6455.5513};
+			azimut=369.00241;
+			id=239;
+			side="EMPTY";
+			vehicle="A3L_HospitalBed2015";
+			skill=0.60000002;
+		};
+		class Item57
+		{
+			position[]={8506.5527,10.46,6454.2847};
+			azimut=369.00241;
+			id=240;
+			side="EMPTY";
+			vehicle="A3L_HospitalBed2015";
+			skill=0.60000002;
+		};
+		class Item58
+		{
+			position[]={8509.0664,10.46,6453.8901};
+			azimut=369.00241;
+			id=241;
+			side="EMPTY";
+			vehicle="A3L_HospitalBed2015";
+			skill=0.60000002;
+		};
+		class Item59
+		{
+			position[]={8513.1768,10.46,6464.5615};
+			azimut=187.85448;
+			id=242;
+			side="EMPTY";
+			vehicle="A3L_HospitalBed2015";
+			skill=0.60000002;
+		};
+		class Item60
+		{
+			position[]={8507.4912,10.46,6465.957};
+			azimut=187.85448;
+			id=243;
+			side="EMPTY";
+			vehicle="A3L_HospitalBed2015";
+			skill=0.60000002;
 		};
 	};
 	class Markers
