@@ -12,12 +12,15 @@ _type = [_this,1,"",[""]] call BIS_fnc_param;
 
 if(isNull _restrainer) exitWith {};
 
+player SVAR [_type, true, true];
+
+titleText[format["You have been %1 by %2", _type, _restrainer getVariable ["realname", name _restrainer]], "PLAIN"];
+
 //Monitor excessive restrainment
 [_restrainer, _type] spawn {
 	_restrainer = _this select 0;
 	_type = _this select 1;
 
-	systemChat "2";
 	while {true} do {
 		
 		sleep 300;
