@@ -69,6 +69,9 @@ if (_completed) then
 {
 	_npc setVariable ["robberytime", time, true];
 	life_cash = life_cash + _bounty;
+	deleteMarker (_markername);
+    uiSleep 1800;
+    _npc addAction["Rob Store", life_fnc_robNPC, _shoptype];
 	hint format["You have sucessfully robbed the %1 shop", _shoptype];
 }
 else
