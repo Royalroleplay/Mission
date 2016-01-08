@@ -15,6 +15,7 @@ class CarShops {
 			{ "ADM_GMC_Vandura", 5000, "driver" },
 			{ "Jonzie_Ceed", 6000, "driver" },
 			{ "Jonzie_Ute", 7500, "driver" },
+			{ "DRPG_06Victoria_Base", 7500, "driver"},
 			{ "Jonzie_Transit", 10000, "driver" }
 		};
 	};
@@ -53,7 +54,11 @@ class CarShops {
 			{ "shounka_h2", 57400, "driver" },  // Hummer h2 based off real pricing of car
 			{ "Mrshounka_evox_civ", 50000, "driver" },  // Lancer Evolution based off real pricing of car
 			{ "Mrshounka_lykan_c", 340000, "driver" },  // LykanHyper Sport based off real pricing of car
-			{ "Mrshounka_c63_2015_civ", 52000, "driver" }
+			{ "Mrshounka_c63_2015_civ", 52000, "driver" },
+			{ "DRPG_14Explorer_Base", 22500, "driver" },
+			{ "DRPG_12Charger_Base", 15000, "driver" },
+			{ "DRPG_15Charger_Base", 27995, "driver" },
+			{ "DRPG_12M5_Base", 30000, "driver" }
 		};
 	};
 
@@ -75,7 +80,8 @@ class CarShops {
 			{ "A3L_Subaru_EMS", 2500, "" },
 			{ "A3L_ExplorerEMS_S", 3500, ""},
 			{ "A3L_Charger_EMS_Fast", 3500, ""},
-			{ "Jonzie_AmbulanceExtended", 5000, "" }
+			{ "Jonzie_AmbulanceExtended", 5000, "" },
+			{ "DRPG_06Victoria_EMS", 1000, "" }
 		};
 	};
 
@@ -122,7 +128,14 @@ class CarShops {
 		side = "cop";
 		vehicles[] = {
 			{ "AM_Impala_P_P", 1000, "" },
-			{ "Mrshounka_a3_smart_cop", 500, "" }
+			{ "Mrshounka_a3_smart_cop", 500, "" },
+			{ "DRPG_12Charger_P_P", 1500, "" },
+			{ "DRPG_12M5_P_P", 2000, "" },
+			{ "DRPG_08Suburban_P_U", 2500, "" },
+			{ "DRPG_06Victoria_P_T", 3000, "" },
+			{ "DRPG_14Explorer_P_P", 3500, "" },
+			{ "DRPG_06Victoria_P_P", 4000, "" },
+			{ "DRPG_14Explorer_P_P", 4500, "" }
 		};
 	};
 
@@ -293,6 +306,19 @@ class CfgVehicles {
 	class ADM_1969_Camaro: Jonzie_Base {vItemSpace = 100;};
 	class ADM_1969_Charger: Jonzie_Base {vItemSpace = 90;};
 	class ADM_Ford_F100: Jonzie_Base {vItemSpace = 150;};
+	class DRPG_12Charger_P_P: Jonzie_Base {vItemSpace = 125;};
+	class DRPG_12M5_P_P: Jonzie_Base {vItemSpace = 150;};
+	class DRPG_08Suburban_P_U: Jonzie_Base {vItemSpace = 175;};
+	class DRPG_06Victoria_P_T: Jonzie_Base {vItemSpace = 150;};
+	class DRPG_14Explorer_P_P: Jonzie_Base {vItemSpace = 125;};
+	class DRPG_06Victoria_P_P: Jonzie_Base {vItemSpace = 100;};
+	class DRPG_14Explorer_P_P: Jonzie_Base {vItemSpace = 150;};
+	class DRPG_06Victoria_EMS: Jonzie_Base {vItemSpace = 100;};
+	class DRPG_06Victoria_Base: Jonzie_Base {vItemSpace = 100;};
+	class DRPG_14Explorer_Base: Jonzie_Base {vItemSpace = 125;};
+	class DRPG_12Charger_Base: Jonzie_Base {vItemSpace = 125;};
+	class DRPG_15Charger_Base: Jonzie_Base {vItemSpace = 150;};
+	class DRPG_12M5_Base: Jonzie_Base {vItemSpace = 150;};
 	
 	class I_Truck_02_medical_F : Default {
 		vItemSpace = 150;
