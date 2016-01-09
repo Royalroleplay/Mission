@@ -115,10 +115,10 @@ class CarShops {
 		side = "med";
 		vehicles[] = {
 			{ "A3L_CVPILBFD", 1000, "" },
-			{ "A3L_Subaru_EMS", 2500, "" },
-			{ "A3L_ExplorerEMS_S", 3500, ""},
-			{ "A3L_Charger_EMS_Fast", 3500, ""},
-			{ "Jonzie_AmbulanceExtended", 5000, "" },
+			{ "A3L_Subaru_EMS", 1500, "" },
+			{ "A3L_ExplorerEMS_S", 1500, ""},
+			{ "A3L_Charger_EMS_Fast", 2500, ""},
+			{ "Jonzie_AmbulanceExtended", 1000, "" },
 			{ "DRPG_06Victoria_EMS", 1000, "" }
 		};
 	};
