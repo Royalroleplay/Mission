@@ -5215,7 +5215,7 @@ class Mission
 		};
 		class Item115
 		{
-			position[]={8791.8926,10.46,6725.0083};
+			position[]={8791.0547,10.46,6726.6841};
 			name="high_end";
 			text="High End Vehicle Dealer";
 			type="c_car";
@@ -5319,7 +5319,7 @@ class Mission
 		};
 		class Item129
 		{
-			position[]={8564.8408,10.46,6473.1597};
+			position[]={8563.418,10.46,6460.3608};
 			name="civ_car_classic";
 			type="Empty";
 			angle=187.80261;
