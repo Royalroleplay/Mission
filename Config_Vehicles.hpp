@@ -334,8 +334,8 @@ class CfgVehicles {
 	class Jonzie_Viper : Jonzie_Base {vItemSpace = 50; };
 	class Jonzie_AmbulanceExtended: Jonzie_Base {vItemSpace = 100; textures[] = {}; };
 	class Jonzie_Western: Jonzie_Base {vItemSpace = 0;};
-	class Jonzie_Flatbed: Jonzie_Base {vItemSpace = 300;};
-	class Jonzie_Curtain: Jonzie_Base {vItemSpace = 400;};
+	class Jonzie_Flatbed: Jonzie_Base {vItemSpace = 450;};
+	class Jonzie_Curtain: Jonzie_Base {vItemSpace = 480;};
 	class ADM_GMC_Vandura: Jonzie_Base {vItemSpace = 100;};
 	class ADM_Monte_Carlo: Jonzie_Base {vItemSpace = 0;};
 	class ADM_1964_Impala: Jonzie_Base {vItemSpace = 80;};
