@@ -21,8 +21,8 @@ wreckLimit = 3;
 wreckRemovalMinTime = 60;
 wreckRemovalMaxTime = 320;
 corpseLimit = 150;
-corpseRemovalMinTime = 600;
-corpseRemovalMaxTime = 650;
+corpseRemovalMinTime = 1200;
+corpseRemovalMaxTime = 1200;
 
 #include "CfgRemoteExec.hpp"
 #include "dialog\MasterHandler.h"
