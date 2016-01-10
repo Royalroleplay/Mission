@@ -279,6 +279,7 @@ class Life_Client_Core
 		class nearATM {};
 		class patDown {};
 		class playerVehicleKeys {};
+		class getOut {};
 	};
 	
 	class Network
