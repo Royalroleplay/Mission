@@ -13,3 +13,4 @@ if(isNull _vehicle) exitWith {}; //Bad vehicle type
 _vehicle setHitPointDamage["HitLFWheel",1];
 _vehicle setHitPointDamage["HitLF2Wheel",1];
 _vehicle setHitPointDamage["HitRFWheel",1];
+_vehicle setHitPointDamage["HitRF2Wheel",1];
