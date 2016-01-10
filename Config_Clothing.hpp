@@ -480,7 +480,12 @@ class Clothing {
 			{ "RR_Clothing_Police_RM_Dep_Chief_obj", "", 0, {"", "", -1 } },
 			{ "RR_Clothing_Police_RM_Chief_obj", "", 0, {"", "", -1 } },
 			{ "RR_Clothing_Police_Tactical_obj", "SWAT", 0, {"", "", -1 } },
-			{ "a3l_pdofc", "", 100, { "", "", -1 } }
+			{ "a3l_pdofc", "", 100, { "", "", -1 } },
+			{ "A3L_CCPT", "", 0, { "", "", -1 } },
+			{ "A3L_CLT", "", 0, { "", "", -1 } },
+			{ "A3L_CSGT", "", 0, { "", "", -1 } },
+			{ "A3L_CCPL", "", 0, { "", "", -1 } },
+			{ "A3L_COFC", "", 0, { "", "", -1 } }
 		};
 
 		headgear[] = {
