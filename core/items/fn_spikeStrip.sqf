@@ -21,5 +21,6 @@ if(!isNil "life_action_spikeStripDeploy") then {player removeAction life_action_
 if(isNull _spikeStrip) exitWith {life_spikestrip = ObjNull;};
 
 _spikeStrip setPos [(getPos _spikeStrip select 0),(getPos _spikeStrip select 1),0.01];
+_spikeStrip addAction ["<t color='#FF0000'>Pack Spikestrip</t>", "if ([true,'spikeStrip',1] call life_fnc_handleInv) then {deleteVehicle (_this select 3)};", _spikeStrip, 1.5, true, true, "", "side _this == west && (_target getVariable 'owner') == _this"];
 
 [_spikeStrip] remoteExec ["TON_fnc_spikeStrip",RSERV]; //Send it to the server for monitoring.
