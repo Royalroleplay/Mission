@@ -865,6 +865,15 @@ class CfgVehicles {
     	chopShop = 15000;
 		textures[] = {};
     };
+	
+	class Jonzie_Tow_Truck {
+    	vItemSpace = 300;
+    	storageFee[] = { 50, 0, 0, 0 };
+    	garageSell[] = { 0, 0, 0, 0 };
+    	insurance = 10000;
+    	chopShop = 15000;
+		textures[] = {};
+    };
     
 	class B_MRAP_01_F {
         vItemSpace = 65;
