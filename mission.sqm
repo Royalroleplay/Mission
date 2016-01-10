@@ -2692,7 +2692,7 @@ class Mission
 					vehicle="B_RangeMaster_F";
 					leader=1;
 					skill=0.60000002;
-					init="this enableSimulation false;  this allowDamage false;  this addAction[""Vehicle Shop"",life_fnc_vehicleShopMenu,[""cop_car"",west,[""cop_car_2"",""cop_car_2_1""],""cop"",""DOC Vehicles""]];  this addAction[""Vehicle Garage"",  {   [getPlayerUID player,playerSide,""Car"",player] remoteExecCall [""TON_fnc_getVehicles"",2];   createDialog ""Life_impound_menu"";   disableSerialization;   ctrlSetText[2802,""Fetching Vehicles....""];   life_garage_sp = ""cop_car_1""; life_garage_type = ""Car"";  },"""",0,false,false,"""",'playerSide == west'];  this addAction[""Store vehicle in Garage"",life_fnc_storeVehicle,"""",0,false,false,"""",'!life_garage_store']; this setVariable[""realname"",""Cop Vehicle Store""];";
+					init="this enableSimulation false;  this allowDamage false;  this addAction[""Vehicle Shop"",life_fnc_vehicleShopMenu,[""cop_car"",west,[""cop_car_2"",""cop_car_2_1""],""cop"",""DOC Vehicles""]];  this addAction[""Vehicle Garage"",  {   [getPlayerUID player,playerSide,""Car"",player] remoteExecCall [""TON_fnc_getVehicles"",2];   createDialog ""Life_impound_menu"";   disableSerialization;   ctrlSetText[2802,""Fetching Vehicles....""];   life_garage_sp = ""cop_car_2""; life_garage_type = ""Car"";  },"""",0,false,false,"""",'playerSide == west'];  this addAction[""Store vehicle in Garage"",life_fnc_storeVehicle,"""",0,false,false,"""",'!life_garage_store']; this setVariable[""realname"",""Cop Vehicle Store""];";
 				};
 			};
 		};
@@ -2734,7 +2734,7 @@ class Mission
 					vehicle="B_RangeMaster_F";
 					leader=1;
 					skill=0.60000002;
-					init="this enableSimulation false;  this allowDamage false;  this addAction[""Vehicle Shop"",life_fnc_vehicleShopMenu,[""cop_car"",west,""cop_car_3"",""cop"",""DOC Vehicles""]];  this addAction[""Vehicle Garage"",  {   [getPlayerUID player,playerSide,""Car"",player] remoteExecCall [""TON_fnc_getVehicles"",2];   createDialog ""Life_impound_menu"";   disableSerialization;   ctrlSetText[2802,""Fetching Vehicles....""];   life_garage_sp = ""cop_car_1""; life_garage_type = ""Car"";  },"""",0,false,false,"""",'playerSide == west'];  this addAction[""Store vehicle in Garage"",life_fnc_storeVehicle,"""",0,false,false,"""",'!life_garage_store']; this setVariable[""realname"",""Cop Vehicle Store""];";
+					init="this enableSimulation false;  this allowDamage false;  this addAction[""Vehicle Shop"",life_fnc_vehicleShopMenu,[""cop_car"",west,""cop_car_3"",""cop"",""DOC Vehicles""]];  this addAction[""Vehicle Garage"",  {   [getPlayerUID player,playerSide,""Car"",player] remoteExecCall [""TON_fnc_getVehicles"",2];   createDialog ""Life_impound_menu"";   disableSerialization;   ctrlSetText[2802,""Fetching Vehicles....""];   life_garage_sp = ""cop_car_3""; life_garage_type = ""Car"";  },"""",0,false,false,"""",'playerSide == west'];  this addAction[""Store vehicle in Garage"",life_fnc_storeVehicle,"""",0,false,false,"""",'!life_garage_store']; this setVariable[""realname"",""Cop Vehicle Store""];";
 				};
 			};
 		};
@@ -4480,7 +4480,7 @@ class Mission
 		};
 		class Item25
 		{
-			position[]={8300.4463,10.5,6523.5137};
+			position[]={8297.4258,10.504498,6520.3252};
 			name="civ_truck_1";
 			type="Empty";
 			angle=131.26846;
@@ -4660,7 +4660,7 @@ class Mission
 		};
 		class Item46
 		{
-			position[]={8539.8682,10.46,6665.0996};
+			position[]={8557.2744,10.46,6665.6045};
 			name="car_g_1";
 			type="Empty";
 			angle=452.66107;
@@ -5056,14 +5056,14 @@ class Mission
 		};
 		class Item95
 		{
-			position[]={9656.4092,9.8599997,10045.29};
+			position[]={9659.8818,9.8599997,10042.017};
 			name="cop_car_2";
 			type="Empty";
 			angle=-495.84698;
 		};
 		class Item96
 		{
-			position[]={9660.9014,9.8599997,10050.035};
+			position[]={9664.374,9.8599997,10047.356};
 			name="cop_car_2_1";
 			type="Empty";
 			angle=-495.84698;
@@ -5334,7 +5334,7 @@ class Mission
 		};
 		class Item131
 		{
-			position[]={8296.7041,10.506592,6516.981};
+			position[]={8301.7383,10.5,6517.9878};
 			name="civ_truck_1_1";
 			type="Empty";
 			angle=131.26801;
