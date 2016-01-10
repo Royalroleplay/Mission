@@ -139,8 +139,8 @@ class VirtualItems {
 	VITEMMACRO(salt_refined, "STR_Item_SaltR", "saltRefined", 1, -1, 175, false, -1, "")
 	VITEMMACRO(sand, "STR_Item_Sand", "sand", 3, -1, -1, false, -1, "")
 	VITEMMACRO(glass, "STR_Item_Glass", "glass", 1, -1, 225, false, -1, "")
-	VITEMMACRO(diamond_uncut, "STR_Item_DiamondU", "diamondUncut", 4, -1, 500, false, -1, "")
-	VITEMMACRO(diamond_cut, "STR_Item_DiamondC", "diamondCut", 2, -1, 850, false, -1, "")
+	VITEMMACRO(diamond_uncut, "STR_Item_DiamondU", "diamondUncut", 4, -1, 750, false, -1, "")
+	VITEMMACRO(diamond_cut, "STR_Item_DiamondC", "diamondCut", 2, -1, 2000, false, -1, "")
 	VITEMMACRO(rock, "STR_Item_Rock", "rock", 6, -1, -1, false, -1, "")
 	VITEMMACRO(cement, "STR_Item_CementBag", "cement", 5, -1, 200, false, -1, "")
 
