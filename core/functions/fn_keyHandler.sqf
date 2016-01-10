@@ -122,14 +122,6 @@ switch (_code) do {
 		};
 	};
 
-	//Push vehicles Shift + L
-	case 38: {
-		if(_shift) then {_handled = true;};
-		if(_shift && playerSide == west && {cursorTarget isKindOf "Car"} && {cursorTarget distance player < 1.5}) then {
-			[] spawn life_fnc_pushObject;
-		};
-	};
-
 	//Knock out, this is experimental and yeah...
 	case 34: {
 		if(_shift) then {_handled = true;};
