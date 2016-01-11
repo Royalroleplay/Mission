@@ -495,6 +495,7 @@ class Clothing {
 			{ "TRYK_R_CAP_BLK", "", 0, { "", "", -1 } },
 			{ "H_Cap_blk", "", 0, { "", "", -1 } },
 			{ "H_CrewHelmetHeli_B", "", 0, { "", "", -1 } },
+			{ "H_PilotHelmetHeli_B", "", 0, { "", "", -1 } },
 			{ "TRYK_H_PASGT_BLK", "", 175, { "life_coplevel", "SCALAR", 6 } },
 			{ "TRYK_H_headsetcap_blk_Glasses", "", 120, { "", "", -1 } },
 			{ "H_MilCap_mcamo", "", 100, { "", "", -1 } }
@@ -513,6 +514,7 @@ class Clothing {
 			{ "Kio_Balaclava_blk", "", 150, { "", "", -1 } },
 			{ "G_Lady_Blue", "", 150, { "" , "", -1 } },
 			{ "G_Lowprofile", "", 30, { "", "", -1 } },
+			{ "TRYK_kio_balaclavas", "Pilots Only", 50, { "", "", -1 } },
 			{ "G_Combat", "", 55, { "", "", -1 } }
 		};
 
