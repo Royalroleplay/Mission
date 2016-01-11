@@ -155,7 +155,7 @@ switch (_code) do {
 	case 38: {
 
 		//Radar
-		if(!_alt && !_ctrlKey) then { [] call life_fnc_radar; };
+		if(!_alt && !_ctrlKey && playerSide == west) then { [] call life_fnc_radar; };
 
 /* Disable mission based cop lights
 		//If cop run checks for turning lights on.

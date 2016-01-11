@@ -9,10 +9,10 @@ private ["_speed","_vehicle"];
 _vehicle = cursorTarget;
 _speed = round speed _vehicle;
 
+if((currentWeapon player) != "Radar_Gun") exitWith {"You need a radar gun in your hand!"};
 if(isNull _vehicle) exitWith {hint "Point at a vehicle!"};
 if(playerSide != west) exitWith {};
 if(!(_vehicle isKindOf "Car")) exitWith {hint "Point at a land vehicle!"};
-if((currentWeapon player) != "Radar_Gun") exitWith {"You need a radar gun in your hand!"};
 
 switch (true) do 
 {
