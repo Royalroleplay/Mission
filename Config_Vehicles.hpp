@@ -15,7 +15,6 @@ class CarShops {
 			{ "ADM_GMC_Vandura", 5000, "driver" },
 			{ "Jonzie_Ceed", 6000, "driver" },
 			{ "Jonzie_Ute", 7500, "driver" },
-			{ "DRPG_06Victoria_Base", 7500, "driver"},
 			{ "Jonzie_Transit", 10000, "driver" }
 		};
 	};
@@ -54,11 +53,7 @@ class CarShops {
 			{ "shounka_h2", 57400, "driver" },  // Hummer h2 based off real pricing of car
 			{ "Mrshounka_evox_civ", 50000, "driver" },  // Lancer Evolution based off real pricing of car
 			{ "Mrshounka_lykan_c", 340000, "driver" },  // LykanHyper Sport based off real pricing of car
-			{ "Mrshounka_c63_2015_civ", 52000, "driver" },
-			{ "DRPG_14Explorer_Base", 22500, "driver" },
-			{ "DRPG_12Charger_Base", 15000, "driver" },
-			{ "DRPG_15Charger_Base", 27995, "driver" },
-			{ "DRPG_12M5_Base", 30000, "driver" }
+			{ "Mrshounka_c63_2015_civ", 52000, "driver" }
 		};
 	};
 
