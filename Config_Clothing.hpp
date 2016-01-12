@@ -375,7 +375,14 @@ class Clothing {
 			{ "TRYK_H_Booniehat_JSDF", "", 150, { "", "", -1 } },
 			{ "TRYK_R_CAP_BLK", "", 150, { "", "", -1 } },
 			{ "TRYK_R_CAP_TAN", "", 150, { "", "", -1 } },
-			{ "TRYK_R_CAP_OD_US", "", 150, { "", "", -1 } }
+			{ "TRYK_R_CAP_OD_US", "", 150, { "", "", -1 } },
+			{ "TRYK_Shemagh_G", "", 150, { "", "", -1 } },
+			{ "TRYK_Shemagh", "", 150, { "", "", -1 } },
+			{ "TRYK_Shemagh_WH", "", 150, { "", "", -1 } },
+			{ "TRYK_Shemagh_shade_G", "", 150, { "", "", -1 } },
+			{ "TRYK_Shemagh_shade", "", 150, { "", "", -1 } },
+			{ "TRYK_Shemagh_shade_WH", "", 150, { "", "", -1 } },
+			{ "TRYK_H_wig", "", 150, { "", "", -1 } }
 		};
 
 		goggles[] = {
@@ -424,14 +431,7 @@ class Clothing {
 			{ "G_Lady_Dark", "", 150, { "", "", -1 } },
 			{ "G_Lady_Blue", "", 150, { "", "", -1 } },
 			{ "G_Lowprofile", "", 30, { "", "", -1 } },
-			{ "G_Combat", "", 55, { "", "", -1 } },
-			{ "TRYK_H_wig", "", 150, { "", "", -1 } },
-			{ "TRYK_Shemagh_G", "", 150, { "", "", -1 } },
-			{ "TRYK_Shemagh", "", 150, { "", "", -1 } },
-			{ "TRYK_Shemagh_WH", "", 150, { "", "", -1 } },
-			{ "TRYK_Shemagh_shade_G", "", 150, { "", "", -1 } },
-			{ "TRYK_Shemagh_shade", "", 150, { "", "", -1 } },
-			{ "TRYK_Shemagh_shade_WH", "", 150, { "", "", -1 } }
+			{ "G_Combat", "", 55, { "", "", -1 } }
 		};
 
 		vests[] = {
