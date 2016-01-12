@@ -41,6 +41,27 @@ life_corpse SVAR ["name",nil,TRUE];
 [life_corpse] remoteExecCall ["life_fnc_corpse",RANY];
 hideBody life_corpse;
 
+
+if((!isNil "life_death_primary") && life_death_primary != "") then {
+	player addWeapon life_death_primary;
+};
+
+if((!isNil "life_death_primary_items") && life_death_primary_items != []) then {
+	{
+		player addPrimaryWeaponItem _x;
+	} forEach life_death_primary_items;
+};
+
+if((!isNil "life_death_secondary") && life_death_secondary != "") then {
+	player addWeapon life_death_secondary;
+};
+
+if((!isNil "life_death_primary_items") && life_death_primary_items != []) then {
+	{
+		player addSecondaryWeaponItem _x;
+	} forEach life_death_primary_items;
+};
+
 player SVAR ["Revive",nil,TRUE];
 player SVAR ["name",nil,TRUE];
 player SVAR ["Reviving",nil,TRUE];

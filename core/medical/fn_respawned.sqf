@@ -40,6 +40,11 @@ switch(playerSide) do
 	waitUntil {scriptDone _handle};
 };
 
+life_death_primary = "";
+life_death_primary_items = [];
+life_death_secondary = "";
+life_death_secondary_items = [];
+
 showChat true;
 
 //Cleanup of weapon containers near the body & hide it.
