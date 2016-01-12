@@ -32,7 +32,7 @@ _progressBar progressSetPosition 0.01;
 _cP = 0.01;
 _cpRate = 0.0092;
 
-[2,"STR_House_Raid_NOTF",true,[(_house GVAR "house_owner") select 1]] remoteExecCall ["life_fnc_broadcast",RCLIENT];
+//[2,"STR_House_Raid_NOTF",true,[(_house GVAR "house_owner") select 1]] remoteExecCall ["life_fnc_broadcast",RCLIENT];
 
 while {true} do {
 	if(animationState player != "AinvPknlMstpSnonWnonDnon_medic_1") then {

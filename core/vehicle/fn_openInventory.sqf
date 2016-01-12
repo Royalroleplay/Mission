@@ -36,7 +36,7 @@ if(_vehicle isKindOf "House_F" && {count (_vehicle getVariable ["containers",[]]
 if(_veh_data select 0 == -1 && {!(_vehicle isKindOf "House_F")}) exitWith {closeDialog 0; _vehicle setVariable["trunk_in_use",false,true]; hint localize "STR_MISC_NoStorageVeh";};
 
 ctrlSetText[3504,format[(localize "STR_MISC_Weight")+ " %1/%2",_veh_data select 1,_veh_data select 0]];
-[_vehicle] call life_fnc_vehInventory;
+[_vehicle] call life_fnc_vehInventory;	
 life_trunk_vehicle = _vehicle;
 
 _vehicle spawn {

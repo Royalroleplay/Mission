@@ -38,7 +38,7 @@ if(_shooter isKindOf "Man" && alive player) then {
 		_obj = "Land_ClutterCutter_small_F" createVehicle ASLTOATL(visiblePositionASL player);
 		_obj setPosATL ASLTOATL(visiblePositionASL player);
 		[player,"AinjPfalMstpSnonWnonDf_carried_fallwc"] remoteExecCall ["life_fnc_animSync",RCLIENT];
-		[0,"STR_NOTF_Tazed",true,[profileName, _shooter GVAR ["realname",name _shooter]]] remoteExecCall ["life_fnc_broadcast",RCLIENT];
+//		[0,"STR_NOTF_Tazed",true,[profileName, _shooter GVAR ["realname",name _shooter]]] remoteExecCall ["life_fnc_broadcast",RCLIENT];
 		_unit attachTo [_obj,[0,0,0]];
 		disableUserInput true;
 		sleep 15;

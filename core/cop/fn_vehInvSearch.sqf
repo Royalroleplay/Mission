@@ -27,7 +27,7 @@ _value = 0;
 } foreach (SEL(_vehicleInfo,0));
 
 if(_value > 0) then {
-	[0,"STR_NOTF_VehContraband",true,[[_value] call life_fnc_numberText]] remoteExecCall ["life_fnc_broadcast",RCLIENT];
+//	[0,"STR_NOTF_VehContraband",true,[[_value] call life_fnc_numberText]] remoteExecCall ["life_fnc_broadcast",RCLIENT];
 	ADD(BANK,_value);
 	_vehicle SVAR ["Trunk",[],true];
 } else {

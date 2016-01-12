@@ -63,7 +63,7 @@ switch (true) do {
 	case (_esc): {
 		life_is_arrested = false;
 		hint localize "STR_Jail_EscapeSelf";
-		[0,"STR_Jail_EscapeNOTF",true,[profileName]] remoteExecCall ["life_fnc_broadcast",RCLIENT];
+//		[0,"STR_Jail_EscapeNOTF",true,[profileName]] remoteExecCall ["life_fnc_broadcast",RCLIENT];
 		[getPlayerUID player,profileName,"901"] remoteExecCall ["life_fnc_wantedAdd",RSERV];
 		[5] call SOCK_fnc_updatePartial;
 	};

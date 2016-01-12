@@ -15,7 +15,7 @@ if(_vault GVAR ["safe_open",false]) exitWith {hint localize "STR_ISTR_Blast_Alre
 if(!([false,"blastingcharge",1] call life_fnc_handleInv)) exitWith {}; //Error?
 
 _vault SVAR ["chargeplaced",true,true];
-[0,"STR_ISTR_Blast_Placed"] remoteExecCall ["life_fnc_broadcast",west];
+//[0,"STR_ISTR_Blast_Placed"] remoteExecCall ["life_fnc_broadcast",west];
 hint localize "STR_ISTR_Blast_KeepOff";
 _handle = [] spawn life_fnc_demoChargeTimer;
 [] remoteExec ["life_fnc_demoChargeTimer",west];

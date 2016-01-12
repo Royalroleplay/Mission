@@ -15,7 +15,7 @@ if(player distance cursorTarget > 10) exitWith {};
 _vehicleData = _vehicle GVAR ["vehicle_info_owners",[]];
 if(EQUAL((count _vehicleData),0)) exitWith {deleteVehicle _vehicle}; //Bad vehicle.
 _vehicleName = FETCH_CONFIG2(getText,CONFIG_VEHICLES,(typeOf _vehicle),"displayName");
-[0,"STR_NOTF_BeingImpounded",true,[SEL(SEL(_vehicleData,0),1),_vehicleName]] remoteExecCall ["life_fnc_broadcast",RCLIENT];
+//[0,"STR_NOTF_BeingImpounded",true,[SEL(SEL(_vehicleData,0),1),_vehicleName]] remoteExecCall ["life_fnc_broadcast",RCLIENT];
 life_action_inUse = true;
 
 _upp = localize "STR_NOTF_Impounding";
@@ -57,7 +57,7 @@ life_impound_inuse = true;
 [_vehicle,true,player] remoteExecCall ["TON_fnc_vehicleStore",RSERV];
 waitUntil {!life_impound_inuse};
 hint format[localize "STR_NOTF_Impounded",_type,_price];
-[0,"STR_NOTF_HasImpounded",true,[profileName,SEL(SEL(_vehicleData,0),1),_vehicleName]] remoteExecCall ["life_fnc_broadcast",RCLIENT];
+//[0,"STR_NOTF_HasImpounded",true,[profileName,SEL(SEL(_vehicleData,0),1),_vehicleName]] remoteExecCall ["life_fnc_broadcast",RCLIENT];
 ADD(BANK,_price);
 hint format ["You have been rewarded with $%1 for your efforts to clean up the streets.", _price];
 

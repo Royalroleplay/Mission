@@ -16,4 +16,4 @@ if(BANK < life_bail_amount) exitWith {hint format[localize "STR_NOTF_Bail_NotEno
 
 SUB(BANK,life_bail_amount);
 life_bail_paid = true;
-[0,"STR_NOTF_Bail_Bailed",true,[profileName]] remoteExecCall ["life_fnc_broadcast",RCLIENT];
+//[0,"STR_NOTF_Bail_Bailed",true,[profileName]] remoteExecCall ["life_fnc_broadcast",RCLIENT];

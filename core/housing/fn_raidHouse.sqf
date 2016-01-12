@@ -69,7 +69,7 @@ _value = 0;
 } foreach (SEL(_houseInv,0));
 
 if(_value > 0) then {
-	[0,"STR_House_Raid_Successful",true,[[_value] call life_fnc_numberText]] remoteExecCall ["life_fnc_broadcast",RCLIENT];
+	//[0,"STR_House_Raid_Successful",true,[[_value] call life_fnc_numberText]] remoteExecCall ["life_fnc_broadcast",RCLIENT];
 	ADD(BANK,round(_value / 2));
 	
 	_house SVAR ["Trunk",[_houseInvData,_houseInvVal],true];

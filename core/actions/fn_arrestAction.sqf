@@ -20,4 +20,4 @@ if(isNull _unit) exitWith {}; //Not valid
 if(isNull _unit) exitWith {}; //Not valid
 detach _unit;
 [_unit,false] remoteExecCall ["life_fnc_jail",_unit];
-[0,"STR_NOTF_Arrested_1",true, [_unit GVAR ["realname",name _unit], profileName]] remoteExecCall ["life_fnc_broadcast",RCLIENT];
+//[0,"STR_NOTF_Arrested_1",true, [_unit GVAR ["realname",name _unit], profileName]] remoteExecCall ["life_fnc_broadcast",RCLIENT];
