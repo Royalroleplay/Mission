@@ -44,6 +44,7 @@ life_death_primary = "";
 life_death_primary_items = [];
 life_death_secondary = "";
 life_death_secondary_items = [];
+life_death_glasses = "";
 
 showChat true;
 

@@ -95,6 +95,7 @@ life_death_primary = primaryWeapon _unit;
 life_death_primary_items = primaryWeaponItems _unit;
 life_death_secondary = secondaryWeapon _unit;
 life_death_secondary_items = secondaryWeaponItems _unit;
+life_death_glasses = goggles _unit;
 //life_death_magazines = magazines _unit;
 
 removeAllWeapons _unit;

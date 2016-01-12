@@ -36,10 +36,12 @@ switch(playerSide) do {
 //Bring me back to life.
 player setDir _dir;
 player setPosASL (visiblePositionASL life_corpse);
-life_corpse SVAR ["Revive",nil,TRUE];
-life_corpse SVAR ["name",nil,TRUE];
-[life_corpse] remoteExecCall ["life_fnc_corpse",RANY];
-hideBody life_corpse;
+
+deleteVehicle life_corpse;
+//life_corpse SVAR ["Revive",nil,TRUE];
+//life_corpse SVAR ["name",nil,TRUE];
+//[life_corpse] remoteExecCall ["life_fnc_corpse",RANY];
+//hideBody life_corpse;
 
 
 if((!isNil "life_death_primary") && life_death_primary != "") then {
@@ -60,6 +62,10 @@ if((!isNil "life_death_primary_items") && life_death_primary_items != []) then {
 	{
 		player addSecondaryWeaponItem _x;
 	} forEach life_death_primary_items;
+};
+
+if((!isNil "life_death_glasses") && life_death_glasses != "") then {
+	player addGoggles life_death_glasses;
 };
 
 player SVAR ["Revive",nil,TRUE];
