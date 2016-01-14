@@ -75,4 +75,7 @@ if(playerside == independent) then {
 
 	_Btn7 ctrlEnable false;
 	_Btn7 ctrlShow false;
+
+	_Btn8 ctrlEnable false;
+	_Btn8 ctrlShow false;
 };

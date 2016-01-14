@@ -48,7 +48,7 @@ if((!isNil "life_death_primary") && life_death_primary != "") then {
 	player addWeapon life_death_primary;
 };
 
-if((!isNil "life_death_primary_items") && life_death_primary_items != []) then {
+if((!isNil "life_death_primary_items") && (count life_death_primary_items > 0)) then {
 	{
 		player addPrimaryWeaponItem _x;
 	} forEach life_death_primary_items;
@@ -58,7 +58,7 @@ if((!isNil "life_death_secondary") && life_death_secondary != "") then {
 	player addWeapon life_death_secondary;
 };
 
-if((!isNil "life_death_primary_items") && life_death_primary_items != []) then {
+if((!isNil "life_death_primary_items") && (count life_death_primary_items > 0)) then {
 	{
 		player addSecondaryWeaponItem _x;
 	} forEach life_death_primary_items;
