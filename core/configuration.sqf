@@ -36,6 +36,7 @@ tawvd_addon_disable = true;
 life_god = false; //Add this
 life_frozen = false; //And this
 life_markers = false; //Finally this
+life_gear = [];
 
 life_death_primary = "";
 life_death_primary_items = [];

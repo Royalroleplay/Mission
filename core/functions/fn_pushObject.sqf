@@ -14,4 +14,4 @@ if (_unit in _Object) exitwith {titleText ["You can't push from inside the vehic
 _Object setOwner (owner _unit);
 _unit playMove "AmovPercMstpSnonWnonDnon_AinvPercMstpSnonWnonDnon_Putdown";
 if (currentWeapon _unit == "") then {sleep 1;} else {sleep 2;};
-_Object setVelocity [(sin(direction _unit))*3, (cos(direction _unit))*3, 0];
+_Object setVelocity [(sin(direction _unit))*10, (cos(direction _unit))*10, 0];

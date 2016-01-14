@@ -76,3 +76,16 @@ if(playerside == independent) then {
 	_Btn7 ctrlEnable false;
 	_Btn7 ctrlShow false;
 };
+
+if(playerside == civilian) then {
+	
+	_Btn5 ctrlEnable false;
+	_Btn5 ctrlShow false;
+
+	_Btn6 ctrlEnable false;
+	_Btn6 ctrlShow false;
+
+	_Btn7 ctrlEnable false;
+	_Btn7 ctrlShow false;
+};
+

@@ -91,14 +91,8 @@ if(!isNull _killer && {_killer != _unit}) then {
 	life_removeWanted = true;
 };
 
-life_death_primary = primaryWeapon _unit;
-life_death_primary_items = primaryWeaponItems _unit;
-life_death_secondary = secondaryWeapon _unit;
-life_death_secondary_items = secondaryWeaponItems _unit;
-life_death_glasses = goggles _unit;
-//life_death_magazines = magazines _unit;
+call life_fnc_saveGear;
 
-removeAllWeapons _unit;
 _handle = [_unit] spawn life_fnc_dropItems;
 waitUntil {scriptDone _handle};
 
