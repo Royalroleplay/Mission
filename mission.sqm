@@ -2512,7 +2512,7 @@ class Mission
 					leader=1;
 					skill=0.60000002;
 					text="h1_3";
-					init="this enableSimulation false;  this addAction[""Cop Item Shop"",life_fnc_virt_menu,""cop""];  this allowDamage false;  this addAction[""Cop Clothing Shop"",life_fnc_clothingMenu,""cop""]; this addAction[""Detective Shop"",life_fnc_clothingMenu,""dtu""]; this addAction[""Cop Weapon Shop"",life_fnc_weaponShopMenu,""cop_weapons""]; this addAction[format[""%1 ($%2)"",localize (getText(missionConfigFile >> ""Licenses"" >> ""cAir"" >> ""displayName"")), [(getNumber(missionConfigFile >> ""Licenses"" >> ""cAir"" >> ""price""))] call life_fnc_numberText],life_fnc_buyLicense,""cAir"",0,false,false,"""",' !license_cop_cAir && playerSide == west '];  this addAction[format[""%1 ($%2)"",localize (getText(missionConfigFile >> ""Licenses"" >> ""coastguard"" >> ""displayName"")), [(getNumber(missionConfigFile >> ""Licenses"" >> ""coastguard"" >> ""price""))] call life_fnc_numberText],life_fnc_buyLicense,""coastguard"",0,false,false,"""",' !license_cop_cg && playerSide == west ']; ";
+					init="this enableSimulation false;  this addAction[""Cop Item Shop"",life_fnc_virt_menu,""cop""];  this allowDamage false;  this addAction[""Cop Clothing Shop"",life_fnc_clothingMenu,""cop""]; this addAction[""Detective Shop"",life_fnc_clothingMenu,""dtu""]; this addAction[""Cop Weapon Shop"",life_fnc_weaponShopMenu,""cop_weapons""]; this addAction[""DTU Weapon Shop"",life_fnc_weaponShopMenu,""dtu""]; this addAction[format[""%1 ($%2)"",localize (getText(missionConfigFile >> ""Licenses"" >> ""cAir"" >> ""displayName"")), [(getNumber(missionConfigFile >> ""Licenses"" >> ""cAir"" >> ""price""))] call life_fnc_numberText],life_fnc_buyLicense,""cAir"",0,false,false,"""",' !license_cop_cAir && playerSide == west '];  this addAction[format[""%1 ($%2)"",localize (getText(missionConfigFile >> ""Licenses"" >> ""coastguard"" >> ""displayName"")), [(getNumber(missionConfigFile >> ""Licenses"" >> ""coastguard"" >> ""price""))] call life_fnc_numberText],life_fnc_buyLicense,""coastguard"",0,false,false,"""",' !license_cop_cg && playerSide == west ']; ";
 				};
 			};
 		};
@@ -3950,8 +3950,8 @@ class Mission
 		};
 		class Item14
 		{
-			position[]={8494.5762,10.46,6473.7163};
-			azimut=-76.805389;
+			position[]={8494.5664,10.46,6473.75};
+			azimut=-79.912598;
 			id=204;
 			side="EMPTY";
 			vehicle="Land_Atm_02_F";
@@ -5005,11 +5005,11 @@ class Mission
 		};
 		class Item69
 		{
-			position[]={8494.5469,10.46,6473.7446};
+			position[]={8494.5566,10.46,6473.7109};
 			name="atm_marker_1_2";
 			type="loc_Tourism";
 			colorName="ColorGreen";
-			angle=-432.57767;
+			angle=-435.68436;
 		};
 		class Item70
 		{

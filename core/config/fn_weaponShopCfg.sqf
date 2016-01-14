@@ -292,4 +292,80 @@ switch(_shop) do {
 			]
 		];
 	};
+
+	case "dtu":
+	{
+		switch(true) do
+		{
+			default
+			{
+				["DTU Weapon Shop",
+					[
+						["RH_m9c",nil,500],
+						["RH_15Rnd_9x19_M9",nil,100],
+
+						["RH_vp70",nil,500],
+						["RH_18Rnd_9x19_VP",nil,250],
+
+						["hgun_Pistol_heavy_01_F",nil,500],
+						["11Rnd_45ACP_Mag",nil,300],
+
+						["RH_kimber_nw",nil,500],
+						["RH_7Rnd_45cal_m1911",nil,300],
+
+						["RH_kimber",nil,500],
+						["RH_7Rnd_45cal_m1911",nil,300],
+
+						["RH_g18",nil,500],
+						["RH_19Rnd_9x19_g18",nil,175],
+
+						["RH_vz61",nil,500],
+						["RH_20Rnd_32cal_vz61",nil,250],
+
+						["RH_muzi",nil,500],
+						["RH_30Rnd_9x19_UZI",nil,200],
+
+						["RH_tec9",nil,500],
+						["RH_32Rnd_9x19_tec",nil,250],
+
+						["hlc_smg_mp5k",nil,500],
+						["hlc_30Rnd_9x19_B_MP5",nil,200],
+						
+						["RH_sbr9_wdl",nil,500],
+						["RH_32Rnd_9mm_M822",nil,250],
+
+						["RH_sbr9_tg",nil,500],
+						["RH_32Rnd_9mm_M822",nil,250],
+
+						["RH_sbr9_des",nil,500],
+						["RH_32Rnd_9mm_M822",nil,250],
+
+						["SMG_01_F",nil,500],
+						["30Rnd_45ACP_Mag_SMG_01",nil,250],
+
+						["hlc_rifle_aku12",nil,500],
+						["hlc_30Rnd_545x39_B_AK",nil,250],
+
+						["hlc_rifle_aek971worn",nil,500],
+						["hlc_30Rnd_545x39_B_AK",nil,250],
+
+						["hlc_rifle_aks74",nil,500],
+						["hlc_30Rnd_545x39_B_AK",nil,250],
+
+						["hlc_rifle_ak74_dirty2",nil,500],
+						["hlc_30Rnd_545x39_B_AK",nil,250],
+
+						["hlc_rifle_ak47",nil,500],
+						["hlc_30Rnd_762x39_b_ak",nil,250],
+
+						["hlc_rifle_akm",nil,500],
+						["hlc_30Rnd_762x39_b_ak",nil,350],
+
+						["hlc_optic_kobra",nil,500],
+						["optic_Aco",nil,500]
+					]
+				];
+			};
+		};
+	};
 };

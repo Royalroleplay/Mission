@@ -84,5 +84,3 @@ _Btn7 ctrlShow false;
 
 _Btn8 ctrlEnable false;
 _Btn8 ctrlShow false;
-
-

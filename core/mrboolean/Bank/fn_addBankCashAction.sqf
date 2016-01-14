@@ -1,0 +1,1 @@
+bank_cash addAction ["Take Cash", { [] spawn life_fnc_takeBankCash; }];
