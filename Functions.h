@@ -45,6 +45,7 @@ class Life_Client_Core
 		file = "Core\MrBoolean\Bank";
 
 		class resetBank {};
+		class addBankCashAction {};
 		class robBank {};
 		class takeBankCash {};
 	};

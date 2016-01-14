@@ -118,6 +118,7 @@ class CfgRemoteExec {
 		F(life_fnc_pushFunction,ANYONE)
 		F(life_fnc_simDisable,ANYONE)
 		F(MBF_fnc_fireworks,ANYONE)
+		F(life_fnc_addBankCashAction,ANYONE)
 
 	};
 	

@@ -8,7 +8,7 @@
 */
 
 if(life_inv_hacking_device < 1) exitWith {hint "You require a hacking device!";};
-if(bank_building getVariable ["time",0] >= time) exitWith {hint "The bank was robbed too recently!";};
+if(((bank_building getVariable ["time",0])+1800) >= time) exitWith {hint "The bank was robbed too recently!";};
 if(bank_building getVariable ["hacking_active",false]) exitWith {hint "Hacking Device Already Active!";};
 if(!([false,"hacking_device",1] call life_fnc_handleInv)) exitWith {}; //Error?
 

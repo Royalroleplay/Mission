@@ -14,6 +14,8 @@ createDialog "rr_phone_message";
 
 ctrlSetText [1000, format ["%1", name player]];
 
+_type = "";
+
 {
 	if(alive _x && _x != player) then {
 		switch (side _x) do {

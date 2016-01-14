@@ -13,7 +13,6 @@ params [
 ];
 
 disableSerialization;
-player setVariable ["tf_unable_to_use_radio", true];
 
 //Set some vars
 _unit SVAR ["Revive",FALSE,TRUE]; //Set the corpse to a revivable state.
@@ -29,7 +28,7 @@ showCinemaBorder TRUE;
 life_deathCamera cameraEffect ["Internal","Back"];
 createDialog "DeathScreen";
 life_deathCamera camSetTarget _unit;
-life_deathCamera camSetRelPos [0,8.5,9.5];
+life_deathCamera camSetRelPos [0,3.5,4.5];
 life_deathCamera camSetFOV .5;
 life_deathCamera camSetFocus [50,0];
 life_deathCamera camCommit 0;
@@ -82,7 +81,7 @@ if(side _killer == west && playerSide != west) then {
 	life_copRecieve = _killer;
 	//Did I rob the federal reserve?
 	if(!life_use_atm && {CASH > 0}) then {
-//		[format[localize "STR_Cop_RobberDead",[CASH] call life_fnc_numberText]] remoteExecCall ["life_fnc_broadcast",RCLIENT];
+		[format[localize "STR_Cop_RobberDead",[CASH] call life_fnc_numberText]] remoteExecCall ["life_fnc_broadcast",RCLIENT];
 		CASH = 0;
 	};
 };
@@ -90,8 +89,6 @@ if(side _killer == west && playerSide != west) then {
 if(!isNull _killer && {_killer != _unit}) then {
 	life_removeWanted = true;
 };
-
-call life_fnc_saveGear;
 
 _handle = [_unit] spawn life_fnc_dropItems;
 waitUntil {scriptDone _handle};
