@@ -28,22 +28,6 @@ if(BANK > (LIFE_SETTINGS(getNumber,"revive_fee"))) then {
 	BANK = 0;
 };
 
-//Retexturing of units clothing, vanilla files only retexture the EMS unit.
-switch(playerSide) do {
-	case independent: {[player,0,"\rr_textures\textures\medic_uniform.jpg"] remoteExecCall ["life_fnc_setTexture",RCLIENT];};
-};
-
-//Bring me back to life.
-player setDir _dir;
-player setPosASL (visiblePositionASL life_corpse);
-
-deleteVehicle life_corpse;
-//life_corpse SVAR ["Revive",nil,TRUE];
-//life_corpse SVAR ["name",nil,TRUE];
-//[life_corpse] remoteExecCall ["life_fnc_corpse",RANY];
-//hideBody life_corpse;
-
-
 if((!isNil "life_death_primary") && life_death_primary != "") then {
 	player addWeapon life_death_primary;
 };
@@ -67,6 +51,16 @@ if((!isNil "life_death_primary_items") && (count life_death_primary_items > 0)) 
 if((!isNil "life_death_glasses") && life_death_glasses != "") then {
 	player addGoggles life_death_glasses;
 };
+
+//Bring me back to life.
+player setDir _dir;
+player setPosASL (visiblePositionASL life_corpse);
+
+deleteVehicle life_corpse;
+//life_corpse SVAR ["Revive",nil,TRUE];
+//life_corpse SVAR ["name",nil,TRUE];
+//[life_corpse] remoteExecCall ["life_fnc_corpse",RANY];
+//hideBody life_corpse;
 
 player SVAR ["Revive",nil,TRUE];
 player SVAR ["name",nil,TRUE];

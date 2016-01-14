@@ -173,4 +173,3 @@ if(EQUAL(LIFE_SETTINGS(getNumber,"enable_fatigue"),0)) then {player enableFatigu
 		sleep 0.5;
 	};
 };
-

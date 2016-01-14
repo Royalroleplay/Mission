@@ -98,7 +98,10 @@ life_death_secondary_items = secondaryWeaponItems _unit;
 life_death_glasses = goggles _unit;
 //life_death_magazines = magazines _unit;
 
-removeAllWeapons _unit;
+_unit removeWeapon life_death_primary;
+_unit removeWeapon life_death_secondary;
+
+//removeAllWeapons _unit;
 _handle = [_unit] spawn life_fnc_dropItems;
 waitUntil {scriptDone _handle};
 
