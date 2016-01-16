@@ -115,7 +115,11 @@ switch(_shop) do {
 						["NVGoggles",nil,1200],
 						["B_FieldPack_ocamo",nil,3000],
 						["tf_anprc152",nil,0],
-						["tf_anprc148jem",nil,0]
+						["tf_anprc148jem",nil,0],
+						["Chemlight_green",nil,0],
+						["Chemlight_red",nil,0],
+						["Chemlight_yellow",nil,0],
+						["Chemlight_blue",nil,0]
 					]
 				];
 			};
