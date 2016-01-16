@@ -103,8 +103,8 @@ diag_log "----------------------------------------------------------------------
 diag_log format["                End of Altis Life Client Init :: Total Execution Time %1 seconds ",(diag_tickTime) - _timeStamp];
 diag_log "------------------------------------------------------------------------------------------------------";
 
-life_sidechat = true;
-[player,life_sidechat,playerSide] remoteExecCall ["TON_fnc_managesc",RSERV];
+//life_sidechat = false;
+//[player,life_sidechat,playerSide] remoteExecCall ["TON_fnc_managesc",RSERV];
 0 cutText ["","BLACK IN"];
 [] call life_fnc_hudSetup;
 

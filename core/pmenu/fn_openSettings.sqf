@@ -24,7 +24,7 @@ ctrlSetText[2922, format["%1", life_vdAir]];
 } foreach [[2901,life_vdFoot],[2911,life_vdCar],[2921,life_vdAir]];
 
 if(isNil "life_tagson") then {
-	life_sidechat = true;
+	life_sidechat = false;
 	life_tagson = true;
 	life_revealObjects = true;
 };

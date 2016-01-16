@@ -24,6 +24,7 @@ player SVAR ["Revive",nil,TRUE];
 player SVAR ["name",nil,TRUE];
 player SVAR ["Reviving",nil,TRUE];
 player setVariable ["tf_unable_to_use_radio", false, true];
+player setVariable ["tiedup", false, true];
 
 //Load gear for a 'new life'
 switch(playerSide) do
@@ -60,6 +61,7 @@ if(!isNull life_corpse) then {
 //Destroy our camera...
 life_deathCamera cameraEffect ["TERMINATE","BACK"];
 camDestroy life_deathCamera;
+
 
 //Bad boy
 if(life_is_arrested) exitWith {
