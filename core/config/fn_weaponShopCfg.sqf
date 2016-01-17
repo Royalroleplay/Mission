@@ -301,6 +301,7 @@ switch(_shop) do {
 	{
 		switch(true) do
 		{
+			case (playerSide != west): {"You are not a cop!"};
 			default
 			{
 				["DTU Weapon Shop",
