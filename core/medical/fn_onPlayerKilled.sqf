@@ -104,3 +104,10 @@ CASH = 0;
 
 [0] call SOCK_fnc_updatePartial;
 [3] call SOCK_fnc_updatePartial;
+
+[_killer] spawn {
+	_killer = _this select 0;	
+	cutText[format["You were killed by %1",(_killer getVariable ["realname",name _killer])],"PLAIN",2];
+	sleep 20;
+	cutText["","PLAIN"];
+};
