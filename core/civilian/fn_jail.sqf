@@ -25,7 +25,7 @@ hint localize "STR_Jail_LicenseNOTF";
 
 if(_bad) then {
 	waitUntil {alive player};
-	sleep 1;
+	uiSleep 1;
 };
 
 player forceAddUniform "RR_Clothing_Prisoner_obj";

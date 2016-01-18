@@ -18,6 +18,6 @@ while {true} do {
 	if(!alive _vehicle) exitWith {};
 	if(isNull _vehicle) exitWith {};
 	_vehicle say3D "RoyalFire";
-	sleep 18.5;
+	uiSleep 18.5;
 	if(!(_vehicle GVAR "siren")) exitWith {};
 };

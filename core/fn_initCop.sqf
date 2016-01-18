@@ -13,12 +13,12 @@ _end = false;
 
 if(life_blacklisted) exitWith {
 	["Blacklisted",false,true] call BIS_fnc_endMission;
-	sleep 30;
+	uiSleep 30;
 };
 
 if((FETCH_CONST(life_coplevel) == 0) && (FETCH_CONST(life_adminlevel) == 0)) then {
 	["NotWhitelisted",false,true] call BIS_fnc_endMission;
-	sleep 35;
+	uiSleep 35;
 };
 
 player setVariable["rank",(FETCH_CONST(life_coplevel)),true];

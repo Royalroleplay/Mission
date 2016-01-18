@@ -14,7 +14,7 @@ if(life_session_time) exitWith {hint localize "STR_Session_SyncdAlready";};
 hint localize "STR_Session_SyncData";
 [] spawn {
 	life_session_time = true;
-	sleep (5 * 60);
+	uiSleep (5 * 60);
 	life_session_time = false;
 };
 	

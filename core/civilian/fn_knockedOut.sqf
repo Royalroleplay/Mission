@@ -23,7 +23,7 @@ _obj = "Land_ClutterCutter_small_F" createVehicle ASLTOATL(visiblePositionASL pl
 _obj setPosATL ASLTOATL(visiblePositionASL player);
 
 player attachTo [_obj,[0,0,0]];
-sleep 15;
+uiSleep 15;
 player playMoveNow "amovppnemstpsraswrfldnon";
 detach player;
 deleteVehicle _obj;

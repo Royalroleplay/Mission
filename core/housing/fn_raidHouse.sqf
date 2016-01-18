@@ -33,7 +33,7 @@ _cpRate = 0.0075;
 
 while {true} do
 {
-	sleep 0.26;
+	uiSleep 0.26;
 	if(isNull _ui) then {
 		5 cutRsc ["life_progress","PLAIN"];
 		_ui = GVAR_UINS "life_progress";

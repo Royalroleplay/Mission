@@ -23,7 +23,7 @@ titleText[format["You have been %1 by %2", _type, _restrainer getVariable ["real
 
 	while {true} do {
 		
-		sleep 300;
+		uiSleep 300;
 		
 		if(!(player GVAR [_type,FALSE])) exitWith {};
 		if(!([side _restrainer,getPos player,30] call life_fnc_nearUnits) && (player GVAR [_type,FALSE]) && vehicle player == player) exitWith {

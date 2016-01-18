@@ -22,9 +22,9 @@ _bail = false;
 [_bad] spawn {
 	life_canpay_bail = false;
 	if(_this select 0) then {
-		sleep (10 * 60);
+		uiSleep (10 * 60);
 	} else {
-		sleep (5 * 60);
+		uiSleep (5 * 60);
 	};
 	life_canpay_bail = nil;
 };
@@ -45,7 +45,7 @@ while {true} do {
 	
 	if((round(_time - time)) < 1) exitWith {hint ""};
 	if(!alive player && ((round(_time - time)) > 0)) exitWith {};
-	sleep 0.1;
+	uiSleep 0.1;
 };
 
 
