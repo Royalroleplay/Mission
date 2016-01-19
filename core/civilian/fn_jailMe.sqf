@@ -24,9 +24,9 @@ _bail = false;
 [_bad] spawn {
 	life_canpay_bail = false;
 	if(_this select 0) then {
-		sleep (10 * 60);
+		uisleep (10 * 60);
 	} else {
-		sleep (5 * 60);
+		uisleep (5 * 60);
 	};
 	life_canpay_bail = nil;
 };
