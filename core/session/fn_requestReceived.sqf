@@ -58,7 +58,7 @@ switch(playerSide) do {
 		CONST(life_medicLevel, 0);
 		life_houses = SEL(_this,9);
 		{
-			_house = nearestBuilding (call compile format["%1", SEL(_x,0)]);
+			_house = nearestObject (call compile format["%1", SEL(_x,0)]);
 			life_vehicles pushBack _house;
 		} foreach life_houses;
 		
