@@ -192,7 +192,7 @@ switch (_code) do {
 		if(playerSide in [west,independent] && {vehicle player != player} && {!life_siren_active} && {((driver vehicle player) == player)}) then {
 			[] spawn {
 				life_siren_active = true;
-				sleep 4.7;
+				uiSleep 4.7;
 				life_siren_active = false;
 			};
 

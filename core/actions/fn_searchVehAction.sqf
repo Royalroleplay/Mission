@@ -11,7 +11,7 @@ if((_vehicle isKindOf "Car") || !(_vehicle isKindOf "Air") || !(_vehicle isKindO
 	life_action_inUse = true;
 	hint localize "STR_NOTF_Searching";
 	
-	sleep 3;
+	uiSleep 3;
 	life_action_inUse = false;
 	
 	if(player distance _vehicle > 10 || !alive player || !alive _vehicle) exitWith {hint localize "STR_NOTF_SearchVehFail";};

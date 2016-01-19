@@ -17,6 +17,6 @@ tawvd_addon_disable = true;
 		if(vehicle player != _recorded OR !alive player) then {
 			[] call life_fnc_updateViewDistance;
 		};
-		sleep 2.2;
+		uiSleep 2.2;
 	};
 };

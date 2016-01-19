@@ -38,7 +38,7 @@ while {true} do {
 		player playMoveNow "AinvPknlMstpSnonWnonDnon_medic_1";
 	};
 	
-	sleep .15;
+	uiSleep .15;
 	_cP = _cP + .01;
 	_progressBar progressSetPosition _cP;
 	_titleText ctrlSetText format["%3 (%1%2)...",round(_cP * 100),"%",_title];
@@ -71,5 +71,5 @@ _target SVAR ["Revive",TRUE,TRUE];
 [profileName] remoteExecCall ["life_fnc_revived",_target];
 titleText[format[localize "STR_Medic_RevivePayReceive",_targetName,[LIFE_SETTINGS(getNumber,"revive_fee")] call life_fnc_numberText],"PLAIN"];
 
-sleep .6;
+uiSleep .6;
 player reveal _target;

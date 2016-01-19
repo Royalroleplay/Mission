@@ -14,7 +14,7 @@ if(EQUAL(_ammoType,"GrenadeHand_stone")) then {
 		private "_position";
 		while {!isNull _this} do {
 			_position = ASLtoATL (visiblePositionASL _this);
-			sleep 0.1;
+			uiSleep 0.1;
 		};
 		[_position] remoteExec ["life_fnc_flashbang",RSERV];
 	};

@@ -26,7 +26,7 @@ _cP = 0.01;
 	for "_i" from 0 to 3 do {
 		player playMove "AinvPercMstpSnonWnonDnon_Putdown_AmovPercMstpSnonWnonDnon";
 		waitUntil{animationState player != "AinvPercMstpSnonWnonDnon_Putdown_AmovPercMstpSnonWnonDnon";};
-		sleep 2.5;
+		uiSleep 2.5;
 	};
 };
 

@@ -91,7 +91,6 @@ switch(_shop) do {
 				_items pushBack ["ToolKit",nil,250];
 				_items pushBack ["FirstAidKit",nil,150];
 				_items pushBack ["tf_anprc152",nil,0];
-				_items pushBack ["tf_anprc148jem",nil,0];
 
 				_ret pushback _items;
 

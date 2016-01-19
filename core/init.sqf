@@ -2,6 +2,7 @@
 /*
 	Master client initialization file
 */
+enableRadio false;
 life_firstSpawn = true;
 life_session_completed = false;
 private["_handle","_timeStamp"];
@@ -122,6 +123,8 @@ life_fnc_moveIn = compileFinal
 
 [] spawn life_fnc_survival;
 
+execVM "core\tfr_channellock.sqf";
+
 [] spawn life_fnc_playerVehicleKeys;
 
 CONSTVAR(life_paycheck); //Make the paycheck static.
@@ -155,7 +158,7 @@ if(EQUAL(LIFE_SETTINGS(getNumber,"enable_fatigue"),0)) then {player enableFatigu
 	waitUntil {!isNil "life_atmbank"};
 
 	life_bankCache = life_atmbank;
-	sleep 0.5;
+	uiSleep 0.5;
 	while {true} do {
 		if(typeName life_atmbank != "SCALAR") then {
 			life_atmbank = 0;
@@ -170,6 +173,6 @@ if(EQUAL(LIFE_SETTINGS(getNumber,"enable_fatigue"),0)) then {player enableFatigu
 		if(life_bankCache != life_atmbank) then {
 			life_bankCache = life_atmbank
 		};
-		sleep 0.5;
+		uiSleep 0.5;
 	};
 };

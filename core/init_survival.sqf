@@ -35,9 +35,9 @@
 	
 	while{true} do
 	{
-		sleep 600;
+		uiSleep 600;
 		[] call _fnc_water;
-		sleep 250;
+		uiSleep 250;
 		[] call _fnc_food;
 	};
 };
@@ -64,7 +64,7 @@
 {
 	while {true} do
 	{
-		sleep 1.5;
+		uiSleep 1.5;
 		if(life_carryWeight > life_maxWeight && !isForcedWalk player) then {
 			player forceWalk true;
 			player setFatigue 1;
@@ -85,7 +85,7 @@
 	_MaxWalk = 1200;
 	while{true} do 
 	{
-		sleep 0.5;
+		uiSleep 0.5;
 		if(!alive player) then {_walkDis = 0;}
 		else
 		{

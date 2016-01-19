@@ -108,6 +108,6 @@ CASH = 0;
 [_killer] spawn {
 	_killer = _this select 0;	
 	cutText[format["You were killed by %1",(_killer getVariable ["realname",name _killer])],"PLAIN",2];
-	sleep 20;
+	uiSleep 20;
 	cutText["","PLAIN"];
 };

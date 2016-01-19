@@ -21,7 +21,7 @@ _handle = [] spawn life_fnc_demoChargeTimer;
 [] remoteExec ["life_fnc_demoChargeTimer",west];
 
 waitUntil {scriptDone _handle};
-sleep 0.9;
+uiSleep 0.9;
 if(!(fed_bank getVariable["chargeplaced",false])) exitWith {hint localize "STR_ISTR_Blast_Disarmed"};
 
 _bomb = "Bo_GBU12_LGB_MI10" createVehicle [getPosATL fed_bank select 0, getPosATL fed_bank select 1, (getPosATL fed_bank select 2)+0.5];

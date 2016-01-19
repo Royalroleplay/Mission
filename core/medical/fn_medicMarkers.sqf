@@ -9,7 +9,7 @@ private["_markers","_units"];
 _markers = [];
 _units = [];
 
-sleep 0.25;
+uiSleep 0.25;
 if(visibleMap) then {
 	{
 		_name = _x getVariable "name";
