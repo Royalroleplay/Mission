@@ -9,13 +9,15 @@ private["_time","_bail","_esc","_countDown"];
 
 params [
 	["_ret",[],[[]]],
-	["_bad",false,[false]]
+	["_bad",false,[false]],
+	["_time",0,[0]]
 ];
 
+if(life_jailtime != _time) then {
+	life_jailtime = _time;
+};
 
-if(_bad) then { _time = time + 1100; } else { _time = time + (15 * 60); };
-
-if(count _ret > 0) then { life_bail_amount = SEL(_ret,3); } else { life_bail_amount = 1500; _time = time + (10 * 60); };
+if(count _ret > 0) then { life_bail_amount = SEL(_ret,3); } else { life_bail_amount = 1500; };
 _esc = false;
 _bail = false;
 
@@ -30,9 +32,10 @@ _bail = false;
 };
 
 while {true} do {
-	if((round(_time - time)) > 0) then {
-		_countDown = [(_time - time),"MM:SS.MS"] call BIS_fnc_secondsToString;
-		hintSilent parseText format[(localize "STR_Jail_Time")+ "<br/> <t size='2'><t color='#FF0000'>%1</t></t><br/><br/>" +(localize "STR_Jail_Pay")+ " %3<br/>" +(localize "STR_Jail_Price")+ " $%2",_countDown,[life_bail_amount] call life_fnc_numberText,if(isNil "life_canpay_bail") then {"Yes"} else {"No"}];
+
+
+	if(life_jailtime > 0) then {
+		hintSilent parseText format[(localize "STR_Jail_Time")+ "<br/> <t size='2'><t color='#FF0000'>%1 Months</t></t><br/><br/>" +(localize "STR_Jail_Pay")+ " %3<br/>" +(localize "STR_Jail_Price")+ " $%2",life_jailtime,[life_bail_amount] call life_fnc_numberText,if(isNil "life_canpay_bail") then {"Yes"} else {"No"}];
 	};
 	
 	if(player distance (getMarkerPos "jail_marker") > 60) exitWith {
@@ -43,9 +46,11 @@ while {true} do {
 		_bail = true;
 	};
 	
-	if((round(_time - time)) < 1) exitWith {hint ""};
-	if(!alive player && ((round(_time - time)) > 0)) exitWith {};
-	sleep 0.1;
+	if(life_jailtime < 1) exitWith {hint ""};
+	if(!alive player && (life_jailtime > 0)) exitWith {}; //Died in prison - let them respawn
+
+	uiSleep 60;
+	life_jailtime = life_jailtime - 1;
 };
 
 
@@ -53,6 +58,7 @@ switch (true) do {
 	case (_bail): {
 		life_is_arrested = false;
 		life_bail_paid = false;
+		life_jailtime = 0;
 		hint localize "STR_Jail_Paid";
 		serv_wanted_remove = [player];
 		player setPos (getMarkerPos "jail_release");
@@ -62,6 +68,7 @@ switch (true) do {
 	
 	case (_esc): {
 		life_is_arrested = false;
+		life_jailtime = 0;
 		hint localize "STR_Jail_EscapeSelf";
 //		[0,"STR_Jail_EscapeNOTF",true,[profileName]] remoteExecCall ["life_fnc_broadcast",RCLIENT];
 		[getPlayerUID player,profileName,"901"] remoteExecCall ["life_fnc_wantedAdd",RSERV];
@@ -70,6 +77,7 @@ switch (true) do {
 	
 	case (alive player && !_esc && !_bail): {
 		life_is_arrested = false;
+		life_jailtime = 0;
 		hint localize "STR_Jail_Released";
 		[getPlayerUID player] remoteExecCall ["life_fnc_wantedRemove",RSERV];
 		player setPos (getMarkerPos "jail_release");

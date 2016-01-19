@@ -54,15 +54,17 @@ switch(playerSide) do {
 	
 	case civilian: {
 		life_is_arrested = SEL(_this,7);
+		life_jailtime = SEL(_this,9);
+
 		CONST(life_coplevel, 0);
 		CONST(life_medicLevel, 0);
-		life_houses = SEL(_this,9);
+		life_houses = SEL(_this,10);
 		{
 			_house = nearestObject (call compile format["%1", SEL(_x,0)]);
 			life_vehicles pushBack _house;
 		} foreach life_houses;
 		
-		life_gangData = SEL(_this,10);
+		life_gangData = SEL(_this,11);
 		if(!(EQUAL(count life_gangData,0))) then {
 			[] spawn life_fnc_initGang;
 		};

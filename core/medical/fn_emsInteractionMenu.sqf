@@ -35,6 +35,7 @@ _Btn4 = _display displayCtrl Btn4;
 _Btn5 = _display displayCtrl Btn5;
 _Btn6 = _display displayCtrl Btn6;
 _Btn7 = _display displayCtrl Btn7;
+_Btn8 = _display displayCtrl Btn8;
 life_pInact_curTarget = _curTarget;
 
 //Set Unrestrain Button
@@ -67,3 +68,8 @@ if((_curTarget getVariable["Escorting",false])) then {
 if(!(_curTarget getVariable["restrained",false])) then {
 	_Btn1 ctrlEnable false;
 };
+
+_Btn5 ctrlShow false;
+_Btn6 ctrlShow false;
+_Btn7 ctrlShow false;
+_Btn8 ctrlShow false;
