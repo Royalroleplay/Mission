@@ -33,6 +33,11 @@ if(local _vehicle) then {
 	_vehicle setVariable["Life_VEH_color",_index,true];
 };
 
+if(local _vehicle && (playerSide isEqualTo civilian) && {(typeOf _vehicle) find "Jonzie" >= 0} OR {(typeOf _vehicle) find "ADM" >= 0} OR {(typeOf _vehicle) find "DRPG" >= 0}) exitWith
+{
+	_vehicle setVariable["skin",_index,true];
+};
+
 [] spawn {
 	waitUntil{!isNil {_vehicle getVariable "Life_VEH_color"}};
 	{_vehicle setObjectTexture [_forEachIndex,_x];} foreach _textures;
