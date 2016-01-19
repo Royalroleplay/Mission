@@ -6,11 +6,9 @@
 	Description:
 	Starts the initial process of jailing.
 */
-params [
-	["_unit",objNull,[objNull]],
-	["_bad",false,[false]],
-	["_time",0,[0]]
-];
+_unit = _this select 0;
+_bad = _this select 1;
+_time = _this select 2;
 
 if(isNull _unit) exitWith {}; //Dafuq?
 if(_unit != player) exitWith {}; //Dafuq?
