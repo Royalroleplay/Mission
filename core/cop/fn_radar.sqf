@@ -16,7 +16,7 @@ if(!(_vehicle isKindOf "Car")) exitWith {hint "Point at a land vehicle!"};
 
 switch (true) do 
 {
-	case ((_speed > 33 && _speed <= 80)) :
+	case ((_speed > 10 && _speed <= 80)) :
 	{
 		hint parseText format ["<t color='#ffffff'><t size='2'><t align='center'>" +(localize "STR_Cop_Radar")+ "<br/><t color='#33CC33'><t align='center'><t size='1'>" +(localize "STR_Cop_VehSpeed"),round  _speed];
 	};

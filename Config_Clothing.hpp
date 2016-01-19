@@ -77,6 +77,12 @@ class Clothing {
 			{ "TRYK_U_B_BLK_T_BK", "Black Jeans", 120, { "", "", -1 } },
 			{ "TRYK_U_B_Denim_T_WH", "Blue Jeans", 120, { "", "", -1 } },
 			{ "U_NikosAgedBody", "Casual Wears", 120, { "", "", -1 } },
+			{ "U_IG_Guerilla1_1", "", 3000, {"", "", -1} },
+			{ "U_I_G_Story_Protagonist_F", "", 3000, { "", "", -1 } },
+			{ "U_I_G_resistanceLeader_F", "", 2150, { "", "", -1 } },
+			{ "U_O_SpecopsUniform_ocamo", "", 1750, { "", "", -1 } },
+			{ "U_O_PilotCoveralls", "", 1510, { "", "", -1 } },
+			{ "U_IG_leader", "Guerilla Leader", 2340, { "", "", -1 } },
 			{ "A3L_Badoodlenoodleshirt", "Noodle", 120, { "", "", -1 } }
 		};
 
