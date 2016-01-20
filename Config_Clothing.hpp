@@ -662,7 +662,7 @@ class Clothing {
 			{ "U_IG_Guerilla1_1", "", 3000, {"", "", -1} },
 			{ "U_I_G_Story_Protagonist_F", "", 3000, { "", "", -1 } },
 			{ "U_I_G_resistanceLeader_F", "", 2150, { "", "", -1 } },
-			{ "U_O_SpecopsUniform_ocamo", "", 1750, { "", "", -1 } },
+			//{ "U_O_SpecopsUniform_ocamo", "", 1750, { "", "", -1 } },
 			//{ "U_O_PilotCoveralls", "", 1510, { "", "", -1 } },
 			{ "U_IG_leader", "Guerilla Leader", 2340, { "", "", -1 } },
 			{ "U_O_GhillieSuit", "", 115000, { "", "", -1 } }
