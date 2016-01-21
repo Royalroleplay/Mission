@@ -15,6 +15,11 @@ params [
 disableSerialization;
 
 //Set some vars
+
+if(!isNull _killer) then {
+	_unit SVAR["shot",true,true];
+};
+
 _unit SVAR ["Revive",FALSE,TRUE]; //Set the corpse to a revivable state.
 _unit SVAR ["name",profileName,TRUE]; //Set my name so they can say my name.
 _unit SVAR ["restrained",FALSE,TRUE];

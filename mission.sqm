@@ -2405,7 +2405,7 @@ class Mission
 				};
 				class Item28
 				{
-					position[]={8488.1563,10.46,6464.1177};
+					position[]={8506.5586,10.46,6430.7539};
 					azimut=-75.9804;
 					special="NONE";
 					id=128;
@@ -3278,7 +3278,7 @@ class Mission
 					vehicle="B_RangeMaster_F";
 					leader=1;
 					skill=0.60000002;
-					init="this enableSimulation false;  this allowDamage false;  this addAction[format[""%1 ($%2)"",localize (getText(missionConfigFile >> ""Licenses"" >> ""mAir"" >> ""displayName"")), [(getNumber(missionConfigFile >> ""Licenses"" >> ""mAir"" >> ""price""))] call life_fnc_numberText],life_fnc_buyLicense,""mAir"",0,false,false,"""",' !license_med_mAir && playerSide == independent '];  this addAction[""EMS Item Shop"",life_fnc_weaponShopMenu,""med_basic""];  this addAction[""Vehicle Shop"",life_fnc_vehicleShopMenu,[""med_shop"",independent,""med_car_2"",""med"",""Los Diablos Hosptial""]];  this addAction[""Helicopter Shop"",life_fnc_vehicleShopMenu,[""med_air_hs"",independent,""medic_spawn_2"",""med"",""Kavala Hosptial""]];  this addAction[""Car Garage"",  {   [getPlayerUID player,playerSide,""Car"",player] remoteExecCall [""TON_fnc_getVehicles"",2];   createDialog ""Life_impound_menu"";   disableSerialization;   ctrlSetText[2802,""Fetching Vehicles....""];   life_garage_sp = ""med_car_3""; life_garage_type = ""Car"";  },"""",0,false,false,"""",'playerSide == independent'];  this addAction[""Helicopter Garage"",  {   [getPlayerUID player,playerSide,""Air"",player] remoteExecCall [""TON_fnc_getVehicles"",2];   createDialog ""Life_impound_menu"";   disableSerialization;   ctrlSetText[2802,""Fetching Vehicles....""];   life_garage_sp = ""medic_spawn_2""; life_garage_type = ""Air"";  },"""",0,false,false,"""",'playerSide == independent '];  this addAction[""Store vehicle in Garage"",life_fnc_storeVehicle,"""",0,false,false,"""",'!life_garage_store'];  this setObjectTexture [0,""\rr_textures\textures\medic_uniform.jpg""];";
+					init="this enableSimulation false;  this allowDamage false; this addAction[""EMS Item Shop"",life_fnc_weaponShopMenu,""med_basic""];  this addAction[""Vehicle Shop"",life_fnc_vehicleShopMenu,[""med_shop"",independent,""med_car_2"",""med"",""Kavala Hosptial""]]; this addAction[""Car Garage"",  {   [getPlayerUID player,playerSide,""Car"",player] remoteExecCall [""TON_fnc_getVehicles"",2];   createDialog ""Life_impound_menu"";   disableSerialization;   ctrlSetText[2802,""Fetching Vehicles....""];   life_garage_sp = ""med_car_2""; life_garage_type = ""Car"";  },"""",0,false,false,"""",'playerSide == independent'];    this addAction[""Store vehicle in Garage"",life_fnc_storeVehicle,"""",0,false,false,"""",'!life_garage_store']; this addAction[""emsMarket"",life_fnc_virt_menu,""market""]; this addAction[""EMS Clothing Store"",life_fnc_clothingMenu,""emsShop""]; this setObjectTexture [0,""\rr_textures\textures\medic_uniform.jpg""];";
 				};
 			};
 		};
@@ -3514,7 +3514,7 @@ class Mission
 				items=1;
 				class Item0
 				{
-					position[]={8559.0332,10.46,6483.897};
+					position[]={8558.7109,10.46,6475.2705};
 					azimut=164.03893;
 					special="NONE";
 					id=186;
@@ -3729,8 +3729,8 @@ class Mission
 		};
 		class Item13
 		{
-			position[]={8494.5664,10.46,6473.75};
-			azimut=-79.912598;
+			position[]={8498.5205,10.46,6467.7046};
+			azimut=97.928551;
 			id=203;
 			side="EMPTY";
 			vehicle="Land_Atm_02_F";
@@ -4752,7 +4752,7 @@ class Mission
 		};
 		class Item65
 		{
-			position[]={8485.3857,10.46,6463.8008};
+			position[]={8485.2227,10.46,6447.0474};
 			name="hospital_2";
 			text="Hospital";
 			type="loc_Hospital";
@@ -4784,11 +4784,11 @@ class Mission
 		};
 		class Item69
 		{
-			position[]={8494.5566,10.46,6473.7109};
+			position[]={8498.4697,10.46,6467.7524};
 			name="atm_marker_1_2";
 			type="loc_Tourism";
 			colorName="ColorGreen";
-			angle=-435.68436;
+			angle=-257.8428;
 		};
 		class Item70
 		{
@@ -5244,14 +5244,14 @@ class Mission
 		};
 		class Item128
 		{
-			position[]={8565.2666,10.46,6471.1714};
+			position[]={8564.8008,10.46,6467.8315};
 			name="civ_car_classic";
 			type="Empty";
-			angle=187.80261;
+			angle=279.41672;
 		};
 		class Item129
 		{
-			position[]={8558.9492,10.46,6483.7402};
+			position[]={8558.627,10.46,6475.1138};
 			name="high_end_1_2";
 			text="Classic Car Dealer";
 			type="c_car";

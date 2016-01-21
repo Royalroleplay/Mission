@@ -66,5 +66,6 @@ player SVAR ["Revive",nil,TRUE];
 player SVAR ["name",nil,TRUE];
 player SVAR ["Reviving",nil,TRUE];
 player SVAR ["tf_unable_to_use_radio", false, true];
+player SVAR["shot",false,true];
 showChat true;
 [] call life_fnc_hudUpdate; //Request update of hud.
