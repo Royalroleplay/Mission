@@ -185,36 +185,19 @@ switch (_code) do {
 		};
 	};
 
-/*	Disable mission file based sirens
-
-	//F Key
-	case 33: {
-		if(playerSide in [west,independent] && {vehicle player != player} && {!life_siren_active} && {((driver vehicle player) == player)}) then {
-			[] spawn {
-				life_siren_active = true;
-				uiSleep 4.7;
-				life_siren_active = false;
-			};
-
-			_veh = vehicle player;
-			if(isNil {_veh GVAR "siren"}) then {_veh SVAR ["siren",false,true];};
-			if((_veh GVAR "siren")) then {
-				titleText [localize "STR_MISC_SirensOFF","PLAIN"];
-				_veh SVAR ["siren",false,true];
-			} else {
-				titleText [localize "STR_MISC_SirensON","PLAIN"];
-				_veh SVAR ["siren",true,true];
-				if(playerSide == west) then {
-					//Disable
-					//[_veh] remoteExec ["life_fnc_copSiren",RCLIENT];
-				} else {
-					//Disable
-					//[_veh] remoteExec ["life_fnc_medicSiren",RCLIENT];
+	//6 - Flip Off
+	case 7:
+	{	
+		if(_ctrlKey) then {
+			if (isNull objectParent player && !(player getVariable ["restrained", false]) && (animationState player) != "Incapacitated" && !life_istazed && !life_action_inuse) then
+			{
+				if (vehicle player == player) then {
+					player playActionNow "gesturefinger";
 				};
+				_handled = true;
 			};
-		};
+	    };
 	};
-*/
 
 	//O Key
 	case 24: {

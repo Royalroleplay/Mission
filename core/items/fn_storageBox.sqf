@@ -8,8 +8,8 @@
 private["_boxType","_house","_positions","_containers","_pos","_houseCfg"];
 _boxType = SEL(_this,0);
 
-_house = nearestBuilding (getPosATL player);
-if(!(_house in life_vehicles)) exitWith {hint localize "STR_ISTR_Box_NotinHouse"};
+_house = cursorTarget;
+if(!(_house in life_vehicles)) exitWith {hint "You must be looking at your house!"};
 
 _containers = _house GVAR ["containers",[]];
 _houseCfg = [(typeOf _house)] call life_fnc_houseConfig;

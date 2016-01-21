@@ -123,7 +123,7 @@ life_fnc_moveIn = compileFinal
 
 [] spawn life_fnc_survival;
 
-execVM "core\tfr_channellock.sqf";
+//execVM "core\tfr_channellock.sqf";
 
 [] spawn life_fnc_playerVehicleKeys;
 

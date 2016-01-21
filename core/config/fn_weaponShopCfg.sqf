@@ -228,6 +228,8 @@ switch(_shop) do {
 			{
 				["Billy Joe's Firearms",
 					[
+						["arifle_SDAR_F",nil,8000],
+						["20Rnd_556x45_UW_mag",nil,500],
 						["RH_mak",nil,1000],
 						["RH_8Rnd_9x18_Mak",nil,100],
 						["hgun_P07_F",nil,1000],

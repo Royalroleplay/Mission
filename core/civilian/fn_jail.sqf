@@ -8,7 +8,7 @@
 */
 _unit = _this select 0;
 _bad = _this select 1;
-_time = _this select 2;
+_time = [_this, 2, 0, [0]] call BIS_fnc_param;
 
 if(isNull _unit) exitWith {}; //Dafuq?
 if(_unit != player) exitWith {}; //Dafuq?

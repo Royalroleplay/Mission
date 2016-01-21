@@ -663,9 +663,7 @@ class Clothing {
 			{ "U_I_G_Story_Protagonist_F", "", 3000, { "", "", -1 } },
 			{ "U_I_G_resistanceLeader_F", "", 2150, { "", "", -1 } },
 			{ "U_O_SpecopsUniform_ocamo", "", 1750, { "", "", -1 } },
-			{ "U_O_PilotCoveralls", "", 1510, { "", "", -1 } },
-			{ "U_IG_leader", "Guerilla Leader", 2340, { "", "", -1 } },
-			{ "U_O_GhillieSuit", "", 115000, { "", "", -1 } }
+			{ "TRYK_B_TRYK_UCP_T", "", 1510, { "", "", -1 } }
 		};
 
 		headgear[] = {
@@ -673,7 +671,6 @@ class Clothing {
 			{ "H_ShemagOpen_tan", "", 850, { "", "", -1 } },
 			{ "H_Shemag_olive", "", 850, { "", "", -1 } },
 			{ "H_ShemagOpen_khk", "", 800, { "", "", -1 } },
-			{ "H_HelmetO_ocamo", "", 1000, { "", "", -1 } },
 			{ "H_MilCap_oucamo", "", 1200, { "", "", -1 } },
 			{ "H_Bandanna_camo", "", 1200, { "", "", -1 } }
 		};
@@ -765,10 +762,8 @@ class Clothing {
 
 		uniforms[] = {
 			{ "NONE", "Remove Uniform", 0, { "", "", -1 } },
-			{ "emsoff_uni", "", 100, { "", "", -1 } },
-			{ "A3L_EMSProbieUniform", "", 150, { "", "", -1 } },
-			{ "EMTRM_uni", "", 150, { "", "", -1 } },
-			{ "A3L_EMT2", "", 150, { "", "", -1 } },
+			{ "RR_EMS_EMT_Uniform", "", 0, { "", "", -1 } },
+			{ "RR_EMS_Command_Uniform", "", 0, { "", "", -1 } },
 			{ "U_B_Wetsuit", "", 150, { "", "", -1 } }
 		};
 

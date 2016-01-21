@@ -76,6 +76,14 @@ if((life_veh_shop select 0) == "med_air_hs") then {
 	_vehicle setVectorUp (surfaceNormal _loc);
 	_vehicle setDir (markerDir _spawnPoint);
 	_vehicle setPos _loc;
+
+	if(playerSide == civilian) then {
+		_textures = SEL(SEL(M_CONFIG(getArray,CONFIG_VEHICLES,(typeOf _vehicle),"textures"),_colorIndex),2);
+		if((!isNil "_textures") OR {!(EQUAL(count _textures,0))}) then {
+			{_vehicle setObjectTextureGlobal [_forEachIndex,_x];} foreach _textures;
+		};
+	};
+	
 	[_vehicle,_colorIndex] remoteExecCall ["life_fnc_colorVehicle",RCLIENT];
 	[_vehicle] call life_fnc_clearVehicleAmmo;
 	[_vehicle,"trunk_in_use",false,true] remoteExecCall ["TON_fnc_setObjVar",RSERV];

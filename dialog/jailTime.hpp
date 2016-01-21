@@ -52,7 +52,7 @@ class life_jail_time
 			text = "Send To Jail";
 			colorBackground[] = {"(profilenamespace getvariable ['GUI_BCG_RGB_R',0.3843])", "(profilenamespace getvariable ['GUI_BCG_RGB_G',0.7019])", "(profilenamespace getvariable ['GUI_BCG_RGB_B',0.8862])", 0.5};
 			//onButtonClick = "[] call life_fnc_";
-			action = "detach life_pInact_curTarget; [life_pInact_curTarget,false,(ctrlText 2652)] remoteExecCall [""life_fnc_jail"",life_pInact_curTarget];";
+			action = "detach life_pInact_curTarget; [life_pInact_curTarget,false,parseNumber (ctrlText 2652)] remoteExecCall [""life_fnc_jail"",life_pInact_curTarget];";
 			x = 0.45;
 			y = 0.35;
 			w = (6.25 / 40);

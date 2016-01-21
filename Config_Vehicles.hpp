@@ -15,7 +15,8 @@ class CarShops {
 			{ "ADM_GMC_Vandura", 5000, "driver" },
 			{ "Jonzie_Ceed", 6000, "driver" },
 			{ "Jonzie_Ute", 7500, "driver" },
-			{ "Jonzie_Transit", 10000, "driver" }
+			{ "Jonzie_Transit", 10000, "driver" },
+			{ "Mrshounka_lincoln_civ", 12000, "driver" }
 		};
 	};
 	
@@ -53,7 +54,26 @@ class CarShops {
 			{ "shounka_h2", 57400, "driver" },  // Hummer h2 based off real pricing of car
 			{ "Mrshounka_evox_civ", 50000, "driver" },  // Lancer Evolution based off real pricing of car
 			{ "Mrshounka_lykan_c", 340000, "driver" },  // LykanHyper Sport based off real pricing of car
-			{ "Mrshounka_c63_2015_civ", 52000, "driver" }
+			{ "Mrshounka_c63_2015_civ", 102000, "driver" },
+			{ "RG_yamaha_p_noir", 32000, "driver" },
+			{ "RG_Volkswagen_Touareg_noir", 60000, "driver" },
+			{ "Mrshounka_a3_smart_civ", 40000, "driver" },
+			{ "Mrshounka_twingo_p", 22000, "driver" },
+			{ "RG_r5_noir", 45000, "driver" },
+			{ "Mrshounka_cayenne_p_civ", 34000, "driver" },
+			{ "RG_spr_civ_noir", 78000, "driver" },
+			{ "Mrshounka_Alfa_Romeo_civ", 30000, "driver" },
+			{ "RG_rs4_noir", 25000, "driver" },
+			{ "shounka_avalanche", 52000, "driver" },
+			{ "Mrshounka_c4_p_civ", 37000, "driver" },
+			{ "shounka_nemo", 27500, "driver" },
+			{ "Mrshounka_corbillard_c", 95000, "driver" },
+			{ "Mrshounka_ducati_p", 32000, "driver" },
+			{ "RG_mustang_mat_n", 75000, "driver" },
+			{ "RG_raptor2_noir", 66500, "driver" },
+			{ "Mrshounka_golfvi_civ", 22000, "driver" },
+			{ "Mrshounka_jeep_blinde_noir", 152000, "driver" },
+			{ "Jonzie_Escalade", 80000, "driver" }
 		};
 	};
 
@@ -91,9 +111,29 @@ class CarShops {
 			{ "Mrshounka_lykan_c", 500, "" },  // LykanHyper Sport based off real pricing of car
 			{ "Mrshounka_c63_2015_civ", 500, "" },
 			{ "DRPG_15Charger_P_U", 500, "" },
-			{ "DRPG_12M5_Base", 500, "" }
+			{ "DRPG_12M5_Base", 500, "" },
+			{ "RG_yamaha_p_noir", 500, "" },
+			{ "RG_Volkswagen_Touareg_noir", 500, "" },
+			{ "Mrshounka_a3_smart_civ", 500, "" },
+			{ "Mrshounka_twingo_p", 500, "" },
+			{ "RG_r5_noir", 500, "" },
+			{ "Mrshounka_cayenne_p_civ", 500, "" },
+			{ "RG_spr_civ_noir", 500, "" },
+			{ "Mrshounka_Alfa_Romeo_civ", 500, "" },
+			{ "RG_rs4_noir", 500, "" },
+			{ "shounka_avalanche", 500, "" },
+			{ "Mrshounka_c4_p_civ", 500, "" },
+			{ "shounka_nemo", 500, "" },
+			{ "Mrshounka_corbillard_c", 500, "" },
+			{ "Mrshounka_ducati_p", 500, "" },
+			{ "RG_mustang_mat_n", 500, "" },
+			{ "RG_raptor2_noir", 500, "" },
+			{ "Mrshounka_golfvi_civ", 500, "" },
+			{ "Mrshounka_jeep_blinde_noir", 500, "" },
+			{ "Jonzie_Escalade", 500, "" }
 		};
 	};
+
 
 	class race_shop {
 		side = "civ";
@@ -198,10 +238,10 @@ class CarShops {
 	class cop_ship {
 		side = "cop";
 		vehicles[] = {
-			{ "B_Boat_Transport_01_F", 3000, "coastguard" },
-			{ "C_Boat_Civil_01_police_F", 20000, "coastguard" },
-			{ "B_Boat_Armed_01_minigun_F", 75000, "coastguard" },
-			{ "B_SDV_01_F", 100000, "coastguard" }
+			{ "B_Boat_Transport_01_F", 3000, "" },
+			{ "C_Boat_Civil_01_police_F", 20000, "" },
+			{ "B_Boat_Armed_01_minigun_F", 75000, "" },
+			{ "B_SDV_01_F", 100000, "" }
 		};
 	};
 
@@ -238,7 +278,7 @@ class CfgVehicles {
 		garageSell[] = { 0, 0, 0, 0 };
 		insurance = 2500;
 		chopShop = 2500;
-		textures[] = {};
+		textures = [];
 	};
 
     class shounka_base {
@@ -276,16 +316,44 @@ class CfgVehicles {
     };
 
     class shounka_gt : shounka_base {};
-    class Mrshounka_207_civ : shounka_base {};
-    class Mrshounka_a3_308_rcz : shounka_base {};
-    class Mrshounka_a3_308_civ : shounka_base {};
-    class Mrshounka_a3_dodge15_civ : shounka_base {};
-    class Mrshounka_a3_ds3_civ : shounka_base {}; 
-    class Mrshounka_cherokee_noir : shounka_base {};
-    class shounka_buggy : shounka_base {};
-    class Mrshounka_a3_gtr_civ : shounka_base {};
-    class RG_huracan_c_noir : shounka_base {};
-    class Mrshounka_agera_p : shounka_base {};
+	class Mrshounka_207_civ : shounka_base {};
+	class Mrshounka_a3_308_rcz : shounka_base {};
+	class Mrshounka_a3_308_civ : shounka_base {};
+	class Mrshounka_a3_dodge15_civ : shounka_base {};
+	class Mrshounka_a3_ds3_civ : shounka_base {};
+	class RG_mustang_rouge : shounka_base {};
+	class Mrshounka_cherokee_noir : shounka_base {};
+	class shounka_buggy : shounka_base {};
+	class Mrshounka_a3_gtr_civ : shounka_base {};
+	class RG_huracan_c_noir : shounka_base {};
+	class Mrshounka_agera_p : shounka_base {};
+	class Mrshounka_bmwm1_civ : shounka_base {};
+	class Mrshounka_bmwm6_civ : shounka_base {};
+	class Mrshounka_Bowler_c : shounka_base {};
+	class shounka_f430_spider : shounka_base {};
+	class Mrshounka_hummer_civ : shounka_base {};
+	class shounka_h2 : shounka_base {};
+	class Mrshounka_evox_civ : shounka_base {};
+	class Mrshounka_lykan_c : shounka_base {};
+	class Mrshounka_c63_2015_civ : shounka_base {};
+	class RG_yamaha_p_noir : shounka_base {};
+	class RG_Volkswagen_Touareg_noir : shounka_base {};
+	class Mrshounka_a3_smart_civ : shounka_base {};
+	class Mrshounka_twingo_p : shounka_base {};
+	class RG_r5_noir : shounka_base {};
+	class Mrshounka_cayenne_p_civ : shounka_base {};
+	class RG_spr_civ_noir : shounka_base {};
+	class Mrshounka_Alfa_Romeo_civ : shounka_base {};
+	class RG_rs4_noir : shounka_base {};
+	class shounka_avalanche : shounka_base {};
+	class Mrshounka_c4_p_civ : shounka_base {};
+	class shounka_nemo : shounka_base {};
+	class Mrshounka_corbillard_c : shounka_base {};
+	class Mrshounka_ducati_p : shounka_base {};
+	class RG_mustang_mat_n : shounka_base {};
+	class RG_raptor2_noir : shounka_base {};
+	class Mrshounka_golfvi_civ : shounka_base {};
+	class Mrshounka_jeep_blinde_noir : shounka_base {};
 
 	class Jonzie_Base {
 		vItemSpace = 10;
@@ -349,19 +417,13 @@ class CfgVehicles {
 	class DRPG_12Charger_Base: Jonzie_Base {vItemSpace = 125;};
 	class DRPG_15Charger_Base: Jonzie_Base {vItemSpace = 150;};
 	class DRPG_12M5_Base: Jonzie_Base {vItemSpace = 150;};
+	class Jonzie_Escalade: Jonzie_Base {};
 	
 	class I_Truck_02_medical_F : Default {
 		vItemSpace = 150;
 		storageFee[] = { 0, 0, 150, 0 };
 		garageSell[] = { 0, 0, 0, 0 };
 		chopShop = 3000;
-	};
-	
-	class RG_mustang_rouge : Default {
-		vItemSpace = 50;
-		storageFee[] = { 0, 0, 0, 0 };
-		garageSell[] = { 0, 0, 0, 0 };
-		chopShop = 4500;
 	};
 	
 	class A3L_ExplorerEMS_S : Default {
@@ -862,7 +924,7 @@ class CfgVehicles {
     };
 	
 	class Jonzie_Tow_Truck {
-    	vItemSpace = 300;
+    	vItemSpace = 50;
     	storageFee[] = { 50, 0, 0, 0 };
     	garageSell[] = { 0, 0, 0, 0 };
     	insurance = 10000;
