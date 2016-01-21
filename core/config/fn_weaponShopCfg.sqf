@@ -368,7 +368,12 @@ switch(_shop) do {
 						["hlc_30Rnd_762x39_b_ak",nil,350],
 
 						["hlc_optic_kobra",nil,500],
-						["optic_Aco",nil,500]
+						["optic_Aco",nil,500],
+
+						["RH_Hk416s",nil,500],
+						["RH_30Rnd_556x45_M855A1",nil,100],
+						["RH_ta31rmr",nil,100],
+						["RH_saker",nil,100]
 					]
 				];
 			};
