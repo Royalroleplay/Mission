@@ -44,7 +44,7 @@ _Btn1 buttonSetAction "[life_vInact_curTarget] spawn life_fnc_repairTruck;";
 
 _Btn2 ctrlSetText localize "STR_vInAct_Unflip";
 _Btn2 buttonSetAction "life_vInact_curTarget setPos [getPos life_vInact_curTarget select 0, getPos life_vInact_curTarget select 1, (getPos life_vInact_curTarget select 2)+0.5]; closeDialog 0;";
-if(count crew _curTarget == 0 && {canMove _curTarget}) then { _Btn2 ctrlEnable false;} else {_Btn2 ctrlEnable true;};
+if(cursorTarget in life_vehicles) then { _Btn2 ctrlEnable true;} else {_Btn2 ctrlEnable false;};
 
 _Btn3 ctrlSetText "Push";
 _Btn3 buttonSetAction "[life_vInact_curTarget, player] spawn life_fnc_pushObject; closeDialog 0;";
