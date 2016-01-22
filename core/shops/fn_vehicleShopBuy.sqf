@@ -6,7 +6,7 @@
 	Description:
 	Does something with vehicle purchasing.
 */
-private["_mode","_spawnPoints","_className","_basePrice","_colorIndex","_spawnPoint","_vehicle","_shopSide","_license", "_color"];
+private["_mode","_spawnPoints","_className","_basePrice","_colorIndex","_spawnPoint","_vehicle","_shopSide","_license"];
 _mode = SEL(_this,0);
 if((lbCurSel 2302) == -1) exitWith {hint localize "STR_Shop_Veh_DidntPick"};
 _className = lbData[2302,(lbCurSel 2302)];
@@ -64,82 +64,12 @@ if((life_veh_shop select 0) == "med_air_hs") then {
 	[_vehicle,"trunk_in_use",false,true] remoteExecCall ["TON_fnc_setObjVar",RSERV];
 	[_vehicle,"vehicle_info_owners",[[getPlayerUID player,profileName]],true] remoteExecCall ["TON_fnc_setObjVar",RSERV];
 	_vehicle disableTIEquipment true; //No Thermals.. They're cheap but addictive.
-};
-
-if((typeOf _vehicle) find "Mrshounka" >= 0) then {
-
+} else {
+	
 	_loc = getMarkerPos _spawnPoint;
 	_loc = [_loc select 0, _loc select 1, (_loc select 2)+1.5];
 
-	call 
-	{
-		if (_colorIndex isEqualTo "Red") exitWith {_color = "_rouge"};
-		if (_colorIndex isEqualTo "Black") exitWith {_color = "_noir"};
-		if (_colorIndex isEqualTo "Dark Blue") exitWith {_color = "_bleufonce"};
-		if (_colorIndex isEqualTo "Yellow") exitWith {_color = "_jaune"};
-		if (_colorIndex isEqualTo "Pink") exitWith {_color = "_rose"};
-		if (_colorIndex isEqualTo "Grey") exitWith {_color = "_gris"};
-		if (_colorIndex isEqualTo "Purple") exitWith {_color = "_violet"};
-		if (_colorIndex isEqualTo "Orange") exitWith {_color = "_orange"};
-	};
-
-	_className = format ["%1%2", _className, _color];
-
 	_vehicle = createVehicle [_className, _loc, [], 0, "NONE"];
-	waitUntil {!isNil "_vehicle"}; //Wait?
-	_vehicle allowDamage false; //Temp disable damage handling..
-	_vehicle lock 2;
-	_vehicle setVectorUp (surfaceNormal _loc);
-	_vehicle setDir (markerDir _spawnPoint);
-	_vehicle setPos _loc;
-	//[_vehicle,_colorIndex] remoteExecCall ["life_fnc_colorVehicle",RCLIENT];
-	[_vehicle] call life_fnc_clearVehicleAmmo;
-	[_vehicle,"trunk_in_use",false,true] remoteExecCall ["TON_fnc_setObjVar",RSERV];
-	[_vehicle,"vehicle_info_owners",[[getPlayerUID player,profileName]],true] remoteExecCall ["TON_fnc_setObjVar",RSERV];
-	_vehicle disableTIEquipment true; //No Thermals.. They're cheap but addictive.
-};
-
-if((typeOf _vehicle) find "Jonzie" >= 0 OR (typeOf _vehicle) find "ADM" >= 0 || (typeOf _vehicle) find "DRPG" >= 0) then {
-
-	_loc = getMarkerPos _spawnPoint;
-	_loc = [_loc select 0, _loc select 1, (_loc select 2)+1.5];
-
-	call 
-	{
-		if (_colorIndex isEqualTo "Red") exitWith {_color = "#(argb,8,8,3)color(1,0,0,1)"};
-		if (_colorIndex isEqualTo "Black") exitWith {_color = "#(argb,8,8,3)color(0,0,0,1)"};
-		if (_colorIndex isEqualTo "Dark Blue") exitWith {_color = "#(argb,8,8,3)color(0,0,0.627451,1)"};
-		if (_colorIndex isEqualTo "Yellow") exitWith {_color = "#(argb,8,8,3)color(1,1,0,1)"};
-		if (_colorIndex isEqualTo "Pink") exitWith {_color = "#(argb,8,8,3)color(1,0,1,1)"};
-		if (_colorIndex isEqualTo "Grey") exitWith {_color = "#(argb,8,8,3)color(0.5,0.5,0.5,1)"};
-		if (_colorIndex isEqualTo "Purple") exitWith {_color = "#(argb,8,8,3)color(0.501961,0,0.501961,1)"};
-		if (_colorIndex isEqualTo "Orange") exitWith {_color = "#(argb,8,8,3)color(1,0.501961,0,1)"};
-	};
-
-	_vehicle = createVehicle [_className, _loc, [], 0, "NONE"];
-	_vehicle setVariable ["skin", _color];
-	waitUntil {!isNil "_vehicle"}; //Wait?
-	_vehicle allowDamage false; //Temp disable damage handling..
-	_vehicle lock 2;
-	_vehicle setVectorUp (surfaceNormal _loc);
-	_vehicle setDir (markerDir _spawnPoint);
-	_vehicle setPos _loc;
-	//[_vehicle,_colorIndex] remoteExecCall ["life_fnc_colorVehicle",RCLIENT];
-	[_vehicle] call life_fnc_clearVehicleAmmo;
-	[_vehicle,"trunk_in_use",false,true] remoteExecCall ["TON_fnc_setObjVar",RSERV];
-	[_vehicle,"vehicle_info_owners",[[getPlayerUID player,profileName]],true] remoteExecCall ["TON_fnc_setObjVar",RSERV];
-	_vehicle disableTIEquipment true; //No Thermals.. They're cheap but addictive.
-};
-
-if((typeOf _vehicle) find "C_" >= 0 OR (typeOf _vehicle) find "B_" >= 0 OR (typeOf _vehicle) find "I_" >= 0 OR OR (typeOf _vehicle) find "O_" >= 0) then {
-
-	_loc = getMarkerPos _spawnPoint;
-	_loc = [_loc select 0, _loc select 1, (_loc select 2)+1.5];
-
-	_color = "";
-
-	_vehicle = createVehicle [_className, _loc, [], 0, "NONE"];
-	_vehicle setVariable ["skin", _color];
 	waitUntil {!isNil "_vehicle"}; //Wait?
 	_vehicle allowDamage false; //Temp disable damage handling..
 	_vehicle lock 2;
@@ -238,7 +168,7 @@ life_vehicles pushBack _vehicle;
 
 if(_mode) then {
 	if(!(_className in ["B_G_Offroad_01_armed_F","B_MRAP_01_hmg_F"])) then {
-		[(getPlayerUID player),playerSide,_vehicle,_colorIndex, _color] remoteExecCall ["TON_fnc_vehicleCreate",RSERV];
+		[(getPlayerUID player),playerSide,_vehicle,_colorIndex] remoteExecCall ["TON_fnc_vehicleCreate",RSERV];
 	};
 };
 
