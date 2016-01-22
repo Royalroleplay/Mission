@@ -25,12 +25,13 @@ uiSleep 0.25;
 		//Loop through and create markers.
 		{
 			_marker = createMarkerLocal [format["%1_dead_marker",_x],visiblePosition _x];
-			_marker setMarkerColorLocal "ColorRed";
 			_marker setMarkerTypeLocal "loc_Hospital";
 
 			if(_x getVariable ["shot",false]) then {
 				_marker setMarkerTextLocal format["%1 : Gunshot Victim",(_x getVariable["name","Unknown Player"])];
+				_marker setMarkerColorLocal "ColorRed";
 			} else {
+				_marker setMarkerColorLocal "ColorOrange";
 				_marker setMarkerTextLocal format["%1",(_x getVariable["name","Unknown Player"])];
 			};
 

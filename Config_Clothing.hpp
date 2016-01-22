@@ -335,8 +335,6 @@ class Clothing {
 			{ "U_C_HunterBody_grn", "The Hunters Look", 1100, { "", "", -1 } },
 			{ "U_C_WorkerCoveralls", "Mechanic Coveralls", 150, { "", "", -1 } },
 			{ "U_OrestesBody", "Surfing On Land", 110, { "", "", -1 } },
-			{ "TRYK_SUITS_BR_F", "", 300, { "", "", -1 } },
-			{ "TRYK_SUITS_BLK_F", "", 300, { "", "", -1 } },
 			{ "TRYK_U_B_wh_OD_Rollup_CombatUniform", "White Shirt", 50, { "", "", -1 } },
 			{ "TRYK_U_B_wh_tan_Rollup_CombatUniform", "White Shirt", 50, { "", "", -1 } },
 			{ "TRYK_U_B_wh_blk_Rollup_CombatUniform", "White Shirt", 50, { "", "", -1 } },
@@ -349,41 +347,24 @@ class Clothing {
 			{ "TRYK_U_B_Denim_T_WH", "Blue Jeans", 120, { "", "", -1 } },
 			{ "U_NikosAgedBody", "Casual Wears", 120, { "", "", -1 } },
 			{ "A3L_Badoodlenoodleshirt", "Noodle", 120, { "", "", -1 } },
-			{ "KAEL_SUITS_BLK_F", "", 300, { "", "", -1 } },
-			{ "KAEL_SUITS_BR_F", "", 300, { "", "", -1 } },
-			{ "KAEL_SUITS_BR_F3", "", 300, { "", "", -1 } },
-			{ "KAEL_SUITS_BR_F4", "", 300, { "", "", -1 } },
-			{ "KAEL_SUITS_BR_F5", "", 300, { "", "", -1 } },
-			{ "KAEL_SUITS_BR_F6", "", 300, { "", "", -1 } },
-			{ "KAEL_SUITS_BR_F7", "", 300, { "", "", -1 } },
-			{ "KAEL_SUITS_BR_F8", "", 300, { "", "", -1 } },
-			{ "KAEL_SUITS_BR_F9", "", 300, { "", "", -1 } },
-			{ "KAEL_SUITS_BR_F10", "", 300, { "", "", -1 } },
-			{ "KAEL_SUITS_BR_F11", "", 300, { "", "", -1 } },
-			{ "KAEL_SUITS_BR_F12", "", 300, { "", "", -1 } },
-			{ "KAEL_SUITS_BR_F13", "", 300, { "", "", -1 } },
-			{ "KAEL_SUITS_BR_F14", "", 300, { "", "", -1 } },
-			{ "KAEL_SUITS_BR_F15", "", 300, { "", "", -1 } },
-			{ "KAEL_SUITS_BR_F16", "", 300, { "", "", -1 } },
-			{ "KAEL_SUITS_BR_F17", "", 300, { "", "", -1 } },
-			{ "KAEL_SUITS_BR_F18", "", 300, { "", "", -1 } },
-			{ "KAEL_SUITS_BR_F19", "", 300, { "", "", -1 } },
-			{ "KAEL_SUITS_BR_F20", "", 300, { "", "", -1 } },
-			{ "KAEL_SUITS_BR_F21", "", 300, { "", "", -1 } },
-			{ "KAEL_SUITS_BR_F22", "", 300, { "", "", -1 } },
-			{ "KAEL_SUITS_BR_F23", "", 300, { "", "", -1 } },
-			{ "KAEL_SUITS_BR_F24", "", 300, { "", "", -1 } },
-			{ "KAEL_SUITS_BR_F25", "", 300, { "", "", -1 } },
-			{ "KAEL_SUITS_BR_F26", "", 300, { "", "", -1 } },
-			{ "KAEL_SUITS_BR_F27", "", 300, { "", "", -1 } },
-			{ "KAEL_SUITS_BR_F28", "", 300, { "", "", -1 } },
-			{ "KAEL_SUITS_BR_F29", "", 300, { "", "", -1 } },
-			{ "KAEL_SUITS_BR_F30", "", 300, { "", "", -1 } },
-			{ "KAEL_SUITS_BR_F31", "", 300, { "", "", -1 } },
-			{ "KAEL_SUITS_BR_F32", "", 300, { "", "", -1 } },
-			{ "KAEL_SUITS_BR_F33", "", 300, { "", "", -1 } },
-			{ "KAEL_SUITS_BR_F34", "", 300, { "", "", -1 } },
-			{ "KAEL_SUITS_BR_F35", "", 300, { "", "", -1 } }
+			{ "TRYK_U_denim_jersey_blk", "", 120, { "", "", -1 } },
+			{ "TRYK_U_denim_jersey_blu", "", 120, { "", "", -1 } },
+			{ "TRYK_U_pad_j_blk", "", 120, { "", "", -1 } },
+			{ "TRYK_U_pad_j", "", 120, { "", "", -1 } },
+			{ "TRYK_U_B_BLK_T_BG_BK", "", 120, { "", "", -1 } },
+			{ "TRYK_U_B_RED_T_BG_BR", "", 120, { "", "", -1 } },
+			{ "TRYK_U_B_BLK_T_BG_WH", "", 120, { "", "", -1 } },
+			{ "TRYK_U_B_BLK_T_BK", "", 120, { "", "", -1 } },
+			{ "TRYK_U_B_RED_T_BR", "", 120, { "", "", -1 } },
+			{ "TRYK_U_B_BLK_T_WH", "", 120, { "", "", -1 } },
+			{ "TRYK_U_B_Denim_T_BG_BK", "", 120, { "", "", -1 } },
+			{ "TRYK_U_B_Denim_T_BG_WH", "", 120, { "", "", -1 } },
+			{ "U_PMC_BluePlaidShirt_BeigeCords", "", 120, { "", "", -1 } },
+			{ "U_PMC_RedPlaidShirt_DenimCords", "", 120, { "", "", -1 } },
+			{ "A3LCivPoloGreenBlack", "", 120, { "", "", -1 } },
+			{ "A3LCivPoloGreenGreen", "", 120, { "", "", -1 } },
+			{ "A3LCivPoloGreenGrey", "", 120, { "", "", -1 } },
+			{ "A3LCivPoloGreenOrange", "", 120, { "", "", -1 } }
 		};
 
 		headgear[] = {
@@ -538,6 +519,8 @@ class Clothing {
 			{ "TRYK_B_Carryall_wood", "", 500, { "", "", -1 } },
 			{ "TRYK_B_FieldPack_Wood", "", 500, { "", "", -1 } },
 			{ "TRYK_B_Kitbag_blk", "", 500, { "", "", -1 } },
+			{ "TRYK_B_Kitbag_Base", "", 500, { "", "", -1 } },
+			{ "TRYK_B_Kitbag_blk", "", 500, { "", "", -1 } },
 			{ "TRYK_B_Kitbag_Base", "", 500, { "", "", -1 } }
 		};
 	};
@@ -662,12 +645,58 @@ class Clothing {
 			{ "U_IG_Guerilla1_1", "", 3000, {"", "", -1} },
 			{ "U_I_G_Story_Protagonist_F", "", 3000, { "", "", -1 } },
 			{ "U_I_G_resistanceLeader_F", "", 2150, { "", "", -1 } },
-			{ "U_O_SpecopsUniform_ocamo", "", 1750, { "", "", -1 } },
-			{ "TRYK_B_TRYK_UCP_T", "", 1510, { "", "", -1 } }
-			//{ "U_O_SpecopsUniform_ocamo", "", 1750, { "", "", -1 } },
-			//{ "U_O_PilotCoveralls", "", 1510, { "", "", -1 } },
-			//{ "U_IG_leader", "Guerilla Leader", 2340, { "", "", -1 } },
-			//{ "U_O_GhillieSuit", "", 115000, { "", "", -1 } }
+			{ "TRYK_B_TRYK_UCP_T", "", 1510, { "", "", -1 } },
+			{ "U_B_CTRG_2", "", 1510, { "", "", -1 } },
+			{ "U_PMC_IndUniformRS_BSBPBB", "", 1510, { "", "", -1 } },
+			{ "U_PMC_IndUniformRS_TSTPTB", "", 1510, { "", "", -1 } },
+			{ "U_PMC_IndUniformRS_GSTPTB", "", 1510, { "", "", -1 } },
+			{ "U_PMC_IndUniformRS_TSGPTB", "", 1510, { "", "", -1 } },
+			{ "U_PMC_IndUniformRS_BSTPTB", "", 1510, { "", "", -1 } },
+			{ "U_PMC_IndUniformRS_TSBPTB", "", 1510, { "", "", -1 } },
+			{ "U_PMC_IndUniformRS_YSBPBB", "", 1510, { "", "", -1 } },
+			{ "U_BG_Guerrilla_6_1", "", 1510, { "", "", -1 } },
+			{ "U_PMC_CombatUniformLS_BSSPBB", "", 1510, { "", "", -1 } },
+			{ "U_PMC_CombatUniformLS_GSBPBB", "", 1510, { "", "", -1 } },
+			{ "U_PMC_CombatUniformLS_GSSPBB", "", 1510, { "", "", -1 } },
+			{ "U_PMC_CombatUniformLS_IndPBSBB", "", 1510, { "", "", -1 } },
+			{ "U_PMC_CombatUniformLS_SSBPBB", "", 1510, { "", "", -1 } },
+			{ "TRYK_U_pad_hood_CSATBlk", "", 1510, { "", "", -1 } },
+			{ "TRYK_U_pad_hood_Blod", "", 1510, { "", "", -1 } },
+			{ "TRYK_U_pad_hood_Blk", "", 1510, { "", "", -1 } },
+			{ "TRYK_U_pad_hood_BKT2", "", 1510, { "", "", -1 } },
+			{ "TRYK_U_nohoodPcu_gry", "", 1510, { "", "", -1 } },
+			{ "TRYK_U_pad_hood_tan", "", 1510, { "", "", -1 } },
+			{ "TRYK_hoodie_3c", "", 1510, { "", "", -1 } },
+			{ "TRYK_hoodie_FR", "", 1510, { "", "", -1 } },
+			{ "TRYK_hoodie_Blk", "", 1510, { "", "", -1 } },
+			{ "TRYK_hoodie_Wood", "", 1510, { "", "", -1 } },
+			{ "TRYK_U_hood_mc", "", 1510, { "", "", -1 } },
+			{ "TRYK_U_hood_nc", "", 1510, { "", "", -1 } },
+			{ "TRYK_T_BLK_PAD", "", 1510, { "", "", -1 } },
+			{ "TRYK_T_CSAT_PAD", "", 1510, { "", "", -1 } },
+			{ "TRYK_T_T2_PAD", "", 1510, { "", "", -1 } },
+			{ "TRYK_U_denim_hood_mc", "", 1510, { "", "", -1 } },
+			{ "TRYK_T_camo_3c_BG", "", 1510, { "", "", -1 } },
+			{ "TRYK_T_camo_desert_marpat_BG", "", 1510, { "", "", -1 } },
+			{ "TRYK_T_camo_Wood_BG", "", 1510, { "", "", -1 } },
+			{ "TRYK_T_camo_wood_marpat_BG", "", 1510, { "", "", -1 } },
+			{ "TRYK_T_camo_3c", "", 1510, { "", "", -1 } },
+			{ "TRYK_T_camo_Wood", "", 1510, { "", "", -1 } },
+			{ "TRYK_T_camo_wood_marpat", "", 1510, { "", "", -1 } },
+			{ "TRYK_U_B_woodtan_CombatUniform", "", 1510, { "", "", -1 } },
+			{ "TRYK_U_B_woodtanR_CombatUniformTshirt", "", 1510, { "", "", -1 } },
+			{ "TRYK_U_B_TANOCP_CombatUniform", "", 1510, { "", "", -1 } },
+			{ "TRYK_U_B_TANOCP_R_CombatUniformTshirt", "", 1510, { "", "", -1 } },
+			{ "TRYK_U_B_JSDF_CombatUniform", "", 1510, { "", "", -1 } },
+			{ "TRYK_U_B_JSDF_CombatUniformTshirt", "", 1510, { "", "", -1 } },
+			{ "TRYK_U_B_Woodland", "", 1510, { "", "", -1 } },
+			{ "TRYK_U_B_Woodland_Tshirt", "", 1510, { "", "", -1 } },
+			{ "TRYK_U_B_wood_CombatUniform", "", 1510, { "", "", -1 } },
+			{ "TRYK_U_B_woodR_CombatUniformTshirt", "", 1510, { "", "", -1 } },
+			{ "TRYK_U_B_WDL_GRY_R_CombatUniform", "", 1510, { "", "", -1 } },
+			{ "TRYK_U_B_Wood_T", "", 1510, { "", "", -1 } },
+			{ "TRYK_U_B_wood3c_CombatUniform", "", 1510, { "", "", -1 } }
+
 		};
 
 		headgear[] = {
@@ -676,7 +705,8 @@ class Clothing {
 			{ "H_Shemag_olive", "", 850, { "", "", -1 } },
 			{ "H_ShemagOpen_khk", "", 800, { "", "", -1 } },
 			{ "H_MilCap_oucamo", "", 1200, { "", "", -1 } },
-			{ "H_Bandanna_camo", "", 1200, { "", "", -1 } }
+			{ "H_Bandanna_camo", "", 1200, { "", "", -1 } },
+			{ "TRYK_H_woolhat_CW", "", 600, { "", "", -1 } }
 		};
 
 		goggles[] = {
@@ -696,7 +726,25 @@ class Clothing {
 			{ "NONE", "Remove Vest", 0, { "", "", -1 } },
 			{ "V_TacVest_khk", "", 5100, { "", "", -1 } },
 			{ "V_BandollierB_cbr", "", 4500, { "", "", -1 } },
-			{ "V_HarnessO_brn", "", 3500, { "", "", -1 } }
+			{ "V_HarnessO_brn", "", 3500, { "", "", -1 } },
+			{ "TAC_FS_FO_B", "", 3500, { "", "", -1 } },
+			{ "TAC_FS_FO_G", "", 3500, { "", "", -1 } },
+			{ "TAC_FS_FOL_B", "", 3500, { "", "", -1 } },
+			{ "TAC_FS_FOL_G", "", 3500, { "", "", -1 } },
+			{ "TAC_EI_RRV24L_B", "", 3500, { "", "", -1 } },
+			{ "TAC_EI_RRV24L_Khaki", "", 3500, { "", "", -1 } },
+			{ "TAC_EI_RRV24L_OD", "", 3500, { "", "", -1 } },
+			{ "TAC_EI_RRVCVH_B", "", 3500, { "", "", -1 } },
+			{ "TAC_EI_RRVCVH_Khaki", "", 3500, { "", "", -1 } },
+			{ "TAC_EI_RRVCVH_OD", "", 3500, { "", "", -1 } },
+			{ "TRYK_V_tacv1M_BK", "", 3500, { "", "", -1 } },
+			{ "TRYK_V_tacv1_CY", "", 3500, { "", "", -1 } },
+			{ "TRYK_V_tacv1", "", 3500, { "", "", -1 } },
+			{ "V_TacVest_camo", "", 3500, { "", "", -1 } },
+			{ "V_TacVest_blk", "", 3500, { "", "", -1 } },
+			{ "V_TacVest_oli", "", 3500, { "", "", -1 } },
+			{ "V_I_G_resistanceLeader_F", "", 3500, { "", "", -1 } }
+
 		};
 
 		backpacks[] = {
@@ -708,7 +756,10 @@ class Clothing {
 			{ "B_Bergen_sgg", "", 450, { "", "", -1 } },
 			{ "B_Kitbag_cbr", "", 450, { "", "", -1 } },
 			{ "B_Carryall_oli", "", 500, { "", "", -1 } },
-			{ "B_Carryall_khk", "", 500, { "", "", -1 } }
+			{ "B_Carryall_khk", "", 500, { "", "", -1 } },
+			{ "TRYK_B_Kitbag_Base_JSDF", "", 500, { "", "", -1 } },
+			{ "B_TacticalPack_mcamo", "", 500, { "", "", -1 } },
+			{ "B_TacticalPack_ocamo", "", 500, { "", "", -1 } }
 		};
 	};
 
@@ -744,6 +795,157 @@ class Clothing {
 			{ "H_RacingHelmet_2_F", "", 10000, { "", "", -1 } },
 			{ "H_RacingHelmet_3_F", "", 10000, { "", "", -1 } },
 			{ "H_RacingHelmet_4_F", "", 10000, { "", "", -1 } }
+		};
+
+		goggles[] = {
+			{ "NONE", "Remove Glasses", 0, { "", "", -1 } }
+		};
+
+		vests[] = {
+			{ "NONE", "Remove Vest", 0, { "", "", -1 } }
+		};
+
+		backpacks[] = {
+			{ "NONE", "Remove Backpack", 0, { "", "", -1 } }
+		};
+	};
+
+	class buck {
+		title = "";
+		license = "";
+		side = "civ";
+
+		uniforms[] = {
+			{ "NONE", "Remove Uniform", 0, { "", "", -1 } },
+			{ "TRYK_shirts_DENIM_BK", "", 80, { "", "", -1 } },
+			{ "TRYK_shirts_DENIM_BL", "", 80, { "", "", -1 } },
+			{ "TRYK_shirts_DENIM_BWH", "", 80, { "", "", -1 } },
+			{ "TRYK_shirts_DENIM_od", "", 80, { "", "", -1 } },
+			{ "TRYK_shirts_DENIM_R", "", 80, { "", "", -1 } },
+			{ "TRYK_shirts_DENIM_RED2", "", 80, { "", "", -1 } },
+			{ "TRYK_shirts_DENIM_WH", "", 80, { "", "", -1 } },
+			{ "TRYK_shirts_DENIM_WHB", "", 80, { "", "", -1 } },
+			{ "TRYK_shirts_DENIM_ylb", "", 80, { "", "", -1 } },
+			{ "TRYK_shirts_DENIM_od_Sleeve", "", 80, { "", "", -1 } },
+			{ "TRYK_shirts_DENIM_ylb_Sleeve", "", 80, { "", "", -1 } },
+			{ "TRYK_shirts_DENIM_BK_Sleeve", "", 80, { "", "", -1 } },
+			{ "TRYK_shirts_DENIM_BL_Sleeve", "", 80, { "", "", -1 } },
+			{ "TRYK_shirts_DENIM_R_Sleeve", "", 80, { "", "", -1 } },
+			{ "TRYK_shirts_DENIM_RED2_Sleeve", "", 80, { "", "", -1 } },
+			{ "TRYK_shirts_DENIM_WH_Sleeve", "", 80, { "", "", -1 } },
+			{ "TRYK_shirts_DENIM_WHB_Sleeve", "", 80, { "", "", -1 } },
+			{ "TRYK_shirts_PAD_BK", "", 80, { "", "", -1 } },
+			{ "TRYK_shirts_BLK_PAD_BK", "", 80, { "", "", -1 } },
+			{ "TRYK_shirts_OD_PAD_BK", "", 80, { "", "", -1 } },
+			{ "TRYK_shirts_TAN_PAD_BK", "", 80, { "", "", -1 } },
+			{ "TRYK_shirts_PAD_BL", "", 80, { "", "", -1 } },
+			{ "TRYK_shirts_BLK_PAD_BL", "", 80, { "", "", -1 } },
+			{ "TRYK_shirts_OD_PAD_BL", "", 80, { "", "", -1 } },
+			{ "TRYK_shirts_TAN_PAD_BL", "", 80, { "", "", -1 } },
+			{ "TRYK_shirts_PAD_BLW", "", 80, { "", "", -1 } },
+			{ "TRYK_shirts_BLK_PAD_BLW", "", 80, { "", "", -1 } },
+			{ "TRYK_shirts_OD_PAD_BLW", "", 80, { "", "", -1 } },
+			{ "TRYK_shirts_TAN_PAD_BLW", "", 80, { "", "", -1 } },
+			{ "TRYK_shirts_PAD_BLU3", "", 80, { "", "", -1 } },
+			{ "TRYK_shirts_BLK_PAD_BLU3", "", 80, { "", "", -1 } },
+			{ "TRYK_shirts_OD_PAD_BLU3", "", 80, { "", "", -1 } },
+			{ "TRYK_shirts_TAN_PAD_BLU3", "", 80, { "", "", -1 } },
+			{ "TRYK_shirts_PAD", "", 80, { "", "", -1 } },
+			{ "TRYK_shirts_BLK_PAD", "", 80, { "", "", -1 } },
+			{ "TRYK_shirts_OD_PAD", "", 80, { "", "", -1 } },
+			{ "TRYK_shirts_TAN_PAD", "", 80, { "", "", -1 } },
+			{ "TRYK_shirts_PAD_RED2", "", 80, { "", "", -1 } },
+			{ "TRYK_shirts_BLK_PAD_RED2", "", 80, { "", "", -1 } },
+			{ "TRYK_shirts_OD_PAD_RED2", "", 80, { "", "", -1 } },
+			{ "TRYK_shirts_TAN_PAD_RED2", "", 80, { "", "", -1 } },
+			{ "TRYK_shirts_PAD_YEL", "", 80, { "", "", -1 } },
+			{ "TRYK_shirts_BLK_PAD_YEL", "", 80, { "", "", -1 } },
+			{ "TRYK_shirts_OD_PAD_YEL", "", 80, { "", "", -1 } },
+			{ "TRYK_shirts_TAN_PAD_YEL", "", 80, { "", "", -1 } },
+			{ "TRYK_U_pad_hood_odBK", "", 80, { "", "", -1 } },
+			{ "TRYK_U_pad_hood_Cl", "", 80, { "", "", -1 } },
+			{ "TRYK_T_OD_PAD", "", 80, { "", "", -1 } },
+			{ "TRYK_T_TAN_PAD", "", 80, { "", "", -1 } },
+			{ "TRYK_U_denim_hood_blk", "", 80, { "", "", -1 } },
+			{ "TRYK_U_denim_hood_nc", "", 80, { "", "", -1 } },
+			{ "TRYK_T_camo_tan", "", 80, { "", "", -1 } }
+
+		};
+
+		headgear[] = {
+			{ "NONE", "Remove Hat", 0, { "", "", -1 } },
+			{ "TRYK_H_woolhat", "", 80, { "", "", -1 } },
+			{ "TRYK_H_woolhat_br", "", 80, { "", "", -1 } },
+			{ "TRYK_H_woolhat_cu", "", 80, { "", "", -1 } },
+			{ "TRYK_H_woolhat_tan", "", 80, { "", "", -1 } },
+			{ "TRYK_H_woolhat_WH", "", 80, { "", "", -1 } }
+
+		};
+
+		goggles[] = {
+			{ "NONE", "Remove Glasses", 0, { "", "", -1 } }
+		};
+
+		vests[] = {
+			{ "NONE", "Remove Vest", 0, { "", "", -1 } }
+		};
+
+		backpacks[] = {
+			{ "NONE", "Remove Backpack", 0, { "", "", -1 } }
+		};
+	};
+
+
+	class suit {
+		title = "";
+		license = "";
+		side = "civ";
+
+		uniforms[] = {
+			{ "NONE", "Remove Uniform", 0, { "", "", -1 } },
+			{ "TRYK_SUITS_BR_F", "", 1000, { "", "", -1 } },
+			{ "TRYK_SUITS_BLK_F", "", 1000, { "", "", -1 } },
+			{ "KAEL_SUITS_BLK_F", "", 1000, { "", "", -1 } },
+			{ "KAEL_SUITS_BR_F", "", 1000, { "", "", -1 } },
+			{ "KAEL_SUITS_BR_F3", "", 1000, { "", "", -1 } },
+			{ "KAEL_SUITS_BR_F4", "", 1000, { "", "", -1 } },
+			{ "KAEL_SUITS_BR_F5", "", 1000, { "", "", -1 } },
+			{ "KAEL_SUITS_BR_F6", "", 1000, { "", "", -1 } },
+			{ "KAEL_SUITS_BR_F7", "", 1000, { "", "", -1 } },
+			{ "KAEL_SUITS_BR_F8", "", 1000, { "", "", -1 } },
+			{ "KAEL_SUITS_BR_F9", "", 1000, { "", "", -1 } },
+			{ "KAEL_SUITS_BR_F10", "", 1000, { "", "", -1 } },
+			{ "KAEL_SUITS_BR_F11", "", 1000, { "", "", -1 } },
+			{ "KAEL_SUITS_BR_F12", "", 1000, { "", "", -1 } },
+			{ "KAEL_SUITS_BR_F13", "", 1000, { "", "", -1 } },
+			{ "KAEL_SUITS_BR_F14", "", 1000, { "", "", -1 } },
+			{ "KAEL_SUITS_BR_F15", "", 1000, { "", "", -1 } },
+			{ "KAEL_SUITS_BR_F16", "", 1000, { "", "", -1 } },
+			{ "KAEL_SUITS_BR_F17", "", 1000, { "", "", -1 } },
+			{ "KAEL_SUITS_BR_F18", "", 1000, { "", "", -1 } },
+			{ "KAEL_SUITS_BR_F19", "", 1000, { "", "", -1 } },
+			{ "KAEL_SUITS_BR_F20", "", 1000, { "", "", -1 } },
+			{ "KAEL_SUITS_BR_F21", "", 1000, { "", "", -1 } },
+			{ "KAEL_SUITS_BR_F22", "", 1000, { "", "", -1 } },
+			{ "KAEL_SUITS_BR_F23", "", 1000, { "", "", -1 } },
+			{ "KAEL_SUITS_BR_F24", "", 1000, { "", "", -1 } },
+			{ "KAEL_SUITS_BR_F25", "", 1000, { "", "", -1 } },
+			{ "KAEL_SUITS_BR_F26", "", 1000, { "", "", -1 } },
+			{ "KAEL_SUITS_BR_F27", "", 1000, { "", "", -1 } },
+			{ "KAEL_SUITS_BR_F28", "", 1000, { "", "", -1 } },
+			{ "KAEL_SUITS_BR_F29", "", 1000, { "", "", -1 } },
+			{ "KAEL_SUITS_BR_F30", "", 1000, { "", "", -1 } },
+			{ "KAEL_SUITS_BR_F31", "", 1000, { "", "", -1 } },
+			{ "KAEL_SUITS_BR_F32", "", 1000, { "", "", -1 } },
+			{ "KAEL_SUITS_BR_F33", "", 1000, { "", "", -1 } },
+			{ "KAEL_SUITS_BR_F34", "", 1000, { "", "", -1 } },
+			{ "KAEL_SUITS_BR_F35", "", 1000, { "", "", -1 } }
+
+		};
+
+		headgear[] = {
+			{ "NONE", "Remove Hat", 0, { "", "", -1 } }
+
 		};
 
 		goggles[] = {

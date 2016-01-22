@@ -351,7 +351,7 @@ class CfgVehicles {
 	class Mrshounka_corbillard_c : shounka_base {};
 	class Mrshounka_ducati_p : shounka_base {};
 	class RG_mustang_mat_n : shounka_base {};
-	class RG_raptor2_noir : shounka_base {};
+	class RG_raptor2_noir : shounka_base {vItemSpace = 150;};
 	class Mrshounka_golfvi_civ : shounka_base {};
 	class Mrshounka_jeep_blinde_noir : shounka_base {};
 
