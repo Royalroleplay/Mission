@@ -65,7 +65,7 @@ if(_curTarget isKindOf "Man" && {!alive _curTarget} && {playerSide in [west,inde
 //If target is a player then check if we can use the cop menu.
 if(isPlayer _curTarget && _curTarget isKindOf "Man") then {
 	if(!dialog && {playerSide == independent}) then {
-		[_curTarget] call life_fnc_emsInteractionMenu;
+		//[_curTarget] call life_fnc_emsInteractionMenu;
 	};
 
 	if(!dialog && playerSide == west) then {

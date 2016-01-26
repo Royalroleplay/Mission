@@ -15,12 +15,14 @@ if(visibleMap) then {
 	
 	//Create markers
 	{
-		_marker = createMarkerLocal [format["%1_marker",_x],visiblePosition _x];
-		_marker setMarkerColorLocal "ColorBlue";
-		_marker setMarkerTypeLocal "Mil_dot";
-		_marker setMarkerTextLocal format["%1", _x getVariable["realname",name _x]];
-	
-		_markers pushBack [_marker,_x];
+		if("ItemGPS" in (assignedItems _x)) then {
+			_marker = createMarkerLocal [format["%1_marker",_x],visiblePosition _x];
+			_marker setMarkerColorLocal "ColorBlue";
+			_marker setMarkerTypeLocal "Mil_dot";
+			_marker setMarkerTextLocal format["%1", _x getVariable["realname",name _x]];
+		
+			_markers pushBack [_marker,_x];
+		};
 	} foreach _cops;
 		
 	while {visibleMap} do {
@@ -30,7 +32,11 @@ if(visibleMap) then {
 			_unit = _x select 1;
 			if(!isNil "_unit") then {
 				if(!isNull _unit) then {
-					_marker setMarkerPosLocal (visiblePosition _unit);
+					if("ItemGPS" in (assignedItems _unit)) then {
+						_marker setMarkerPosLocal (visiblePosition _unit);
+					} else {
+						_markers deleteAt (_markers find _x);
+					};
 				};
 			};
 		} foreach _markers;

@@ -66,7 +66,6 @@ class Life_Client_Core
 		class foodMonitor {};
 		class waterMonitor {};
 		class karmaMonitor {};
-		class phoneBatteryMonitor {};
 	};
 
 	class MrBoolean_NewLifeMonitor

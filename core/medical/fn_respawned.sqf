@@ -55,12 +55,12 @@ if(!isNull life_corpse) then {
 	life_corpse SVAR ["Revive",TRUE,TRUE];
 	_containers = nearestObjects[life_corpse,["WeaponHolderSimulated"],5];
 	{deleteVehicle _x;} foreach _containers; //Delete the containers.
-	hideBody life_corpse;
+	//hideBody life_corpse;
 };
 
 //Destroy our camera...
-life_deathCamera cameraEffect ["TERMINATE","BACK"];
-camDestroy life_deathCamera;
+//life_deathCamera cameraEffect ["TERMINATE","BACK"];
+//camDestroy life_deathCamera;
 
 
 //Bad boy

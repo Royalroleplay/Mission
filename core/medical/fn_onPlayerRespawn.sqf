@@ -11,6 +11,8 @@ _unit = SEL(_this,0);
 _corpse = SEL(_this,1);
 life_corpse = _corpse;
 
+deleteVehicle life_corpse;
+
 //Comment this code out if you want them to keep the weapon on the ground.
 _containers = nearestObjects[getPosATL _corpse,["WeaponHolderSimulated"],5]; //Fetch list of containers (Simulated = weapons)
 {deleteVehicle _x;} foreach _containers; //Delete the containers.
@@ -21,7 +23,6 @@ _unit SVAR ["Escorting",FALSE,TRUE];
 _unit SVAR ["transporting",FALSE,TRUE]; //Again why the fuck am I setting this? Can anyone tell me?
 _unit SVAR ["steam64id",steamid,true]; //Reset the UID.
 _unit SVAR ["realname",profileName,true]; //Reset the players name.
-_unit SVAR ["tf_unable_to_use_radio", false, true];
 _unit SVAR["shot",false,true];
 
 _unit addRating 1e12; //Set our rating to a high value, this is for a ARMA engine thing.

@@ -11,6 +11,8 @@ player addRating 9999999;
 waitUntil {!(isNull (findDisplay 46))};
 _end = false;
 
+player setvariable ["cse_sys_medical_enabled", true, true];
+
 if(life_blacklisted) exitWith {
 	["Blacklisted",false,true] call BIS_fnc_endMission;
 	uiSleep 30;

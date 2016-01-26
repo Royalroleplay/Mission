@@ -14,6 +14,8 @@ private "_unit";
 _unit = param [2,ObjNull,[ObjNull]];
 if(isNull _unit) exitWith {}; //MEH
 
-life_curWep_h = currentWeapon _unit;
-_unit action ["SwitchWeapon", _unit, _unit, 100];
-_unit switchCamera cameraView;
+if(!(player getVariable ["holstered",false])) then {
+	life_curWep_h = currentWeapon _unit;
+	_unit action ["SwitchWeapon", _unit, _unit, 100];
+	_unit switchCamera cameraView;
+};

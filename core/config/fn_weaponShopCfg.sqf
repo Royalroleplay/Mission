@@ -26,6 +26,15 @@ switch(_shop) do {
 				_ret = ["LSPD Shop"];
 
 				_items = [];
+
+				_items pushBack ["Binocular",nil,150];
+				_items pushback ["pmc_earpiece",nil,50]; // added - Von
+				_items pushBack ["ItemGPS",nil,100];
+				_items pushBack ["ToolKit",nil,250];
+				_items pushBack ["tf_anprc152",nil,0];
+				_items pushBack ["ItemCompass",nil,50];
+				_items pushBack ["ACE_fieldDressing",nil,0];
+
 				_items pushBack ["taser_26","Taser",200];
 				_items pushBack ["26_cartridge","Taser Magazine",125];
 				_items pushBack ["radar_gun","Radar Gun",750];
@@ -85,16 +94,41 @@ switch(_shop) do {
 					//_items pushBack ["RH_fa556",nil,50]; - SILENCER - Maybe for the future
 				};
 
-				_items pushBack ["Binocular",nil,150];
-				_items pushback ["pmc_earpiece",nil,50]; // added - Von
-				_items pushBack ["ItemGPS",nil,100];
-				_items pushBack ["ToolKit",nil,250];
-				_items pushBack ["FirstAidKit",nil,150];
-				_items pushBack ["tf_anprc152",nil,0];
-
 				_ret pushback _items;
 
 				_ret
+			};
+		};
+	};
+
+	case "med_supplies": {
+		switch (true) do {
+			case (playerSide != independent): {"You are not an EMS Medic"};
+			default {
+				["Hospital EMS Supplies",
+					[
+						["ACE_atropine",nil,0],
+						["ACE_fieldDressing",nil,0],
+						["ACE_elasticBandage",nil,0],
+						["ACE_quikclot",nil,0],
+						["ACE_bloodIV",nil,0],
+						["ACE_bloodIV_500",nil,0],
+						["ACE_bloodIV_250",nil,0],
+						["ACE_bodyBag",nil,0],
+						["ACE_epinephrine",nil,0],
+						["ACE_morphine",nil,0],
+						["ACE_packingBandage",nil,0],
+						["ACE_personalAidKit",nil,0],
+						["ACE_plasmaIV",nil,0],
+						["ACE_plasmaIV_500",nil,0],
+						["ACE_plasmaIV_250",nil,0],
+						["ACE_salineIV",nil,0],
+						["ACE_salineIV_500",nil,0],
+						["ACE_salineIV_250",nil,0],
+						["ACE_surgicalKit",nil,0],
+						["ACE_tourniquet",nil,0]
+					]
+				];
 			};
 		};
 	};
@@ -106,10 +140,10 @@ switch(_shop) do {
 				["Hospital EMS Shop",
 					[
 						["ItemGPS",nil,100],
+						["ItemCompass",nil,50],
 						["Binocular",nil,150],
 						["pmc_earpiece",nil,50],
 						["ToolKit",nil,250],
-						["FirstAidKit",nil,150],
 						["Medikit",nil,500],
 						["NVGoggles",nil,1200],
 						["B_FieldPack_ocamo",nil,3000],
@@ -281,12 +315,13 @@ switch(_shop) do {
 	{
 		["General Store",
 			[
+				["ACE_fieldDressing",nil,80],
+				["ItemCompass",nil,50],
 				["Binocular",nil,150],
 				["tf_anprc152",nil,0],
 				["tf_anprc148jem",nil,0],
 				["ItemGPS",nil,100],
 				["ToolKit",nil,250],
-				["FirstAidKit",nil,150],
 				["NVGoggles",nil,2000],
 				["Chemlight_red",nil,300],
 				["Chemlight_yellow",nil,300],

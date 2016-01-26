@@ -80,6 +80,7 @@ switch (_code) do {
 	//Holster / recall weapon.
 	case 35: {
 		if(_shift && !_ctrlKey && !(EQUAL(currentWeapon player,""))) then {
+			player setVariable ["holstered",true,true];
 			life_curWep_h = currentWeapon player;
 			player action ["SwitchWeapon", player, player, 100];
 			player switchCamera cameraView;
@@ -87,6 +88,7 @@ switch (_code) do {
 
 		if(!_shift && _ctrlKey && !isNil "life_curWep_h" && {!(EQUAL(life_curWep_h,""))}) then {
 			if(life_curWep_h in [RIFLE,LAUNCHER,PISTOL]) then {
+				player setVariable ["holstered",false,true];
 				player selectWeapon life_curWep_h;
 			};
 		};

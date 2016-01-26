@@ -66,6 +66,7 @@ if(_bool) then {
 
 		case CONFIG_WEAPONS: {
 			//New addition
+			if((_item select [0,3]) == "ACE") exitWith {player addItem _item;};
 			if(_toUniform) exitWith {player addItemToUniform _item;};
 			if(_toVest) exitWith {player addItemToVest _item;};
 			if(_ispack) exitWith {player addItemToBackpack _item;};

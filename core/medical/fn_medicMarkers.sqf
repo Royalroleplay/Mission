@@ -15,12 +15,11 @@ uiSleep 0.25;
 	if(visibleMap) then {
 
 		{
-			_name = _x getVariable "name";
-			_down = _x getVariable ["Revive",false];
-			if(!isNil "_name" && !_down) then {
+			_unconscious = _x getVariable ["ACE_isUnconscious",false];
+			if(_unconscious) then {
 				_units pushBack _x;
 			};
-		} foreach allDeadMen;
+		} foreach playableUnits;
 		
 		//Loop through and create markers.
 		{

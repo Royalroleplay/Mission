@@ -13,10 +13,11 @@ _unit = cursorTarget;
 if(isNull _unit) exitWith {}; //Not valid
 if(!alive _unit) exitWith {};
 if(!(_unit isKindOf "Man")) exitWith {};
-if((player distance _unit) > 4) exitWith {};
+if((player distance _unit) > 2) exitWith {};
 if((_unit getVariable ["restrained",false]) || (_unit getVariable ["tiedup",false]) || (_unit getVariable ["Escorting",false])) exitWith {};
 if(player == _unit) exitWith {};
 if(!isPlayer _unit) exitWith {};
+if(speed _unit > 2) exitWith {};
 if((animationState _unit) != "Incapacitated") exitWith {};
 if(life_inv_rope == 0) exitWith { titleText ["You do not have any rope", "PLAIN"]; };
 

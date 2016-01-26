@@ -176,3 +176,24 @@ if(EQUAL(LIFE_SETTINGS(getNumber,"enable_fatigue"),0)) then {player enableFatigu
 		uiSleep 0.5;
 	};
 };
+
+[] spawn {
+	while {true} do {
+		if(player getVariable ["holstered",false]) then {
+			if(player != vehicle player) then {
+				waitUntil{player == vehicle player};
+				if(currentWeapon player == life_curWep_h) then {
+					life_curWep_h = currentWeapon player;
+					player action ["SwitchWeapon", player, player, 100];
+					player switchCamera cameraView;
+					[player,"AmovPercMstpSnonWnonDnon"] remoteExecCall ["life_fnc_animSync"];
+					player switchMove "AmovPercMstpSnonWnonDnon"; 
+				};
+			} else {
+				waitUntil{player != vehicle player};
+			};
+		};
+	};
+
+	sleep 0.1;
+};
