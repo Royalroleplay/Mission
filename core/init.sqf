@@ -66,9 +66,6 @@ waitUntil {life_session_completed};
 0 cutText["Finishing client setup procedure","BLACK FADED"];
 0 cutFadeOut 9999999;
 
-//diag_log "::Life Client:: Group Base Execution";
-//[] spawn life_fnc_escInterupt;
-
 switch (playerSide) do {
 	case west: {
 		_handle = [] spawn life_fnc_initCop;

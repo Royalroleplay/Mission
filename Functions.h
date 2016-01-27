@@ -245,7 +245,6 @@ class Life_Client_Core
 		class fetchDeadGear {};
 		class loadDeadGear {};
 		class isnumeric {};
-		class escInterupt {};
 		class onTakeItem {};
 		class fetchVehInfo {};
 		class pushObject {};
