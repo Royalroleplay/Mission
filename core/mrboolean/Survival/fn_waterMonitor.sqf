@@ -7,7 +7,7 @@
 */
 
 if(life_thirst < 2) exitWith {
-	[player, 1, "body", "water"] call ace_medical_fnc_addDamageToUnit;
+	[player, 0.25, "body", "water"] call ace_medical_fnc_addDamageToUnit;
 	hint localize "STR_NOTF_DrinkMSG_Death";
 };
 
@@ -16,7 +16,7 @@ if(!life_is_arrested) then {
 	life_thirst = life_thirst - 10;
 
 	if(life_thirst < 2) exitWith {
-		[player, 1, "body", "water"] call ace_medical_fnc_addDamageToUnit;
+		[player, 0.25, "body", "water"] call ace_medical_fnc_addDamageToUnit;
 		hint localize "STR_NOTF_DrinkMSG_Death";
 	};
 	

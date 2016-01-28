@@ -8,7 +8,7 @@
 
 // Make sure they're not starved to death - if they are, kill them and exit
 if(life_hunger < 2) exitWith {
-	[player, 1, "body", "starvation"] call ace_medical_fnc_addDamageToUnit;
+	[player, 0.25, "body", "starvation"] call ace_medical_fnc_addDamageToUnit;
 	hint localize "STR_NOTF_EatMSG_Death";
 };
 
@@ -19,8 +19,7 @@ if(!life_is_arrested) then {
 	
 	//Now that we've reduced their hunger, lets make sure they don't need to die.
 	if(life_hunger < 2) exitWith {
-
-		[player, 1, "body", "starvation"] call ace_medical_fnc_addDamageToUnit;
+		[player, 0.25, "body", "starvation"] call ace_medical_fnc_addDamageToUnit;
 		hint localize "STR_NOTF_EatMSG_Death";
 	};
 };

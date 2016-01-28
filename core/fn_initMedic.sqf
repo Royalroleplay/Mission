@@ -23,7 +23,6 @@ waitUntil{isNull (findDisplay 38500)}; //Wait for the spawn selection to be done
 
 player setVariable ["ace_medical_medicClass",1,true];
 
-
 /*
 
 Custom Actions
@@ -48,5 +47,5 @@ Custom Actions
 3: Action <ARRAY>
 */
 
-start_revive = ["Start Revive","Start Revive","",{ cursorTarget setVariable["start_revive",true,true]; },{true},{}] call ace_interact_menu_fnc_createAction;
-[MyUnitClass, 0, ["ACE_MainActions"], start_revive] call ace_interact_menu_fnc_addActionToClass;
+//start_revive = ["Start Revive","Start Revive","",{ cursorTarget setVariable["start_revive",true,true]; },{true},{}] call ace_interact_menu_fnc_createAction;
+//[MyUnitClass, 0, ["ACE_MainActions"], start_revive] call ace_interact_menu_fnc_addActionToClass;
