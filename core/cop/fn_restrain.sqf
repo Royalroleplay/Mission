@@ -17,23 +17,7 @@ player SVAR [_type, true, true];
 titleText[format["You have been %1 by %2", _type, _restrainer getVariable ["realname", name _restrainer]], "PLAIN"];
 
 //Monitor excessive restrainment
-[_restrainer, _type] spawn {
-	_restrainer = _this select 0;
-	_type = _this select 1;
-
-	while {true} do {
-		
-		uiSleep 300;
-		
-		if(!(player GVAR [_type,FALSE])) exitWith {};
-		if(!([side _restrainer,getPos player,30] call life_fnc_nearUnits) && (player GVAR [_type,FALSE]) && vehicle player == player) exitWith {
-			player SVAR [_type,FALSE,TRUE];
-			player SVAR ["Escorting",FALSE,TRUE];
-			player SVAR ["transporting",false,true];
-			detach player;
-		};
-	};
-};
+[300, life_fnc_restrain_monitor, [_restrainer, _type], true] call MBF_GameLoop_fnc_addEvent;
 
 player SVAR ["surrender", false, true];
 player SVAR ["knockedout", false, true];

@@ -33,6 +33,7 @@ class playerHUD {
 			font = "PuristaLight";
 			idc = 1000;
 			text = "";
+			SizeEx = "(			(			(			((safezoneW / safezoneH) min 1.2) / 1.2) / 25) * 1)";
 			x = 0.402031 * safezoneW + safezoneX;
 			y = 0.951 * safezoneH + safezoneY;
 			w = 0.20625 * safezoneW;

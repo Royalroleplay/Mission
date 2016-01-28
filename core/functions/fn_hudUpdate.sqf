@@ -14,4 +14,4 @@ disableSerialization;
 
 if(isNull LIFEdisplay) then {[] call life_fnc_hudSetup;};
 
-LIFEctrl(IDC_TEXT) ctrlsetText format["Health: %1  Thirst: %2  Hunger: %3", round((1 - (damage player)) * 100), life_thirst, life_hunger];
+LIFEctrl(IDC_TEXT) ctrlsetText format["Thirst: %1  Hunger: %2", life_thirst, life_hunger];

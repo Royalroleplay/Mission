@@ -110,8 +110,6 @@ switch (_code) do {
 	case 19: {
 		if(_shift) then {
 			if(playerSide == west) then	{
-
-				hint "running restrain action";
 				[] call life_fnc_restrainActionCop;
 			};
 

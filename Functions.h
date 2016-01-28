@@ -33,6 +33,13 @@ class Life_Client_Core
 		class giveRocks {};
 	};
 
+	class MrBoolean_Police
+	{
+		file = "Core\MrBoolean\Police";
+
+		class restrain_monitor {};
+	};
+
 	class MrBoolean_Prison
 	{
 		file = "Core\MrBoolean\Prison";
@@ -62,10 +69,10 @@ class Life_Client_Core
 	{
 		file = "Core\MrBoolean\Survival";
 
-		class survivalMonitor {};
 		class foodMonitor {};
 		class waterMonitor {};
-		class karmaMonitor {};
+		class survivalMonitor {};
+		class backpackMonitor {};
 	};
 
 	class MrBoolean_NewLifeMonitor
@@ -94,7 +101,6 @@ class Life_Client_Core
 		class initCop {};
 		class initMedic {};
 		class welcomeNotification {};
-		class survival {};
 	};
 	
 	class Medical_System

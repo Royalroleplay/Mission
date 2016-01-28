@@ -24,15 +24,4 @@ hint parseText format[(localize "STR_Cop_DealerMSG")+ "<br/><br/>%1",_names];
 SEL(_this,0) SVAR ["sellers",[],true];
 life_action_inUse = false;
 
-/*
-
-	todo: Spawn this on the dealer
-
-[] spawn {
-	systemChat "pausing dealer";
-	drug_dealer disableAI "MOVE";
-	uiSleep 30;
-	drug_dealer enableAI "MOVE";
-};
-
-*/
+[] remoteExec ["MBF_fnc_freezeDealer",2];

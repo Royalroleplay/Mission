@@ -113,21 +113,14 @@ LIFE_ID_RevealObjects = ["LIFE_RevealObjects","onEachFrame","life_fnc_revealObje
 player SVAR ["steam64ID",steamid];
 player SVAR ["realname",profileName,true];
 
-life_fnc_moveIn = compileFinal
-"
-	player moveInCargo (_this select 0);
-";
+life_fnc_moveIn = compileFinal "player moveInCargo (_this select 0);";
 
-[] spawn life_fnc_survival;
-
-//execVM "core\tfr_channellock.sqf";
+[(5*60), life_fnc_survivalMonitor, [], true] call MBF_GameLoop_fnc_addEvent;
+[1, life_fnc_backpackMonitor, [], true] call MBF_GameLoop_fnc_addEvent;
 
 [] spawn life_fnc_playerVehicleKeys;
 
 CONSTVAR(life_paycheck); //Make the paycheck static.
-if(EQUAL(LIFE_SETTINGS(getNumber,"enable_fatigue"),0)) then {player enableFatigue false;};
-
-//[] call MBF_Phone_fnc_initPhone;
 
 [] spawn {
 	prison_building = (nearestObjects [[9643,10082,0], ["Land_MainSection"], 200]) select 0;
@@ -160,12 +153,10 @@ if(EQUAL(LIFE_SETTINGS(getNumber,"enable_fatigue"),0)) then {player enableFatigu
 		if(typeName life_atmbank != "SCALAR") then {
 			life_atmbank = 0;
 			life_atmbank = life_bankCache;
-			hint "Fixed Bank Cash Error";
 		};
 		if(isNil "life_atmbank") then {
 			life_atmbank = 0;
 			life_atmbank = life_bankCache;
-			hint "Fixed Bank Cash Error";
 		};
 		if(life_bankCache != life_atmbank) then {
 			life_bankCache = life_atmbank

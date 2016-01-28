@@ -102,6 +102,7 @@ class CfgRemoteExec {
 		F(MBF_fnc_startBreak,SERVER)
 		F(MBF_Bank_fnc_startRobbery,SERVER)
 		F(MBF_Bank_fnc_resetBank,SERVER)
+		F(MBF_fnc_freezeDealer,SERVER)
 		
 		/* Functions for everyone */
 		F(life_fnc_broadcast,ANYONE)
