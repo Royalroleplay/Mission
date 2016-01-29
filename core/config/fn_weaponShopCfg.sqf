@@ -33,7 +33,7 @@ switch(_shop) do {
 				_items pushBack ["ToolKit",nil,250];
 				_items pushBack ["tf_anprc152",nil,0];
 				_items pushBack ["ItemCompass",nil,50];
-				_items pushBack ["ACE_fieldDressing",nil,0];
+				_items pushBack ["FirstAidKit",nil,0];
 
 				_items pushBack ["taser_26","Taser",200];
 				_items pushBack ["26_cartridge","Taser Magazine",125];
@@ -315,7 +315,7 @@ switch(_shop) do {
 	{
 		["General Store",
 			[
-				["ACE_fieldDressing",nil,80],
+				["FirstAidKit",nil,80],
 				["ItemCompass",nil,50],
 				["Binocular",nil,150],
 				["tf_anprc152",nil,0],
