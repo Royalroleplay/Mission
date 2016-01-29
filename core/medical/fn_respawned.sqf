@@ -59,8 +59,8 @@ if(!isNull life_corpse) then {
 };
 
 //Destroy our camera...
-//life_deathCamera cameraEffect ["TERMINATE","BACK"];
-//camDestroy life_deathCamera;
+life_deathCamera cameraEffect ["TERMINATE","BACK"];
+camDestroy life_deathCamera;
 
 
 //Bad boy
