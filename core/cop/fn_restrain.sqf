@@ -17,7 +17,7 @@ player SVAR [_type, true, true];
 titleText[format["You have been %1 by %2", _type, _restrainer getVariable ["realname", name _restrainer]], "PLAIN"];
 
 //Monitor excessive restrainment
-[300, life_fnc_restrain_monitor, [_restrainer, _type], true] call MBF_GameLoop_fnc_addEvent;
+[30*60, life_fnc_restrain_monitor, [_restrainer, _type], false] call MBF_GameLoop_fnc_addEvent;
 
 player SVAR ["surrender", false, true];
 player SVAR ["knockedout", false, true];
