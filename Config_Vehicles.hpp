@@ -73,7 +73,26 @@ class CarShops {
 			{ "RG_raptor2_noir", 66500, "driver" },
 			{ "Mrshounka_golfvi_civ", 22000, "driver" },
 			{ "Mrshounka_jeep_blinde_noir", 152000, "driver" },
-			{ "Jonzie_Escalade", 80000, "driver" }
+			{ "Jonzie_Escalade", 80000, "driver" },
+			{ "shounka_a3_suburbangign", 75000, "driver" },
+			{ "Mrshounka_subaru08_base", 80000, "driver" },
+			{ "Mrshounka_c4_picasso_p_base", 80000, "driver" },
+			{ "Mrshounka_mercedes_190_p_base", 80000, "driver" },
+			{ "Mrshounka_mercedes_clk_base", 80000, "driver" },
+			{ "Mrshounka_mp4_base", 80000, "driver" },
+			{ "Mrshounka_rs6_base", 80000, "driver" },
+			{ "Mrshounka_transam_base", 80000, "driver" },
+			{ "quiet_dodge1969_spawn_f", 80000, "driver" },
+			{ "Quiet_c65amg_blanche_f", 80000, "driver" },
+			{ "quiet_dodge_charger_2015_spawn_f", 95000, "driver" },
+			{ "Mrshounka_porsche911_base", 100000, "driver" },
+			{ "quiet_raptor_spawn_f", 100000, "driver" },
+			{ "Quiet_garage_maison_struct", 150000, "driver" },
+			{ "quiet_Bugatti_blanche_f", 180000, "driver" },
+			{ "quiet_audi_r8_plus_spawn_f", 180000, "driver" },
+			{ "shounka_a3_audirs5_base", 180000, "driver" },
+			{ "shounka_a3_audiq7_base", 180000, "driver" },
+			{ "Mrshounka_pagani_base", 180000, "driver" }
 		};
 	};
 
@@ -130,7 +149,26 @@ class CarShops {
 			{ "RG_raptor2_noir", 500, "" },
 			{ "Mrshounka_golfvi_civ", 500, "" },
 			{ "Mrshounka_jeep_blinde_noir", 500, "" },
-			{ "Jonzie_Escalade", 500, "" }
+			{ "Jonzie_Escalade", 500, "" },
+			{ "shounka_a3_suburbangign", 500, "" },
+			{ "Mrshounka_subaru08_base", 500, "" },
+			{ "Mrshounka_c4_picasso_p_base", 500, "" },
+			{ "Mrshounka_mercedes_190_p_base", 500, "" },
+			{ "Mrshounka_mercedes_clk_base", 500, "" },
+			{ "Mrshounka_mp4_base", 500, "" },
+			{ "Mrshounka_rs6_base", 500, "" },
+			{ "Mrshounka_transam_base", 500, "" },
+			{ "quiet_dodge1969_spawn_f", 500, "" },
+			{ "Quiet_c65amg_blanche_f", 500, "" },
+			{ "quiet_dodge_charger_2015_spawn_f", 500, "" },
+			{ "Mrshounka_porsche911_base", 500, "" },
+			{ "quiet_raptor_spawn_f", 500, "" },
+			{ "Quiet_garage_maison_struct", 500, "" },
+			{ "quiet_Bugatti_blanche_f", 500, "" },
+			{ "quiet_audi_r8_plus_spawn_f", 500, "" },
+			{ "shounka_a3_audirs5_base", 500, "" },
+			{ "shounka_a3_audiq7_base", 500, "" },
+			{ "Mrshounka_pagani_base", 500, "" }
 		};
 	};
 
@@ -354,6 +392,25 @@ class CfgVehicles {
 	class RG_raptor2_noir : shounka_base {vItemSpace = 150;};
 	class Mrshounka_golfvi_civ : shounka_base {};
 	class Mrshounka_jeep_blinde_noir : shounka_base {};
+	class shounka_a3_suburbangign : shounka_base {};
+	class Mrshounka_subaru08_base : shounka_base {};
+	class Mrshounka_c4_picasso_p_base : shounka_base {};
+	class Mrshounka_mercedes_190_p_base : shounka_base {};
+	class Mrshounka_mercedes_clk_base : shounka_base {};
+	class Mrshounka_mp4_base : shounka_base {};
+	class Mrshounka_rs6_base : shounka_base {};
+	class Mrshounka_transam_base : shounka_base {};
+	class quiet_dodge1969_spawn_f : shounka_base {};
+	class Quiet_c65amg_blanche_f : shounka_base {};
+	class quiet_dodge_charger_2015_spawn_f : shounka_base {};
+	class Mrshounka_porsche911_base : shounka_base {};
+	class quiet_raptor_spawn_f : shounka_base {};
+	class Quiet_garage_maison_struct : shounka_base {};
+	class quiet_Bugatti_blanche_f : shounka_base {};
+	class quiet_audi_r8_plus_spawn_f : shounka_base {};
+	class shounka_a3_audirs5_base : shounka_base {};
+	class shounka_a3_audiq7_base : shounka_base {};
+	class Mrshounka_pagani_base : shounka_base {};
 
 	class Jonzie_Base {
 		vItemSpace = 10;
