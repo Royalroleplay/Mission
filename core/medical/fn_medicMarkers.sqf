@@ -17,15 +17,12 @@ uiSleep 0.25;
 		{
 			_name = _x getVariable "name";
 			_down = _x getVariable ["Revive",false];
-			if(!isNil "_name" && !_down) then {
 
-			_unconscious = _x getVariable ["ACE_isUnconscious",false];
-			if(_unconscious) then {
+			if(!isNil "_name" && !_down) then {
 				_units pushBack _x;
 			};
 		} foreach allDeadMen;
 		
-		//Loop through and create markers.
 		{
 			_marker = createMarkerLocal [format["%1_dead_marker",_x],visiblePosition _x];
 			_marker setMarkerTypeLocal "loc_Hospital";
@@ -51,7 +48,6 @@ uiSleep 0.25;
 	_ems = [];
 	{if(side _x == independent) then {_ems pushBack _x;}} foreach playableUnits;
 	
-	//Create markers
 	{
 		_marker = createMarkerLocal [format["%1_marker",_x],visiblePosition _x];
 		_marker setMarkerColorLocal "ColorBlue";

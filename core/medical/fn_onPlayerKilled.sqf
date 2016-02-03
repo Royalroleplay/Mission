@@ -116,5 +116,3 @@ CASH = 0;
 	uiSleep 20;
 	cutText["","PLAIN"];
 };
-
-//ACE_isUnconscious

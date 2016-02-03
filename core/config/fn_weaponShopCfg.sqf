@@ -84,14 +84,12 @@ switch(_shop) do {
 					_items pushBack ["RH_30Rnd_68x43_FMJ",nil,50];
 				};
 
-				if(FETCH_CONST(life_coplevel) >= 8) then { //High Command
+				if(FETCH_CONST(life_coplevel) >= 8) then { //SWAT
 					_items pushBack ["RH_Hk416s",nil,250];
 					_items pushBack ["RH_30Rnd_556x45_M855A1",nil,50];
 					_items pushBack ["RH_M4sbr_b",nil,250];
 					_items pushBack ["RH_30Rnd_556x45_M855A1",nil,50];
 					_items pushBack ["acc_flashlight",nil,50];
-
-					//_items pushBack ["RH_fa556",nil,50]; - SILENCER - Maybe for the future
 				};
 
 				_ret pushback _items;
@@ -139,6 +137,7 @@ switch(_shop) do {
 			default {
 				["Hospital EMS Shop",
 					[
+						["FirstAidKit",nil,0],
 						["ItemGPS",nil,100],
 						["ItemCompass",nil,50],
 						["Binocular",nil,150],

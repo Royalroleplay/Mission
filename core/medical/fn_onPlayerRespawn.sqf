@@ -11,7 +11,7 @@ _unit = SEL(_this,0);
 _corpse = SEL(_this,1);
 life_corpse = _corpse;
 
-deleteVehicle life_corpse;
+//deleteVehicle life_corpse;
 
 //Comment this code out if you want them to keep the weapon on the ground.
 _containers = nearestObjects[getPosATL _corpse,["WeaponHolderSimulated"],5]; //Fetch list of containers (Simulated = weapons)
