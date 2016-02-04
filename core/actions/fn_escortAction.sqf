@@ -21,6 +21,6 @@ else
 if(!_check) exitWith {};
 
 _unit attachTo [player,[0.1,1.1,0]];
-_unit SVAR ["transporting",false,true];
-_unit SVAR ["Escorting",true,true];
+_unit setVariable ["transporting",false,true];
+_unit setVariable ["Escorting",true,true];
 player reveal _unit;

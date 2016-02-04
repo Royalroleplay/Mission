@@ -1,8 +1,8 @@
 #include <macro.h>
 #define IDC_TEXT 1000
 
-#define LIFEdisplay (GVAR_UINS ["playerHUD",displayNull])
-#define LIFEctrl(ctrl) ((GVAR_UINS ["playerHUD",displayNull]) displayCtrl ctrl)
+#define LIFEdisplay (uiNamespace getVariable ["playerHUD",displayNull])
+#define LIFEctrl(ctrl) ((uiNamespace getVariable ["playerHUD",displayNull]) displayCtrl ctrl)
 /*
 	File: fn_hudUpdate.sqf
 	Author: Dillon "Itsyuka" Modine-Thuen

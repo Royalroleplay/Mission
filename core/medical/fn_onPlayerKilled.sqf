@@ -17,15 +17,15 @@ disableSerialization;
 //Set some vars
 
 if(!isNull _killer && {_killer != _unit} ) then {
-	_unit SVAR["shot",true,true];
+	_unit setVariable["shot",true,true];
 };
 
-_unit SVAR ["Revive",FALSE,TRUE]; //Set the corpse to a revivable state.
-_unit SVAR ["name",profileName,TRUE]; //Set my name so they can say my name.
-_unit SVAR ["restrained",FALSE,TRUE];
-_unit SVAR ["Escorting",FALSE,TRUE];
-_unit SVAR ["transporting",FALSE,TRUE]; //Why the fuck do I have this? Is it used?
-_unit SVAR ["steam64id",(getPlayerUID player),true]; //Set the UID.
+_unit setVariable ["Revive",FALSE,TRUE]; //Set the corpse to a revivable state.
+_unit setVariable ["name",profileName,TRUE]; //Set my name so they can say my name.
+_unit setVariable ["restrained",FALSE,TRUE];
+_unit setVariable ["Escorting",FALSE,TRUE];
+_unit setVariable ["transporting",FALSE,TRUE]; //Why the fuck do I have this? Is it used?
+_unit setVariable ["steam64id",(getPlayerUID player),true]; //Set the UID.
 _unit removeWeapon (primaryWeapon _unit);
 
 //Setup our camera view
@@ -68,13 +68,13 @@ _unit spawn {
 //Make the killer wanted
 if(!isNull _killer && {_killer != _unit} && {side _killer != west} && {alive _killer}) then {
 	if(vehicle _killer isKindOf "LandVehicle") then {
-		[getPlayerUID _killer,_killer GVAR ["realname",name _killer],"187V"] remoteExecCall ["life_fnc_wantedAdd",RSERV];
+		[getPlayerUID _killer,_killer getVariable ["realname",name _killer],"187V"] remoteExecCall ["life_fnc_wantedAdd",RSERV];
 		//Get rid of this if you don't want automatic vehicle license removal.
 		if(!local _killer) then {
 			[2] remoteExecCall ["life_fnc_removeLicenses",_killer];
 		};
 	} else {
-		[getPlayerUID _killer,_killer GVAR ["realname",name _killer],"187"] remoteExecCall ["life_fnc_wantedAdd",RSERV];
+		[getPlayerUID _killer,_killer getVariable ["realname",name _killer],"187"] remoteExecCall ["life_fnc_wantedAdd",RSERV];
 		
 		if(!local _killer) then {
 			[3] remoteExecCall ["life_fnc_removeLicenses",_killer];
@@ -86,9 +86,9 @@ if(!isNull _killer && {_killer != _unit} && {side _killer != west} && {alive _ki
 if(side _killer == west && playerSide != west) then {
 	life_copRecieve = _killer;
 	//Did I rob the federal reserve?
-	if(!life_use_atm && {CASH > 0}) then {
-		[format[localize "STR_Cop_RobberDead",[CASH] call life_fnc_numberText]] remoteExecCall ["life_fnc_broadcast",RCLIENT];
-		CASH = 0;
+	if(!life_use_atm && {life_cash > 0}) then {
+		[format[localize "STR_Cop_RobberDead",[life_cash] call life_fnc_numberText]] remoteExecCall ["life_fnc_broadcast",RCLIENT];
+		life_cash = 0;
 	};
 };
 
@@ -102,7 +102,7 @@ waitUntil {scriptDone _handle};
 life_hunger = 100;
 life_thirst = 100;
 life_carryWeight = 0;
-CASH = 0;
+life_cash = 0;
 
 [] call life_fnc_hudUpdate; //Get our HUD updated.
 //[player,life_sidechat,playerSide] remoteExecCall ["TON_fnc_managesc",RSERV];

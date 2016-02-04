@@ -10,7 +10,7 @@ private["_vendor","_type","_itemInfo","_oldItem","_newItem","_cost","_upp","_has
 _vendor = [_this,0,ObjNull,[ObjNull]] call BIS_fnc_param;
 _type = [_this,3,"",[""]] call BIS_fnc_param;
 //Error check
-if(isNull _vendor OR EQUAL(_type,"") OR (player distance _vendor > 10)) exitWith {};
+if(isNull _vendor OR (_type isEqualTo "") OR (player distance _vendor > 10)) exitWith {};
 _hasLicense = LICENSE_VALUE(_type,"civ");
 if(!_hasLicense) exitWith {hint "A processing license is required!"};
 
@@ -30,25 +30,25 @@ _itemInfo = switch (_type) do {
 };
 
 //Error checking
-if(EQUAL(count _itemInfo,0)) exitWith {};
+if((count _itemInfo) isEqualTo 0) exitWith {};
 
 //Setup vars.
-_oldItem = SEL(_itemInfo,0);
-_newItem = SEL(_itemInfo,1);
-_cost = SEL(_itemInfo,2);
-_upp = SEL(_itemInfo,3);
+_oldItem = (_itemInfo select 0);
+_newItem = (_itemInfo select 1);
+_cost = (_itemInfo select 2);
+_upp = (_itemInfo select 3);
 
 _itemName = M_CONFIG(getText,"VirtualItems",_newItem,"displayName");
 _oldVal = ITEM_VALUE(_oldItem);
 
 _cost = _cost * _oldVal;
 //Some more checks
-if(EQUAL(_oldVal,0)) exitWith {};
+if(_oldVal isEqualTo 0) exitWith {};
 
 //Setup our progress bar.
 disableSerialization;
 5 cutRsc ["life_progress","PLAIN"];
-_ui = GVAR_UINS "life_progress";
+_ui = uiNamespace getVariable "life_progress";
 _progress = _ui displayCtrl 38201;
 _pgText = _ui displayCtrl 38202;
 _pgText ctrlSetText format["%2 (1%1)...","%",_upp];

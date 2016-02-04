@@ -16,7 +16,7 @@ if(_length > 32) exitWith {hint localize "STR_GNOTF_Over32"};
 _badChar = false;
 {if(!(_x in _allowed)) exitWith {_badChar = true;};} foreach _chrByte;
 if(_badChar) exitWith {hint localize "STR_GNOTF_IncorrectChar";};
-if(BANK < (LIFE_SETTINGS(getNumber,"gang_price"))) exitWith {hint format[localize "STR_GNOTF_NotEnoughMoney",[((LIFE_SETTINGS(getNumber,"gang_price")) - BANK)] call life_fnc_numberText];};
+if(life_atmbank < (LIFE_SETTINGS(getNumber,"gang_price"))) exitWith {hint format[localize "STR_GNOTF_NotEnoughMoney",[((LIFE_SETTINGS(getNumber,"gang_price")) - life_atmbank)] call life_fnc_numberText];};
 
 [player,getPlayerUID player,_gangName] remoteExec ["TON_fnc_insertGang",RSERV];
 hint localize "STR_NOTF_SendingData";

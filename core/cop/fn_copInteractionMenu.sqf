@@ -42,7 +42,7 @@ _Btn9 = _display displayCtrl Btn9;
 life_pInact_curTarget = _curTarget;
 
 _escorting = life_pInact_curTarget getVariable["Escorting",false];
-_restrained = (life_pInact_curTarget GVAR["tiedup",false] || life_pInact_curTarget GVAR ["restrained",false]);
+_restrained = (life_pInact_curTarget getVariable["tiedup",false] || life_pInact_curTarget getVariable ["restrained",false]);
 
 if(!_restrained) exitWith {closeDialog 0;}; //Bad side check?
 

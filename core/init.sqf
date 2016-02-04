@@ -18,15 +18,15 @@ waitUntil {!isNull player && player == player}; //Wait till the player is ready
 //Set bank amount for new players
 switch (playerSide) do {
 	case west: {
-		BANK = LIFE_SETTINGS(getNumber,"bank_cop");
+		life_atmbank = LIFE_SETTINGS(getNumber,"bank_cop");
 		life_paycheck = LIFE_SETTINGS(getNumber,"paycheck_cop");
 	};
 	case civilian: {
-		BANK = LIFE_SETTINGS(getNumber,"bank_civ");
+		life_atmbank = LIFE_SETTINGS(getNumber,"bank_civ");
 		life_paycheck = LIFE_SETTINGS(getNumber,"paycheck_civ");
 	};
 	case independent: {
-		BANK = LIFE_SETTINGS(getNumber,"bank_med");
+		life_atmbank = LIFE_SETTINGS(getNumber,"bank_med");
 		life_paycheck = LIFE_SETTINGS(getNumber,"paycheck_med");
 	};
 };
@@ -83,10 +83,10 @@ switch (playerSide) do {
 	};
 };
 
-player SVAR ["restrained",false,true];
-player SVAR ["tiedup",false,true];
-player SVAR ["Escorting",false,true];
-player SVAR ["transporting",false,true];
+player setVariable ["restrained",false,true];
+player setVariable ["tiedup",false,true];
+player setVariable ["Escorting",false,true];
+player setVariable ["transporting",false,true];
 
 diag_log "Past Settings Init";
 [] execFSM "core\fsm\client.fsm";
@@ -110,8 +110,8 @@ diag_log "----------------------------------------------------------------------
 LIFE_ID_PlayerTags = ["LIFE_PlayerTags","onEachFrame","life_fnc_playerTags"] call BIS_fnc_addStackedEventHandler;
 LIFE_ID_RevealObjects = ["LIFE_RevealObjects","onEachFrame","life_fnc_revealObjects"] call BIS_fnc_addStackedEventHandler;
 
-player SVAR ["steam64ID",steamid];
-player SVAR ["realname",profileName,true];
+player setVariable ["steam64ID",getPlayerUID player];
+player setVariable ["realname",profileName,true];
 
 life_fnc_moveIn = compileFinal
 "
@@ -125,7 +125,7 @@ life_fnc_moveIn = compileFinal
 [] spawn life_fnc_playerVehicleKeys;
 
 CONSTVAR(life_paycheck); //Make the paycheck static.
-if(EQUAL(LIFE_SETTINGS(getNumber,"enable_fatigue"),0)) then {player enableFatigue false;};
+if((LIFE_SETTINGS(getNumber,"enable_fatigue") isEqualTo 0)) then {player enableFatigue false;};
 
 //[] call MBF_Phone_fnc_initPhone;
 

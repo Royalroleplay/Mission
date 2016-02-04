@@ -7,14 +7,14 @@
 	Does something with vehicle purchasing.
 */
 private["_mode","_spawnPoints","_className","_basePrice","_colorIndex","_spawnPoint","_vehicle","_shopSide","_license"];
-_mode = SEL(_this,0);
+_mode = (_this select 0);
 if((lbCurSel 2302) == -1) exitWith {hint localize "STR_Shop_Veh_DidntPick"};
 _className = lbData[2302,(lbCurSel 2302)];
 _vIndex = lbValue[2302,(lbCurSel 2302)];
 
-_vehicleList = M_CONFIG(getArray,"CarShops",SEL(life_veh_shop,0),"vehicles");
-_shopSide = M_CONFIG(getText,"CarShops",SEL(life_veh_shop,0),"side");
-_basePrice = SEL(SEL(_vehicleList,_vIndex),1);
+_vehicleList = M_CONFIG(getArray,"CarShops",(life_veh_shop select 0),"vehicles");
+_shopSide = M_CONFIG(getText,"CarShops",(life_veh_shop select 0),"side");
+_basePrice = ((_vehicleList select _vIndex) select 1);
 
  if(_mode) then {_basePrice = round(_basePrice * 1.5)};
 _colorIndex = lbValue[2304,(lbCurSel 2304)];
@@ -23,17 +23,17 @@ _colorIndex = lbValue[2304,(lbCurSel 2304)];
 if(_basePrice < 0) exitWith {}; //Bad price entry
 if(CASH < _basePrice) exitWith {hint format[localize "STR_Shop_Veh_NotEnough",[_basePrice - CASH] call life_fnc_numberText];};
 
-_license = SEL(SEL(_vehicleList,_vIndex),2);
-if(!(EQUAL(_license,"")) && {!(LICENSE_VALUE(_license,_shopSide))}) exitWith {hint localize "STR_Shop_Veh_NoLicense"};
+_license = ((_vehicleList select _vIndex) select 2);
+if(!((_license isEqualTo "")) && {!(LICENSE_VALUE(_license,_shopSide))}) exitWith {hint localize "STR_Shop_Veh_NoLicense"};
 
-_spawnPoints = SEL(life_veh_shop,1);
+_spawnPoints = (life_veh_shop select 1);
 _spawnPoint = "";
 
-if((SEL(life_veh_shop,0) == "med_air_hs")) then {
+if(((life_veh_shop select 0) isEqualTo "med_air_hs")) then {
 	if(count(nearestObjects[(getMarkerPos _spawnPoints),["Air"],35]) == 0) exitWith {_spawnPoint = _spawnPoints};
 } else {
 	//Check if there is multiple spawn points and find a suitable spawnpoint.
-	if(EQUAL(typeName _spawnPoints,typeName [])) then {
+	if((typeName _spawnPoints) isEqualTo typeName []) then {
 		//Find an available spawn point.
 		{if(count(nearestObjects[(getMarkerPos _x),["Car","Motorbike","Motorcycle","Ship","Bicycle","Air"],5]) == 0) exitWith {_spawnPoint = _x};} foreach _spawnPoints;
 	} else {
@@ -42,8 +42,8 @@ if((SEL(life_veh_shop,0) == "med_air_hs")) then {
 };
 
 
-if(EQUAL(_spawnPoint,"")) exitWith {hint localize "STR_Shop_Veh_Block";};
-SUB(CASH,_basePrice);
+if(_spawnPoint isEqualTo "") exitWith {hint localize "STR_Shop_Veh_Block";};
+FNC_SUB(CASH,_basePrice);
 hint format[localize "STR_Shop_Veh_Bought",getText(configFile >> "CfgVehicles" >> _className >> "displayName"),[_basePrice] call life_fnc_numberText];
 
 //Spawn the vehicle and prep it.
@@ -78,8 +78,8 @@ if((life_veh_shop select 0) == "med_air_hs") then {
 	_vehicle setPos _loc;
 
 	if(playerSide == civilian) then {
-		_textures = SEL(SEL(M_CONFIG(getArray,CONFIG_VEHICLES,(typeOf _vehicle),"textures"),_colorIndex),2);
-		if((!isNil "_textures") OR {!(EQUAL(count _textures,0))}) then {
+		_textures = ((M_CONFIG(getArray,"CfgVehicles",(typeOf _vehicle),"textures") select _colorIndex) select 2);
+		if((!isNil "_textures") OR {!(count _textures isEqualTo 0)}) then {
 			{_vehicle setObjectTextureGlobal [_forEachIndex,_x];} foreach _textures;
 		};
 	};
@@ -98,7 +98,7 @@ switch(playerSide) do {
 	};
 
 	case civilian: {
-		if(EQUAL(SEL(life_veh_shop,2),"civ") && {_className == "B_Heli_Light_01_F"}) then {
+		if(((life_veh_shop select 2) isEqualTo "civ") && {_className == "B_Heli_Light_01_F"}) then {
 			[_vehicle,"civ_littlebird",true] spawn life_fnc_vehicleAnimate;
 		};
 	};

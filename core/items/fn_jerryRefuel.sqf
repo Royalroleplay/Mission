@@ -17,14 +17,14 @@ if(player distance _vehicle > 7.5) exitWith {hint localize "STR_ISTR_Jerry_NotNe
 if(!([false,"fuelFull",1] call life_fnc_handleInv)) exitWith {};
 life_action_inUse = true;
 
-_displayName = FETCH_CONFIG2(getText,CONFIG_VEHICLES,(typeOf _vehicle),"displayName");
+_displayName = FETCH_CONFIG2(getText,"CfgVehicles",(typeOf _vehicle),"displayName");
 
 _upp = format[localize "STR_ISTR_Jerry_Process",_displayName];
 
 //Setup our progress bar.
 disableSerialization;
 5 cutRsc ["life_progress","PLAIN"];
-_ui = GVAR_UINS "life_progress";
+_ui = uiNamespace getVariable "life_progress";
 _progress = _ui displayCtrl 38201;
 _pgText = _ui displayCtrl 38202;
 _pgText ctrlSetText format["%2 (1%1)...","%",_upp];
@@ -40,7 +40,7 @@ while{true} do {
 	uiSleep 0.2;
 	if(isNull _ui) then {
 		5 cutRsc ["life_progress","PLAIN"];
-		_ui = GVAR_UINS "life_progress";
+		_ui = uiNamespace getVariable "life_progress";
 		_progressBar = _ui displayCtrl 38201;
 		_titleText = _ui displayCtrl 38202;
 	};

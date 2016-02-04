@@ -35,7 +35,7 @@ if(isNull _curTarget) exitWith {
 };
 
 
-if(!alive _curTarget && _curTarget isKindOf "Animal" && !(EQUAL((typeOf _curTarget),"Turtle_F"))) exitWith {
+if((!(alive _curTarget) && _curTarget isKindOf "Animal" && (!((typeOf _curTarget) isEqualTo "Turtle_F")))) exitWith {
 	[_curTarget] call life_fnc_gutAnimal;
 };
 
@@ -56,7 +56,7 @@ life_action_inUse = true;
 //Check if it's a dead body.
 if(_curTarget isKindOf "Man" && {!alive _curTarget} && {playerSide in [west,independent]}) exitWith {
 	//Hotfix code by ins0
-	if(((playerSide == blufor && {(EQUAL(LIFE_SETTINGS(getNumber,"revive_cops"),1))}) || playerSide == independent) && {"Medikit" in (items player)}) then {
+	if(((playerSide == blufor && {(LIFE_SETTINGS(getNumber,"revive_cops") isEqualTo 1)}) || playerSide == independent) && {"Medikit" in (items player)}) then {
 		[_curTarget] call life_fnc_revivePlayer;
 	};
 };
@@ -80,7 +80,7 @@ if(isPlayer _curTarget && _curTarget isKindOf "Man") then {
 	private["_isVehicle","_miscItems","_money","_list"];
 
 	_list = ["landVehicle","Ship","Air"];
-	_isVehicle = if(KINDOF_ARRAY(_curTarget,_list)) then {true} else {false};
+	_isVehicle = if(FNC_ISKINDOF(_curTarget,_list)) then {true} else {false};
 	_miscItems = ["Land_BottlePlastic_V1_F","Land_TacticalBacon_F","Land_Can_V3_F","Land_CanisterFuel_F","Land_Suitcase_F"];
 	_animalTypes = ["Salema_F","Ornate_random_F","Mackerel_F","Tuna_F","Mullet_F","CatShark_F","Turtle_F"];
 	_money = "Land_Money_F";
@@ -88,14 +88,14 @@ if(isPlayer _curTarget && _curTarget isKindOf "Man") then {
 	//It's a vehicle! open the vehicle interaction key!
 	if(_isVehicle) then {
 		if(!dialog) then {
-			if(player distance _curTarget < SEL(SEL(boundingBox _curTarget,1),0)+2) then {
+			if(player distance _curTarget < ((boundingBox _curTarget select 1) select 0)+2) then {
 				[_curTarget] call life_fnc_vInteractionMenu;
 			};
 		};
 	} else {
 		//Is it a animal type?
 		if((typeOf _curTarget) in _animalTypes) then {
-			if(EQUAL((typeOf _curTarget),"Turtle_F") && !alive _curTarget) then {
+			if(((typeOf _curTarget) isEqualTo "Turtle_F") && !alive _curTarget) then {
 				private "_handle";
 				_handle = [_curTarget] spawn life_fnc_catchTurtle;
 				waitUntil {scriptDone _handle};
@@ -110,7 +110,7 @@ if(isPlayer _curTarget && _curTarget isKindOf "Man") then {
 				[_curTarget,player,false] remoteExecCall ["TON_fnc_pickupAction",RSERV];
 			} else {
 				//It wasn't a misc item so is it money?
-				if(EQUAL((typeOf _curTarget),_money) && {!(_curTarget GVAR ["inUse",false])}) then {
+				if(((typeOf _curTarget) isEqualTo _money) && {!(_curTarget getVariable ["inUse",false])}) then {
 					[_curTarget,player,true] remoteExecCall ["TON_fnc_pickupAction",RSERV];
 				};
 			};

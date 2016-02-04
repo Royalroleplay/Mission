@@ -89,11 +89,11 @@ while {true} do {
 	
 	if(fuel _vehicle == 0) exitWith {titleText[localize "STR_NOTF_OutOfFuel","PLAIN"];};
 	titleText[format[localize "STR_NOTF_DeviceMined",_sum],"PLAIN"];
-	_vehicle SVAR ["Trunk",[_items,_space + _itemWeight],true];
+	_vehicle setVariable ["Trunk",[_items,_space + _itemWeight],true];
 	_weight = [_vehicle] call life_fnc_vehicleWeight;
 	_sum = [_item,15,_weight select 1,_weight select 0] call life_fnc_calWeightDiff; //Get a sum base of the remaining weight.. 
 	if(_sum < 1) exitWith {titleText[localize "STR_NOTF_DeviceFull","PLAIN"];};
 	uiSleep 2;
 };
 
-_vehicle SVAR ["mining",nil,true];
+_vehicle setVariable ["mining",nil,true];

@@ -18,7 +18,7 @@ if((nearestObject [[16019.5,16952.9,0],"Land_Dome_Big_F"]) == _building OR (near
 //	[0,"STR_ISTR_Bolt_AlertHouse",true,[profileName]] remoteExecCall ["life_fnc_broadcast",RCLIENT];
 };
 
-_doors = FETCH_CONFIG2(getNumber,CONFIG_VEHICLES,(typeOf _building), "numberOfDoors");
+_doors = FETCH_CONFIG2(getNumber,"CfgVehicles",(typeOf _building), "numberOfDoors");
 
 _door = 0;
 //Find the nearest door
@@ -28,14 +28,14 @@ for "_i" from 1 to _doors do {
 		if(player distance _worldSpace < 5) exitWith {_door = _i;};
 };
 if(_door == 0) exitWith {hint localize "STR_Cop_NotaDoor"}; //Not near a door to be broken into.
-if((_building GVAR [format["bis_disabled_Door_%1",_door],0]) == 0) exitWith {hint localize "STR_House_Raid_DoorUnlocked"};
+if((_building getVariable [format["bis_disabled_Door_%1",_door],0]) == 0) exitWith {hint localize "STR_House_Raid_DoorUnlocked"};
 life_action_inUse = true;
 
 //Setup the progress bar
 disableSerialization;
 _title = localize "STR_ISTR_Bolt_Process";
 5 cutRsc ["life_progress","PLAIN"];
-_ui = GVAR_UINS "life_progress";
+_ui = uiNamespace getVariable "life_progress";
 _progressBar = _ui displayCtrl 38201;
 _titleText = _ui displayCtrl 38202;
 _titleText ctrlSetText format["%2 (1%1)...","%",_title];
@@ -58,7 +58,7 @@ while {true} do
 	uiSleep 0.26;
 	if(isNull _ui) then {
 		5 cutRsc ["life_progress","PLAIN"];
-		_ui = GVAR_UINS "life_progress";
+		_ui = uiNamespace getVariable "life_progress";
 		_progressBar = _ui displayCtrl 38201;
 		_titleText = _ui displayCtrl 38202;
 	};
@@ -74,7 +74,7 @@ while {true} do
 5 cutText ["","PLAIN"];
 player playActionNow "stop";
 if(!alive player OR life_istazed) exitWith {life_action_inUse = false;};
-if((player GVAR ["restrained",false])) exitWith {life_action_inUse = false;};
+if((player getVariable ["restrained",false])) exitWith {life_action_inUse = false;};
 if(life_interrupted) exitWith {life_interrupted = false; titleText[localize "STR_NOTF_ActionCancel","PLAIN"]; life_action_inUse = false;};
 life_boltcutter_uses = life_boltcutter_uses + 1;
 life_action_inUse = false;
@@ -84,8 +84,8 @@ if(life_boltcutter_uses >= 5) then {
 	life_boltcutter_uses = 0;
 };
 
-_building SVAR [format["bis_disabled_Door_%1",_door],0,true]; //Unlock the door.
-if((_building GVAR ["locked",false])) then {
-	_building SVAR ["locked",false,true];
+_building setVariable [format["bis_disabled_Door_%1",_door],0,true]; //Unlock the door.
+if((_building getVariable ["locked",false])) then {
+	_building setVariable ["locked",false,true];
 };
 [getPlayerUID player,profileName,"459"] remoteExecCall ["life_fnc_wantedAdd",RSERV];

@@ -202,8 +202,6 @@ class Licenses {
     LICENSEMACRO(gun,"STR_License_Firearm","gun",7000,false,"civ")
     LICENSEMACRO(dive,"STR_License_Diving","dive",2000,false,"civ")
     LICENSEMACRO(oil,"STR_License_Oil","oil",8000,false,"civ")
-    LICENSEMACRO(cAir,"STR_License_Pilot","cAir",15000,false,"cop")
-    LICENSEMACRO(coastguard,"STR_License_CG","cg",3000,false,"cop")
     LICENSEMACRO(heroin,"STR_License_Heroin","heroin",12000,true,"civ")
     LICENSEMACRO(marijuana,"STR_License_Marijuana","marijuana",9500,true,"civ")
     LICENSEMACRO(medmarijuana,"STR_License_Medmarijuana","medmarijuana",15000,false,"civ")
@@ -220,6 +218,21 @@ class Licenses {
     LICENSEMACRO(home,"STR_License_Home","home",50000,false,"civ")
     LICENSEMACRO(race,"STR_License_Race","race",5000,false,"civ")
     LICENSEMACRO(semi,"STR_License_Semi","semi",20000,false,"civ")
+    //cop
+    LICENSEMACRO(air_support,"STR_License_Pilot","air_support",0,false,"cop")
+    LICENSEMACRO(coast_guard,"STR_License_Pilot","coast_guard",0,false,"cop")
+    LICENSEMACRO(basic_firearms,"STR_License_CG","basic_firearms",0,false,"cop")
+    LICENSEMACRO(adv_firearms,"STR_License_CG","adv_firearms",0,false,"cop")
+    LICENSEMACRO(dtu,"STR_License_CG","dtu",0,false,"cop")
+    LICENSEMACRO(swat,"STR_License_CG","swat",0,false,"cop")
+    LICENSEMACRO(swat_marks,"STR_License_CG","swat_marks",0,false,"cop")
+    LICENSEMACRO(basic_driving,"STR_License_CG","basic_driving",0,false,"cop")
+    LICENSEMACRO(adv_driving,"STR_License_CG","adv_driving",0,false,"cop")
+    LICENSEMACRO(trainer_patrol,"STR_License_CG","trainer_patrol",0,false,"cop")
+    LICENSEMACRO(trainer_swat,"STR_License_CG","trainer_swat",0,false,"cop")
+    LICENSEMACRO(trainer_dtu,"STR_License_CG","trainer_dtu",0,false,"cop")
+    LICENSEMACRO(trainer_highway,"STR_License_CG","trainer_highway",0,false,"cop")
+    LICENSEMACRO(trainer_doc,"STR_License_CG","trainer_doc",0,false,"cop")
 };
 
 class VirtualShops {
@@ -285,3 +298,4 @@ class VirtualShops {
 };
 
 #include "Config_Vehicles.hpp"
+#include "Config_Weapons.hpp"

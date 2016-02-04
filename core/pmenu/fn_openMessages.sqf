@@ -23,7 +23,7 @@ _type = "";
 			case civilian: {_type = "Civ"};
 			case independent: {_type = "Med"};
 		};
-		lbAdd [3004, format["%1 (%2)",_x GVAR ["realname",name _x],_type]];
+		lbAdd [3004, format["%1 (%2)",_x getVariable ["realname",name _x],_type]];
 		lbSetData [3004, (lbSize 3004)-1,str(_x)];
 	};
 } foreach playableUnits;

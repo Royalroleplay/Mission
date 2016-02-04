@@ -24,12 +24,12 @@ _unit = call compile format["%1", _unit];
 if(isNull _unit OR isNil "_unit") exitWith {}; 
 
 _uid = getPlayerUID _unit;
-_owners = _vehicle GVAR "vehicle_info_owners";
+_owners = _vehicle getVariable "vehicle_info_owners";
 _index = [_uid,_owners] call TON_fnc_index;
-if(EQUAL(_index,-1)) then  {
-	_owners pushBack [_uid,_unit GVAR ["realname",name _unit]];
-	_vehicle SVAR ["vehicle_info_owners",_owners,true];
+if(_index isEqualTo -1) then  {
+	_owners pushBack [_uid,_unit getVariable ["realname",name _unit]];
+	_vehicle setVariable ["vehicle_info_owners",_owners,true];
 };
 
-hint format["You have given %1 keys to your %2",_unit GVAR ["realname",name _unit],typeOf _vehicle];
+hint format["You have given %1 keys to your %2",_unit getVariable ["realname",name _unit],typeOf _vehicle];
 [_vehicle,_unit,profileName] remoteExecCAll ["TON_fnc_clientGetKey",_unit];

@@ -11,19 +11,19 @@ private["_list","_clothes","_pic","_filter","_pos","_oldPos","_oldDir","_flag","
 _exit = false;
 
 /* License check & config validation */
-if(!isClass(missionConfigFile >> "Clothing" >> (SEL(_this,3)))) exitWith {}; //Bad config entry.
-_shopTitle = M_CONFIG(getText,"Clothing",(SEL(_this,3)),"title");
-_shopSide = M_CONFIG(getText,"Clothing",(SEL(_this,3)),"side");
-_license = M_CONFIG(getText,"Clothing",(SEL(_this,3)),"license");
+if(!isClass(missionConfigFile >> "Clothing" >> ((_this select 3)))) exitWith {}; //Bad config entry.
+_shopTitle = M_CONFIG(getText,"Clothing",(_this select 3),"title");
+_shopSide = M_CONFIG(getText,"Clothing",(_this select 3),"side");
+_license = M_CONFIG(getText,"Clothing",(_this select 3),"license");
 
-if(!(EQUAL(_license,""))) then {
+if(!(_license isEqualTo "")) then {
 	_flag = M_CONFIG(getText,"Licenses",_license,"side");
 	if(!(LICENSE_VALUE(_license,_flag))) exitWith {hint localize "STR_Shop_Veh_NoLicense"; _exit = true;};
 };
 if(_exit) exitWith {};
 
 _flag = switch(playerSide) do {case west: {"cop"}; case independent: {"med"}; default {"civ"};};
-if(!(EQUAL(_flag,_shopSide))) exitWith {};
+if(!(_flag isEqualTo _shopSide)) exitWith {};
 
 ctrlSetText [3103,localize _shopTitle];
 /* Open up the menu */
@@ -31,14 +31,14 @@ createDialog "Life_Clothing";
 disableSerialization;
 
 //Cop / Civ Pre Check
-if((SEL(_this,3) in ["bruce","dive","reb","kart"] && playerSide != civilian)) exitWith {hint localize "STR_Shop_NotaCiv"; closeDialog 0;};
-if((SEL(_this,3) == "reb" && !license_civ_rebel)) exitWith {hint localize "STR_Shop_NotaReb"; closeDialog 0;};
-if((SEL(_this,3) in ["cop"] && playerSide != west)) exitWith {hint localize "STR_Shop_NotaCop"; closeDialog 0;};
-if((SEL(_this,3) in ["dive"] && !license_civ_dive)) exitWith { hint localize "STR_Shop_NotaDive"; closeDialog 0;};
+if((_this select 3) in ["bruce","dive","reb","kart"] && playerSide != civilian) exitWith {hint localize "STR_Shop_NotaCiv"; closeDialog 0;};
+if((_this select 3) == "reb" && !license_civ_rebel) exitWith {hint localize "STR_Shop_NotaReb"; closeDialog 0;};
+if((_this select 3) in ["cop"] && playerSide != west) exitWith {hint localize "STR_Shop_NotaCop"; closeDialog 0;};
+if((_this select 3) in ["dive"] && !license_civ_dive) exitWith { hint localize "STR_Shop_NotaDive"; closeDialog 0;};
 
 player switchMove "";
 
-life_clothing_store = SEL(_this,3);
+life_clothing_store = (_this select 3);
 
 /* Store license check */
 if(isClass(missionConfigFile >> "Licenses" >> life_clothing_store)) then {

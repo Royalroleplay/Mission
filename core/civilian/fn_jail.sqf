@@ -15,9 +15,9 @@ if(_unit != player) exitWith {}; //Dafuq?
 if(life_is_arrested) exitWith {}; //Dafuq i'm already arrested
 if(_time < 1) exitWith {};
 
-player SVAR ["restrained",false,true];
-player SVAR ["Escorting",false,true];
-player SVAR ["transporting",false,true];
+player setVariable ["restrained",false,true];
+player setVariable ["Escorting",false,true];
+player setVariable ["transporting",false,true];
 
 life_jailtime = _time;
 

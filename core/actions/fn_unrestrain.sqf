@@ -6,9 +6,9 @@ private["_unit"];
 _unit = param [0,ObjNull,[ObjNull]];
 
 if(isNull _unit) exitWith {}; //Error check?
-if(!(_unit GVAR ["tiedup",FALSE])) exitWith {};
+if(!(_unit getVariable ["tiedup",FALSE])) exitWith {};
 
-_unit SVAR ["tiedup",FALSE,TRUE];
-_unit SVAR ["Escorting",FALSE,TRUE];
-_unit SVAR ["transporting",FALSE,TRUE];
+_unit setVariable ["tiedup",FALSE,TRUE];
+_unit setVariable ["Escorting",FALSE,TRUE];
+_unit setVariable ["transporting",FALSE,TRUE];
 detach _unit;

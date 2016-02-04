@@ -20,7 +20,7 @@ life_cMenu_lock = true;
 life_clothing_purchase set[life_clothing_filter,(_control lbValue _selection)];
 _data = _control lbData _selection;
 
-if(EQUAL(_data,"NONE")) then {
+if(_data isEqualTo "NONE") then {
 	_item = switch(life_clothing_filter) do {
 		case 0: {uniform player};
 		case 1: {headGear player};

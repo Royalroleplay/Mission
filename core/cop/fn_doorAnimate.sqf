@@ -6,9 +6,9 @@
 	Animates a door?
 */
 private["_b","_doors","_door"];
-_b = SEL(_this,0);
+_b = _this select 0;
 _doors = 1;
-_doors = FETCH_CONFIG2(getNumber,CONFIG_VEHICLES,typeOf _b,"NumberOfDoors");
+_doors = FETCH_CONFIG2(getNumber,"CfgVehicles",typeOf _b,"NumberOfDoors");
 
 _door = 0;
 //Find the nearest door

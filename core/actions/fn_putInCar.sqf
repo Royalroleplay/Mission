@@ -15,5 +15,5 @@ if(isNil "_nearestVehicle") exitWith {hint localize "STR_NOTF_VehicleNear"};
 
 detach _unit;
 [_nearestVehicle] remoteExecCall ["life_fnc_moveIn",_unit];
-_unit SVAR["Escorting",FALSE,TRUE];
-_unit SVAR["transporting",TRUE,TRUE];
+_unit setVariable["Escorting",FALSE,TRUE];
+_unit setVariable["transporting",TRUE,TRUE];

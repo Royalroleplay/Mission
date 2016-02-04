@@ -6,21 +6,21 @@
 	Tries to place a storage box in the nearest house.
 */
 private["_boxType","_house","_positions","_containers","_pos","_houseCfg"];
-_boxType = SEL(_this,0);
+_boxType = (_this select 0);
 
 _house = cursorTarget;
 if(!(_house in life_vehicles)) exitWith {hint "You must be looking at your house!"};
 
-_containers = _house GVAR ["containers",[]];
+_containers = _house getVariable ["containers",[]];
 _houseCfg = [(typeOf _house)] call life_fnc_houseConfig;
 if(count _houseCfg == 0) exitWith {}; //What the fuck happened?
 if(count _containers >= (_houseCfg select 1)) exitWith {hint localize "STR_ISTR_Box_HouseFull"};
 
-_slots = _house GVAR ["slots",[]];
+_slots = _house getVariable ["slots",[]];
 _positions = [_house] call life_fnc_getBuildingPositions;
 _pos = [0,0,0];
 {
-	_slots = _house GVAR ["slots",[]];
+	_slots = _house getVariable ["slots",[]];
 	if(!(_forEachIndex in _slots)) exitWith {
 		_slots pushBack _forEachIndex;
 		_house setVariable["slots",_slots,true];

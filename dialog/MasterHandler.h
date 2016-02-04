@@ -26,3 +26,4 @@
 #include "defines.hpp"
 #include "royalphone.hpp"
 #include "jailTime.hpp"
+#include "crimes.hpp"

@@ -22,12 +22,12 @@ switch (true) do {
 	default {""};
 };
 //Mine check
-if(EQUAL(_mine,"")) exitWith {hint localize "STR_ISTR_Pick_NotNear"};
+if(_mine isEqualTo "") exitWith {hint localize "STR_ISTR_Pick_NotNear"};
 if(vehicle player != player) exitWith {hint localize "STR_ISTR_Pick_MineVeh";};
 
-_diff = [SEL(_mine,0),SEL(_mine,1),life_carryWeight,life_maxWeight] call life_fnc_calWeightDiff;
+_diff = [(_mine select 0),(_mine select 1),life_carryWeight,life_maxWeight] call life_fnc_calWeightDiff;
 
-if(EQUAL(_diff,0)) exitWith {hint localize "STR_NOTF_InvFull"};
+if(_diff isEqualTo 0) exitWith {hint localize "STR_NOTF_InvFull"};
 
 life_action_inUse = true;
 for "_i" from 0 to 2 do {
@@ -36,8 +36,8 @@ for "_i" from 0 to 2 do {
 	uiSleep 2.5;
 };
 
-if(([true,SEL(_mine,0),_diff] call life_fnc_handleInv)) then {
-	_itemName = M_CONFIG(getText,"VirtualItems",SEL(_mine,0),"displayName");
+if(([true,(_mine select 0),_diff] call life_fnc_handleInv)) then {
+	_itemName = M_CONFIG(getText,"VirtualItems",(_mine select 0),"displayName");
 	titleText[format[localize "STR_ISTR_Pick_Success",(localize _itemName),_diff],"PLAIN"];
 };
 

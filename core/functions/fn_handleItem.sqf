@@ -16,15 +16,15 @@ _toVest = [_this,6,false,[false]] call BIS_fnc_param; //Manual override to send 
 _preview = [_this,7,false,[true]] call BIS_fnc_param;
 
 //Some checks
-if(EQUAL(_item,"")) exitWith {};
+if((_item isEqualTo "")) exitWith {};
 _isgun = false;
 
 _details = [_item] call life_fnc_fetchCfgDetails;
-if(EQUAL(count _details,0)) exitWith {};
+if((count _details) isEqualTo 0) exitWith {};
 
 if(_bool) then {
 	switch((_details select 6)) do {
-		case CONFIG_GLASSES: {
+		case "CfgGlasses": {
 			if(_toUniform) exitWith {player addItemToUniform _item;};
 			if(_toVest) exitWith {player addItemToVest _item;};
 
@@ -34,7 +34,7 @@ if(_bool) then {
 				if(_override) then {
 					player addItem _item;
 				} else {
-					if(!(EQUAL(goggles player,""))) then {
+					if(!(goggles player isEqualTo "")) then {
 						removeGoggles player;
 					};
 					player addGoggles _item;
@@ -42,8 +42,8 @@ if(_bool) then {
 			};
 		};
 
-		case CONFIG_VEHICLES: {
-			if(!(EQUAL(backpack player,""))) then {
+		case "CfgVehicles": {
+			if(!(backpack player isEqualTo "")) then {
 				_items = (backpackItems player);
 				removeBackpack player;
 			};
@@ -56,7 +56,7 @@ if(_bool) then {
 			};
 		};
 
-		case CONFIG_MAGAZINES: {
+		case "CfgMagazines": {
 			if(_toUniform) exitWith {player addItemToUniform _item;};
 			if(_toVest) exitWith {player addItemToVest _item;};
 			if(_ispack) exitWith {player addItemToBackpack _item;};
@@ -64,16 +64,16 @@ if(_bool) then {
 			player addMagazine _item;
 		};
 
-		case CONFIG_WEAPONS: {
+		case "CfgWeapons": {
 			//New addition
 			if((_item select [0,3]) == "ACE") exitWith {player addItem _item;};
 			if(_toUniform) exitWith {player addItemToUniform _item;};
 			if(_toVest) exitWith {player addItemToVest _item;};
 			if(_ispack) exitWith {player addItemToBackpack _item;};
 
-			if((SEL(_details,4)) in [1,2,4,5,4096]) then {
-				if(EQUAL(SEL(_details,4),4096)) then {
-					if(EQUAL(SEL(_details,5),-1)) then {
+			if((_details select 4) in [1,2,4,5,4096]) then {
+				if((_details select 4) isEqualTo 4096) then {
+					if((_details select 5),-1) then {
 						_isgun = true;
 					};
 				} else {
@@ -83,13 +83,13 @@ if(_bool) then {
 
 			if(_isgun) then {
 				if(!_ispack && _override) exitWith {}; //It was in the vest/uniform, try to close to prevent it overriding stuff... (Actual weapon and not an item)
-				if(EQUAL(_item,"MineDetector")) then {
+				if(_item isEqualTo "MineDetector") then {
 					player addItem _item;
 				} else {
 					player addWeapon _item;
 				};
 			} else {
-				switch(SEL(_details,5)) do {
+				switch(_details select 5) do {
 					case 0:  {
 						if(_ispack) then {
 							player addItemToBackpack _item;
@@ -114,10 +114,10 @@ if(_bool) then {
 							if(_override) then {
 								player addItem _item;
 							} else {
-								if(EQUAL(headGear player,_item)) then{
+								if((headGear player isEqualTo _item)) then{
 									player addItem _item;
 								} else {
-									if(!(EQUAL(headGear player,""))) then {removeHeadGear player;};
+									if(!(headGear player isEqualTo "")) then {removeHeadGear player;};
 									player addHeadGear _item;
 								};
 							};
@@ -132,10 +132,10 @@ if(_bool) then {
 								player addItem _item;
 							} else {
 								if(player isKindOf "Civilian") then {
-									if(EQUAL(uniform player,_item) && {!_preview}) then {
+									if((uniform player isEqualTo _item) && {!_preview}) then {
 										player addItem _item;
 									} else {
-										if(!(EQUAL(uniform player,""))) then {
+										if(!((uniform player isEqualTo ""))) then {
 											_items = uniformItems player;
 											removeUniform player;
 										};
@@ -146,7 +146,7 @@ if(_bool) then {
 										};
 									};
 								} else {									
-									if(!(EQUAL(uniform player,""))) then {
+									if(!(uniform player isEqualTo "")) then {
 										_items = uniformItems player;
 										removeUniform player;
 									};
@@ -171,10 +171,10 @@ if(_bool) then {
 							if(_override) then{
 								player addItem _item;
 							} else {
-								if(EQUAL(vest player,_item)) then {
+								if((vest player isEqualTo _item)) then {
 									player addItem _item;
 								} else {
-									if(!(EQUAL(vest player,""))) then {
+									if(!(vest player isEqualTo "")) then {
 										_items = vestItems player;
 										removeVest player;
 									};
@@ -206,10 +206,10 @@ if(_bool) then {
 									player addItem _item;
 								} else {
 									private["_wepItems","_action","_slotTaken"];
-									_wepItems = switch(_type) do {case 1:{RIFLE_ITEMS}; case 2:{secondaryWeaponItems player}; case 3:{PISTOL_ITEMS}; default {["","",""]};};
+									_wepItems = switch(_type) do {case 1:{primaryWeaponItems player}; case 2:{secondaryWeaponItems player}; case 3:{handgunItems player}; default {["","",""]};};
 									_slotTaken = false;
 
-									if(!(EQUAL(SEL(_wepItems,2),""))) then {_slotTaken = true;};
+									if(!((_wepItems select 2) isEqualTo "")) then {_slotTaken = true;};
 
 									if(_slotTaken) then {
 										_action = [localize "STR_MISC_AttachmentMSG",localize "STR_MISC_Attachment",localize "STR_MISC_Weapon",localize "STR_MISC_Inventory"] call BIS_fnc_guiMessage;
@@ -254,10 +254,10 @@ if(_bool) then {
 									player addItem _item;
 								} else {
 									private["_wepItems","_action","_slotTaken"];
-									_wepItems = switch(_type) do {case 1:{RIFLE_ITEMS}; case 2:{secondaryWeaponItems player}; case 3:{PISTOL_ITEMS}; default {["","",""]};};
+									_wepItems = switch(_type) do {case 1:{primaryWeaponItems player}; case 2:{secondaryWeaponItems player}; case 3:{handgunItems player}; default {["","",""]};};
 									_slotTaken = false;
 
-									if(!(EQUAL(SEL(_wepItems,1),""))) then {_slotTaken = true;};
+									if(!((_wepItems select 1) isEqualTo "")) then {_slotTaken = true;};
 
 									if(_slotTaken) then {
 										_action = [localize "STR_MISC_AttachmentMSG",localize "STR_MISC_Attachment",localize "STR_MISC_Weapon",localize "STR_MISC_Inventory"] call BIS_fnc_guiMessage;
@@ -302,10 +302,10 @@ if(_bool) then {
 									player addItem _item;
 								} else {
 									private["_wepItems","_action","_slotTaken"];
-									_wepItems = switch(_type) do {case 1:{RIFLE_ITEMS}; case 2:{secondaryWeaponItems player}; case 3:{PISTOL_ITEMS}; default {["","",""]};};
+									_wepItems = switch(_type) do {case 1:{primaryWeaponItems player}; case 2:{secondaryWeaponItems player}; case 3:{handgunItems player}; default {["","",""]};};
 									_slotTaken = false;
 
-									if(!(EQUAL(SEL(_wepItems,0),""))) then {_slotTaken = true;};
+									if(!((_wepItems select 0) isEqualTo "")) then {_slotTaken = true;};
 
 									if(_slotTaken) then {
 										_action = [localize "STR_MISC_AttachmentMSG",localize "STR_MISC_Attachment",localize "STR_MISC_Weapon",localize "STR_MISC_Inventory"] call BIS_fnc_guiMessage;
@@ -370,27 +370,27 @@ if(_bool) then {
 		};
 	};
 } else {
-	switch(SEL(_details,6)) do {
-		case CONFIG_VEHICLES: {
+	switch(_details select 6) do {
+		case "CfgVehicles": {
 			removeBackpack player;
 		};
 
-		case CONFIG_MAGAZINES: {
+		case "CfgMagazines": {
 			player removeMagazine _item;
 		};
 
-		case CONFIG_GLASSES: {
-			if(EQUAL(_item,goggles player)) then {
+		case "CfgGlasses": {
+			if((_item isEqualTo goggles player)) then {
 				removeGoggles player;
 			} else {
 				player removeItem _item;
 			};
 		};
 
-		case CONFIG_WEAPONS: {
-			if(SEL(_details,4) in [1,2,4,5,4096]) then {
-				if(EQUAL(SEL(_details,4),4096)) then {
-					if(EQUAL(SEL(_details,5),1)) then {
+		case "CfgWeapons": {
+			if((_details select 4) in [1,2,4,5,4096]) then {
+				if((_details select 4) isEqualTo 4096) then {
+					if((_details select 5) isEqualTo 1) then {
 						_isgun = true;
 					};
 				} else {
@@ -400,9 +400,9 @@ if(_bool) then {
 
 			if(_isgun) then {
 				switch(true) do {
-					case (EQUAL(RIFLE,_item)) : {_ispack = false;};
-					case (EQUAL(LAUNCHER,_item)) : {_ispack = false;};
-					case (EQUAL(PISTOL,_item)) : {_ispack = false;};
+					case (primaryWeapon player isEqualTo _item) : {_ispack = false;};
+					case (secondaryWeapon player isEqualTo _item) : {_ispack = false;};
+					case (handgunWeapon player isEqualTo _item) : {_ispack = false;};
 					case (_item in assignedItems player) : {_ispack = false;};
 					default {_ispack = true;};
 				};
@@ -475,17 +475,17 @@ if(_bool) then {
 					};
 				};
 			} else {
-				switch(SEL(_details,5)) do {
+				switch(_details select 5) do {
 					case 0: {player unassignItem _item; player removeItem _item;};
-					case 605: {if(EQUAL(headGear player,_item)) then {removeHeadgear player} else {player removeItem _item};};
-					case 801: {if(EQUAL(uniform player,_item)) then {removeUniform player} else {player removeItem _item};};
-					case 701: {if(EQUAL(vest player,_item)) then {removeVest player} else {player removeItem _item};};
+					case 605: {if(headGear player isEqualTo _item) then {removeHeadgear player} else {player removeItem _item};};
+					case 801: {if(uniform player isEqualTo _item) then {removeUniform player} else {player removeItem _item};};
+					case 701: {if(vest player isEqualTo _item) then {removeVest player} else {player removeItem _item};};
 					case 621: {player unassignItem _item; player removeItem _item;};
 					case 616: {player unassignItem _item; player removeItem _item;};
 					default {
 						switch (true) do {
-							case (_item in RIFLE_ITEMS) : {player removePrimaryWeaponItem _item;};
-							case (_item in PISTOL_ITEMS) : {player removeHandgunItem _item;};
+							case (_item in primaryWeaponItems player) : {player removePrimaryWeaponItem _item;};
+							case (_item in handgunItems player) : {player removeHandgunItem _item;};
 							default {player removeItem _item;};
 						};
 					};

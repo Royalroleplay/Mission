@@ -17,9 +17,9 @@ _licensesConfigs = "getText(_x >> 'side') isEqualTo 'civ'" configClasses (missio
 
 {
 	if(LICENSE_VALUE(configName _x,"civ")) then {
-		ADD(_licenses,localize getText(_x >> "displayName") + "<br/>");
+		FNC_ADD(_licenses,localize getText(_x >> "displayName") + "<br/>");
 	};
 } foreach _licensesConfigs;
 
-if(EQUAL(_licenses,"")) then {_licenses = (localize "STR_Cop_NoLicensesFound");};
+if(_licenses isEqualTo "") then {_licenses = (localize "STR_Cop_NoLicensesFound");};
 [profileName,_licenses] remoteExecCall ["life_fnc_licensesRead",_cop];

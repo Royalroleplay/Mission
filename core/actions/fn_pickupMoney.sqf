@@ -7,10 +7,10 @@
 	Picks up money
 */
 private "_value";
-if((time - life_action_delay) < 1.5) exitWith {hint localize "STR_NOTF_ActionDelay"; _this SVAR ["inUse",false,true];};
-if(isNull _this OR {player distance _this > 3}) exitWith {_this SVAR ["inUse",false,true];};
+if((time - life_action_delay) < 1.5) exitWith {hint localize "STR_NOTF_ActionDelay"; _this setVariable ["inUse",false,true];};
+if(isNull _this OR {player distance _this > 3}) exitWith {_this setVariable ["inUse",false,true];};
 
-_value = SEL((_this GVAR "item"),1);
+_value = ((_this getVariable "item") select 1);
 if(!isNil "_value") exitWith {
 	deleteVehicle _this;
 	
@@ -22,6 +22,6 @@ if(!isNil "_value") exitWith {
 	
 	player playMove "AinvPknlMstpSlayWrflDnon";
 	titleText[format[localize "STR_NOTF_PickedMoney",[_value] call life_fnc_numberText],"PLAIN"];
-	ADD(CASH,_value);
+	FNC_ADD(life_cash,_value);
 	life_action_delay = time;
 };

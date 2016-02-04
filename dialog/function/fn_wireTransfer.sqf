@@ -10,6 +10,6 @@ params [
 	["_from","",[""]]
 ];
 
-if(EQUAL(_value,0) OR EQUAL(_from,"") OR EQUAL(_from,profileName)) exitWith {}; //No
-ADD(BANK,_value);
+if((_value isEqualTo 0) OR (_from isEqualTo "") OR (_from isEqualTo profileName)) exitWith {}; //No
+FNC_ADD(life_atmbank,_value);
 hint format["%1 has wire transferred $%2 to you",_from,[_value] call life_fnc_numberText];

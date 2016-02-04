@@ -18,7 +18,7 @@ life_action_gathering = true;
 	if(player distance (getMarkerPos _x) < 30) exitWith {_zone = _x;};
 } foreach _resourceZones;
 
-if(EQUAL(_zone,"")) exitWith {life_action_inUse = false;};
+if(_zone isEqualTo "") exitWith {life_action_inUse = false;};
 
 //Get the resource that will be gathered from the zone name...
 switch(true) do {
@@ -32,8 +32,8 @@ switch(true) do {
 //gather check??
 if(vehicle player != player) exitWith {};
 
-_diff = [SEL(_gather,0),SEL(_gather,1),life_carryWeight,life_maxWeight] call life_fnc_calWeightDiff;
-if(EQUAL(_diff,0)) exitWith {hint localize "STR_NOTF_InvFull"};
+_diff = [(_gather select 0),(_gather select 1),life_carryWeight,life_maxWeight] call life_fnc_calWeightDiff;
+if(_diff isEqualTo 0) exitWith {hint localize "STR_NOTF_InvFull"};
 life_action_inUse = true;
 
 for "_i" from 0 to 2 do {
@@ -42,8 +42,8 @@ for "_i" from 0 to 2 do {
 	sleep 2.5;
 };
 
-if(([true,SEL(_gather,0),_diff] call life_fnc_handleInv)) then {
-	_itemName = M_CONFIG(getText,"VirtualItems",SEL(_gather,0),"displayName");
+if(([true,(_gather select 0),_diff] call life_fnc_handleInv)) then {
+	_itemName = M_CONFIG(getText,"VirtualItems",(_gather select 0),"displayName");
 	titleText[format[localize "STR_NOTF_Gather_Success",(localize _itemName),_diff],"PLAIN"];
 };
 

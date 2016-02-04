@@ -4,14 +4,14 @@
 	Author: Bryan "Tonic" Boardwine
 	
 	Description:
-	Handles damage, specifically for handling the 'tazer' pistol and nothing else.
+	Handles damage, specifically for handling the 'tazer' handgunWeapon player and nothing else.
 */
 private["_unit","_damage","_source","_projectile","_part","_curWep"];
-_unit = SEL(_this,0);
-_part = SEL(_this,1);
-_damage = SEL(_this,2);
-_source = SEL(_this,3);
-_projectile = SEL(_this,4);
+_unit = (_this select 0);
+_part = (_this select 1);
+_damage = (_this select 2);
+_source = (_this select 3);
+_projectile = (_this select 4);
 
 if(_part == "") then {
 	_damage = 0;
@@ -30,7 +30,7 @@ if(!isNull _source) then {
 				
 				_damage = 0;
 				if(_unit distance _source < 40) then {
-					if(!life_istazed && !(_unit GVAR ["restrained",false])) then {
+					if(!life_istazed && !(_unit getVariable ["restrained",false])) then {
 						if(_isVehicle && _isQuad) then {
 							player action ["Eject",vehicle player];
 							[_unit,_source] spawn life_fnc_tazed;

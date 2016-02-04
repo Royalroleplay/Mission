@@ -29,11 +29,7 @@ class Mission
 		"A3L_CivClothesPack",
 		"A3_Characters_F_INDEP",
 		"A3L_HospitalBed2015",
-		"Mattaust_Objects",
-		"ace_optionsmenu",
-		"ace_interaction",
-		"ace_medical",
-		"ace_medical_menu"
+		"Mattaust_Objects"
 	};
 	addOnsAuto[]=
 	{

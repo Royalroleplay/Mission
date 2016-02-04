@@ -24,7 +24,7 @@ _struct = "";
 	};
 } foreach (format["getText(_x >> 'side') isEqualTo '%1'",_side] configClasses (missionConfigFile >> "Licenses"));
 
-if(EQUAL(_struct,"")) then {
+if(_struct isEqualTo "") then {
 	_struct = "No Licenses";
 };
 

@@ -12,7 +12,7 @@ _type = [_this,1,"",[""]] call BIS_fnc_param;
 
 if(isNull _restrainer) exitWith {};
 
-player SVAR [_type, true, true];
+player setVariable [_type, true, true];
 
 titleText[format["You have been %1 by %2", _type, _restrainer getVariable ["realname", name _restrainer]], "PLAIN"];
 
@@ -25,27 +25,27 @@ titleText[format["You have been %1 by %2", _type, _restrainer getVariable ["real
 		
 		uiSleep 300;
 		
-		if(!(player GVAR [_type,FALSE])) exitWith {};
-		if(!([side _restrainer,getPos player,30] call life_fnc_nearUnits) && (player GVAR [_type,FALSE]) && vehicle player == player) exitWith {
-			player SVAR [_type,FALSE,TRUE];
-			player SVAR ["Escorting",FALSE,TRUE];
-			player SVAR ["transporting",false,true];
+		if(!(player getVariable [_type,FALSE])) exitWith {};
+		if(!([side _restrainer,getPos player,30] call life_fnc_nearUnits) && (player getVariable [_type,FALSE]) && vehicle player == player) exitWith {
+			player setVariable [_type,FALSE,TRUE];
+			player setVariable ["Escorting",FALSE,TRUE];
+			player setVariable ["transporting",false,true];
 			detach player;
 		};
 	};
 };
 
-player SVAR ["surrender", false, true];
-player SVAR ["knockedout", false, true];
+player setVariable ["surrender", false, true];
+player setVariable ["knockedout", false, true];
 
-while {player GVAR [_type, false]} do
+while {player getVariable [_type, false]} do
 {
 	if(vehicle player == player) then {
 		player playMove "AmovPercMstpSnonWnonDnon_Ease";
 	};
 
 	_state = vehicle player;
-	waitUntil {animationState player != "AmovPercMstpSnonWnonDnon_Ease" || !(player GVAR [_type, false]) || vehicle player != _state};
+	waitUntil {animationState player != "AmovPercMstpSnonWnonDnon_Ease" || !(player getVariable [_type, false]) || vehicle player != _state};
 
 	if(!alive player) exitWith {};
 
@@ -60,7 +60,7 @@ if(alive player) then
 	player playMoveNow "AmovPercMstpSlowWrflDnon";
 };
 
-player SVAR [_type, false, true];
-player SVAR ["Escorting", false, true];
-player SVAR ["transporting", false, true];
+player setVariable [_type, false, true];
+player setVariable ["Escorting", false, true];
+player setVariable ["transporting", false, true];
 detach player;

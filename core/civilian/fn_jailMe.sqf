@@ -17,7 +17,7 @@ if(life_jailtime != _time) then {
 	life_jailtime = _time;
 };
 
-if(count _ret > 0) then { life_bail_amount = SEL(_ret,3); } else { life_bail_amount = 1500; };
+if(count _ret > 0) then { life_bail_amount = (_ret select 3); } else { life_bail_amount = 1500; };
 _esc = false;
 _bail = false;
 

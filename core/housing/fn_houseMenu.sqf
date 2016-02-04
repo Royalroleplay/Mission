@@ -20,7 +20,7 @@ disableSerialization;
 _curTarget = param [0,ObjNull,[ObjNull]];
 if(isNull _curTarget) exitWith {}; //Bad target
 _houseCfg = [(typeOf _curTarget)] call life_fnc_houseConfig;
-if(EQUAL(count _houseCfg,0) && playerSide == civilian) exitWith {};
+if(((count _houseCfg) isEqualTo 0) && playerSide == civilian) exitWith {};
 
 if(!dialog) then {
 	createDialog "pInteraction_Menu";
@@ -48,7 +48,7 @@ if(_curTarget isKindOf "House_F" && playerSide == west) exitWith {
 		_Btn2 ctrlShow true;
 		
 	} else {
-		if(!isNil {_curTarget GVAR "house_owner"}) then {
+		if(!isNil {_curTarget getVariable "house_owner"}) then {
 			_Btn1 ctrlSetText localize "STR_House_Raid_Owner";
 			_Btn1 buttonSetAction "[life_pInact_curTarget] call life_fnc_copHouseOwner;";
 			_Btn1 ctrlShow true;
@@ -74,13 +74,13 @@ if(_curTarget isKindOf "House_F" && playerSide == west) exitWith {
 	};
 };
 
-if(!(_curTarget in life_vehicles) OR isNil {_curTarget GVAR "house_owner"}) then {
-	if(_curTarget in life_vehicles) then {SUB(life_vehicles,[_curTarget]);};
+if(!(_curTarget in life_vehicles) OR isNil {_curTarget getVariable "house_owner"}) then {
+	if(_curTarget in life_vehicles) then {FNC_SUB(life_vehicles,[_curTarget]);};
 	_Btn1 ctrlSetText localize "STR_pInAct_BuyHouse";
 	_Btn1 buttonSetAction "[life_pInact_curTarget] spawn life_fnc_buyHouse;";
 	_Btn1 ctrlShow true;
 	
-	if(!isNil {_curTarget GVAR "house_owner"}) then {
+	if(!isNil {_curTarget getVariable "house_owner"}) then {
 		_Btn1 ctrlEnable false;
 	};
 } else {
@@ -89,7 +89,7 @@ if(!(_curTarget in life_vehicles) OR isNil {_curTarget GVAR "house_owner"}) then
 		_Btn1 buttonSetAction "[life_pInact_curTarget] spawn life_fnc_sellHouse; closeDialog 0;";
 		_Btn1 ctrlShow true;
 		
-		if(SEL(_curTarget GVAR "house_owner",0) != steamid) then {
+		if(((_curTarget getVariable "house_owner") select 0) != getPlayerUID player) then {
 			_Btn1 ctrlEnable false;
 		};
 		
@@ -105,11 +105,11 @@ if(!(_curTarget in life_vehicles) OR isNil {_curTarget GVAR "house_owner"}) then
 		_Btn1 buttonSetAction "[life_pInact_curTarget] spawn life_fnc_sellHouse; closeDialog 0;";
 		_Btn1 ctrlShow true;
 		
-		if(((_curTarget GVAR "house_owner") select 0) != (getPlayerUID player)) then {
+		if(((_curTarget getVariable "house_owner") select 0) != (getPlayerUID player)) then {
 			_Btn1 ctrlEnable false;
 		};
 		
-		if(_curTarget GVAR ["locked",false]) then {
+		if(_curTarget getVariable ["locked",false]) then {
 			_Btn2 ctrlSetText localize "STR_pInAct_UnlockStorage";
 		} else {
 			_Btn2 ctrlSetText localize "STR_pInAct_LockStorage";
@@ -117,7 +117,7 @@ if(!(_curTarget in life_vehicles) OR isNil {_curTarget GVAR "house_owner"}) then
 		_Btn2 buttonSetAction "[life_pInact_curTarget] call life_fnc_lockHouse; closeDialog 0;";
 		_Btn2 ctrlShow true;
 		
-		if(isNull (_curTarget GVAR ["lightSource",ObjNull])) then {
+		if(isNull (_curTarget getVariable ["lightSource",ObjNull])) then {
 			_Btn3 ctrlSetText localize "STR_pInAct_LightsOn";
 		} else {
 			_Btn3 ctrlSetText localize "STR_pInAct_LightsOff";

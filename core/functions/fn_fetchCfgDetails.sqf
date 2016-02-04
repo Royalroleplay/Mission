@@ -29,7 +29,7 @@
 private["_className","_section","_type","_accPointer","_accMuzzle","_accOptic","_classes","_itemInfo","_magazines","_scope","_config","_displayName"];
 _className = [_this,0,"",[""]] call BIS_fnc_param;
 _section = [_this,1,"",[""]] call BIS_fnc_param;
-if((EQUAL(_className,""))) exitWith {[]};
+if(((_className isEqualTo ""))) exitWith {[]};
 
 _type = -1;
 _accPointer = [];
@@ -42,16 +42,16 @@ _muzzles = [];
 _magazines = [];
 _return = [];
 
-if(EQUAL(_section,"")) then {
+if(_section isEqualTo "") then {
 	_section = switch(true) do {
-		case (isClass(configFile >> CONFIG_MAGAZINES >> _className)): {CONFIG_MAGAZINES};
-		case (isClass(configFile >> CONFIG_WEAPONS >> _className)): {CONFIG_WEAPONS};
-		case (isClass(configFile >> CONFIG_VEHICLES >> _className)): {CONFIG_VEHICLES};
-		case (isClass(configFile >> CONFIG_GLASSES >> _className)): {CONFIG_GLASSES};
+		case (isClass(configFile >> "CfgMagazines" >> _className)): {"CfgMagazines"};
+		case (isClass(configFile >> "CfgWeapons" >> _className)): {"CfgWeapons"};
+		case (isClass(configFile >> "CfgVehicles" >> _className)): {"CfgVehicles"};
+		case (isClass(configFile >> "CfgGlasses" >> _className)): {"CfgGlasses"};
 	};
 };
 
-if(!(EQUAL(typeName _section,typeName "STRING")) OR {!isClass(configFile >> _section >> _className)} OR {EQUAL(_section,"")}) exitWith {[]};
+if((!(typeName _section isEqualTo typeName "STRING")) OR {!isClass(configFile >> _section >> _className)} OR {(_section isEqualTo "")}) exitWith {[]};
 _config = configFile >> _section >> _className;
 _displayName = getText(_config >> "displayName");
 _picture = getText(_config >> "picture");
@@ -60,12 +60,12 @@ _base = inheritsFrom _config;
 
 switch (_section) do
 {
-	case CONFIG_VEHICLES: {
+	case "CfgVehicles": {
 		_type = getText(_config >> "vehicleClass");
 		_scope = getNumber(_config >> "scope");
 	};
 	
-	case CONFIG_WEAPONS: {
+	case "CfgWeapons": {
 		_scope = getNumber(_config >> "scope");
 		_type = getNumber(_config >> "type");
 		_desc = getText(_config >> "descriptionshort");
@@ -107,7 +107,7 @@ switch (_section) do
 		};
 	};
 	
-	case CONFIG_MAGAZINES: {
+	case "CfgMagazines": {
 		_scope = getNumber(_config >> "scope");
 	};
 };

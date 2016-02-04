@@ -6,12 +6,12 @@
 	Switching it up and making it prettier..
 */
 private["_option","_state"];
-_option = SEL(_this,0);
-_state = SEL(_this,1);
+_option = (_this select 0);
+_state = (_this select 1);
 
 switch(_option) do {
 	case "tags": {
-		if(EQUAL(_state,1)) then {
+		if(_state isEqualTo 1) then {
 			life_tagson = true;
 			LIFE_ID_PlayerTags = ["LIFE_PlayerTags","onEachFrame","life_fnc_playerTags"] call BIS_fnc_addStackedEventHandler;
 		} else {
@@ -21,7 +21,7 @@ switch(_option) do {
 	};
 	
 	case "objects": {
-		if(EQUAL(_state,1)) then {
+		if(_state isEqualTo 1) then {
 			life_revealObjects = true;
 			LIFE_ID_RevealObjects = ["LIFE_RevealObjects","onEachFrame","life_fnc_revealObjects"] call BIS_fnc_addStackedEventHandler;
 		} else {

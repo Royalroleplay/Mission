@@ -13,13 +13,13 @@ if(isNull _veh) exitwith {};
 if((_veh isKindOf "Car") OR (_veh isKindOf "Ship") OR (_veh isKindOf "Air")) then {
 	if("ToolKit" in (items player)) then {
 		life_action_inUse = true;
-		_displayName = FETCH_CONFIG2(getText,CONFIG_VEHICLES,(typeOf _veh),"displayName");
+		_displayName = FETCH_CONFIG2(getText,"CfgVehicles",(typeOf _veh),"displayName");
 		_upp = format[localize "STR_NOTF_Repairing",_displayName];
 		
 		//Setup our progress bar.
 		disableSerialization;
 		5 cutRsc ["life_progress","PLAIN"];
-		_ui = GVAR_UINS "life_progress";
+		_ui = uiNamespace getVariable "life_progress";
 		_progress = _ui displayCtrl 38201;
 		_pgText = _ui displayCtrl 38202;
 		_pgText ctrlSetText format["%2 (1%1)...","%",_upp];
@@ -52,13 +52,13 @@ if((_veh isKindOf "Car") OR (_veh isKindOf "Ship") OR (_veh isKindOf "Air")) the
 		titleText[localize "STR_NOTF_RepairedVehicle","PLAIN"];
 	} else {
 		life_action_inUse = true;
-		_displayName = FETCH_CONFIG2(getText,CONFIG_VEHICLES,(typeOf _veh),"displayName");
+		_displayName = FETCH_CONFIG2(getText,"CfgVehicles",(typeOf _veh),"displayName");
 		_upp = format[localize "STR_NOTF_Repairing",_displayName];
 		
 		//Setup our progress bar.
 		disableSerialization;
 		5 cutRsc ["life_progress","PLAIN"];
-		_ui = GVAR_UINS "life_progress";
+		_ui = uiNamespace getVariable "life_progress";
 		_progress = _ui displayCtrl 38201;
 		_pgText = _ui displayCtrl 38202;
 		_pgText ctrlSetText format["%2 (1%1)...","%",_upp];

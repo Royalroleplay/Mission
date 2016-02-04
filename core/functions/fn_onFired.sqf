@@ -1,4 +1,4 @@
-#include "..\..\script_macros.hpp"
+ #include "..\..\script_macros.hpp"
 /*
 	Author: Bryan "Tonic" Boardwine
 	
@@ -6,10 +6,10 @@
 	Handles various different ammo types being fired.
 */
 private["_ammoType","_projectile"];
-_ammoType = SEL(_this,4); 
-_projectile = SEL(_this,6);
+_ammoType = (_this select 4); 
+_projectile = (_this select 6);
 
-if(EQUAL(_ammoType,"GrenadeHand_stone")) then {
+if(_ammoType isEqualTo "GrenadeHand_stone") then {
 	_projectile spawn {
 		private "_position";
 		while {!isNull _this} do {

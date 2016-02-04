@@ -7,21 +7,21 @@
 	Main key handler for event 'keyDown'
 */
 private ["_handled","_shift","_alt","_code","_ctrl","_alt","_ctrlKey","_veh","_locked","_interactionKey","_mapKey","_interruptionKeys"];
-_ctrl = SEL(_this,0);
-_code = SEL(_this,1);
-_shift = SEL(_this,2);
-_ctrlKey = SEL(_this,3);
-_alt = SEL(_this,4);
+_ctrl = (_this select 0);
+_code = (_this select 1);
+_shift = (_this select 2);
+_ctrlKey = (_this select 3);
+_alt = (_this select 4);
 _speed = speed cursorTarget;
 _handled = false;
 
-_interactionKey = if((EQUAL(count (actionKeys "User10"),0))) then {219} else {(actionKeys "User10") select 0};
-_mapKey = SEL(actionKeys "ShowMap",0);
+_interactionKey = if(count (actionKeys "User10") isEqualTo 0) then {219} else {(actionKeys "User10") select 0};
+_mapKey = (actionKeys "ShowMap" select 0);
 //hint str _code;
 _interruptionKeys = [17,30,31,32]; //A,S,W,D
 
 //Vault handling...
-if((_code in (actionKeys "GetOver") || _code in (actionKeys "salute")) && {(player GVAR ["restrained",false])}) exitWith {
+if((_code in (actionKeys "GetOver") || _code in (actionKeys "salute")) && {(player getVariable ["restrained",false])}) exitWith {
 	true;
 };
 
@@ -31,7 +31,7 @@ if(life_action_inUse) exitWith {
 };
 
 //Hotfix for Interaction key not being able to be bound on some operation systems.
-if(!(EQUAL(count (actionKeys "User10"),0)) && {(inputAction "User10" > 0)}) exitWith {
+if(!(count (actionKeys "User10") isEqualTo 0)) && {(inputAction "User10" > 0)}) exitWith {
 	//Interaction key (default is Left Windows, can be mapped via Controls -> Custom -> User Action 10)
 	if(!life_action_inUse) then {
 		[] spawn {
@@ -48,7 +48,7 @@ switch (_code) do {
 	//Space key for Jumping
 	case 57: {
 		if(isNil "jumpActionTime") then {jumpActionTime = 0;};
-		if(_shift && {!(EQUAL(animationState player,"AovrPercMrunSrasWrflDf"))} && {isTouchingGround player} && {EQUAL(stance player,"STAND")} && {speed player > 2} && {!life_is_arrested} && {SEL((velocity player),2) < 2.5} && {time - jumpActionTime > 1.5}) then {
+		if(_shift && {!((animationState player, isEqualTo "AovrPercMrunSrasWrflDf"))} && {isTouchingGround player} && {stance player isEqualTo "STAND"} && {speed player > 2} && {!life_is_arrested} && {((velocity player) select 2) < 2.5} && {time - jumpActionTime > 1.5}) then {
 			jumpActionTime = time; //Update the time.
 			[player,true] spawn life_fnc_jumpFnc; //Local execution
 			[player,false] remoteExec ["life_fnc_jumpFnc",RANY]; //Global execution
@@ -79,15 +79,15 @@ switch (_code) do {
 
 	//Holster / recall weapon.
 	case 35: {
-		if(_shift && !_ctrlKey && !(EQUAL(currentWeapon player,""))) then {
+		if(_shift && !_ctrlKey && (!(currentWeapon player, isEqualTo ""))) then {
 			player setVariable ["holstered",true,true];
 			life_curWep_h = currentWeapon player;
 			player action ["SwitchWeapon", player, player, 100];
 			player switchCamera cameraView;
 		};
 
-		if(!_shift && _ctrlKey && !isNil "life_curWep_h" && {!(EQUAL(life_curWep_h,""))}) then {
-			if(life_curWep_h in [RIFLE,LAUNCHER,PISTOL]) then {
+		if(!_shift && _ctrlKey && !isNil "life_curWep_h" && {(!(life_curWep_h isEqualTo ""))}) then {
+			if(life_curWep_h in [primaryWeapon player,secondaryWeapon player,handgunWeapon player]) then {
 				player setVariable ["holstered",false,true];
 				player selectWeapon life_curWep_h;
 			};
@@ -144,8 +144,8 @@ switch (_code) do {
 			} else {
 				private "_list";
 				_list = ["landVehicle","Air","Ship","House_F"];
-				if(KINDOF_ARRAY(cursorTarget,_list) && {player distance cursorTarget < 7} && {vehicle player == player} && {alive cursorTarget} && {!life_action_inUse}) then {
-					if(cursorTarget in life_vehicles OR {!(cursorTarget GVAR ["locked",true])}) then {
+				if(FNC_ISKINDOF(cursorTarget,_list) && {player distance cursorTarget < 7} && {vehicle player == player} && {alive cursorTarget} && {!life_action_inUse}) then {
+					if(cursorTarget in life_vehicles OR {!(cursorTarget getVariable ["locked",true])}) then {
 						[cursorTarget] call life_fnc_openInventory;
 					};
 				};
@@ -163,7 +163,7 @@ switch (_code) do {
 		//If cop run checks for turning lights on.
 		if(_shift && playerSide in [west,independent]) then {
 			if(vehicle player != player && (typeOf vehicle player) in ["C_Offroad_01_F","B_MRAP_01_F","C_SUV_01_F"]) then {
-				if(!isNil {vehicle player GVAR "lights"}) then {
+				if(!isNil {vehicle player getVariable "lights"}) then {
 					if(playerSide == west) then {
 						[vehicle player] call life_fnc_sirenLights;
 					} else {
@@ -226,15 +226,15 @@ switch (_code) do {
 			if(_veh isKindOf "House_F" && {playerSide == civilian}) then {
 				if(_veh in life_vehicles && player distance _veh < 8) then {
 					_door = [_veh] call life_fnc_nearestDoor;
-					if(EQUAL(_door,0)) exitWith {hint localize "STR_House_Door_NotNear"};
-					_locked = _veh GVAR [format["bis_disabled_Door_%1",_door],0];
+					if(_door, isEqualTo 0) exitWith {hint localize "STR_House_Door_NotNear"};
+					_locked = _veh getVariable [format["bis_disabled_Door_%1",_door],0];
 
-					if(EQUAL(_locked,0)) then {
-						_veh SVAR [format["bis_disabled_Door_%1",_door],1,true];
+					if(_locked, isEqualTo 0) then {
+						_veh setVariable [format["bis_disabled_Door_%1",_door],1,true];
 						_veh animate [format["door_%1_rot",_door],0];
 						systemChat localize "STR_House_Door_Lock";
 					} else {
-						_veh SVAR [format["bis_disabled_Door_%1",_door],0,true];
+						_veh setVariable [format["bis_disabled_Door_%1",_door],0,true];
 						_veh animate [format["door_%1_rot",_door],1];
 						systemChat localize "STR_House_Door_Unlock";
 					};
@@ -242,7 +242,7 @@ switch (_code) do {
 			} else {
 				_locked = locked _veh;
 				if(_veh in life_vehicles && player distance _veh < 8) then {
-					if(EQUAL(_locked,2)) then {
+					if(_locked, isEqualTo 2) then {
 						if(local _veh) then {
 							_veh lock 0;
 						} else {

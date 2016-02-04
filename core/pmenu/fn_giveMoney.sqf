@@ -25,12 +25,12 @@ closeDialog 0;
 if(!life_use_atm) exitWith {hint "You recently robbed the bank! You can't give money away just yet.";};
 if(!([_amount] call TON_fnc_isnumber)) exitWith {hint "You didn't enter an actual number format.";};
 if(parseNumber(_amount) <= 0) exitWith {hint "You need to enter an actual amount you want to give.";};
-if(parseNumber(_amount) > CASH) exitWith {hint "You don't have that much to give!";};
+if(parseNumber(_amount) > life_cash) exitWith {hint "You don't have that much to give!";};
 if(isNull _unit) exitWith {};
 if(isNil "_unit") exitWith {hint "The selected player is not within range";};
 
 hint format["You gave $%1 to %2",[(parseNumber(_amount))] call life_fnc_numberText,_unit getVariable["realname",name _unit]];
-CASH = CASH - (parseNumber(_amount));
+life_cash = life_cash - (parseNumber(_amount));
 
 [0] call SOCK_fnc_updatePartial;
 [_unit,_amount,player] remoteExec ["life_fnc_receiveMoney",_unit];

@@ -21,7 +21,7 @@ if(speed _unit > 2) exitWith {};
 if((animationState _unit) != "Incapacitated") exitWith {};
 if(life_inv_rope == 0) exitWith { titleText ["You do not have any rope", "PLAIN"]; };
 
-_unit SVAR["tiedup",true,false];
+_unit setVariable["tiedup",true,false];
 
 [player, "tiedup"] remoteExec ["life_fnc_restrain",_unit];
 

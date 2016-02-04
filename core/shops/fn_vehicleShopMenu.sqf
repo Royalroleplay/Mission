@@ -7,7 +7,7 @@
 	Blah
 */
 private["_shop","_sideCheck","_spawnPoints","_shopFlag","_shopTitle","_disableBuy"];
-(SEL(_this,3)) params [
+(_this select 3) params [
 	["_shop","",[""]],
 	["_sideCheck",sideUnknown,[civilian]],
 	["_spawnPoints","",["",[]]],
@@ -42,12 +42,12 @@ ctrlShow [2304,false];
 
 //Loop through
 {
-	_className = SEL(_x,0);
-	_basePrice = SEL(_x,1);
-	_levelData = SEL(_x,3);
+	_className = (_x select 0);
+	_basePrice = (_x select 1);
+	_levelData = (_x select 3);
 	_passOver = false;
 	
-	if(!isNil "_levelData" && {_var = GVAR_MNS (SEL(_levelData,0)); !(FETCH_CONST(_var) >= (SEL(_levelData,1)))}) then {_passOver = true;};
+	if(!isNil "_levelData" && {_var = missionNamespace getVariable (_levelData select 0); !(FETCH_CONST(_var) >= (_levelData select 1))}) then {_passOver = true;};
 	
 	if(!_passOver) then {
 		_vehicleInfo = [_className] call life_fnc_fetchVehInfo;

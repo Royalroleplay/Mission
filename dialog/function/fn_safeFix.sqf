@@ -7,8 +7,8 @@
 	Piece of functionality for the cops to close the safe (lock it)
 */
 private "_vault";
-_vault = SEL(_this,0);
-if(!(_vault GVAR ["safe_open",false])) exitWith {hint localize "STR_Cop_VaultLocked"};
+_vault = (_this select 0);
+if(!(_vault getVariable ["safe_open",false])) exitWith {hint localize "STR_Cop_VaultLocked"};
 
 life_action_inUse = true;
 
@@ -16,7 +16,7 @@ life_action_inUse = true;
 disableSerialization;
 _title = localize "STR_Cop_RepairVault";
 5 cutRsc ["life_progress","PLAIN"];
-_ui = GVAR_UINS "life_progress";
+_ui = uiNamespace getVariable "life_progress";
 _progressBar = _ui displayCtrl 38201;
 _titleText = _ui displayCtrl 38202;
 _titleText ctrlSetText format["%2 (1%1)...","%",_title];
@@ -34,7 +34,7 @@ while {true} do {
 	
 	if(isNull _ui) then {
 		5 cutRsc ["life_progress","PLAIN"];
-		_ui = GVAR_UINS "life_progress";
+		_ui = uiNamespace getVariable "life_progress";
 		_progressBar = _ui displayCtrl 38201;
 		_titleText = _ui displayCtrl 38202;
 	};
@@ -53,5 +53,5 @@ if(life_interrupted) exitWith {life_interrupted = false; titleText[localize "STR
 
 life_action_inUse = false;
 
-_vault SVAR ["safe_open",false,true];
+_vault setVariable ["safe_open",false,true];
 hint localize "STR_Cop_VaultRepaired";

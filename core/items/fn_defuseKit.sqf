@@ -10,7 +10,7 @@ _vault = param [0,ObjNull,[ObjNull]];
 
 if(isNull _vault) exitWith {};
 if(typeOf _vault != "Land_CargoBox_V1_F") exitWith {};
-if(!(_vault GVAR ["chargeplaced",false])) exitWith {hint localize "STR_ISTR_Defuse_Nothing"};
+if(!(_vault getVariable ["chargeplaced",false])) exitWith {hint localize "STR_ISTR_Defuse_Nothing"};
 
 life_action_inUse = true;
 //Setup the progress bar
@@ -18,7 +18,7 @@ disableSerialization;
 
 _title = localize "STR_ISTR_Defuse_Process";
 5 cutRsc ["life_progress","PLAIN"];
-_ui = GVAR_UINS "life_progress";
+_ui = uiNamespace getVariable "life_progress";
 _progressBar = _ui displayCtrl 38201;
 _titleText = _ui displayCtrl 38202;
 _titleText ctrlSetText format["%2 (1%1)...","%",_title];
@@ -35,7 +35,7 @@ while {true} do
 	uiSleep 0.26;
 	if(isNull _ui) then {
 		5 cutRsc ["life_progress","PLAIN"];
-		_ui = GVAR_UINS "life_progress";
+		_ui = uiNamespace getVariable "life_progress";
 		_progressBar = _ui displayCtrl 38201;
 		_titleText = _ui displayCtrl 38202;
 	};

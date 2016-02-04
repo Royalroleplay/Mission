@@ -8,15 +8,15 @@
 */
 private "_item";
 disableSerialization;
-if(EQUAL(lbCurSel 1500,-1)) exitWith {hint localize "STR_ISTR_SelectItemFirst";};
+if(lbCurSel 1500 isEqualTo -1) exitWith {hint localize "STR_ISTR_SelectItemFirst";};
 _item = CONTROL_DATA(1500);
 
 switch (true) do {
 	case (_item in ["waterBottle","coffee","redgull"]): {
 		if(([false,_item,1] call life_fnc_handleInv)) then {
 			life_thirst = 100;
-			if(EQUAL(LIFE_SETTINGS(getNumber,"enable_fatigue"),1)) then {player setFatigue 0;};
-			if(EQUAL(_item,"redgull") && {EQUAL(LIFE_SETTINGS(getNumber,"enable_fatigue"),1)}) then {
+			if((LIFE_SETTINGS(getNumber,"enable_fatigue") isEqualTo 1)) then {player setFatigue 0;};
+			if((_item isEqualTo "redgull") && {(LIFE_SETTINGS(getNumber,"enable_fatigue") isEqualTo 1)}) then {
 				[] spawn { //TODO: Port this to event handler system
 					life_redgull_effect = time;
 					titleText[localize "STR_ISTR_RedGullEffect","PLAIN"];
@@ -29,12 +29,12 @@ switch (true) do {
 		};
 	};
 	
-	case (EQUAL(_item,"boltcutter")): {
+	case (_item isEqualTo "boltcutter"): {
 		[cursorTarget] spawn life_fnc_boltcutter;
 		closeDialog 0;
 	};
 	
-	case (EQUAL(_item,"defusekit")): {
+	case (_item isEqualTo "defusekit"): {
 		[cursorTarget] spawn life_fnc_defuseKit;
 	};
 	
@@ -42,24 +42,24 @@ switch (true) do {
 		[_item] call life_fnc_storageBox;
 	};
 	
-	case (EQUAL(_item,"spikeStrip")): {
+	case (_item isEqualTo "spikeStrip"): {
 		if(!isNull life_spikestrip) exitWith {hint localize "STR_ISTR_SpikesDeployment"};
 		if(([false,_item,1] call life_fnc_handleInv)) then {
 			[] spawn life_fnc_spikeStrip;
 		};
 	};
 	
-	case (EQUAL(_item,"fuelFull")): {
+	case (_item isEqualTo "fuelFull"): {
 		if(vehicle player != player) exitWith {hint localize "STR_ISTR_RefuelInVehicle"};
 		[] spawn life_fnc_jerryRefuel;
 	};
 	
-	case (EQUAL(_item,"lockpick")): {
+	case (_item isEqualTo "lockpick"): {
 		[] spawn life_fnc_lockpick;
 	};
 	
 	case (_item in ["apple","rabbit","salema","ornate","mackerel","tuna","mullet","catshark","turtlesoup","hen","rooster","sheep","goat","donut","tbacon","peach","rabbit_grilled"]): {
-		if(!(EQUAL(M_CONFIG(getNumber,"VirtualItems",_item,"edible"),-1))) then {
+		if(!(M_CONFIG(getNumber,"VirtualItems",_item,"edible") isEqualTo -1)) then {
 			if([false,_item,1] call life_fnc_handleInv) then {
 				_val = M_CONFIG(getNumber,"VirtualItems",_item,"edible");
 				_sum = life_hunger + _val;
@@ -72,7 +72,7 @@ switch (true) do {
 		};
 	};
 	
-	case (EQUAL(_item,"pickaxe")): {
+	case (_item isEqualTo "pickaxe"): {
 		[] spawn life_fnc_pickAxeUse;
 	};
 	

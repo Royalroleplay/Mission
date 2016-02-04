@@ -16,8 +16,8 @@ _index = _this select 1;
 _className = _control lbData _index;
 _vIndex = _control lbValue _index;
 
-_vehicleList = M_CONFIG(getArray,"CarShops",SEL(life_veh_shop,0),"vehicles");
-_basePrice = SEL(SEL(_vehicleList,_vIndex),1);
+_vehicleList = M_CONFIG(getArray,"CarShops",(life_veh_shop select 0),"vehicles");
+_basePrice = ((_vehicleList select _vIndex) select 1);
 
 _vehicleInfo = [_className] call life_fnc_fetchVehInfo;
 _trunkSpace = [_className] call life_fnc_vehicleWeightCfg;
@@ -44,12 +44,12 @@ _vehicleInfo select 9
 
 _ctrl = CONTROL(2300,2304);
 lbClear _ctrl;
-_colorArray = M_CONFIG(getArray,CONFIG_VEHICLES,_className,"textures");
+_colorArray = M_CONFIG(getArray,"CfgVehicles",_className,"textures");
 
 {
-	_flag = SEL(_x,1);
-	_textureName = SEL(_x,0);
-	if(EQUAL(SEL(life_veh_shop,2),_flag)) then {
+	_flag = (_x select 1);
+	_textureName = (_x select 0);
+	if((life_veh_shop isEqualTo 2) select _flag) then {
 		_ctrl lbAdd _textureName;
 		_ctrl lbSetValue [(lbSize _ctrl)-1,_forEachIndex];
 	};

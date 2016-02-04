@@ -11,7 +11,7 @@ params [
 	["_index",-1,[0]]
 ];
 
-if(isNull _vehicle OR !alive _vehicle OR EQUAL(_index,-1)) exitWith {};
+if(isNull _vehicle OR !alive _vehicle OR (_index isEqualTo -1)) exitWith {};
 //Does the vehicle already have random styles? Halt till it's set.
 
 if(local _vehicle) then {
@@ -25,8 +25,8 @@ if(local _vehicle) then {
 	};
 };
 
-_textures = SEL(SEL(M_CONFIG(getArray,CONFIG_VEHICLES,(typeOf _vehicle),"textures"),_index),2);
-if(isNil "_textures" OR {EQUAL(count _textures,0)}) exitWith {};
+_textures = ((M_CONFIG(getArray,"CfgVehicles",(typeOf _vehicle),"textures") select _index) select 2);
+if(isNil "_textures" OR {(count _textures isEqualTo 0)}) exitWith {};
 
 //Local to us? Set it's color.
 if(local _vehicle) then {
