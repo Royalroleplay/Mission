@@ -16,6 +16,9 @@ _price = M_CONFIG(getNumber,"Licenses",_type,"price");
 _sideFlag = M_CONFIG(getText,"Licenses",_type,"side");
 _varName = LICENSE_VARNAME(_varName,_sideFlag);
 
+/* Log That Shit! */
+[getPlayerUID player,life_cash,life_atmbank,_price,_varName,format["License: %1",_displayName]] remoteExec ["MBF_fnc_logTrans",hc_1];
+
 if(life_cash < _price) exitWith {hint format[localize "STR_NOTF_NE_1",[_price] call life_fnc_numberText,localize _displayName];};
 FNC_SUB(life_cash,_price);
 

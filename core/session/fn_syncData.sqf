@@ -16,4 +16,4 @@ hint localize "STR_Session_SyncData";
 	life_session_time = true;
 	uiSleep (5 * 60);
 	life_session_time = false;
-};	
+};

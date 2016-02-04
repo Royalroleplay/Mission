@@ -44,6 +44,10 @@ if(([true,_type,_amount] call life_fnc_handleInv)) then
 		} else {
 			if((_price * _amount) > life_cash) exitWith {[false,_type,_amount] call life_fnc_handleInv; hint localize "STR_NOTF_NotEnoughMoney";};
 			hint format[localize "STR_Shop_Virt_BoughtItem",_amount,(localize _name),[(_price * _amount)] call life_fnc_numberText];
+
+			/* Log That Shit! */
+			[getPlayerUID player,life_cash,life_atmbank,(_price * _amount),_type,format["Item(s) Purchased: %1",(localize _name)]] remoteExec ["MBF_fnc_logTrans",hc_1];
+
 			FNC_SUB(life_cash,_price * _amount);
 		};
 	} else {

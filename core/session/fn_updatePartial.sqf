@@ -51,4 +51,8 @@ switch(_mode) do {
 	};
 };
 
-_packet remoteExecCall ["DB_fnc_updatePartial",RSERV];
+if(!isNil "hc_1" && {!isNull hc_1}) then {
+	_packet remoteExecCall ["DB_fnc_updatePartial",hc_1];
+}else{
+	_packet remoteExecCall ["DB_fnc_updatePartial",RSERV];
+};

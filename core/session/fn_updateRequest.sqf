@@ -24,4 +24,8 @@ switch (playerSide) do {
 	};
 };
 
-_packet remoteExecCall ["DB_fnc_updateRequest",RSERV];
+if(!isNil "hc_1" && {!isNull hc_1}) then {
+	_packet remoteExecCall ["DB_fnc_updateRequest",hc_1];
+} else {
+	_packet remoteExecCall ["DB_fnc_updateRequest",RSERV];
+};

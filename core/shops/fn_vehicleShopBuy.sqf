@@ -43,6 +43,10 @@ if(((life_veh_shop select 0) isEqualTo "med_air_hs")) then {
 
 
 if(_spawnPoint isEqualTo "") exitWith {hint localize "STR_Shop_Veh_Block";};
+
+/* LOG THAT SHIT */
+[getPlayerUID player,life_cash,life_atmbank,_basePrice,_className,format["Vehicle Purchased: %1",getText(configFile >> "CfgVehicles" >> _className >> "displayName")]] remoteExec ["MBF_fnc_logTrans",hc_1];
+
 FNC_SUB(CASH,_basePrice);
 hint format[localize "STR_Shop_Veh_Bought",getText(configFile >> "CfgVehicles" >> _className >> "displayName"),[_basePrice] call life_fnc_numberText];
 
