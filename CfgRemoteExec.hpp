@@ -82,10 +82,6 @@ class CfgRemoteExec {
 		F(TON_fnc_spikeStrip,SERVER)
 		F(life_fnc_wantedPardon,SERVER)
 		F(life_fnc_wantedFetch,SERVER)
-		F(DB_fnc_queryRequest,SERVER)
-		F(DB_fnc_insertRequest,SERVER)
-		F(DB_fnc_updatePartial,SERVER)
-		F(DB_fnc_updateRequest,SERVER)
 		F(TON_fnc_chopShopSell,SERVER)
 		F(TON_fnc_setObjVar,SERVER)
 		F(TON_fnc_keyManagement,SERVER)
@@ -120,6 +116,11 @@ class CfgRemoteExec {
 		F(life_fnc_simDisable,ANYONE)
 		F(MBF_fnc_fireworks,ANYONE)
 		F(life_fnc_addBankCashAction,ANYONE)
+		F(DB_fnc_queryRequest,ANYONE)
+		F(DB_fnc_insertRequest,ANYONE)
+		F(DB_fnc_updatePartial,ANYONE)
+		F(DB_fnc_updateRequest,ANYONE)
+		F(MBF_fnc_logTrans,ANYONE)
 
 	};
 	

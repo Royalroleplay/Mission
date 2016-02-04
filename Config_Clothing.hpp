@@ -864,7 +864,7 @@ class Clothing {
 		};
 	};
 
-	class buck {
+	class asshole {
 		title = "";
 		license = "";
 		side = "civ";

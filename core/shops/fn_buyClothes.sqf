@@ -17,6 +17,9 @@ _price = 0;
 } foreach life_clothing_purchase;
 
 if(_price > CASH) exitWith {titleText[localize "STR_Shop_NotEnoughClothes","PLAIN"];};
+
+[getPlayerUID player,life_cash,life_atmbank,_price,life_clothing_purchase,"Clothing Purchase"] remoteExec ["MBF_fnc_logTrans",hc_1];
+
 CASH = CASH - _price;
 
 life_clothesPurchased = true;
