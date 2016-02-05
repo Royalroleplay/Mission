@@ -16,7 +16,20 @@ class Socket_Reciever
 class Life_Client_Core
 {
 	tag = "life";
-	
+	class DEADdem_Base{
+		file = "core\deaddem";
+
+		class Setup {
+			postInit = 1;
+		};
+	};
+	class DEADdem_Common{
+		file="core\deaddem\common";
+
+		class Holster {};
+		class HolsterDeath {};
+		
+	};
 	class MrBoolean
 	{
 		file = "core\MrBoolean";

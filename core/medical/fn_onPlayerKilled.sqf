@@ -57,7 +57,8 @@ _unit spawn {
 };
 
 [] spawn life_fnc_deathScreen;
-
+[0] spawn life_fnc_HolsterDeath;
+[1] spawn life_fnc_HolsterDeath;
 //Create a thread to follow with some what precision view of the corpse.
 [_unit] spawn {
 	private["_unit"];

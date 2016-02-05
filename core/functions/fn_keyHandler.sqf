@@ -45,6 +45,26 @@ if(!(EQUAL(count (actionKeys "User10"),0)) && {(inputAction "User10" > 0)}) exit
 };
 
 switch (_code) do {
+	// 1 - Holster call for slot 1
+	case 2:
+	{
+		if (isNull objectParent player && !(player getVariable ["restrained", false]) && (animationState player) != "Incapacitated" && !life_istazed && !life_action_inuse) then {
+			if(_ctrlKey)then{
+				[59] call life_fnc_Holster;
+				_handled = true;
+			};
+		};
+	};
+
+	case 3:
+	{
+		if (isNull objectParent player && !(player getVariable ["restrained", false]) && (animationState player) != "Incapacitated" && !life_istazed && !life_action_inuse && (side player) == west) then {
+			if(_ctrlKey)then{
+				[60] call life_fnc_Holster;
+				_handled = true;
+			};
+		};
+	};
 	//Space key for Jumping
 	case 57: {
 		if(isNil "jumpActionTime") then {jumpActionTime = 0;};
