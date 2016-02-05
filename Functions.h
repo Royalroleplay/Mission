@@ -219,6 +219,7 @@ class Life_Client_Core
 	class Functions
 	{
 		file = "core\functions";
+		class robNPC {};
 		class calWeightDiff {};
 		class fetchCfgDetails {};
 		class handleInv {};

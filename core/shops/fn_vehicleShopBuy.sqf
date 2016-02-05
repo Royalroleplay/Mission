@@ -21,7 +21,7 @@ _colorIndex = lbValue[2304,(lbCurSel 2304)];
 
 //Series of checks (YAY!)
 if(_basePrice < 0) exitWith {}; //Bad price entry
-if(CASH < _basePrice) exitWith {hint format[localize "STR_Shop_Veh_NotEnough",[_basePrice - CASH] call life_fnc_numberText];};
+if(life_cash < _basePrice) exitWith {hint format[localize "STR_Shop_Veh_NotEnough",[_basePrice - life_cash] call life_fnc_numberText];};
 
 _license = ((_vehicleList select _vIndex) select 2);
 if(!((_license isEqualTo "")) && {!(LICENSE_VALUE(_license,_shopSide))}) exitWith {hint localize "STR_Shop_Veh_NoLicense"};
@@ -47,7 +47,7 @@ if(_spawnPoint isEqualTo "") exitWith {hint localize "STR_Shop_Veh_Block";};
 /* LOG THAT SHIT */
 [getPlayerUID player,life_cash,life_atmbank,_basePrice,_className,format["Vehicle Purchased: %1",getText(configFile >> "CfgVehicles" >> _className >> "displayName")]] remoteExec ["MBF_fnc_logTrans",hc_1];
 
-FNC_SUB(CASH,_basePrice);
+FNC_SUB(life_cash,_basePrice);
 hint format[localize "STR_Shop_Veh_Bought",getText(configFile >> "CfgVehicles" >> _className >> "displayName"),[_basePrice] call life_fnc_numberText];
 
 //Spawn the vehicle and prep it.

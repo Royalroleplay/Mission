@@ -73,7 +73,7 @@ if(_bool) then {
 
 			if((_details select 4) in [1,2,4,5,4096]) then {
 				if((_details select 4) isEqualTo 4096) then {
-					if((_details select 5),-1) then {
+					if((_details select 5) isEqualTo -1) then {
 						_isgun = true;
 					};
 				} else {

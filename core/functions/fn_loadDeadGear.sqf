@@ -6,7 +6,7 @@
 	Description:
 	BLAH
 */
-private["_allowedItems","_loadout","_primary","_secondaryWeapon player","_handgun","_magazines","_uniform","_vest","_backpack","_items","_primitems","_secitems","_handgunitems","_uitems","_vitems","_bitems","_handle"];
+private["_allowedItems","_loadout","_primary","_secondaryWeapon","_handgun","_magazines","_uniform","_vest","_backpack","_items","_primitems","_secitems","_handgunitems","_uitems","_vitems","_bitems","_handle"];
 _loadout = [_this,0,[],[[]]] call BIS_fnc_param;
 
 _primary = (_loadout select 0);
@@ -25,6 +25,8 @@ _vitems = (_loadout select 12);
 _bitems = (_loadout select 13);
 _headgear = (_loadout select 14);
 _goggles = (_loadout select 15);
+
+_secondaryWeapon = secondaryWeapon player;
 
 //Strip the unit down
 RemoveAllWeapons player;
@@ -49,7 +51,7 @@ if(!(_backpack isEqualTo "")) then {_handle = [_backpack,true,false,false,false]
 } foreach _magazines;
 
 if(!(_primary isEqualTo "")) then {[_primary,true,false,false,false] spawn life_fnc_handleItem;};
-if(!(_launcher) isEqualTo "") then {[_secondaryWeapon player,true,false,false,false] spawn life_fnc_handleItem;};
+if(!(_launcher) isEqualTo "") then {[_secondaryWeapon,true,false,false,false] spawn life_fnc_handleItem;};
 if(!(_handgun isEqualTo "")) then {[_handgun,true,false,false,false] spawn life_fnc_handleItem;};
 
 {_handle = [_x,true,false,false,false] spawn life_fnc_handleItem; waitUntil {scriptDone _handle};} foreach _items;
