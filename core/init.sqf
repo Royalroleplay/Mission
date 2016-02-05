@@ -2,6 +2,8 @@
 /*
 	Master client initialization file
 */
+if(!hasInterface) exitWith {};
+	
 enableRadio false;
 life_firstSpawn = true;
 life_session_completed = false;
