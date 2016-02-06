@@ -15,7 +15,7 @@ _alt = (_this select 4);
 _speed = speed cursorTarget;
 _handled = false;
 
-systemChat format["Ctrl: %1 Code: %2 Shift: %3 CtrlKey: %4 Alt: %5 Speed: %6",_ctrl,_code,_shift,_ctrlKey,_alt,_speed];
+//systemChat format["Ctrl: %1 Code: %2 Shift: %3 CtrlKey: %4 Alt: %5 Speed: %6",_ctrl,_code,_shift,_ctrlKey,_alt,_speed];
 
 _interactionKey = if(count (actionKeys "User10") isEqualTo 0) then {219} else {(actionKeys "User10") select 0};
 _mapKey = (actionKeys "ShowMap" select 0);
@@ -48,9 +48,10 @@ if(!(count (actionKeys "User10") isEqualTo 0) && {(inputAction "User10" > 0)}) e
 
 switch (_code) do {
 	//Space key for Jumping
-	case 57: {
+	case 57:
+	{
 		if(isNil "jumpActionTime") then {jumpActionTime = 0;};
-		if(_shift && {!(((animationState player) isEqualTo "AovrPercMrunSrasWrflDf"))} && {isTouchingGround player} && {stance player isEqualTo "STAND"} && {speed player > 2} && {!life_is_arrested} && {((velocity player) select 2) < 2.5} && {time - jumpActionTime > 1.5}) then {
+		if(_shift && {animationState player != "AovrPercMrunSrasWrflDf"} && {isTouchingGround player} && {stance player == "STAND"} && {speed player > 2} && {!life_is_arrested} && {(velocity player) select 2 < 2.5} && {time - jumpActionTime > 1.5}) then {
 			jumpActionTime = time; //Update the time.
 			[player,true] spawn life_fnc_jumpFnc; //Local execution
 			[player,false] remoteExec ["life_fnc_jumpFnc",RANY]; //Global execution
@@ -81,14 +82,14 @@ switch (_code) do {
 
 	//Holster / recall weapon.
 	case 35: {
-		if(_shift && !_ctrlKey && (!(currentWeapon player, isEqualTo ""))) then {
+		if(_shift && !_ctrlKey && (!(currentWeapon player isEqualTo ""))) then {
 			player setVariable ["holstered",true,true];
 			life_curWep_h = currentWeapon player;
 			player action ["SwitchWeapon", player, player, 100];
 			player switchCamera cameraView;
 		};
 
-		if(!_shift && _ctrlKey && !isNil "life_curWep_h" && {(!(life_curWep_h isEqualTo ""))}) then {
+		if(!_shift && _ctrlKey && {!isNil "life_curWep_h"} && {(!(life_curWep_h isEqualTo ""))}) then {
 			if(life_curWep_h in [primaryWeapon player,secondaryWeapon player,handgunWeapon player]) then {
 				player setVariable ["holstered",false,true];
 				player selectWeapon life_curWep_h;
@@ -111,7 +112,8 @@ switch (_code) do {
 	//Restraining (Shift + R)
 	case 19: {
 		if(_shift) then {
-			if(playerSide == west) then	{
+			if(playerSide == west) then	
+			{
 
 				hint "running restrain action";
 				[] call life_fnc_restrainActionCop;
@@ -228,10 +230,10 @@ switch (_code) do {
 			if(_veh isKindOf "House_F" && {playerSide == civilian}) then {
 				if(_veh in life_vehicles && player distance _veh < 8) then {
 					_door = [_veh] call life_fnc_nearestDoor;
-					if(_door, isEqualTo 0) exitWith {hint localize "STR_House_Door_NotNear"};
+					if(_door isEqualTo 0) exitWith {hint localize "STR_House_Door_NotNear"};
 					_locked = _veh getVariable [format["bis_disabled_Door_%1",_door],0];
 
-					if(_locked, isEqualTo 0) then {
+					if(_locked isEqualTo 0) then {
 						_veh setVariable [format["bis_disabled_Door_%1",_door],1,true];
 						_veh animate [format["door_%1_rot",_door],0];
 						systemChat localize "STR_House_Door_Lock";
@@ -244,7 +246,7 @@ switch (_code) do {
 			} else {
 				_locked = locked _veh;
 				if(_veh in life_vehicles && player distance _veh < 8) then {
-					if(_locked, isEqualTo 2) then {
+					if(_locked isEqualTo 2) then {
 						if(local _veh) then {
 							_veh lock 0;
 						} else {

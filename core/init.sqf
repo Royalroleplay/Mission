@@ -35,7 +35,6 @@ switch (playerSide) do {
 
 //Setup initial client core functions
 diag_log "::Life Client:: Initialization Variables";
-[] call MBF_GameLoop_fnc_init;
 [] call compile PreprocessFileLineNumbers "core\configuration.sqf";
 
 diag_log "::Life Client:: Variables initialized";
@@ -63,6 +62,7 @@ if(!isNil "life_server_extDB_notLoaded" && {life_server_extDB_notLoaded != ""}) 
 	999999 cutFadeOut 99999999;
 };
 
+[] call MBF_GameLoop_fnc_init;
 [] call SOCK_fnc_dataQuery;
 waitUntil {life_session_completed};
 0 cutText["Finishing client setup procedure","BLACK FADED"];
@@ -127,7 +127,7 @@ life_fnc_moveIn = compileFinal
 [] spawn life_fnc_playerVehicleKeys;
 
 CONSTVAR(life_paycheck); //Make the paycheck static.
-if((LIFE_SETTINGS(getNumber,"enable_fatigue") isEqualTo 0)) then {player enableFatigue false;};
+if(LIFE_SETTINGS(getNumber,"enable_fatigue") isEqualTo 0) then {player enableFatigue false;};
 
 //[] call MBF_Phone_fnc_initPhone;
 
