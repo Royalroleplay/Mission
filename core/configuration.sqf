@@ -39,6 +39,8 @@ life_markers = false; //Finally this
 life_gear = [];
 life_respawn_started = false;
 
+life_health = 100;
+
 life_death_primary = "";
 life_death_primary_items = [];
 life_death_secondary = "";
