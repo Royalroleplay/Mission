@@ -25,7 +25,7 @@ if(([false,_type,_amount] call life_fnc_handleInv)) then {
 	hint format[localize "STR_Shop_Virt_SellItem",_amount,(localize _name),[_price] call life_fnc_numberText];
 
 	/* Log That Shit! */
-	[getPlayerUID player,life_cash,life_atmbank,_price,_type,format["Sold Item(s): %1",(localize _name)]] remoteExec ["MBF_fnc_logTrans",hc_1];
+	//[getPlayerUID player,life_cash,life_atmbank,_price,_type,format["Sold Item(s): %1",(localize _name)]] remoteExec ["MBF_fnc_logTrans",hc_1];
 
 	FNC_ADD(life_cash,_price);
 	[] call life_fnc_virt_update;	

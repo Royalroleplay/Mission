@@ -1,5 +1,5 @@
 author = "MrBoolean / Tonic / Yuka";
-onLoadName = "Royal Roleplay v0.06";
+onLoadName = "Royal Roleplay v0.06a";
 onLoadMission = "Enjoy your stay";
 joinUnassigned = 1;
 respawn = BASE;

@@ -159,7 +159,7 @@ if(LIFE_SETTINGS(getNumber,"enable_fatigue") isEqualTo 0) then {player enableFat
 	life_bankCache = life_atmbank;
 	uiSleep 0.5;
 	while {true} do {
-		if(typeName life_atmbank != "SCALAR") then {
+		if((typeName life_atmbank) != "SCALAR") then {
 			life_atmbank = 0;
 			life_atmbank = life_bankCache;
 			hint "Fixed Bank Cash Error";

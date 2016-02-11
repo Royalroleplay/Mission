@@ -49,7 +49,7 @@ _colorArray = M_CONFIG(getArray,"CfgVehicles",_className,"textures");
 {
 	_flag = (_x select 1);
 	_textureName = (_x select 0);
-	if((life_veh_shop isEqualTo 2) select _flag) then {
+	if((life_veh_shop select 2) == _flag) then {
 		_ctrl lbAdd _textureName;
 		_ctrl lbSetValue [(lbSize _ctrl)-1,_forEachIndex];
 	};

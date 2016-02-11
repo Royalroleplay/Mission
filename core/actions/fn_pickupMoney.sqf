@@ -24,7 +24,7 @@ if(!isNil "_value") exitWith {
 	titleText[format[localize "STR_NOTF_PickedMoney",[_value] call life_fnc_numberText],"PLAIN"];
 
 	/* Log That Shit! */
-	[getPlayerUID player,life_cash,life_atmbank,_value,"Picked Up Money",format["Picked Up $%1",_value]] remoteExec ["MBF_fnc_logTrans",hc_1];
+	//[getPlayerUID player,life_cash,life_atmbank,_value,"Picked Up Money",format["Picked Up $%1",_value]] remoteExec ["MBF_fnc_logTrans",hc_1];
 
 	FNC_ADD(life_cash,_value);
 	life_action_delay = time;

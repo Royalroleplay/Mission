@@ -45,7 +45,7 @@ if(((life_veh_shop select 0) isEqualTo "med_air_hs")) then {
 if(_spawnPoint isEqualTo "") exitWith {hint localize "STR_Shop_Veh_Block";};
 
 /* LOG THAT SHIT */
-[getPlayerUID player,life_cash,life_atmbank,_basePrice,_className,format["Vehicle Purchased: %1",getText(configFile >> "CfgVehicles" >> _className >> "displayName")]] remoteExec ["MBF_fnc_logTrans",hc_1];
+//[getPlayerUID player,life_cash,life_atmbank,_basePrice,_className,format["Vehicle Purchased: %1",getText(configFile >> "CfgVehicles" >> _className >> "displayName")]] remoteExec ["MBF_fnc_logTrans",hc_1];
 
 FNC_SUB(life_cash,_basePrice);
 hint format[localize "STR_Shop_Veh_Bought",getText(configFile >> "CfgVehicles" >> _className >> "displayName"),[_basePrice] call life_fnc_numberText];
@@ -81,7 +81,7 @@ if((life_veh_shop select 0) == "med_air_hs") then {
 	_vehicle setDir (markerDir _spawnPoint);
 	_vehicle setPos _loc;
 
-	if(playerSide == civilian) then {
+	if(!(_className in ["Mrshounka_a3_smart_cop","DRPG_12Charger_P_P","DRPG_12M5_P_P","DRPG_08Suburban_P_U","DRPG_06Victoria_P_T","DRPG_14Explorer_P_P","DRPG_06Victoria_P_P"])) then {
 		_textures = ((M_CONFIG(getArray,"CfgVehicles",(typeOf _vehicle),"textures") select _colorIndex) select 2);
 		if((!isNil "_textures") OR {!(count _textures isEqualTo 0)}) then {
 			{_vehicle setObjectTextureGlobal [_forEachIndex,_x];} foreach _textures;

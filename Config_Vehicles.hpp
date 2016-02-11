@@ -86,7 +86,6 @@ class CarShops {
 			{ "ADM_GMC_Vandura", 500, "" },
 			{ "Jonzie_Ceed", 500, "" },
 			{ "Jonzie_Ute", 500, "" },
-			{ "DRPG_06Victoria_Base", 500, ""},
 			{ "Jonzie_Transit", 500, "" },
 			{ "shounka_gt", 500, "" },
 			{ "Mrshounka_207_civ", 500, "" },
@@ -111,7 +110,6 @@ class CarShops {
 			{ "Mrshounka_lykan_c", 500, "" },  // LykanHyper Sport based off real pricing of car
 			{ "Mrshounka_c63_2015_civ", 500, "" },
 			{ "DRPG_15Charger_P_U", 500, "" },
-			{ "DRPG_12M5_Base", 500, "" },
 			{ "RG_yamaha_p_noir", 500, "" },
 			{ "RG_Volkswagen_Touareg_noir", 500, "" },
 			{ "Mrshounka_a3_smart_civ", 500, "" },

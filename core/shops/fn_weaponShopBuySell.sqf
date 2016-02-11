@@ -26,7 +26,7 @@ if(_bad != "") exitWith {hint _bad};
 if((uiNamespace getVariable["Weapon_Shop_Filter",0]) == 1) then {
 
 	/* Log That Shit! */
-	[getPlayerUID player,life_cash,life_atmbank,_price,_item,format["Sold Weapon: %1",(_itemInfo select 1)]] remoteExec ["MBF_fnc_logTrans",hc_1];
+	//[getPlayerUID player,life_cash,life_atmbank,_price,_item,format["Sold Weapon: %1",(_itemInfo select 1)]] remoteExec ["MBF_fnc_logTrans",hc_1];
 
 	life_cash = life_cash + _price;
 	[_item,false] call life_fnc_handleItem;
@@ -56,7 +56,7 @@ if((uiNamespace getVariable["Weapon_Shop_Filter",0]) == 1) then {
 			if(_price > life_cash) exitWith {hint localize "STR_NOTF_NotEnoughMoney"};
 
 			/* Log That Shit! */
-			[getPlayerUID player,life_cash,life_atmbank,_price,_item,format["Bought Weapon: %1",(_itemInfo select 1)]] remoteExec ["MBF_fnc_logTrans",hc_1];
+			//[getPlayerUID player,life_cash,life_atmbank,_price,_item,format["Bought Weapon: %1",(_itemInfo select 1)]] remoteExec ["MBF_fnc_logTrans",hc_1];
 
 			hint parseText format[localize "STR_Shop_Weapon_BoughtItem",_itemInfo select 1,[_price] call life_fnc_numberText];
 			FNC_SUB(life_cash,_price);
@@ -66,7 +66,7 @@ if((uiNamespace getVariable["Weapon_Shop_Filter",0]) == 1) then {
 		if(_price > life_cash) exitWith {hint localize "STR_NOTF_NotEnoughMoney"};
 
 		/* Log That Shit! */
-		[getPlayerUID player,life_cash,life_atmbank,_price,_item,format["Bought Weapon: %1",(_itemInfo select 1)]] remoteExec ["MBF_fnc_logTrans",hc_1];
+		//[getPlayerUID player,life_cash,life_atmbank,_price,_item,format["Bought Weapon: %1",(_itemInfo select 1)]] remoteExec ["MBF_fnc_logTrans",hc_1];
 		
 		hint parseText format[localize "STR_Shop_Weapon_BoughtItem",_itemInfo select 1,[_price] call life_fnc_numberText];
 		life_cash = life_cash - _price;

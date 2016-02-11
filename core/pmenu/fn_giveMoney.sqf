@@ -32,7 +32,7 @@ if(isNil "_unit") exitWith {hint "The selected player is not within range";};
 hint format["You gave $%1 to %2",[(parseNumber(_amount))] call life_fnc_numberText,_unit getVariable["realname",name _unit]];
 
 /* Log That Shit! */
-[getPlayerUID player,life_cash,life_atmbank,(parseNumber(_amount)),"Sending Money",format["Sent $%1 to %2",(parseNumber(_amount)),(_unit getVariable["realname",name _unit])]] remoteExec ["MBF_fnc_logTrans",hc_1];
+//[getPlayerUID player,life_cash,life_atmbank,(parseNumber(_amount)),"Sending Money",format["Sent $%1 to %2",(parseNumber(_amount)),(_unit getVariable["realname",name _unit])]] remoteExec ["MBF_fnc_logTrans",hc_1];
 
 life_cash = life_cash - (parseNumber(_amount));
 

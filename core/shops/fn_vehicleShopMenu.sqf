@@ -51,9 +51,13 @@ ctrlShow [2304,false];
 	
 	if(!_passOver) then {
 		_vehicleInfo = [_className] call life_fnc_fetchVehInfo;
-		_control lbAdd (_vehicleInfo select 3);
-		_control lbSetPicture [(lbSize _control)-1,(_vehicleInfo select 2)];
-		_control lbSetData [(lbSize _control)-1,_className];
-		_control lbSetValue [(lbSize _control)-1,_ForEachIndex];
+		
+		if(count _vehicleInfo > 0) then {
+			_control lbAdd (_vehicleInfo select 3);
+			_control lbSetPicture [(lbSize _control)-1,(_vehicleInfo select 2)];
+			_control lbSetData [(lbSize _control)-1,_className];
+			_control lbSetValue [(lbSize _control)-1,_ForEachIndex];
+		};
+
 	};
 } foreach _vehicleList;
