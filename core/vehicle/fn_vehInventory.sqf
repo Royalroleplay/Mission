@@ -25,7 +25,7 @@ if(_veh isKindOf "House_F") then {
 	_veh_data = [_veh] call life_fnc_vehicleWeight;
 };
 
-if((_veh_data isEqualTo 0) select -1) exitWith {closeDialog 0};
+if((_veh_data select 0) == -1) exitWith {closeDialog 0};
 
 ctrlSetText[3504,format["Weight: %1/%2",_veh_data select 1,_veh_data select 0]];
 _data = _veh getVariable ["Trunk",[]];

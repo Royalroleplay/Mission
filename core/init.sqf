@@ -108,6 +108,9 @@ diag_log "----------------------------------------------------------------------
 0 cutText ["","BLACK IN"];
 [] call life_fnc_hudSetup;
 
+/* Sync Data every 5 Minutes */
+[(60*5), SOCK_fnc_updateRequest, [], true] call MBF_GameLoop_fnc_addEvent;
+
 /* Set up frame-by-frame handlers */
 LIFE_ID_PlayerTags = ["LIFE_PlayerTags","onEachFrame","life_fnc_playerTags"] call BIS_fnc_addStackedEventHandler;
 LIFE_ID_RevealObjects = ["LIFE_RevealObjects","onEachFrame","life_fnc_revealObjects"] call BIS_fnc_addStackedEventHandler;

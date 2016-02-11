@@ -82,6 +82,8 @@ if(!isNull _killer && {_killer != _unit} && {side _killer != west} && {alive _ki
 	};
 };
 
+life_save_gear = [player] call life_fnc_fetchDeadGear;
+
 //Killed by cop stuff...
 if(side _killer == west && playerSide != west) then {
 	life_copRecieve = _killer;
@@ -110,11 +112,6 @@ life_cash = 0;
 [0] call SOCK_fnc_updatePartial;
 [3] call SOCK_fnc_updatePartial;
 
-[_killer] spawn {
-	_killer = _this select 0;	
-	cutText[format["You were killed by %1",(_killer getVariable ["realname",name _killer])],"PLAIN",2];
-	uiSleep 20;
-	cutText["","PLAIN"];
-};
+cutText[format["You were killed by %1",(_killer getVariable ["realname",name _killer])],"PLAIN",2];
 
 //ACE_isUnconscious

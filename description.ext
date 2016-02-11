@@ -20,9 +20,9 @@ class Header
 wreckLimit = 3;
 wreckRemovalMinTime = 60;
 wreckRemovalMaxTime = 320;
-corpseLimit = 3;
-corpseRemovalMinTime = 780;
-corpseRemovalMaxTime = 900;
+corpseLimit = 999;
+corpseRemovalMinTime = 1000;
+corpseRemovalMaxTime = 1000;
 
 #include "CfgRemoteExec.hpp"
 #include "dialog\MasterHandler.h"

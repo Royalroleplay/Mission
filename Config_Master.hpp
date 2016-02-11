@@ -223,6 +223,7 @@ class Licenses {
     //cop
     LICENSEMACRO(air_support,"STR_License_Pilot","air_support",0,false,"cop")
     LICENSEMACRO(coast_guard,"STR_License_Pilot","coast_guard",0,false,"cop")
+/*
     LICENSEMACRO(basic_firearms,"STR_License_CG","basic_firearms",0,false,"cop")
     LICENSEMACRO(adv_firearms,"STR_License_CG","adv_firearms",0,false,"cop")
     LICENSEMACRO(dtu,"STR_License_CG","dtu",0,false,"cop")
@@ -235,6 +236,7 @@ class Licenses {
     LICENSEMACRO(trainer_dtu,"STR_License_CG","trainer_dtu",0,false,"cop")
     LICENSEMACRO(trainer_highway,"STR_License_CG","trainer_highway",0,false,"cop")
     LICENSEMACRO(trainer_doc,"STR_License_CG","trainer_doc",0,false,"cop")
+*/
 };
 
 class VirtualShops {

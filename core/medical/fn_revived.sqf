@@ -61,6 +61,8 @@ deleteVehicle life_corpse;
 //life_corpse setVariable ["name",nil,TRUE];
 //[life_corpse] remoteExecCall ["life_fnc_corpse",RANY];
 //hideBody life_corpse;
+[life_save_gear] spawn life_fnc_loadDeadGear;
+life_save_gear = [];
 
 player setVariable ["Revive",nil,TRUE];
 player setVariable ["name",nil,TRUE];

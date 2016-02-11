@@ -46,6 +46,7 @@ life_death_primary_items = [];
 life_death_secondary = "";
 life_death_secondary_items = [];
 life_death_glasses = "";
+life_save_gear = [];
 
 //Uniform price (0),Hat Price (1),Glasses Price (2),Vest Price (3),Backpack Price (4)
 life_clothing_purchase = [-1,-1,-1,-1,-1];

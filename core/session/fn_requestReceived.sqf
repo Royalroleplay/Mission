@@ -41,7 +41,7 @@ life_gear = (_this select 8);
 //Parse side specific information.
 switch(playerSide) do {
 	case west: {
-		CONST(life_coplevel, 8);
+		CONST(life_coplevel, parseNumber(_this select 7));
 		CONST(life_medicLevel,0);
 		life_blacklisted = (_this select 9);
 	};
