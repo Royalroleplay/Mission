@@ -51,7 +51,7 @@ if(!(_backpack isEqualTo "")) then {_handle = [_backpack,true,false,false,false]
 } foreach _magazines;
 
 if(!(_primary isEqualTo "")) then {[_primary,true,false,false,false] spawn life_fnc_handleItem;};
-if(!(_launcher) isEqualTo "") then {[_secondaryWeapon,true,false,false,false] spawn life_fnc_handleItem;};
+if(!(_launcher isEqualTo "")) then {[_secondaryWeapon,true,false,false,false] spawn life_fnc_handleItem;};
 if(!(_handgun isEqualTo "")) then {[_handgun,true,false,false,false] spawn life_fnc_handleItem;};
 
 {_handle = [_x,true,false,false,false] spawn life_fnc_handleItem; waitUntil {scriptDone _handle};} foreach _items;

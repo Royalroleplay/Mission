@@ -15,14 +15,12 @@ class CarShops {
 			{ "ADM_GMC_Vandura", 5000, "driver" },
 			{ "Jonzie_Ceed", 6000, "driver" },
 			{ "Jonzie_Ute", 7500, "driver" },
+			{ "Jonzie_Mini_Cooper", 8000, "driver" },
+			{ "Jonzie_Datsun_Z432", 6000, "driver" },
 			{ "Jonzie_Transit", 10000, "driver" },
-			{ "Mrshounka_lincoln_civ", 12000, "driver" }
-		};
-	};
-	
-	class car_classic {
-		side = "civ";
-		vehicles[] = {
+			{ "Mrshounka_lincoln_civ", 12000, "driver" },
+			{ "Jonzie_30CSL", 12000, "driver" },
+			{ "Jonzie_XB", 12000, "driver" },
 			{ "ADM_Ford_F100", 12500 , "driver" },
 			{ "ADM_1964_Impala", 15000 , "driver" },
 			{ "ADM_1969_Camaro", 25000 , "driver" },
@@ -73,7 +71,33 @@ class CarShops {
 			{ "RG_raptor2_noir", 66500, "driver" },
 			{ "Mrshounka_golfvi_civ", 22000, "driver" },
 			{ "Mrshounka_jeep_blinde_noir", 152000, "driver" },
-			{ "Jonzie_Escalade", 80000, "driver" }
+			{ "Jonzie_Escalade", 80000, "driver" },
+			{ "IVORY_R8", 130000, "driver" },
+			{ "A3L_Panamera_Black", 120000, "driver" },
+			{ "A3L_Mercedes_ML63_Base", 85000, "driver" },
+			{ "A3L_F350Black", 45000, "driver" },
+			{ "Jonzie_Mini_Cooper_R_spec", 65000, "driver" },
+			{ "A3L_CVBlack", 28000, "driver" },
+			{ "A3L_Challenger", 50000, "driver" },
+			{ "Jonzie_STI", 100000, "driver" },
+			{ "ivory_gt500", 50000, "driver" },
+			{ "ivory_lfa", 78000, "driver" },
+			{ "ivory_lp560", 130000, "driver" },
+			{ "IVORY_PRIUS", 45000, "driver" },
+			{ "IVORY_REV", 220000, "driver" },
+			{ "ivory_c", 80000, "driver" },
+			{ "ivory_wrx", 80000, "driver" },
+			{ "Mrshounka_c4_picasso_p_bleufonce", 60000, "driver" },
+			{ "Mrshounka_mercedes_190_p_civ", 75000, "driver" },
+			{ "shounka_clk_grise", 75000, "driver" },
+			{ "shounka_mp4", 75000, "driver" },
+			{ "shounka_porsche911", 100000, "driver" },
+			{ "shounka_rs6", 52000, "driver" },
+			{ "shounka_transam", 60000, "driver" },
+			{ "Quiet_c65amg_blanche_f", 80000, "driver" },
+			{ "Quiet_dodge_15_blanche_f", 50000, "driver" },
+			{ "Quiet_v2_r8plus_blanche_f", 250000, "driver" },
+			{ "Mrshounka_subaru08_civ", 35000, "driver" }
 		};
 	};
 
@@ -128,7 +152,36 @@ class CarShops {
 			{ "RG_raptor2_noir", 500, "" },
 			{ "Mrshounka_golfvi_civ", 500, "" },
 			{ "Mrshounka_jeep_blinde_noir", 500, "" },
-			{ "Jonzie_Escalade", 500, "" }
+			{ "Jonzie_Escalade", 500, "" },
+			{ "IVORY_R8", 500, "" },
+			{ "A3L_Panamera_Black", 500, "" },
+			{ "A3L_Mercedes_ML63_Base", 500, "" },
+			{ "A3L_F350Black", 500, "" },
+			{ "Jonzie_Mini_Cooper_R_spec", 500, "" },
+			{ "Jonzie_Datsun_Z432", 500, "" },
+			{ "Jonzie_XB", 500, "" },
+			{ "A3L_CVBlack", 500, "" },
+			{ "A3L_TaurusBlack", 500, "" },
+			{ "A3L_Challenger", 500, "" },
+			{ "Jonzie_STI", 500, "" },
+			{ "ivory_gt500", 500, "" },
+			{ "ivory_lfa", 500, "" },
+			{ "ivory_lp560", 500, "" },
+			{ "IVORY_PRIUS", 500, "" },
+			{ "IVORY_REV", 500, "" },
+			{ "ivory_c", 500, "" },
+			{ "ivory_wrx", 500, "" },
+			{ "Mrshounka_c4_picasso_p_bleufonce", 500, "" },
+			{ "Mrshounka_mercedes_190_p_civ", 500, "" },
+			{ "shounka_clk_grise", 500, "" },
+			{ "shounka_mp4", 500, "" },
+			{ "shounka_porsche911", 500, "" },
+			{ "shounka_rs6", 500, "" },
+			{ "shounka_transam", 500, "" },
+			{ "Quiet_c65amg_blanche_f", 500, "" },
+			{ "Quiet_dodge_15_blanche_f", 500, "" },
+			{ "Quiet_v2_r8plus_blanche_f", 500, "" },
+			{ "Mrshounka_subaru08_civ", 500, "" }
 		};
 	};
 
@@ -172,7 +225,12 @@ class CarShops {
 			{ "C_Van_01_box_F", 25000, "trucking" },
 			{ "Jonzie_Box_Truck", 70000, "trucking" },
 			{ "Jonzie_Tow_Truck", 40000, "trucking" },
-			{ "Jonzie_Western", 80000, "semi" }
+			{ "A3L_Renault_Magnum", 80000, "trucking" },
+			{ "Jonzie_Western", 80000, "semi" },
+			{ "Jonzie_Superliner", 80000, "semi" },
+			{ "A3L_Towtruck_black", 60000, "trucking" },
+			{ "A3L_Bus_base", 120000, "semi" },
+			{ "wirk_h3_limo", 75000, "trucking" }
 		};
 	};
 
@@ -211,25 +269,35 @@ class CarShops {
 	class civ_air {
 		side = "civ";
 		vehicles[] = {
+			{ "sab_camel", 150000, "pilot" },
+			{ "sab_camel_pro", 150000, "pilot" },
+			{ "sab_FAAllegro", 160000, "pilot" },
+			{ "sab_FAAllegro_2", 160000, "pilot" },
+			{ "sab_FAAllegro_3", 160000, "pilot" },
+			{ "sab_FAAllegro_4", 160000, "pilot" },
+			{ "sab_FAAllegro_5", 160000, "pilot" },
+			{ "GNT_C185", 250000, "pilot" },
+			{ "GNT_C185F", 275000, "pilot" },
+			{ "Sab_A2_An2", 500000, "pilot" },
+			{ "Sab_cz_An2", 500000, "pilot" },
+			{ "Sab_ee_An2", 500000, "pilot" },
 			{ "B_Heli_Light_01_F", 253000, "pilot" },
-			{ "O_Heli_Light_02_unarmed_F", 750000, "pilot" }
+			{ "O_Heli_Light_02_unarmed_F", 750000, "pilot" },
+			{ "ivory_b206", 300000, "pilot" },
+			{ "ivory_b206_news", 350000, "pilot" },
+			{ "IVORY_BELL512", 400000, "pilot" },
+			{ "IVORY_ERJ135_1", 800000, "pilot" },
+			{ "IVORY_CRJ200_1", 1000000, "pilot" },
+			{ "ivory_yak42d_1", 3000000, "pilot" }
 		};
 	};
 
 	class cop_air {
 		side = "cop";
 		vehicles[] = {
-			{ "B_Heli_Light_01_F", 75000, "cAir" },
-			{ "B_Heli_Transport_01_F", 200000, "cAir", { "life_coplevel", 3 } }
-		};
-	};
-
-	class cop_airhq {
-		side = "civ";
-		vehicles[] = {
-			{ "B_Heli_Light_01_F", 75000, "cAir" },
-			{ "B_Heli_Transport_01_F", 200000, "cAir", { "life_coplevel", 3 } },
-			{ "B_MRAP_01_hmg_F", 750000, "", { "life_coplevel", 3 } }
+			{ "B_Heli_Light_01_F", 20000, "cAir" },
+			{ "ivory_b206_police", 20000, "cAir" },
+			{ "IVORY_BELL512_POLICE", 20000, "cAir" }
 		};
 	};
 
@@ -386,6 +454,38 @@ class CfgVehicles {
             } }
 	    };
 	};
+	class Mrshounka_subaru08_civ: Jonzie_Base {vItemSpace = 25;};
+	class Quiet_v2_r8plus_blanche_f: Jonzie_Base {vItemSpace = 25;};
+	class Quiet_dodge_15_blanche_f: Jonzie_Base {vItemSpace = 25;};
+	class Quiet_c65amg_blanche_f: Jonzie_Base {vItemSpace = 25;};
+	class shounka_transam: Jonzie_Base {vItemSpace = 25;};
+	class shounka_rs6: Jonzie_Base {vItemSpace = 25;};
+	class shounka_porsche911: Jonzie_Base {vItemSpace = 25;};
+	class shounka_mp4: Jonzie_Base {vItemSpace = 25;};
+	class shounka_clk_grise: Jonzie_Base {vItemSpace = 25;};
+	class Mrshounka_mercedes_190_p_civ: Jonzie_Base {vItemSpace = 25;};
+	class Mrshounka_c4_picasso_p_bleufonce: Jonzie_Base {vItemSpace = 25;};
+	class ivory_wrx: Jonzie_Base {vItemSpace = 25;};
+	class IVORY_REV: Jonzie_Base {vItemSpace = 25;};
+	class ivory_c: Jonzie_Base {vItemSpace = 25;};
+	class IVORY_PRIUS: Jonzie_Base {vItemSpace = 25;};
+	class ivory_lp560: Jonzie_Base {vItemSpace = 25;};
+	class ivory_lfa: Jonzie_Base {vItemSpace = 25;};
+	class ivory_gt500: Jonzie_Base {vItemSpace = 25;};
+	class Jonzie_Superliner: Jonzie_Base {vItemSpace = 0;};
+	class wirk_h3_limo: Jonzie_Base {vItemSpace = 25;};
+	class Jonzie_STI: Jonzie_Base {vItemSpace = 25;};
+	class A3L_Challenger: Jonzie_Base {vItemSpace = 25;};
+	class A3L_TaurusBlack: Jonzie_Base {vItemSpace = 25;};
+	class A3L_CVBlack: Jonzie_Base {vItemSpace = 25;};
+	class Jonzie_XB: Jonzie_Base {vItemSpace = 25;};
+	class Jonzie_Datsun_Z432: Jonzie_Base {vItemSpace = 25;};
+	class Jonzie_Mini_Cooper_R_spec: Jonzie_Base {vItemSpace = 25;};
+	class Jonzie_Mini_Cooper: Jonzie_Base {vItemSpace = 25;};
+	class A3L_Mercedes_ML63_Base: Jonzie_Base {vItemSpace = 25;};
+	class A3L_F350Black: Jonzie_Base {vItemSpace = 25;};
+	class A3L_Panamera_Black: Jonzie_Base {vItemSpace = 25;};
+	class IVORY_R8: Jonzie_Base {vItemSpace = 25;};
 	class Jonzie_Z432: Jonzie_Base {vItemSpace = 50;};
 	class Jonzie_Galant: Jonzie_Base {vItemSpace = 55;};
 	class Jonzie_Corolla: Jonzie_Base {vItemSpace = 60;};
@@ -919,6 +1019,15 @@ class CfgVehicles {
     	insurance = 10000;
     	chopShop = 15000;
 		textures[] = {};
+    };
+
+    class A3L_Renault_Magnum {
+    	vItemSpace = 350;
+    	storageFee[] = {1000, 1000, 1000, 1000};
+    	garageSell[] = {0,0,0,0};
+    	insurance = 10000;
+    	chopShop = 15000;
+    	textures[] = {};
     };
 	
 	class Jonzie_Tow_Truck {

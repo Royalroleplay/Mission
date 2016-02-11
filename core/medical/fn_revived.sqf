@@ -9,8 +9,6 @@
 private["_medic","_dir"];
 _medic = param [0,"Unknown Medic",[""]];
 
-_oldGear = [life_corpse] call life_fnc_fetchDeadGear;
-[_oldGear] spawn life_fnc_loadDeadGear;
 life_corpse setVariable ["realname",nil,true]; //Should correct the double name sinking into the ground.
 [life_corpse] remoteExecCall ["life_fnc_corpse",RANY];
 

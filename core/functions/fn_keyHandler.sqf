@@ -191,6 +191,20 @@ switch (_code) do {
 		};
 	};
 
+	//5 - Thumbs Up
+	case 6:
+	{	
+		if(_ctrlKey) then {
+			if (isNull objectParent player && !(player getVariable ["restrained", false]) && (animationState player) != "Incapacitated" && !life_istazed && !life_action_inuse) then
+			{
+				if (vehicle player == player) then {
+					player playActionNow "GestureThumbs";
+				};
+				_handled = true;
+			};
+	    };
+	};
+
 	//6 - Flip Off
 	case 7:
 	{	
@@ -199,6 +213,48 @@ switch (_code) do {
 			{
 				if (vehicle player == player) then {
 					player playActionNow "gesturefinger";
+				};
+				_handled = true;
+			};
+	    };
+	};
+
+	//7 - Threaten
+	case 8:
+	{	
+		if(_ctrlKey) then {
+			if (isNull objectParent player && !(player getVariable ["restrained", false]) && (animationState player) != "Incapacitated" && !life_istazed && !life_action_inuse) then
+			{
+				if (vehicle player == player) then {
+					player playActionNow "GestureThreat";
+				};
+				_handled = true;
+			};
+	    };
+	};
+
+	//8 - Facepalm
+	case 9:
+	{	
+		if(_ctrlKey) then {
+			if (isNull objectParent player && !(player getVariable ["restrained", false]) && (animationState player) != "Incapacitated" && !life_istazed && !life_action_inuse) then
+			{
+				if (vehicle player == player) then {
+					player playActionNow "GestureFacepalm";
+				};
+				_handled = true;
+			};
+	    };
+	};
+
+	//9 - Dancing
+	case 10:
+	{	
+		if(_ctrlKey) then {
+			if (isNull objectParent player && !(player getVariable ["restrained", false]) && (animationState player) != "Incapacitated" && !life_istazed && !life_action_inuse) then
+			{
+				if (vehicle player == player) then {
+					player playActionNow "GestureDancing";
 				};
 				_handled = true;
 			};
