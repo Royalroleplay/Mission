@@ -7,12 +7,12 @@
 ****** Backend Variables *****
 *****************************
 */
+life_recieved_sync = false;
 life_query_time = time;
 life_action_delay = time;
 life_trunk_vehicle = Objnull;
 life_session_completed = false;
 life_garage_store = false;
-life_session_tries = 0;
 life_net_dropped = false;
 life_siren_active = false;
 life_clothing_filter = 0;

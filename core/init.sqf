@@ -7,6 +7,7 @@ if(!hasInterface) exitWith {};
 enableRadio false;
 life_firstSpawn = true;
 life_session_completed = false;
+life_session_tries = 0;
 private["_handle","_timeStamp"];
 0 cutText["Setting up client, please wait...","BLACK FADED"];
 0 cutFadeOut 9999999;

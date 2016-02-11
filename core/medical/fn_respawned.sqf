@@ -13,7 +13,7 @@ life_use_atm = true;
 life_hunger = 100;
 life_thirst = 100;
 life_carryWeight = 0;
-life_cash = 0; //Make sure we don't get our cash back.
+CASH = 0; //Make sure we don't get our cash back.
 life_respawned = false;
 player playMove "amovpercmstpsnonwnondnon";
 
@@ -55,12 +55,12 @@ if(!isNull life_corpse) then {
 	life_corpse setVariable ["Revive",TRUE,TRUE];
 	_containers = nearestObjects[life_corpse,["WeaponHolderSimulated"],5];
 	{deleteVehicle _x;} foreach _containers; //Delete the containers.
-	//hideBody life_corpse;
+	hideBody life_corpse;
 };
 
 //Destroy our camera...
-//life_deathCamera cameraEffect ["TERMINATE","BACK"];
-//camDestroy life_deathCamera;
+life_deathCamera cameraEffect ["TERMINATE","BACK"];
+camDestroy life_deathCamera;
 
 
 //Bad boy

@@ -11,6 +11,8 @@ _itemArray = life_gear;
 
 diag_log(format["Gear: %1",_itemArray]);
 
+if(life_session_completed) exitWith {}; //Why did this get executed when the client already initialized? Fucking arma...
+
 waitUntil {!(isNull (findDisplay 46))};
 
 _handle = [] spawn life_fnc_stripDownPlayer;
@@ -92,7 +94,3 @@ if(!(_seco isEqualTo "")) then {_handle = [_seco,true,false,false,false] spawn l
         player addHandgunItem _x;
     };
 } foreach (_hItems);
-
-if(playerSide == independent && {((uniform player) isEqualTo "U_Rangemaster")}) then {
-    [player,0,"\rr_textures\textures\medic_uniform.jpg"] remoteExecCall ["life_fnc_setTexture",RCLIENT];
-};
