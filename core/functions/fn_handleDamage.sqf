@@ -59,22 +59,6 @@ if(vehicle _source isKindOf "LandVehicle") then {
 	};
 };
 
-/*
-if(isPlayer _unit) then 
-{
-	if(alive _unit) then 
-	{
-		_damage_clone = round((1 - _damage * 100)
-		if(_damage_clone >= life_health) then {life_health = 0}; 
-		life_health = life_health - _damage_clone;
-	}
-	else
-	{
-		life_health = 0;
-	};
-};
-*/
-
 [] call life_fnc_hudUpdate;
 
 _damage
