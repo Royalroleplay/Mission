@@ -5,12 +5,13 @@
 */
 private["_hgItems","_holder","_items","_pwItems","_safeItems","_swItems","_weps"];
 
-_safeItems = ["FirstAidKit","ItemRadio","ItemMap","ItemCompass","ItemGPS","ItemWatch","NVGoggles","Rangefinder","Binocular"];	
+_safeItems = ["FirstAidKit","ItemRadio","ItemMap","ItemCompass","ItemWatch","NVGoggles","Rangefinder","Binocular"];	
 
-0 cutText["Your weapons are removed.","PLAIN"];
+0 cutText["You've been pat down.","PLAIN"];
 
 //--Get weapons, attachments and magazines of player
 _weps = [];
+_aItems = [];
 
 _pwItems = primaryWeaponItems player;
 _swItems = secondaryWeaponItems player;
@@ -61,6 +62,16 @@ if(handgunWeapon player != "") then
 	};
 
 }forEach (weapons player);
+
+// Check their assigned items
+{
+	if(!(_x in _safeItems)) then
+	{
+		player unassignItem _x;
+		player removeItem _x;
+		_aItems pushBack _x;
+	};
+}forEach (assignedItems player);
 
 
 //-- Create holder and add everything to it.

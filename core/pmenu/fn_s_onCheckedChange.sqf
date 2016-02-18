@@ -32,6 +32,6 @@ switch(_option) do {
 	
 	case "sidechat": {
 		life_sidechat = false;
-		//[player,life_sidechat,playerSide] remoteExecCall ["TON_fnc_managesc",RSERV];
+		[player,life_sidechat,playerSide] remoteExecCall ["TON_fnc_managesc",RSERV];
 	};
 };

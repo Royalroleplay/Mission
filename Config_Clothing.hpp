@@ -330,7 +330,8 @@ class Clothing {
 			{ "TRYK_B_Carryall_wood", "", 500, { "", "", -1 } },
 			{ "TRYK_B_FieldPack_Wood", "", 500, { "", "", -1 } },
 			{ "TRYK_B_Kitbag_blk", "", 500, { "", "", -1 } },
-			{ "TRYK_B_Kitbag_Base", "", 500, { "", "", -1 } }
+			{ "TRYK_B_Kitbag_Base", "", 500, { "", "", -1 } },
+			{ "a3l_bergenMurica", "", 500, { "", "", -1 } }
 		};
 	};
 
@@ -575,7 +576,8 @@ class Clothing {
 			{ "TRYK_B_Kitbag_blk", "", 500, { "", "", -1 } },
 			{ "TRYK_B_Kitbag_Base", "", 500, { "", "", -1 } },
 			{ "TRYK_B_Kitbag_blk", "", 500, { "", "", -1 } },
-			{ "TRYK_B_Kitbag_Base", "", 500, { "", "", -1 } }
+			{ "TRYK_B_Kitbag_Base", "", 500, { "", "", -1 } },
+			{ "a3l_bergenMurica", "", 500, { "", "", -1 } }
 		};
 	};
 

@@ -28,11 +28,15 @@ if(!(typeName _price isEqualTo typeName 0) OR _price < 1) then {_price = 1000};
 if(life_atmbank < _price) exitWith {hint format[(localize "STR_Garage_CashError"),[_price] call life_fnc_numberText];};
 
 if(typeName life_garage_sp isEqualTo typeName []) then {
+
 	[_vid,_pid,(life_garage_sp select 0),_unit,_price,(life_garage_sp select 1)] remoteExec ["TON_fnc_spawnVehicle",RSERV];
+
 } else {
 	if(life_garage_sp in ["medic_spawn_1","medic_spawn_2","medic_spawn_3","ems_heli"]) then {
+	
 		[_vid,_pid,life_garage_sp,_unit,_price] remoteExec ["TON_fnc_spawnVehicle",RSERV];
-	} else {
+	} else {	
+
 		[_vid,_pid,(getMarkerPos life_garage_sp),_unit,_price,markerDir life_garage_sp] remoteExec ["TON_fnc_spawnVehicle",RSERV];
 	};
 };

@@ -10,6 +10,7 @@
 	Description:
 	Updates the HUD when it needs to.
 */
+/*
 disableSerialization;
 
 if(isNull LIFEdisplay) then {[] call life_fnc_hudSetup;};

@@ -349,6 +349,10 @@ class WeaponShops
 				{"RH_7Rnd_45cal_m1911",nil,300},
 				{"RH_kimber",nil,11000},
 				{"RH_7Rnd_45cal_m1911",nil,300},
+				{"RH_deagle",nil,15000},
+				{"rh_7rnd_50_ae",nil,800},
+				{"rh_python",nil,18500},
+				{"rh_6rnd_357_mag",nil,1000}, 
 				{"RH_g18",nil,12000},
 				{"RH_19Rnd_9x19_g18",nil,175},
 				{"RH_vz61",nil,13250},
@@ -378,9 +382,17 @@ class WeaponShops
 				{"hlc_rifle_ak47",nil,46500},
 				{"hlc_30Rnd_762x39_b_ak",nil,250},
 				{"hlc_rifle_akm",nil,52350},
+				{"rh_ar10",nil,62500},
+				{"rh_20rnd_762x51_ar10",nil,1200},
+				{"hlc_rifle_rpk",nil,68000},
+				{"hlc_75rnd_762x39_m_rpk",nil,8500},
+				{"rh_hb_b",nil,70000},
+				{"rh_30rnd_762x35_fmj",nil,2000},
 				{"hlc_30Rnd_762x39_b_ak",nil,350},
 				{"hlc_optic_kobra",nil,500},
-				{"optic_Aco",nil,500}
+				{"optic_Aco",nil,500},
+				{"RH_cmore",nil,2500},
+				{"rh_compm2",nil,3000}
 			};
 		};
 

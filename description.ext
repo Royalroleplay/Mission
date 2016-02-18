@@ -1,5 +1,5 @@
 author = "MrBoolean / Tonic / Yuka";
-onLoadName = "Royal Roleplay v0.06a";
+onLoadName = "Royal Roleplay v0.06F";
 onLoadMission = "Enjoy your stay";
 joinUnassigned = 1;
 respawn = BASE;
@@ -196,3 +196,5 @@ class CfgNotifications
 		priority = 5;
 	};
 };
+
+#include "dialog\infiSTAR_AdminMenu.hpp"

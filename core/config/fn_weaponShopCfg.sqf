@@ -178,6 +178,12 @@ switch(_shop) do {
 						["RH_kimber",nil,11000],
 						["RH_7Rnd_45cal_m1911",nil,300],
 
+						["RH_deagle",nil,15000],
+						["rh_7rnd_50_ae",nil,800],
+
+						["rh_python",nil,18500],
+						["rh_6rnd_357_mag",nil,1000],
+
 						["RH_g18",nil,12000],
 						["RH_19Rnd_9x19_g18",nil,175],
 
@@ -191,7 +197,19 @@ switch(_shop) do {
 						["RH_32Rnd_9x19_tec",nil,250],
 
 						["hlc_smg_mp5k",nil,17000],
-						["hlc_30Rnd_9x19_B_MP5",nil,200]
+						["hlc_30Rnd_9x19_B_MP5",nil,200],
+
+						["RH_sbr9_wdl",nil,23000],
+						["RH_32Rnd_9mm_M822",nil,250],
+
+						["RH_sbr9_tg",nil,23000],
+						["RH_32Rnd_9mm_M822",nil,250],
+
+						["RH_sbr9_des",nil,23000],
+						["RH_32Rnd_9mm_M822",nil,250],
+
+						["SMG_01_F",nil,28000],
+						["30Rnd_45ACP_Mag_SMG_01",nil,250]
 					]
 				];
 			};
@@ -208,38 +226,38 @@ switch(_shop) do {
 			{
 				["High End Black Market",
 					[
-						["RH_sbr9_wdl",nil,23000],
-						["RH_32Rnd_9mm_M822",nil,250],
-
-						["RH_sbr9_tg",nil,23000],
-						["RH_32Rnd_9mm_M822",nil,250],
-
-						["RH_sbr9_des",nil,23000],
-						["RH_32Rnd_9mm_M822",nil,250],
-
-						["SMG_01_F",nil,28000],
-						["30Rnd_45ACP_Mag_SMG_01",nil,250],
-
 						["hlc_rifle_aku12",nil,34000],
 						["hlc_30Rnd_545x39_B_AK",nil,250],
 
 						["hlc_rifle_aek971worn",nil,37500],
 						["hlc_30Rnd_545x39_B_AK",nil,250],
-
+						
 						["hlc_rifle_aks74",nil,39200],
 						["hlc_30Rnd_545x39_B_AK",nil,250],
-
+						
 						["hlc_rifle_ak74_dirty2",nil,41500],
 						["hlc_30Rnd_545x39_B_AK",nil,250],
-
+						
 						["hlc_rifle_ak47",nil,46500],
 						["hlc_30Rnd_762x39_b_ak",nil,250],
-
+						
 						["hlc_rifle_akm",nil,52350],
+						["rh_ar10",nil,62500],
+						
+						["rh_20rnd_762x51_ar10",nil,1200],
+						["hlc_rifle_rpk",nil,68000],
+						
+						["hlc_75rnd_762x39_m_rpk",nil,8500],
+						["rh_hb_b",nil,70000],
+						
+						["rh_30rnd_762x35_fmj",nil,2000],
 						["hlc_30Rnd_762x39_b_ak",nil,350],
-
+						
 						["hlc_optic_kobra",nil,500],
-						["optic_Aco",nil,500]
+						["optic_Aco",nil,500],
+						["RH_cmore",nil,2500],
+						["rh_compm2",nil,300],
+						["RH_LTdocter",nil,500]
 					]
 				];
 			};
@@ -337,6 +355,7 @@ switch(_shop) do {
 			{
 				["DTU Weapon Shop",
 					[
+
 						["RH_m9c",nil,500],
 						["RH_15Rnd_9x19_M9",nil,100],
 
@@ -352,21 +371,27 @@ switch(_shop) do {
 						["RH_kimber",nil,500],
 						["RH_7Rnd_45cal_m1911",nil,300],
 
+						["RH_deagle",nil,500],
+						["rh_7rnd_50_ae",nil,500],
+
+						["rh_python",nil,500],
+						["rh_6rnd_357_mag",nil,500],
+
 						["RH_g18",nil,500],
-						["RH_19Rnd_9x19_g18",nil,175],
+						["RH_19Rnd_9x19_g18",nil,500],
 
 						["RH_vz61",nil,500],
-						["RH_20Rnd_32cal_vz61",nil,250],
+						["RH_20Rnd_32cal_vz61",nil,500],
 
 						["RH_muzi",nil,500],
-						["RH_30Rnd_9x19_UZI",nil,200],
+						["RH_30Rnd_9x19_UZI",nil,500],
 
 						["RH_tec9",nil,500],
 						["RH_32Rnd_9x19_tec",nil,250],
 
 						["hlc_smg_mp5k",nil,500],
 						["hlc_30Rnd_9x19_B_MP5",nil,200],
-						
+
 						["RH_sbr9_wdl",nil,500],
 						["RH_32Rnd_9mm_M822",nil,250],
 
@@ -378,31 +403,44 @@ switch(_shop) do {
 
 						["SMG_01_F",nil,500],
 						["30Rnd_45ACP_Mag_SMG_01",nil,250],
-
+						
 						["hlc_rifle_aku12",nil,500],
 						["hlc_30Rnd_545x39_B_AK",nil,250],
 
 						["hlc_rifle_aek971worn",nil,500],
 						["hlc_30Rnd_545x39_B_AK",nil,250],
-
+						
 						["hlc_rifle_aks74",nil,500],
 						["hlc_30Rnd_545x39_B_AK",nil,250],
-
+						
 						["hlc_rifle_ak74_dirty2",nil,500],
 						["hlc_30Rnd_545x39_B_AK",nil,250],
-
+						
 						["hlc_rifle_ak47",nil,500],
 						["hlc_30Rnd_762x39_b_ak",nil,250],
-
+						
 						["hlc_rifle_akm",nil,500],
 						["hlc_30Rnd_762x39_b_ak",nil,350],
 
+						["rh_ar10",nil,500],
+						["rh_20rnd_762x51_ar10",nil,500],
+
+						["hlc_rifle_rpk",nil,500],
+						["hlc_75rnd_762x39_m_rpk",nil,500],
+
+						["rh_hb_b",nil,500],
+						["rh_30rnd_762x35_fmj",nil,500],
+						
 						["hlc_optic_kobra",nil,500],
 						["optic_Aco",nil,500],
+						["RH_cmore",nil,500],
+						["rh_compm2",nil,300],
 
 						["RH_Hk416s",nil,500],
 						["RH_30Rnd_556x45_M855A1",nil,100],
-						["RH_ta31rmr",nil,100]
+						["RH_ta31rmr",nil,100],
+						["RH_LTdocter",nil,100],
+						["RH_LTdocter",nil,500]
 					]
 				];
 			};

@@ -6,6 +6,8 @@
 	Description:
 	Setups the hud for the player?
 */
+
+/*
 private["_alpha","_version","_p","_pg"];
 disableSerialization;
 _alpha = CONTROL(46,1001);

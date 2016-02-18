@@ -181,7 +181,9 @@ class CarShops {
 			{ "Quiet_c65amg_blanche_f", 500, "" },
 			{ "Quiet_dodge_15_blanche_f", 500, "" },
 			{ "Quiet_v2_r8plus_blanche_f", 500, "" },
-			{ "Mrshounka_subaru08_civ", 500, "" }
+			{ "Mrshounka_subaru08_civ", 500, "" },
+			{ "ivory_wrx_cop_marked", 500, "" },
+			{ "ivory_wrx_cop_slicktop", 500, ""}
 		};
 	};
 
@@ -262,11 +264,12 @@ class CarShops {
 			{ "DRPG_08Suburban_P_U", 2500, "" },
 			{ "DRPG_06Victoria_P_T", 3000, "" },
 			{ "DRPG_14Explorer_P_P", 3500, "" },
-			{ "DRPG_06Victoria_P_P", 4000, "" }
+			{ "DRPG_06Victoria_P_P", 4000, "" },
+			{ "ivory_wrx_cop_marked", 500, "" }
 		};
 	};
 
-	class civ_air {
+	class civ_air {	
 		side = "civ";
 		vehicles[] = {
 			{ "sab_camel", 150000, "pilot" },
@@ -465,11 +468,8 @@ class CfgVehicles {
 	class shounka_clk_grise: Jonzie_Base {vItemSpace = 25;};
 	class Mrshounka_mercedes_190_p_civ: Jonzie_Base {vItemSpace = 25;};
 	class Mrshounka_c4_picasso_p_bleufonce: Jonzie_Base {vItemSpace = 25;};
-	class ivory_wrx: Jonzie_Base {vItemSpace = 25;};
 	class IVORY_REV: Jonzie_Base {vItemSpace = 25;};
-	class ivory_c: Jonzie_Base {vItemSpace = 25;};
 	class IVORY_PRIUS: Jonzie_Base {vItemSpace = 25;};
-	class ivory_lp560: Jonzie_Base {vItemSpace = 25;};
 	class ivory_lfa: Jonzie_Base {vItemSpace = 25;};
 	class ivory_gt500: Jonzie_Base {vItemSpace = 25;};
 	class Jonzie_Superliner: Jonzie_Base {vItemSpace = 0;};
@@ -1151,6 +1151,235 @@ class CfgVehicles {
                 "\a3\air_f_beta\Heli_Transport_02\Data\Skins\heli_transport_02_1_dahoman_co.paa",
                 "\a3\air_f_beta\Heli_Transport_02\Data\Skins\heli_transport_02_2_dahoman_co.paa",
                 "\a3\air_f_beta\Heli_Transport_02\Data\Skins\heli_transport_02_3_dahoman_co.paa"
+            } }
+        };
+    };
+   
+    //Bently Skins
+    class ivory_c {
+        vItemSpace = 10;
+        storageFee[] = { 100, 500, 650, 100 };
+        garageSell[] = { 0, 0, 0, 0 };
+        insurance = 2500;
+        chopShop = 2500;
+        _path = "\ivory_c\data";
+        textures[] = {
+            { "Black", "civ", {
+                "#(argb,8,8,3)color(0,0,0,1.0,CO)"
+            } },
+            { "Gold", "civ", {
+                    "#(argb,8,8,3)color(1,0.843137,0,1.0,CO)"
+            } },
+            { "Gray", "civ", {
+                    "#(argb,8,8,3)color(0.501961,0.501961,0.501961,1.0,CO)"
+            } },
+            { "Green", "civ", {
+                    "#(argb,8,8,3)color(0,0.501961,0,1.0,CO)"
+            } },
+            { "Pink", "civ", {
+                    "#(argb,8,8,3)color(1,0.411765,0.705882,1.0,CO)"
+            } },
+            { "Purple", "civ", {
+                    "#(argb,8,8,3)color(0.501961,0,0.501961,1.0,CO)"
+            } },
+            { "Red", "civ", {
+                    "#(argb,8,8,3)color(1,0,0,1.0,CO)"
+            } },
+            { "Teal", "civ", {
+                    "#(argb,8,8,3)color(1,1,1,1.0,CO)"
+            } },
+            { "White", "civ", {
+                    "#(argb,8,8,3)color(0.501961,0,0.501961,1)"
+            } },
+            { "Carillo", "civ", {
+                    "\ivory_c\data\bentley_con_livery01.paa"
+            } },
+            { "8", "civ", {
+                    "\ivory_c\data\bentley_con_livery02.paa"
+            } },
+            { "Revo", "civ", {
+                    "\ivory_c\data\bentley_con_livery03.paa"
+            } },
+            { "Ksport", "civ", {
+                    "\ivory_c\data\bentley_con_livery04.paa"
+            } },
+            { "Gee", "civ", {
+                    "\ivory_wrx\data\gee.paa"
+            } },
+            { "Race", "civ", {
+                    "\ivory_c\data\race.paa"
+            } },
+            { "Goldee", "civ", {
+                    "\ivory_c\data\goldee.paa"
+            } },
+            { "Camo", "civ", {
+                    "\ivory_c\data\camo.paa"
+            } },
+            { "Velvet", "civ", {
+                    "\ivory_c\data\velvet.paa"
+            } },
+            { "Blue", "civ", {
+                    "#(argb,8,8,3)color(0.027451,0.211765,0.972549,1.0,CO)"
+            } },
+            { "Teal", "civ", {
+                    "#(argb,8,8,3)color(0,0.333333,0.290196,1.0,CO)"
+            } },
+            { "Wedding", "civ", {
+                    "#(argb,8,8,3)color(1,1,1,1.0,CO)"
+            } },
+            { "Orange", "civ", {
+                    "#(argb,8,8,3)color(1,0.501961,0,1.0,CO)"
+            } }
+        };
+    };
+   
+   
+   
+    //lp560
+    class ivory_lp560 {
+        vItemSpace = 25;
+        storageFee[] = { 100, 500, 650, 100 };
+        garageSell[] = { 0, 0, 0, 0 };
+        insurance = 2500;
+        chopShop = 2500;
+        _path = "\ivory_lp560\data";
+        textures[] = {
+            { "Black", "civ", {
+                "#(argb,8,8,3)color(0,0,0,1.0,CO)"
+            } },
+            { "Blue", "civ", {
+                "#(argb,8,8,3)color(0.027451,0.211765,0.972549,1.0,CO)"
+            } },
+            { "Gold", "civ", {
+                    "#(argb,8,8,3)color(1,0.843137,0,1.0,CO)"
+            } },
+            { "Gray", "civ", {
+                    "#(argb,8,8,3)color(0.501961,0.501961,0.501961,1.0,CO)"
+            } },
+            { "Green", "civ", {
+                    "#(argb,8,8,3)color(0,0.501961,0,1.0,CO)"
+            } },
+            { "Pink", "civ", {
+                    "#(argb,8,8,3)color(1,0.411765,0.705882,1.0,CO)"
+            } },
+            { "Purple", "civ", {
+                    "#(argb,8,8,3)color(0.501961,0,0.501961,1.0,CO)"
+            } },
+            { "Red", "civ", {
+                    "#(argb,8,8,3)color(1,0,0,1.0,CO)"
+            } },
+            { "Teal", "civ", {
+                    "#(argb,8,8,3)color(0,0.333333,0.290196,1.0,CO)"
+            } },
+            { "White", "civ", {
+                    "#(argb,8,8,3)color(1,1,1,1.0,CO)"
+            } },
+            { "Orange", "civ", {
+                    "#(argb,8,8,3)color(1,0.501961,0,1.0,CO)"
+            } },
+            { "Fidanza", "civ", {
+                    "\ivory_lp560\data\lamborghini_gallardo_livery01.paa"
+            } },
+            { "Koni", "civ", {
+                    "\ivory_lp560\data\lamborghini_gallardo_livery02.paa"
+            } },
+            { "KW", "civ", {
+                    "\ivory_lp560\data\lamborghini_gallardo_livery03.paa"
+            } },
+            { "Blue Ruthless", "civ", {
+                    "\ivory_lp560\data\lamborghini_gallardo_livery04.paa"
+            } },
+            { "Red Savage", "civ", {
+                    "\ivory_lp560\data\redsavage.paa"
+            } },
+            { "Galaxy", "civ", {
+                    "\ivory_lp560\data\galaxy.paa"
+            } },
+            { "Dark Knight", "civ", {
+                    "\ivory_lp560\data\darkknight.paa"
+            } },
+            { "Purrardo", "civ", {
+                    "\ivory_lp560\data\purrardo.paa"
+            } },
+            { "Dark Knight", "civ", {
+                    "\ivory_lp560\data\25thedition.paa"
+            } }
+        };
+    };
+   
+   
+   
+    //ivory_wrx_cop_marked
+    class ivory_wrx_cop_marked {
+        vItemSpace = 25;
+        storageFee[] = { 100, 500, 650, 100 };
+        garageSell[] = { 0, 0, 0, 0 };
+        insurance = 2500;
+        chopShop = 2500;
+        _path = "\ivory_wrx\data";
+        textures[] = {
+            { "PD Marked", "cop", {
+                    "\ivory_wrx\data\pd.paa"
+            } },
+            { "Sert", "cop", {
+                    "\ivory_wrx\data\sert.paa"
+            } },
+            { "Sheriff", "cop", {
+                    "\ivory_wrx\data\so.paa"
+            } },
+            { "ST", "cop", {
+                    "\ivory_wrx\data\st.paa"
+            } }
+        };
+    };
+   
+    //ivory_wrx_cop_slicktop
+    class ivory_wrx_cop_slicktop {
+        vItemSpace = 25;
+        storageFee[] = { 100, 500, 650, 100 };
+        garageSell[] = { 0, 0, 0, 0 };
+        insurance = 2500;
+        chopShop = 2500;
+        _path = "\ivory_wrx\data";
+        textures[] = {
+            { "PD Marked", "cop", {
+                    "\ivory_wrx\data\pd.paa"
+            } },
+            { "Sert", "cop", {
+                    "\ivory_wrx\data\sert.paa"
+            } },
+            { "Sheriff", "cop", {
+                    "\ivory_wrx\data\so.paa"
+            } },
+            { "ST", "cop", {
+                    "\ivory_wrx\data\st.paa"
+            } },
+            { "Black", "civ", {
+                "#(argb,8,8,3)color(0,0,0,1.0,CO)"
+            } },
+            { "Gold", "civ", {
+                    "#(argb,8,8,3)color(1,0.843137,0,1.0,CO)"
+            } },
+            { "Gray", "civ", {
+                    "#(argb,8,8,3)color(0.501961,0.501961,0.501961,1.0,CO)"
+            } },
+            { "Green", "civ", {
+                    "#(argb,8,8,3)color(0,0.501961,0,1.0,CO)"
+            } },
+            { "Pink", "civ", {
+                    "#(argb,8,8,3)color(1,0.411765,0.705882,1.0,CO)"
+            } },
+            { "Purple", "civ", {
+                    "#(argb,8,8,3)color(0.501961,0,0.501961,1.0,CO)"
+            } },
+            { "Red", "civ", {
+                    "#(argb,8,8,3)color(1,0,0,1.0,CO)"
+            } },
+            { "Teal", "civ", {
+                    "#(argb,8,8,3)color(1,1,1,1.0,CO)"
+            } },
+            { "White", "civ", {
+                    "#(argb,8,8,3)color(0.501961,0,0.501961,1)"
             } }
         };
     };

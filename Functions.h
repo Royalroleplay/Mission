@@ -54,8 +54,7 @@ class Life_Client_Core
 	{
 		file = "Core\MrBoolean\HUD";
 
-		class initStatusbar {};
-		class updateStatusbar {};
+		class statusbar {};
 	};
 
 	class MrBoolean_Survival
@@ -219,6 +218,7 @@ class Life_Client_Core
 	class Functions
 	{
 		file = "core\functions";
+		class encryptRadio {};
 		class robNPC {};
 		class calWeightDiff {};
 		class fetchCfgDetails {};

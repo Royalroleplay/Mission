@@ -47,15 +47,9 @@ if(!isNull _source) then {
 			};
 		};
 
-		if(_projectile == "jackhammer_ammo") then {
+		if(_projectile in ["jackhammer_ammo"]) then {
 			_damage = 0;
 		};
-	};
-};
-
-if(vehicle _source isKindOf "LandVehicle") then {
-	if(_source != _unit AND {alive _unit} AND {isPlayer _source}) then {
-		_damage = 0;
 	};
 };
 
