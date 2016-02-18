@@ -5,7 +5,7 @@ joinUnassigned = 1;
 respawn = BASE;
 respawndelay = 0;
 disabledAI = true;
-disableChannels[]={0,1,2,3,4,5};
+disableChannels[]={0,2,6};
 enableDebugConsole = 1;
 respawnDialog = 0;
 onPauseScript[] = { "life_fnc_escapeInterupt" };
@@ -32,6 +32,18 @@ class RscTitles {
 	#include "dialog\ui.hpp"
 	#include "dialog\progress.hpp"
 	#include "dialog\hud_nameTags.h"
+};
+
+showHUD[] = 
+{
+	true,	
+	true,	
+	true,	
+	true,	
+	true,	
+	false,	
+	false,	
+	true	
 };
 
 class CfgFunctions {
