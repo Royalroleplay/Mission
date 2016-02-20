@@ -12,7 +12,7 @@ class CarShops {
 			{ "Jonzie_Z432", 2000, "driver" },
 			{ "Jonzie_Galant", 3000, "driver" },
 			{ "Jonzie_Corolla", 4500, "driver" },
-			{ "ADM_GMC_Vandura", 5000, "driver" },
+			{ "A3L_GMC_Van", 5000, "driver" },
 			{ "Jonzie_Ceed", 6000, "driver" },
 			{ "Jonzie_Ute", 7500, "driver" },
 			{ "Jonzie_Mini_Cooper", 8000, "driver" },
@@ -97,7 +97,10 @@ class CarShops {
 			{ "Quiet_c65amg_blanche_f", 80000, "driver" },
 			{ "Quiet_dodge_15_blanche_f", 50000, "driver" },
 			{ "Quiet_v2_r8plus_blanche_f", 250000, "driver" },
-			{ "Mrshounka_subaru08_civ", 35000, "driver" }
+			{ "Mrshounka_subaru08_civ", 35000, "driver" },
+			{ "A3L_Ferrari458", 125000, "driver" },
+			{ "A3L_Ford_Mustang", 45000, "driver" },
+			{ "AM_Escalade", 50000, "driver" }
 		};
 	};
 
@@ -107,7 +110,7 @@ class CarShops {
 			{ "Jonzie_Z432", 500, "" },
 			{ "Jonzie_Galant", 500, "" },
 			{ "Jonzie_Corolla", 500, "" },
-			{ "ADM_GMC_Vandura", 500, "" },
+			{ "A3L_GMC_Van", 500, "" },
 			{ "Jonzie_Ceed", 500, "" },
 			{ "Jonzie_Ute", 500, "" },
 			{ "Jonzie_Transit", 500, "" },
@@ -469,13 +472,11 @@ class CfgVehicles {
 	class Mrshounka_mercedes_190_p_civ: Jonzie_Base {vItemSpace = 25;};
 	class Mrshounka_c4_picasso_p_bleufonce: Jonzie_Base {vItemSpace = 25;};
 	class IVORY_REV: Jonzie_Base {vItemSpace = 25;};
-	class IVORY_PRIUS: Jonzie_Base {vItemSpace = 25;};
 	class ivory_lfa: Jonzie_Base {vItemSpace = 25;};
 	class ivory_gt500: Jonzie_Base {vItemSpace = 25;};
 	class Jonzie_Superliner: Jonzie_Base {vItemSpace = 0;};
 	class wirk_h3_limo: Jonzie_Base {vItemSpace = 25;};
 	class Jonzie_STI: Jonzie_Base {vItemSpace = 25;};
-	class A3L_Challenger: Jonzie_Base {vItemSpace = 25;};
 	class A3L_TaurusBlack: Jonzie_Base {vItemSpace = 25;};
 	class A3L_CVBlack: Jonzie_Base {vItemSpace = 25;};
 	class Jonzie_XB: Jonzie_Base {vItemSpace = 25;};
@@ -517,6 +518,374 @@ class CfgVehicles {
 	class DRPG_12M5_Base: Jonzie_Base {vItemSpace = 150;};
 	class Jonzie_Escalade: Jonzie_Base {};
 	
+	class A3L_Challenger {
+		vItemSpace = 10;
+    	storageFee[] = { 100, 500, 650, 100 };
+    	garageSell[] = { 0, 0, 0, 0 };
+    	insurance = 2500;
+    	chopShop = 2500;
+        textures[] = {
+        	{ "Red", "civ", {
+                "#(argb,8,8,3)color(1,0,0,1)"
+            } },
+			{ "Black", "civ", {
+	                "#(argb,8,8,3)color(0,0,0,1)"
+            } },
+			{ "Dark blue", "civ", {
+	                "#(argb,8,8,3)color(0,0,0.627451,1)"
+            } },
+			{ "Yellow", "civ", {
+	                "#(argb,8,8,3)color(1,1,0,1)"
+            } },
+			{ "Pink", "civ", {
+	                "#(argb,8,8,3)color(1,0,1,1)"
+            } },
+			{ "Gray", "civ", {
+	                "#(argb,8,8,3)color(0.5,0.5,0.5,1)"
+            } },
+            { "Purple", "civ", {
+	                "#(argb,8,8,3)color(0.501961,0,0.501961,1)"
+            } },
+			{ "Orange", "civ", {
+	                "#(argb,8,8,3)color(1,0.501961,0,1)"
+            } },
+			{ "White", "civ", {
+					"\A3L_Challenger\data\colors\white.paa"
+            } },
+			{ "Hemi", "civ", {
+					"\A3L_Challenger\data\colors\hemi.paa"
+            } },
+			{ "Jacket", "civ", {
+					"\A3L_Challenger\data\colors\Jacket.paa"
+            } },
+			{ "Fire", "civ", {
+					"\A3L_Challenger\data\colors\Fir.paa"
+            } },
+			{ "General", "civ", {
+					"\A3L_Challenger\data\colors\general.paa"
+            } },
+			{ "Graffiti", "civ", {
+					"\A3L_Challenger\data\colors\graffity.paa"
+            } },
+			{ "SRT8", "civ", {
+					"\A3L_Challenger\data\colors\srt8_sign_2.paa"
+            } }
+	    };
+	};
+	
+	class IVORY_PRIUS {
+		vItemSpace = 10;
+    	storageFee[] = { 100, 500, 650, 100 };
+    	garageSell[] = { 0, 0, 0, 0 };
+    	insurance = 2500;
+    	chopShop = 2500;
+        textures[] = {
+        	{ "Red", "civ", {
+                "#(argb,8,8,3)color(1,0,0,1)"
+            } },
+			{ "Black", "civ", {
+	                "#(argb,8,8,3)color(0,0,0,1)"
+            } },
+			{ "Dark blue", "civ", {
+	                "#(argb,8,8,3)color(0,0,0.627451,1)"
+            } },
+			{ "Yellow", "civ", {
+	                "#(argb,8,8,3)color(1,1,0,1)"
+            } },
+			{ "Pink", "civ", {
+	                "#(argb,8,8,3)color(1,0,1,1)"
+            } },
+			{ "Gray", "civ", {
+	                "#(argb,8,8,3)color(0.5,0.5,0.5,1)"
+            } },
+            { "Purple", "civ", {
+	                "#(argb,8,8,3)color(0.501961,0,0.501961,1)"
+            } },
+			{ "Orange", "civ", {
+	                "#(argb,8,8,3)color(1,0.501961,0,1)"
+            } },
+			{ "White", "civ", {
+					"\A3L_Challenger\data\colors\white.paa"
+            } },
+			{ "Anime", "civ", {
+					"\IVORY_PRIUS\data\anime.paa"
+            } },
+			{ "Animu", "civ", {
+					"\IVORY_PRIUS\data\animu.pac"
+            } },
+			{ "Downtown Taxi", "civ", {
+					"\IVORY_PRIUS\data\taxiblue.paa"
+            } },
+			{ "Anime v2", "civ", {
+					"\IVORY_PRIUS\data\wtf.paa"
+            } },
+			{ "NYC", "civ", {
+					"\IVORY_PRIUS\data\yankes.paa"
+            } }
+	    };
+	};
+	
+	class AM_Escalade {
+		vItemSpace = 10;
+    	storageFee[] = { 100, 500, 650, 100 };
+    	garageSell[] = { 0, 0, 0, 0 };
+    	insurance = 2500;
+    	chopShop = 2500;
+        textures[] = {
+        	{ "Red", "civ", {
+                "#(argb,8,8,3)color(1,0,0,1)"
+            } },
+			{ "Black", "civ", {
+	                "#(argb,8,8,3)color(0,0,0,1)"
+            } },
+			{ "Dark blue", "civ", {
+	                "#(argb,8,8,3)color(0,0,0.627451,1)"
+            } },
+			{ "Yellow", "civ", {
+	                "#(argb,8,8,3)color(1,1,0,1)"
+            } },
+			{ "Pink", "civ", {
+	                "#(argb,8,8,3)color(1,0,1,1)"
+            } },
+			{ "Gray", "civ", {
+	                "#(argb,8,8,3)color(0.5,0.5,0.5,1)"
+            } },
+            { "Purple", "civ", {
+	                "#(argb,8,8,3)color(0.501961,0,0.501961,1)"
+            } },
+			{ "Orange", "civ", {
+	                "#(argb,8,8,3)color(1,0.501961,0,1)"
+            } },
+			{ "White", "civ", {
+					"\A3L_Challenger\data\colors\white.paa"
+            } },
+			{ "Silver", "civ", {
+					"AM_V_Data\data\Colours\Silver.paa"
+            } },
+			{ "ArtBomb", "civ", {
+					"AM_Sexcalade\data\artcadi.paa"
+            } },
+			{ "Taxi", "civ", {
+					"AM_Sexcalade\data\Taxi.paa"
+            } }
+	    };
+	};
+	
+	
+	class A3L_Challenger {
+		vItemSpace = 100;
+    	storageFee[] = { 100, 500, 650, 100 };
+    	garageSell[] = { 0, 0, 0, 0 };
+    	insurance = 2500;
+    	chopShop = 2500;
+        textures[] = {
+        	{ "Red", "civ", {
+                "#(argb,8,8,3)color(1,0,0,1)"
+            } },
+			{ "Black", "civ", {
+	                "#(argb,8,8,3)color(0,0,0,1)"
+            } },
+			{ "Dark blue", "civ", {
+	                "#(argb,8,8,3)color(0,0,0.627451,1)"
+            } },
+			{ "Yellow", "civ", {
+	                "#(argb,8,8,3)color(1,1,0,1)"
+            } },
+			{ "Pink", "civ", {
+	                "#(argb,8,8,3)color(1,0,1,1)"
+            } },
+			{ "Gray", "civ", {
+	                "#(argb,8,8,3)color(0.5,0.5,0.5,1)"
+            } },
+            { "Purple", "civ", {
+	                "#(argb,8,8,3)color(0.501961,0,0.501961,1)"
+            } },
+			{ "Orange", "civ", {
+	                "#(argb,8,8,3)color(1,0.501961,0,1)"
+            } },
+			{ "White", "civ", {
+					"\A3L_Challenger\data\colors\white.paa"
+            } },
+			{ "Aqua", "civ", {
+					"A3L_GMC_Van\Mrshounka_texture\Aqua.paa"
+            } },
+			{ "Candy", "civ", {
+					"A3L_GMC_Van\Mrshounka_texture\Candy.paa"
+            } },
+			{ "Chill", "civ", {
+					"A3L_GMC_Van\Mrshounka_texture\Chill.paa"
+            } },
+			{ "Dew", "civ", {
+					"A3L_GMC_Van\Mrshounka_texture\Dew.paa"
+            } },
+			{ "Fox News", "civ", {
+					"A3L_GMC_Van\Mrshounka_texture\Fox.paa"
+            } },
+			{ "Gangbang", "civ", {
+					"A3L_GMC_Van\Mrshounka_texture\Gangbang.paa"
+            } },
+			{ "Ghost", "civ", {
+					"A3L_GMC_Van\Mrshounka_texture\Ghost.paa"
+            } },
+			{ "LOST BOYS", "civ", {
+					"A3L_GMC_Van\Mrshounka_texture\LOST.paa"
+            } },
+			{ "Monster Drinks", "civ", {
+					"A3L_GMC_Van\Mrshounka_texture\Monster.paa"
+            } },
+			{ "News4", "civ", {
+					"A3L_GMC_Van\Mrshounka_texture\News 4.paa"
+            } },
+			{ "Ocean", "civ", {
+					"A3L_GMC_Van\Mrshounka_texture\Ocean.paa"
+            } },
+			{ "Rockstar Drinks", "civ", {
+					"A3L_GMC_Van\Mrshounka_texture\Rockstar.paa"
+            } },
+			{ "Shark", "civ", {
+					"A3L_GMC_Van\Mrshounka_texture\Shark.paa"
+            } },
+			{ "SWAGGY", "civ", {
+					"A3L_GMC_Van\Mrshounka_texture\SWAGGY.paa"
+            } },
+			{ "Scoobydoo", "civ", {
+					"A3L_GMC_Van\Mrshounka_texture\Scoobydoo.paa"
+            } }
+/*			{ "Food Store", "civ", {
+					"A3L_GMC_Van\Mrshounka_texture\GMC_Food.paa"
+            } },
+			{ "General Store", "civ", {
+					"A3L_GMC_Van\Mrshounka_texture\GMC_General.paa"
+            } },
+			{ "Clothing Store", "civ", {
+				"A3L_GMC_Van\Mrshounka_texture\GMC_Clothing.paa"
+            } }
+*/
+	    };
+	};
+	
+	class A3L_Ferrari458 {
+		vItemSpace = 10;
+    	storageFee[] = { 100, 500, 650, 100 };
+    	garageSell[] = { 0, 0, 0, 0 };
+    	insurance = 2500;
+    	chopShop = 2500;
+        textures[] = {
+        	{ "Red", "civ", {
+                "#(argb,8,8,3)color(1,0,0,1)"
+            } },
+			{ "Black", "civ", {
+	                "#(argb,8,8,3)color(0,0,0,1)"
+            } },
+			{ "Dark blue", "civ", {
+	                "#(argb,8,8,3)color(0,0,0.627451,1)"
+            } },
+			{ "Yellow", "civ", {
+	                "#(argb,8,8,3)color(1,1,0,1)"
+            } },
+			{ "Pink", "civ", {
+	                "#(argb,8,8,3)color(1,0,1,1)"
+            } },
+			{ "Gray", "civ", {
+	                "#(argb,8,8,3)color(0.5,0.5,0.5,1)"
+            } },
+            { "Purple", "civ", {
+	                "#(argb,8,8,3)color(0.501961,0,0.501961,1)"
+            } },
+			{ "Orange", "civ", {
+	                "#(argb,8,8,3)color(1,0.501961,0,1)"
+            } },
+			{ "Challenge", "civ", {
+					"A3L_Ferrari458\Data\Challenge.paa"
+            } },
+			{ "Dragon", "civ", {
+					"A3L_Ferrari458\Data\Dragon.paa"
+            } },
+			{ "Gumball", "civ", {
+					"A3L_Ferrari458\Data\Gumball.paa"
+            } },
+			{ "Gumball Red", "civ", {
+					"A3L_Ferrari458\Data\GumballRed.paa"
+            } },
+			{ "Italia", "civ", {
+					"A3L_Ferrari458\Data\Italia.paa"
+            } },
+			{ "Martini", "civ", {
+					"A3L_Ferrari458\Data\Martini.paa"
+            } },
+			{ "Nighthawk", "civ", {
+					"A3L_Ferrari458\Data\Nighthawk.paa"
+            } },
+			{ "Nyan Cat", "civ", {
+					"A3L_Ferrari458\Data\Nyan.paa"
+            } },
+			{ "Red Dragon", "civ", {
+					"A3L_Ferrari458\Data\RedDragon.paa"
+            } },
+			{ "UK", "civ", {
+					"A3L_Ferrari458\Data\UK.paa"
+            } }
+	    };
+	};
+	
+	class A3L_Ford_Mustang {
+		vItemSpace = 10;
+    	storageFee[] = { 100, 500, 650, 100 };
+    	garageSell[] = { 0, 0, 0, 0 };
+    	insurance = 2500;
+    	chopShop = 2500;
+        textures[] = {
+        	{ "Red", "civ", {
+                "#(argb,8,8,3)color(1,0,0,1)"
+            } },
+			{ "Black", "civ", {
+	                "#(argb,8,8,3)color(0,0,0,1)"
+            } },
+			{ "Dark blue", "civ", {
+	                "#(argb,8,8,3)color(0,0,0.627451,1)"
+            } },
+			{ "Yellow", "civ", {
+	                "#(argb,8,8,3)color(1,1,0,1)"
+            } },
+			{ "Pink", "civ", {
+	                "#(argb,8,8,3)color(1,0,1,1)"
+            } },
+			{ "Gray", "civ", {
+	                "#(argb,8,8,3)color(0.5,0.5,0.5,1)"
+            } },
+            { "Purple", "civ", {
+	                "#(argb,8,8,3)color(0.501961,0,0.501961,1)"
+            } },
+			{ "Orange", "civ", {
+	                "#(argb,8,8,3)color(1,0.501961,0,1)"
+            } },
+			{ "Falken", "civ", {
+					"A3L_Ford_Mustang\Mrshounka_texture\template.paa"
+            } },
+			{ "BlackBird", "civ", {
+					"A3L_Ford_Mustang\Mrshounka_texture\Blackbird.paa"
+            } },
+			{ "Cobra", "civ", {
+					"A3L_Ford_Mustang\Mrshounka_texture\Cobra.paa"
+            } },
+			{ "Monster", "civ", {
+					"A3L_Ford_Mustang\Mrshounka_texture\Monster.paa"
+            } },
+			{ "Roush", "civ", {
+					"A3L_Ford_Mustang\Mrshounka_texture\Roush.paa"
+            } },
+			{ "Sticker Bomb", "civ", {
+					"A3L_Ford_Mustang\Mrshounka_texture\Stickerbomb.paa"
+            } },
+			{ "RedTail", "civ", {
+					"A3L_Ford_Mustang\Mrshounka_texture\RedTail.paa"
+            } },
+			{ "Rs3", "civ", {
+					"A3L_Ford_Mustang\Mrshounka_texture\Rs3.paa"
+            } }
+	    };
+	};
+
 	class I_Truck_02_medical_F : Default {
 		vItemSpace = 150;
 		storageFee[] = { 0, 0, 150, 0 };
