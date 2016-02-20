@@ -159,26 +159,7 @@ switch (_code) do {
 
 	//L Key?
 	case 38: {
-
-		//Radar
 		if(!_alt && !_ctrlKey && playerSide == west) then { [] call life_fnc_radar; };
-
-/* Disable mission based cop lights
-		//If cop run checks for turning lights on.
-		if(_shift && playerSide in [west,independent]) then {
-			if(vehicle player != player && (typeOf vehicle player) in ["C_Offroad_01_F","B_MRAP_01_F","C_SUV_01_F"]) then {
-				if(!isNil {vehicle player getVariable "lights"}) then {
-					if(playerSide == west) then {
-						[vehicle player] call life_fnc_sirenLights;
-					} else {
-						[vehicle player] call life_fnc_medicSirenLights;
-					};
-					_handled = true;
-				};
-			};
-		};
-
-*/
 	};
 
 	//Y Player Menu
@@ -188,6 +169,14 @@ switch (_code) do {
 		};
 		if(!_alt && !_ctrlKey && !dialog && {!life_action_inUse}) then {
 			[] spawn life_fnc_p_openMenu;
+		};
+	};
+
+	//1 - Fix Clothing Bug
+	case 2:
+	{
+		if(_ctrlKey && !_alt) then {
+			[] call life_fnc_fixClothing;
 		};
 	};
 
