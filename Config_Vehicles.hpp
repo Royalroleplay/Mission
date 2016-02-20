@@ -12,7 +12,7 @@ class CarShops {
 			{ "Jonzie_Z432", 2000, "driver" },
 			{ "Jonzie_Galant", 3000, "driver" },
 			{ "Jonzie_Corolla", 4500, "driver" },
-			{ "A3L_GMC_Van", 5000, "driver" },
+			{ "A3L_GMC_Van_White", 5000, "driver" },
 			{ "Jonzie_Ceed", 6000, "driver" },
 			{ "Jonzie_Ute", 7500, "driver" },
 			{ "Jonzie_Mini_Cooper", 8000, "driver" },
@@ -98,9 +98,9 @@ class CarShops {
 			{ "Quiet_dodge_15_blanche_f", 50000, "driver" },
 			{ "Quiet_v2_r8plus_blanche_f", 250000, "driver" },
 			{ "Mrshounka_subaru08_civ", 35000, "driver" },
-			{ "A3L_Ferrari458", 125000, "driver" },
-			{ "A3L_Ford_Mustang", 45000, "driver" },
-			{ "AM_Escalade", 50000, "driver" }
+			{ "A3L_Ferrari458red", 125000, "driver" },
+			{ "A3L_Ford_Mustang_Red", 45000, "driver" },
+			{ "AM_Escalade_White", 50000, "driver" }
 		};
 	};
 
@@ -110,7 +110,7 @@ class CarShops {
 			{ "Jonzie_Z432", 500, "" },
 			{ "Jonzie_Galant", 500, "" },
 			{ "Jonzie_Corolla", 500, "" },
-			{ "A3L_GMC_Van", 500, "" },
+			{ "A3L_GMC_Van_White", 500, "" },
 			{ "Jonzie_Ceed", 500, "" },
 			{ "Jonzie_Ute", 500, "" },
 			{ "Jonzie_Transit", 500, "" },
@@ -605,7 +605,7 @@ class CfgVehicles {
 	                "#(argb,8,8,3)color(1,0.501961,0,1)"
             } },
 			{ "White", "civ", {
-					"\A3L_Challenger\data\colors\white.paa"
+                    "#(argb,8,8,3)color(0.501961,0,0.501961,1)"
             } },
 			{ "Anime", "civ", {
 					"\IVORY_PRIUS\data\anime.paa"
@@ -625,7 +625,7 @@ class CfgVehicles {
 	    };
 	};
 	
-	class AM_Escalade {
+	class AM_Escalade_White {
 		vItemSpace = 10;
     	storageFee[] = { 100, 500, 650, 100 };
     	garageSell[] = { 0, 0, 0, 0 };
@@ -657,7 +657,7 @@ class CfgVehicles {
 	                "#(argb,8,8,3)color(1,0.501961,0,1)"
             } },
 			{ "White", "civ", {
-					"\A3L_Challenger\data\colors\white.paa"
+                    "#(argb,8,8,3)color(0.501961,0,0.501961,1)"
             } },
 			{ "Silver", "civ", {
 					"AM_V_Data\data\Colours\Silver.paa"
@@ -672,7 +672,7 @@ class CfgVehicles {
 	};
 	
 	
-	class A3L_Challenger {
+	class A3L_GMC_Van_White {
 		vItemSpace = 100;
     	storageFee[] = { 100, 500, 650, 100 };
     	garageSell[] = { 0, 0, 0, 0 };
@@ -704,7 +704,7 @@ class CfgVehicles {
 	                "#(argb,8,8,3)color(1,0.501961,0,1)"
             } },
 			{ "White", "civ", {
-					"\A3L_Challenger\data\colors\white.paa"
+                    "#(argb,8,8,3)color(0.501961,0,0.501961,1)"
             } },
 			{ "Aqua", "civ", {
 					"A3L_GMC_Van\Mrshounka_texture\Aqua.paa"
@@ -764,7 +764,7 @@ class CfgVehicles {
 	    };
 	};
 	
-	class A3L_Ferrari458 {
+	class A3L_Ferrari458red {
 		vItemSpace = 10;
     	storageFee[] = { 100, 500, 650, 100 };
     	garageSell[] = { 0, 0, 0, 0 };
@@ -828,7 +828,7 @@ class CfgVehicles {
 	    };
 	};
 	
-	class A3L_Ford_Mustang {
+	class A3L_Ford_Mustang_Red {
 		vItemSpace = 10;
     	storageFee[] = { 100, 500, 650, 100 };
     	garageSell[] = { 0, 0, 0, 0 };
