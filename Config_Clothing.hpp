@@ -1060,8 +1060,11 @@ class Clothing {
 
 		uniforms[] = {
 			{ "NONE", "Remove Uniform", 0, { "", "", -1 } },
-			{ "RR_EMS_EMT_Uniform", "", 0, { "", "", -1 } },
-			{ "RR_EMS_Command_Uniform", "", 0, { "", "", -1 } },
+			{ "RR_EMS_Uniforms_5", "", 0, { "", "", -1 } },
+			{ "RR_EMS_Uniforms_4", "", 0, { "", "", -1 } },
+			{ "RR_EMS_Uniforms_3", "", 0, { "", "", -1 } },
+			{ "RR_EMS_Uniforms_2", "", 0, { "", "", -1 } },
+			{ "RR_EMS_Uniforms_1", "", 0, { "", "", -1 } },
 			{ "U_B_Wetsuit", "", 150, { "", "", -1 } }
 		};
 
@@ -1140,11 +1143,12 @@ class Clothing {
 
 		vests[] = {
 			{ "NONE", "Remove Vest", 0, { "", "", -1 } },
-			{ "rr_ems_vest_probie", "", 0, { "", "", -1 } },
-			{ "rr_ems_vest_emt", "", 0, { "", "", -1 } },
-			{ "rr_ems_vest_emt2", "", 0, { "", "", -1 } },
-			{ "rr_ems_vest_paramedic", "", 0, { "", "", -1 } },
-			{ "rr_ems_vest_command", "", 0, { "", "", -1 } },
+			{ "RR_EMS_Vests_Command", "", 0, { "", "", -1 } },
+			{ "RR_EMS_Vests_RideAlong", "", 0, { "", "", -1 } },
+			{ "RR_EMS_Vests_EMT", "", 0, { "", "", -1 } },
+			{ "RR_EMS_Vests_Paramedic", "", 0, { "", "", -1 } },
+			{ "RR_EMS_Vests_SearchRescue", "", 0, { "", "", -1 } },
+			{ "RR_EMS_Vests_Probie", "", 0, { "", "", -1 } },
 			{ "V_RebreatherB", "", 0, { "", "", -1 } }
 		};
 
